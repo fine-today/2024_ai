@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('./pages/common/include/head.html',{'title' : '메인'})
+  </head>
+  <body>
+    <header id="header">
+      <button type="button" class="btn type5" data-href="admin">admin</button>
+      <button type="button" class="btn type5" data-href="common">common</button>
+      <button type="button" class="btn type5" data-href="menu1">
+        중점연구분야
+      </button>
+      <button type="button" class="btn type5" data-href="menu2">
+        부서소개
+      </button>
+      <button type="button" class="btn type5" data-href="menu3">
+        알림마당
+      </button>
+      <button type="button" class="btn type5" data-href="menu4">
+        사이버홍보
+      </button>
+      <button type="button" class="btn type5" data-href="menu5">
+        연구원소개
+      </button>
+      <button type="button" class="btn type5" data-href="menu6">
+        마이페이지
+      </button>
+      <button type="button" class="btn type5" data-href="etc">etc</button>
+    </header>
+    <div class="guide-wrap">
+      <section id="admin">
+        <h2>admin</h2>
+      </section>
+      <section id="common">
+        <h2>common</h2>
+      </section>
+      <section id="menu1">
+        <h2>중점연구분야</h2>
+      </section>
+      <section id="menu2">
+        <h2>부서소개</h2>
+      </section>
+      <section id="menu3">
+        <h2>알림마당</h2>
+      </section>
+      <section id="menu4">
+        <h2>사이버홍보</h2>
+      </section>
+      <section id="menu5">
+        <h2>연구원소개</h2>
+      </section>
+      <section id="menu6">
+        <h2>마이페이지</h2>
+      </section>
+      <section id="etc">
+        <h2>etc</h2>
+      </section>
+    </div>
+    <script>
+      var th = [
+        "화면ID",
+        "화면명",
+        "화면경로",
+        "작업자",
+        "PC진행사항",
+        "Mobile진행사항",
+        "등록일",
+        "비고",
+      ];
+      var category = [
+        "admin",
+        "common",
+        "menu1",
+        "menu2",
+        "menu3",
+        "menu4",
+        "menu5",
+        "menu6",
+        "etc",
+      ];
+      var td = [
+        {
+          id: 1,
+          category: "common",
+          title: "공통 컴포넌트",
+          href: "http://localhost:8000/pages/common/guide.html",
+          owner: "명화",
+          stepPC: "",
+          stepMobile: "-",
+          date: "2024-09-30",
+          empty: "",
+        },
+        {
+          id: 2,
+          category: "common",
+          title: "main",
+          href: "http://localhost:8000/pages/service/main.html",
+          owner: "명화",
+          stepPC: "",
+          stepMobile: "",
+          date: "2024-09-30",
+          empty: "",
+        },
+        {
+          id: 3,
+          category: "admin",
+          title: "로그인",
+          href: "http://localhost:8000/pages/admin/login.html",
+          owner: "명화",
+          stepPC: "",
+          stepMobile: "",
+          date: "2024-09-30",
+          empty: "",
+        },
+        {
+          id: 3,
+          category: "admin",
+          title: "admin 가이드",
+          href: "http://localhost:8000/pages/admin/sub.html",
+          owner: "명화",
+          stepPC: "",
+          stepMobile: "",
+          date: "2024-09-30",
+          empty: "",
+        },
+        {
+          id: 3,
+          category: "admin",
+          title: "admin 가이드",
+          href: "http://localhost:8000/pages/admin/sub.html",
+          owner: "명화",
+          stepPC: "",
+          stepMobile: "",
+          date: "2024-09-30",
+          empty: "",
+        },
+      ];
+      $(function () {
+        var $header = $("#header"),
+          $headerBtn = $header.find("button");
+        // header btn click
+        $headerBtn.on("click", function () {
+          var $this = $(this),
+            thisHref = $this.attr("data-href");
+          var elemTop = $("body")
+            .find("#" + thisHref)
+            .offset().top;
+          $("html,body").animate({ scrollTop: elemTop }, 300);
+        });
+
+        // table
+        var $section = $("section");
+        $section.each(function () {
+          var $this = $(this);
+          var thisId = $this.attr("id");
+          var thisData = td.filter((x) => x.category === thisId);
+          var $table = $(
+            `<table style="text-align:center" class="guide-table">
+              <colgroup>
+                <col style="width:9%">
+                <col style="width:15%">
+                <col>
+                <col style="width:9%">
+                <col style="width:9%">
+                <col style="width:9%">
+                <col style="width:10%">
+                <col style="width:15%">
+              </colgroup>
+              <thead>
+                <tr></tr>
+              </thead>
+              <tbody></tbody>
+            </table>`
+          );
+          th.forEach(function (thElem) {
+            var $th = $("<th></th>");
+            $th.text(thElem);
+            $table.find("thead tr").append($th);
+          });
+          thisData.forEach(function (trElem) {
+            var {
+              category,
+              title,
+              href,
+              owner,
+              stepPC,
+              stepMobile,
+              date,
+              empty,
+            } = trElem;
+            var $tr = $(
+              `<tr>
+                <td data-category><label>${category}</label></td>
+                <td data-title>${title}</td>
+                <td data-href>
+                  <a href="${href}" target="_blank">${href}</a>
+                </td>
+                <td data-owner>${owner}</td>
+                <td data-stepPC>${stepPC}</td>
+                <td data-stepMobile>${stepMobile}</td>
+                <td data-date>${date}</td>
+                <td data-empty>${empty}</td>
+              </tr>`
+            );
+            $table.find("tbody").append($tr);
+          });
+          $this.append($table);
+        });
+      });
+    </script>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+      }
+      .guide-wrap {
+        padding: 20px;
+        border-top: 10px solid #666;
+      }
+      h2 {
+        font-size: 24px;
+      }
+      .guide-table {
+        font-size: 14px;
+        line-height: 1.5;
+        margin: 20px 0;
+      }
+      .guide-table thead {
+      }
+      .guide-table th,
+      .guide-table td {
+        border: 1px solid #ccc;
+        border-left: 0;
+        padding: 5px 10px;
+      }
+      .guide-table th:last-child,
+      .guide-table td:last-child {
+        border-right: 0;
+      }
+      .guide-table th {
+        background-color: #f4f4f4;
+      }
+      .guide-table tbody {
+      }
+      .guide-table {
+      }
+      .guide-table {
+      }
+    </style>
+  </body>
+</html>
