@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="kr" class="main">
+<html lang="kr" class="sub">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -18,18 +18,7 @@
     <div id="container">
       <header class="header">@@include('./include/header.html')</header>
       <div id="content">
-        <section class="main-section visual">
-          @@include('./include/main-section1.html')
-        </section>
-        <section class="main-section tech">
-          @@include('./include/main-section2.html')
-        </section>
-        <section class="main-section banner">
-          @@include('./include/main-section3.html')
-        </section>
-        <section class="main-section notice">
-          @@include('./include/main-section4.html')
-        </section>
+        <div class="breadcrumb">@@include('./include/menu.html')</div>
       </div>
       <footer class="footer">@@include('./include/footer.html')</footer>
     </div>
