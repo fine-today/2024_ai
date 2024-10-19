@@ -15,33 +15,27 @@ $(function () {
     }
   });
 
-  //인풋 포커스
-  var selectTarget = $('.sd_input input[type="text"]');
-  selectTarget.on({
-    focus: function () {
-      $(this).parent().addClass("focus");
-    },
-    blur: function () {
-      $(this).parent().removeClass("focus");
-    },
-  });
-
-  //모달창
-  $(".modal_btn").on("click", function () {
-    $("html").toggleClass("modal_open");
-  });
-
-  $(".modal_close").on("click", function () {
-    $("html").toggleClass("modal_open");
-  });
-
   //레이어팝업
   $(".popup_btn").click(function () {
-    $(this).siblings().addClass("on");
+    var $this = $(this),
+      thisId = $this.attr("data-pop"),
+      $thisPop = $(`.popup[data-pop="${thisId}"]`);
+    $("html").addClass("popup_open");
+    $thisPop.addClass("active");
   });
-  $(".popup_close").click(function () {
-    $(".popup").removeClass("on");
+  $(".popup_close,[data-close]").click(function () {
+    var $thisPop = $(this).closest(".popup"),
+      thisId = $thisPop.attr("data-pop");
+    $("html").removeClass("popup_open");
+    $thisPop.removeClass("active");
+    $(`.popup_btn[data-pop="${thisId}"]`).focus();
   });
+
+  setTimeout(function () {
+    if ($(".popup").hasClass("active")) {
+      $("html").addClass("popup_open");
+    }
+  }, 0);
 
   /* 아코디언 열고 닫기*/
   $(".qna_item .question .qna_btn").on("click", function () {
@@ -166,7 +160,7 @@ $(function () {
       .find(".select_anchor")
       .removeAttr("title");
     $this
-      .parents(".style_select_box")
+      .closest(".style_select_box")
       .find(".search_select")
       .text(selectButtonText);
     $selectList.addClass("active").siblings().removeClass("active");

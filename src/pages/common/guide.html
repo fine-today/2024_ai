@@ -1,544 +1,573 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    @@include('./include/head.html',{'title' : '가이드'})
+    @@include('../service/include/head.html',{'title' : '가이드'})
   </head>
   <body>
     <div id="container">
-      <header>@@include('./include/header.html')</header>
+      <header>@@include('../service/include/header.html')</header>
 
       <div id="content">
-        <div class="tab_menu type2 depth6">
-          <button class="tab_select"><span>선택된 메뉴명</span></button>
-          <div class="tab_panel">
-            <ul class="tab_list clearfix">
-              <li class="tab_item active">
-                <a href="" class="tab_anchor"><span>6차메뉴</span></a>
-              </li>
-              <li class="tab_item">
-                <a href="" class="tab_anchor" target="_self"
-                  ><span>6차메뉴</span></a
-                >
-              </li>
-              <li class="tab_item">
-                <a href="" class="tab_anchor" target="_self"
-                  ><span>6차메뉴</span></a
-                >
-              </li>
-              <li class="tab_item">
-                <a href="" class="tab_anchor" target="_self"
-                  ><span>6차메뉴</span></a
-                >
-              </li>
-              <li class="tab_item">
-                <a href="" class="tab_anchor" target="_self"
-                  ><span>6차메뉴</span></a
-                >
-              </li>
-              <li class="tab_item">
-                <a href="" class="tab_anchor" target="_self"
-                  ><span>6차메뉴</span></a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="tab" copy-attr="yes">
-          <div class="tab_menu">
-            <button type="button" class="tab_select">
-              <span>스텝박스</span>
-            </button>
+        <div class="wrap">
+          <div class="tab_menu type2 depth6">
+            <button class="tab_select"><span>선택된 메뉴명</span></button>
             <div class="tab_panel">
               <ul class="tab_list clearfix">
                 <li class="tab_item active">
-                  <button type="button" class="tab_button" title="선택됨">
-                    <span>선택중인메뉴</span>
-                  </button>
+                  <a href="" class="tab_anchor"><span>6차메뉴</span></a>
                 </li>
                 <li class="tab_item">
-                  <button type="button" class="tab_button">
-                    <span>4차메뉴는 탭메뉴</span>
-                  </button>
+                  <a href="" class="tab_anchor" target="_self"
+                    ><span>6차메뉴</span></a
+                  >
                 </li>
                 <li class="tab_item">
-                  <button type="button" class="tab_button">
-                    <span>4차메뉴는 탭메뉴 4차메뉴는 탭메뉴 탭메뉴</span>
-                  </button>
+                  <a href="" class="tab_anchor" target="_self"
+                    ><span>6차메뉴</span></a
+                  >
                 </li>
                 <li class="tab_item">
-                  <button type="button" class="tab_button">
-                    <span>4차메뉴는 탭메뉴</span>
-                  </button>
+                  <a href="" class="tab_anchor" target="_self"
+                    ><span>6차메뉴</span></a
+                  >
                 </li>
                 <li class="tab_item">
-                  <button type="button" class="tab_button">
-                    <span>4차메뉴는 탭메뉴</span>
-                  </button>
+                  <a href="" class="tab_anchor" target="_self"
+                    ><span>6차메뉴</span></a
+                  >
                 </li>
                 <li class="tab_item">
-                  <button type="button" class="tab_button">
-                    <span>4차메뉴는 탭메뉴</span>
-                  </button>
-                </li>
-                <li class="tab_item">
-                  <button type="button" class="tab_button">
-                    <span>4차메뉴는 탭메뉴</span>
-                  </button>
+                  <a href="" class="tab_anchor" target="_self"
+                    ><span>6차메뉴</span></a
+                  >
                 </li>
               </ul>
             </div>
-            <div class="tab_content active">1</div>
-            <div class="tab_content">2</div>
-            <div class="tab_content">3</div>
-            <div class="tab_content">4</div>
-            <div class="tab_content">5</div>
-            <div class="tab_content">6</div>
-            <div class="tab_content">7</div>
           </div>
-        </div>
 
-        <div class="tab template">
-          <div class="tab_menu">
-            <button type="button" class="tab_select">
-              <span>스텝박스</span>
-            </button>
-            <div class="tab_panel">
-              <ul class="tab_list clearfix">
-                <li class="tab_item active">
-                  <button type="button" title="선택됨" class="tab_all">
-                    <span>전체보기</span>
-                  </button>
-                </li>
-                <li class="tab_item">
-                  <button type="button" class="tab_button">
-                    <span>제목</span>
-                  </button>
-                </li>
-                <li class="tab_item">
-                  <button type="button" class="tab_button">
-                    <span>목록</span>
-                  </button>
-                </li>
-                <li class="tab_item">
-                  <button type="button" class="tab_button">
-                    <span>포인트디자인</span>
-                  </button>
-                </li>
-                <li class="tab_item">
-                  <button type="button" class="tab_button">
-                    <span>테이블</span>
-                  </button>
-                </li>
-                <li class="tab_item">
-                  <button type="button" class="tab_button">
-                    <span>버튼스타일</span>
-                  </button>
-                </li>
-                <li class="tab_item">
-                  <button type="button" class="tab_button">
-                    <span>폼 스타일</span>
-                  </button>
-                </li>
-                <li class="tab_item">
-                  <button type="button" class="tab_button">
-                    <span>박스디자인</span>
-                  </button>
-                </li>
-                <li class="tab_item">
-                  <button type="button" class="tab_button">
-                    <span>이미지박스</span>
-                  </button>
-                </li>
-                <li class="tab_item">
-                  <button type="button" class="tab_button">
-                    <span>스텝박스</span>
-                  </button>
-                </li>
-                <li class="tab_item">
-                  <button type="button" class="tab_button">
-                    <span>기타</span>
-                  </button>
-                </li>
-                <li class="tab_item">
-                  <button type="button" class="tab_button">
-                    <span>개별디자인</span>
-                  </button>
-                </li>
-              </ul>
+          <div class="tab" copy-attr="yes">
+            <div class="tab_menu">
+              <button type="button" class="tab_select">
+                <span>스텝박스</span>
+              </button>
+              <div class="tab_panel">
+                <ul class="tab_list clearfix">
+                  <li class="tab_item active">
+                    <button type="button" class="tab_button" title="선택됨">
+                      <span>선택중인메뉴</span>
+                    </button>
+                  </li>
+                  <li class="tab_item">
+                    <button type="button" class="tab_button">
+                      <span>4차메뉴는 탭메뉴</span>
+                    </button>
+                  </li>
+                  <li class="tab_item">
+                    <button type="button" class="tab_button">
+                      <span>4차메뉴는 탭메뉴 4차메뉴는 탭메뉴 탭메뉴</span>
+                    </button>
+                  </li>
+                  <li class="tab_item">
+                    <button type="button" class="tab_button">
+                      <span>4차메뉴는 탭메뉴</span>
+                    </button>
+                  </li>
+                  <li class="tab_item">
+                    <button type="button" class="tab_button">
+                      <span>4차메뉴는 탭메뉴</span>
+                    </button>
+                  </li>
+                  <li class="tab_item">
+                    <button type="button" class="tab_button">
+                      <span>4차메뉴는 탭메뉴</span>
+                    </button>
+                  </li>
+                  <li class="tab_item">
+                    <button type="button" class="tab_button">
+                      <span>4차메뉴는 탭메뉴</span>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <div class="tab_content active">1</div>
+              <div class="tab_content">2</div>
+              <div class="tab_content">3</div>
+              <div class="tab_content">4</div>
+              <div class="tab_content">5</div>
+              <div class="tab_content">6</div>
+              <div class="tab_content">7</div>
             </div>
-            <div id="a" class="tab_content active">
-              <!--제목-->
-              <h3 copy-attr="yes">
-                내용 첫제목 H3<span class="subtitle"
-                  >제목 옆에서 보조텍스트</span
+          </div>
+
+          <div class="tab template">
+            <div class="tab_menu">
+              <button type="button" class="tab_select">
+                <span>스텝박스</span>
+              </button>
+              <div class="tab_panel">
+                <ul class="tab_list clearfix">
+                  <li class="tab_item active">
+                    <button type="button" title="선택됨" class="tab_all">
+                      <span>전체보기</span>
+                    </button>
+                  </li>
+                  <li class="tab_item">
+                    <button type="button" class="tab_button">
+                      <span>제목</span>
+                    </button>
+                  </li>
+                  <li class="tab_item">
+                    <button type="button" class="tab_button">
+                      <span>목록</span>
+                    </button>
+                  </li>
+                  <li class="tab_item">
+                    <button type="button" class="tab_button">
+                      <span>포인트디자인</span>
+                    </button>
+                  </li>
+                  <li class="tab_item">
+                    <button type="button" class="tab_button">
+                      <span>테이블</span>
+                    </button>
+                  </li>
+                  <li class="tab_item">
+                    <button type="button" class="tab_button">
+                      <span>버튼스타일</span>
+                    </button>
+                  </li>
+                  <li class="tab_item">
+                    <button type="button" class="tab_button">
+                      <span>폼 스타일</span>
+                    </button>
+                  </li>
+                  <li class="tab_item">
+                    <button type="button" class="tab_button">
+                      <span>박스디자인</span>
+                    </button>
+                  </li>
+                  <li class="tab_item">
+                    <button type="button" class="tab_button">
+                      <span>이미지박스</span>
+                    </button>
+                  </li>
+                  <li class="tab_item">
+                    <button type="button" class="tab_button">
+                      <span>스텝박스</span>
+                    </button>
+                  </li>
+                  <li class="tab_item">
+                    <button type="button" class="tab_button">
+                      <span>기타</span>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <div id="a" class="tab_content active">
+                <!--제목-->
+                <h3 copy-attr="yes">
+                  내용 첫제목 H3<span class="subtitle"
+                    >제목 옆에서 보조텍스트</span
+                  >
+                </h3>
+                <h4 copy-attr="yes">내용 두번째제목 H4</h4>
+                <h5 copy-attr="yes">내용 세번째제목 H5</h5>
+                <h6 copy-attr="yes">내용 세번째제목 H6</h6>
+                <p copy-attr="yes">
+                  심장의 무엇을 보이는 황금시대의 사는가 이것이다. 위하여 인생에
+                  천고에 것이다.보라, 듣는다. 얼음 물방아 불러 대고, 얼음이 꾸며
+                  것이다. 아름답고 낙원을 구하지 것이다. 하는 우리 피가 꽃
+                  날카로우나 이것이야말로 못할 쓸쓸하랴? 거선의 그들은 피어나기
+                  수 있는 청춘은 대한 소담스러운 이상의 있으랴? 따뜻한 불어 없는
+                  이것이다. 우는 품으며, 이상이 그들은 청춘에서만 소담스러운
+                  인생에 원대하고, 뿐이다. 끓는 그러므로 피어나는 못하다 것은
+                  미인을 곳이 힘차게 교향악이다.
+                  <span class="em_point">타이틀포인트</span>
+                </p>
+                <br />
+                <a
+                  href="#"
+                  target="_blank"
+                  title="새창"
+                  class="blank"
+                  rel="noopener noreferrer"
+                  copy-attr="yes"
+                  >컨텐츠 내 링크</a
                 >
-              </h3>
-              <h4 copy-attr="yes">내용 두번째제목 H4</h4>
-              <h5 copy-attr="yes">내용 세번째제목 H5</h5>
-              <h6 copy-attr="yes">내용 세번째제목 H6</h6>
-              <p copy-attr="yes">
-                심장의 무엇을 보이는 황금시대의 사는가 이것이다. 위하여 인생에
-                천고에 것이다.보라, 듣는다. 얼음 물방아 불러 대고, 얼음이 꾸며
-                것이다. 아름답고 낙원을 구하지 것이다. 하는 우리 피가 꽃
-                날카로우나 이것이야말로 못할 쓸쓸하랴? 거선의 그들은 피어나기 수
-                있는 청춘은 대한 소담스러운 이상의 있으랴? 따뜻한 불어 없는
-                이것이다. 우는 품으며, 이상이 그들은 청춘에서만 소담스러운
-                인생에 원대하고, 뿐이다. 끓는 그러므로 피어나는 못하다 것은
-                미인을 곳이 힘차게 교향악이다.
-                <span class="em_point">타이틀포인트</span>
-              </p>
-              <br />
-              <a
-                href="#"
-                target="_blank"
-                title="새창"
-                class="blank"
-                rel="noopener noreferrer"
-                copy-attr="yes"
-                >컨텐츠 내 링크</a
-              >
-              <a
-                href="#"
-                target="_blank"
-                title="다운로드"
-                class="down"
-                copy-attr="yes"
-                >컨텐츠 내 다운로드</a
-              >
-            </div>
-
-            <div id="b" class="tab_content">
-              <!--목록-->
-              <h4>목록(ul/ol)</h4>
-              <h5>기본형 .bu</h5>
-              <ul class="bu" copy-attr="yes">
-                <li>대통령은 국회에 출석하여 발언하거나 서한으로 의견...</li>
-                <li>국가안전보장회의는 대통령이 주재한다. 군인 또는 군...</li>
-                <li>국회의원은 그 지위를 남용하여 국가·공공단체 또는 ...</li>
-                <li>
-                  모든 국민은 근로의 의무를 진다. 국가는 근로의 의무...
-                  <ul>
-                    <li>
-                      대통령은 국회에 출석하여 발언하거나 서한으로 의견...
-                    </li>
-                    <li>
-                      국가안전보장회의는 대통령이 주재한다. 군인 또는 군...
-                    </li>
-                    <li>
-                      국회의원은 그 지위를 남용하여 국가·공공단체 또는 ...
-                    </li>
-                    <li>
-                      모든 국민은 근로의 의무를 진다. 국가는 근로의 의무...
-                      <ul>
-                        <li>
-                          대통령은 국회에 출석하여 발언하거나 서한으로 의견...
-                        </li>
-                        <li>
-                          국가안전보장회의는 대통령이 주재한다. 군인 또는 군...
-                        </li>
-                        <li>
-                          국회의원은 그 지위를 남용하여 국가·공공단체 또는 ...
-                        </li>
-                        <li>
-                          모든 국민은 근로의 의무를 진다. 국가는 근로의 의무...
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-
-              <h5>기본형 .bu.type2</h5>
-              <ul class="bu type2" copy-attr="yes">
-                <li>대통령은 국회에 출석하여 발언하거나 서한으로 의견...</li>
-                <li>국가안전보장회의는 대통령이 주재한다. 군인 또는 군...</li>
-                <li>
-                  국회의원은 그 지위를 남용하여 국가·공공단체 또는 ...
-                  <ul>
-                    <li>
-                      국회의원은 그 지위를 남용하여 국가·공공단체 또는 ...
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-
-              <h6>목록 제목+텍스트</h6>
-              <ul class="bu" copy-attr="yes">
-                <li>
-                  <span class="title">목록에서 제목</span
-                  ><span class="text">제목과 내용띄우기는 기본 15px</span>
-                </li>
-                <li>
-                  <span class="title">들쑥날쑥</span
-                  ><span class="text"
-                    >세글자 정도 들쑥날쑥은 긴 제목에 맞춰서 정렬이지만</span
-                  >
-                </li>
-                <li>
-                  <span class="title">하단면 길이에 맞게</span
-                  ><span class="text">네글자 이상부터는 단독 정렬</span>
-                </li>
-                <li>
-                  <span class="title">조정하기</span
-                  ><span class="text"
-                    >제목과 내용띄우기 통일시키기 / 길이에 맞게 width사이즈
-                    조절해주세요</span
-                  >
-                </li>
-              </ul>
-
-              <h5>순서형 .num</h5>
-              <h6>ol.num</h6>
-              <ol class="num" copy-attr="yes">
-                <li>
-                  순서가 있는 목록은
-                  <ul>
-                    <li>
-                      메뉴
-                      <ul>
-                        <li>메뉴</li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-                <li>특수문자를 앞에 붙여서 사용합니다</li>
-                <li>15까지가 제공됩니다</li>
-                <li>그 이상일때는 별도 이미지 처리하겠습니다</li>
-                <li>하위 ul은 기본사용하는 블릿 사용</li>
-              </ol>
-
-              <h6>ul.num</h6>
-              <ul class="num" copy-attr="yes">
-                <li>
-                  <span class="item">1</span>순서가 있는 목록은
-                  <ul>
-                    <li>
-                      메뉴
-                      <ul>
-                        <li>메뉴</li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <span class="item">2</span>특수문자를 앞에 붙여서 사용합니다
-                </li>
-                <li><span class="item">3</span>15까지가 제공됩니다</li>
-                <li>
-                  <span class="item">4</span>그 이상일때는 별도 이미지
-                  처리하겠습니다
-                </li>
-                <li>
-                  <span class="item">15</span>하위 ul은 기본사용하는 블릿 사용
-                </li>
-              </ul>
-
-              <h5>p.blt</h5>
-              <p class="blt" copy-attr="yes">
-                대통령은 국회에 출석하여 발언하거나 서한으로 의견...
-              </p>
-              <p class="blt type2" copy-attr="yes">
-                대통령은 국회에 출석하여 발언하거나 서한으로 의견...
-              </p>
-              <p class="blt type3" copy-attr="yes">
-                대통령은 국회에 출석하여 발언하거나 서한으로 의견...
-              </p>
-            </div>
-            <div id="c" class="tab_content">
-              <!--포인트디자인-->
-              <h4>주의사항</h4>
-              <p class="warning" title="안내사항" copy-attr="yes">
-                안내사항이 있을때 내용 넣기
-              </p>
-              <p class="warning type2" title="주의사항" copy-attr="yes">
-                경고사항이 있을때 내용 넣기
-              </p>
-              <h4>안내경고 제목+내용</h4>
-              <div class="warning_area" copy-attr="yes">
-                <p class="warning" title="안내사항">안내사항제목</p>
-                <p class="text">안내사항이 있을때 내용 넣기</p>
+                <a
+                  href="#"
+                  target="_blank"
+                  title="다운로드"
+                  class="down"
+                  copy-attr="yes"
+                  >컨텐츠 내 다운로드</a
+                >
               </div>
-              <div class="warning_area" copy-attr="yes">
-                <p class="warning type2" title="경고사항">경고사항제목</p>
-                <p class="text">경고사항이 있을때 내용 넣기</p>
+
+              <div id="b" class="tab_content">
+                <!--목록-->
+                <h4>목록(ul/ol)</h4>
+                <h5>기본형 .bu</h5>
+                <ul class="bu" copy-attr="yes">
+                  <li>대통령은 국회에 출석하여 발언하거나 서한으로 의견...</li>
+                  <li>국가안전보장회의는 대통령이 주재한다. 군인 또는 군...</li>
+                  <li>국회의원은 그 지위를 남용하여 국가·공공단체 또는 ...</li>
+                  <li>
+                    모든 국민은 근로의 의무를 진다. 국가는 근로의 의무...
+                    <ul>
+                      <li>
+                        대통령은 국회에 출석하여 발언하거나 서한으로 의견...
+                      </li>
+                      <li>
+                        국가안전보장회의는 대통령이 주재한다. 군인 또는 군...
+                      </li>
+                      <li>
+                        국회의원은 그 지위를 남용하여 국가·공공단체 또는 ...
+                      </li>
+                      <li>
+                        모든 국민은 근로의 의무를 진다. 국가는 근로의 의무...
+                        <ul>
+                          <li>
+                            대통령은 국회에 출석하여 발언하거나 서한으로 의견...
+                          </li>
+                          <li>
+                            국가안전보장회의는 대통령이 주재한다. 군인 또는
+                            군...
+                          </li>
+                          <li>
+                            국회의원은 그 지위를 남용하여 국가·공공단체 또는 ...
+                          </li>
+                          <li>
+                            모든 국민은 근로의 의무를 진다. 국가는 근로의
+                            의무...
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+
+                <h5>기본형 .bu.type2</h5>
+                <ul class="bu type2" copy-attr="yes">
+                  <li>대통령은 국회에 출석하여 발언하거나 서한으로 의견...</li>
+                  <li>국가안전보장회의는 대통령이 주재한다. 군인 또는 군...</li>
+                  <li>
+                    국회의원은 그 지위를 남용하여 국가·공공단체 또는 ...
+                    <ul>
+                      <li>
+                        국회의원은 그 지위를 남용하여 국가·공공단체 또는 ...
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+
+                <h6>목록 제목+텍스트</h6>
+                <ul class="bu" copy-attr="yes">
+                  <li>
+                    <span class="title">목록에서 제목</span
+                    ><span class="text">제목과 내용띄우기는 기본 15px</span>
+                  </li>
+                  <li>
+                    <span class="title">들쑥날쑥</span
+                    ><span class="text"
+                      >세글자 정도 들쑥날쑥은 긴 제목에 맞춰서 정렬이지만</span
+                    >
+                  </li>
+                  <li>
+                    <span class="title">하단면 길이에 맞게</span
+                    ><span class="text">네글자 이상부터는 단독 정렬</span>
+                  </li>
+                  <li>
+                    <span class="title">조정하기</span
+                    ><span class="text"
+                      >제목과 내용띄우기 통일시키기 / 길이에 맞게 width사이즈
+                      조절해주세요</span
+                    >
+                  </li>
+                </ul>
+
+                <h5>순서형 .num</h5>
+                <h6>ol.num</h6>
+                <ol class="num" copy-attr="yes">
+                  <li>
+                    순서가 있는 목록은
+                    <ul>
+                      <li>
+                        메뉴
+                        <ul>
+                          <li>메뉴</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>특수문자를 앞에 붙여서 사용합니다</li>
+                  <li>15까지가 제공됩니다</li>
+                  <li>그 이상일때는 별도 이미지 처리하겠습니다</li>
+                  <li>하위 ul은 기본사용하는 블릿 사용</li>
+                </ol>
+
+                <h6>ul.num</h6>
+                <ul class="num" copy-attr="yes">
+                  <li>
+                    <span class="item">1</span>순서가 있는 목록은
+                    <ul>
+                      <li>
+                        메뉴
+                        <ul>
+                          <li>메뉴</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span class="item">2</span>특수문자를 앞에 붙여서 사용합니다
+                  </li>
+                  <li><span class="item">3</span>15까지가 제공됩니다</li>
+                  <li>
+                    <span class="item">4</span>그 이상일때는 별도 이미지
+                    처리하겠습니다
+                  </li>
+                  <li>
+                    <span class="item">15</span>하위 ul은 기본사용하는 블릿 사용
+                  </li>
+                </ul>
+
+                <h5>p.blt</h5>
+                <p class="blt" copy-attr="yes">
+                  대통령은 국회에 출석하여 발언하거나 서한으로 의견...
+                </p>
+                <p class="blt type2" copy-attr="yes">
+                  대통령은 국회에 출석하여 발언하거나 서한으로 의견...
+                </p>
+                <p class="blt type3" copy-attr="yes">
+                  대통령은 국회에 출석하여 발언하거나 서한으로 의견...
+                </p>
               </div>
-            </div>
-            <div id="d" class="tab_content">
-              <!--테이블-->
-              <h4>테이블</h4>
-              <h5>기본 가로형</h5>
-              <p class="table_unit" copy-attr="yes">
-                안내사항이 있을때 내용 넣기
-              </p>
-              <table class="table" copy-attr="yes">
-                <caption>
-                  테이블제목 - 순으로 정보를 제공하고 있습니다.
-                </caption>
-                <colgroup>
-                  <col class="w20p" />
-                  <col class="w20p" />
-                  <col class="w20p" />
-                  <col class="w20p" />
-                  <col class="w20p" />
-                </colgroup>
-                <thead>
-                  <tr>
-                    <th scope="col">타이틀 Medium</th>
-                    <th scope="col">bgcolor: #f4f5f9</th>
-                    <th scope="col">타이틀</th>
-                    <th scope="col">타이틀</th>
-                    <th scope="col">타이틀</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">타이틀 DemiLight</th>
-                    <td>국가안전보장회의 Light</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">bgcolor: #f9fafc</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">타이틀 DemiLight</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
+              <div id="c" class="tab_content">
+                <!--포인트디자인-->
+                <h4>주의사항</h4>
+                <p class="warning" title="안내사항" copy-attr="yes">
+                  안내사항이 있을때 내용 넣기
+                </p>
+                <p class="warning type2" title="주의사항" copy-attr="yes">
+                  경고사항이 있을때 내용 넣기
+                </p>
+                <h4>안내경고 제목+내용</h4>
+                <div class="warning_area" copy-attr="yes">
+                  <p class="warning" title="안내사항">안내사항제목</p>
+                  <p class="text">안내사항이 있을때 내용 넣기</p>
+                </div>
+                <div class="warning_area" copy-attr="yes">
+                  <p class="warning type2" title="경고사항">경고사항제목</p>
+                  <p class="text">경고사항이 있을때 내용 넣기</p>
+                </div>
+              </div>
+              <div id="d" class="tab_content">
+                <!--테이블-->
+                <h4>테이블</h4>
+                <h5>기본 가로형</h5>
+                <p class="table_unit" copy-attr="yes">
+                  안내사항이 있을때 내용 넣기
+                </p>
+                <table class="table" copy-attr="yes">
+                  <caption>
+                    테이블제목 - 순으로 정보를 제공하고 있습니다.
+                  </caption>
+                  <colgroup>
+                    <col class="w20p" />
+                    <col class="w20p" />
+                    <col class="w20p" />
+                    <col class="w20p" />
+                    <col class="w20p" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">타이틀 Medium</th>
+                      <th scope="col">bgcolor: #f4f5f9</th>
+                      <th scope="col">타이틀</th>
+                      <th scope="col">타이틀</th>
+                      <th scope="col">타이틀</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">타이틀 DemiLight</th>
+                      <td>국가안전보장회의 Light</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">bgcolor: #f9fafc</th>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">타이틀 DemiLight</th>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
 
-              <h5>세로형 .type1</h5>
-              <table class="table type1" copy-attr="yes">
-                <caption>
-                  테이블제목 - 순으로 정보를 제공하고 있습니다.
-                </caption>
-                <colgroup>
-                  <col class="w25p" />
-                  <col />
-                </colgroup>
-                <tbody>
-                  <tr>
-                    <th scope="row">타이틀</th>
-                    <td>
-                      <ul class="bu">
-                        <li>목록의 타이틀과 내용이 짧을때</li>
-                        <li>목록의 타이틀과 내용이 짧을때</li>
-                      </ul>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">타이틀</th>
-                    <td>
-                      <ul class="bu">
-                        <li>
-                          대통령은 국회에 출석하여 발언하거나 서한으로 의견...
-                        </li>
-                        <li>
-                          대통령은 국회에 출석하여 발언하거나 서한으로 의견...
-                        </li>
-                      </ul>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+                <h5>세로형 .type1</h5>
+                <table class="table type1" copy-attr="yes">
+                  <caption>
+                    테이블제목 - 순으로 정보를 제공하고 있습니다.
+                  </caption>
+                  <colgroup>
+                    <col class="w25p" />
+                    <col />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">타이틀</th>
+                      <td>
+                        <ul class="bu">
+                          <li>목록의 타이틀과 내용이 짧을때</li>
+                          <li>목록의 타이틀과 내용이 짧을때</li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">타이틀</th>
+                      <td>
+                        <ul class="bu">
+                          <li>
+                            대통령은 국회에 출석하여 발언하거나 서한으로 의견...
+                          </li>
+                          <li>
+                            대통령은 국회에 출석하여 발언하거나 서한으로 의견...
+                          </li>
+                        </ul>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
 
-              <h5>세로형 .type2</h5>
-              <table class="table type2" copy-attr="yes">
-                <caption>
-                  테이블제목 - 순으로 정보를 제공하고 있습니다.
-                </caption>
-                <colgroup>
-                  <col class="w25p" />
-                  <col />
-                </colgroup>
-                <tbody>
-                  <tr>
-                    <th scope="row">타이틀</th>
-                    <td>국가안전보장회의는 대통령이 주재한다.</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">타이틀</th>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">타이틀</th>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">타이틀</th>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
+                <h5>세로형 .type2</h5>
+                <table class="table type2" copy-attr="yes">
+                  <caption>
+                    테이블제목 - 순으로 정보를 제공하고 있습니다.
+                  </caption>
+                  <colgroup>
+                    <col class="w25p" />
+                    <col />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">타이틀</th>
+                      <td>국가안전보장회의는 대통령이 주재한다.</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">타이틀</th>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">타이틀</th>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">타이틀</th>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
 
-              <h5>
-                가로2줄형 (tr_over는 스크립트로 붙으니 table이라고만 쓰시면
-                됩니다)
-              </h5>
-              <table class="table" copy-attr="yes">
-                <caption>
-                  테이블제목 - 순으로 정보를 제공하고 있습니다.
-                </caption>
-                <colgroup>
-                  <col class="w20p" />
-                  <col class="w20p" />
-                  <col class="w20p" />
-                  <col class="w20p" />
-                  <col class="w20p" />
-                </colgroup>
-                <thead>
-                  <tr>
-                    <th scope="col" colspan="1" rowspan="2">타이틀 두줄일때</th>
-                    <th scope="col" colspan="2" rowspan="1">타이틀</th>
-                    <th scope="col" colspan="2" rowspan="1">타이틀</th>
-                  </tr>
-                  <tr>
-                    <th scope="col">타이틀</th>
-                    <th scope="col">타이틀</th>
-                    <th scope="col">타이틀</th>
-                    <th scope="col">타이틀</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td></td>
-                    <td>국가안전보장회의</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <td>국가안전보장회의</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
+                <h5>
+                  가로2줄형 (tr_over는 스크립트로 붙으니 table이라고만 쓰시면
+                  됩니다)
+                </h5>
+                <table class="table" copy-attr="yes">
+                  <caption>
+                    테이블제목 - 순으로 정보를 제공하고 있습니다.
+                  </caption>
+                  <colgroup>
+                    <col class="w20p" />
+                    <col class="w20p" />
+                    <col class="w20p" />
+                    <col class="w20p" />
+                    <col class="w20p" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col" colspan="1" rowspan="2">
+                        타이틀 두줄일때
+                      </th>
+                      <th scope="col" colspan="2" rowspan="1">타이틀</th>
+                      <th scope="col" colspan="2" rowspan="1">타이틀</th>
+                    </tr>
+                    <tr>
+                      <th scope="col">타이틀</th>
+                      <th scope="col">타이틀</th>
+                      <th scope="col">타이틀</th>
+                      <th scope="col">타이틀</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td></td>
+                      <td>국가안전보장회의</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td>국가안전보장회의</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
 
-              <h5>스크롤형 .table_scroll</h5>
-              <div class="table_scroll" copy-attr="yes">
-                <table class="table tr_over">
+                <h5>스크롤형 .table_scroll</h5>
+                <div class="table_scroll" copy-attr="yes">
+                  <table class="table tr_over">
+                    <caption>
+                      테이블제목 - 순으로 정보를 제공하고 있습니다.
+                    </caption>
+                    <thead>
+                      <tr>
+                        <th scope="col" rowspan="2">제목텍스트1</th>
+                        <th scope="col" rowspan="2">제목텍스트1</th>
+                        <th scope="col" colspan="2">제목텍스트1</th>
+                      </tr>
+                      <tr>
+                        <th scope="col">제목텍스트1</th>
+                        <th scope="col">제목텍스트1</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">내용 #1b5b3b</th>
+                        <td>내용 #111</td>
+                        <td>내용 #111</td>
+                        <td>내용 #111</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">내용 #1b5b3b</th>
+                        <td>내용 #111</td>
+                        <td>내용 #111</td>
+                        <td>내용 #111</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <h5>반응형 .responsive</h5>
+                <table class="table responsive">
                   <caption>
                     테이블제목 - 순으로 정보를 제공하고 있습니다.
                   </caption>
                   <thead>
                     <tr>
-                      <th scope="col" rowspan="2">제목텍스트1</th>
-                      <th scope="col" rowspan="2">제목텍스트1</th>
-                      <th scope="col" colspan="2">제목텍스트1</th>
-                    </tr>
-                    <tr>
+                      <th scope="col">제목텍스트1</th>
                       <th scope="col">제목텍스트1</th>
                       <th scope="col">제목텍스트1</th>
                     </tr>
@@ -548,160 +577,135 @@
                       <th scope="row">내용 #1b5b3b</th>
                       <td>내용 #111</td>
                       <td>내용 #111</td>
-                      <td>내용 #111</td>
                     </tr>
                     <tr>
                       <th scope="row">내용 #1b5b3b</th>
                       <td>내용 #111</td>
                       <td>내용 #111</td>
-                      <td>내용 #111</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <table class="table responsive">
+                  <caption>
+                    테이블제목 - 순으로 정보를 제공하고 있습니다.
+                  </caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">제목텍스트1</th>
+                      <th scope="col">제목텍스트1</th>
+                      <th scope="col">제목텍스트1</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td colspan="3">조회 결과가 존재하지 않습니다.</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
+              <div id="e" class="tab_content">
+                <!--버튼스타일-->
+                <h4>버튼</h4>
+                <h5>일반버튼</h5>
 
-              <h5>반응형 .responsive</h5>
-              <table class="table responsive">
-                <caption>
-                  테이블제목 - 순으로 정보를 제공하고 있습니다.
-                </caption>
-                <thead>
-                  <tr>
-                    <th scope="col">제목텍스트1</th>
-                    <th scope="col">제목텍스트1</th>
-                    <th scope="col">제목텍스트1</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">내용 #1b5b3b</th>
-                    <td>내용 #111</td>
-                    <td>내용 #111</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">내용 #1b5b3b</th>
-                    <td>내용 #111</td>
-                    <td>내용 #111</td>
-                  </tr>
-                </tbody>
-              </table>
-
-              <table class="table responsive">
-                <caption>
-                  테이블제목 - 순으로 정보를 제공하고 있습니다.
-                </caption>
-                <thead>
-                  <tr>
-                    <th scope="col">제목텍스트1</th>
-                    <th scope="col">제목텍스트1</th>
-                    <th scope="col">제목텍스트1</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td colspan="3">조회 결과가 존재하지 않습니다.</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div id="e" class="tab_content">
-              <!--버튼스타일-->
-              <h4>버튼</h4>
-              <h5>일반버튼</h5>
-
-              <h6>비활성</h6>
-              <a href="" class="btn disabl small" copy-attr="yes">작은버튼</a>
-              <a href="" class="btn disabl" copy-attr="yes">보통버튼</a>
-              <a href="" class="btn disabl large" copy-attr="yes">큰버튼</a>
-              <h6>선버튼</h6>
-              <a href="" class="btn small" copy-attr="yes">작은버튼</a>
-              <a href="" class="btn" copy-attr="yes">보통버튼</a>
-              <a href="" class="btn large" copy-attr="yes">큰버튼</a>
-              <h6>채운버튼</h6>
-              <a href="" class="btn type2 small" copy-attr="yes">작은버튼</a>
-              <a href="" class="btn type2" copy-attr="yes">강조버튼</a>
-              <a href="" class="btn type2 large" copy-attr="yes">큰버튼</a>
-              <a href="" class="btn type3" copy-attr="yes">클릭버튼</a>
-              <a href="" class="btn type4" copy-attr="yes">주의버튼</a>
-              <a href="" class="btn type5" copy-attr="yes">안내버튼</a>
-              <br />
-              <a
-                href=""
-                target="_blank"
-                title="새창"
-                class="ri_icon_btn small"
-                copy-attr="yes"
-              >
-                <span>바로가기</span>
-                <i class="ri-links-line"></i>
-              </a>
-              <a
-                href=""
-                target="_blank"
-                title="새창"
-                class="ri_icon_btn"
-                copy-attr="yes"
-              >
-                <span>바로가기</span>
-                <i class="ri-links-line"></i>
-              </a>
-              <a
-                href=""
-                target="_blank"
-                title="다운로드"
-                class="ri_icon_btn small"
-                copy-attr="yes"
-              >
-                <span>다운로드</span>
-                <i class="ri-download-cloud-line"></i>
-              </a>
-              <a
-                href=""
-                target="_blank"
-                title="다운로드"
-                class="ri_icon_btn"
-                copy-attr="yes"
-              >
-                <span>다운로드</span>
-                <i class="ri-download-cloud-line"></i>
-              </a>
-              <a
-                href=""
-                target="_blank"
-                title="새창"
-                class="ri_icon_btn"
-                copy-attr="yes"
-              >
-                <span>검색하기</span>
-                <i class="ri-search-line"></i>
-              </a>
-              <a
-                href=""
-                target="_blank"
-                title="인쇄"
-                class="ri_icon_btn"
-                copy-attr="yes"
-              >
-                <span>인쇄하기</span>
-                <i class="ri-printer-line"></i>
-              </a>
-            </div>
-            <div id="f" class="tab_content">
-              <!--폼스타일-->
-              <h4>폼스타일</h4>
-              <h5>인풋 텍스트</h5>
-              <div class="input" copy-attr="yes">
-                <input type="text" title="" placeholder="인풋박스" />
+                <h6>비활성</h6>
+                <a href="" class="btn disabl small" copy-attr="yes">작은버튼</a>
+                <a href="" class="btn disabl" copy-attr="yes">보통버튼</a>
+                <a href="" class="btn disabl large" copy-attr="yes">큰버튼</a>
+                <h6>선버튼</h6>
+                <a href="" class="btn small" copy-attr="yes">작은버튼</a>
+                <a href="" class="btn" copy-attr="yes">보통버튼</a>
+                <a href="" class="btn large" copy-attr="yes">큰버튼</a>
+                <h6>채운버튼</h6>
+                <a href="" class="btn type2 small" copy-attr="yes">작은버튼</a>
+                <a href="" class="btn type2" copy-attr="yes">강조버튼</a>
+                <a href="" class="btn type2 large" copy-attr="yes">큰버튼</a>
+                <a href="" class="btn type3" copy-attr="yes">type3</a>
+                <a href="" class="btn type4" copy-attr="yes">주의버튼</a>
+                <a href="" class="btn type5" copy-attr="yes">안내버튼</a>
+                <br />
+                <a
+                  href=""
+                  target="_blank"
+                  title="새창"
+                  class="ri_icon_btn small"
+                  copy-attr="yes"
+                >
+                  <span>바로가기</span>
+                  <i class="ri-links-line"></i>
+                </a>
+                <a
+                  href=""
+                  target="_blank"
+                  title="새창"
+                  class="ri_icon_btn"
+                  copy-attr="yes"
+                >
+                  <span>바로가기</span>
+                  <i class="ri-links-line"></i>
+                </a>
+                <a
+                  href=""
+                  target="_blank"
+                  title="다운로드"
+                  class="ri_icon_btn small"
+                  copy-attr="yes"
+                >
+                  <span>다운로드</span>
+                  <i class="ri-download-cloud-line"></i>
+                </a>
+                <a
+                  href=""
+                  target="_blank"
+                  title="다운로드"
+                  class="ri_icon_btn"
+                  copy-attr="yes"
+                >
+                  <span>다운로드</span>
+                  <i class="ri-download-cloud-line"></i>
+                </a>
+                <a
+                  href=""
+                  target="_blank"
+                  title="새창"
+                  class="ri_icon_btn"
+                  copy-attr="yes"
+                >
+                  <span>검색하기</span>
+                  <i class="ri-search-line"></i>
+                </a>
+                <a
+                  href=""
+                  target="_blank"
+                  title="인쇄"
+                  class="ri_icon_btn"
+                  copy-attr="yes"
+                >
+                  <span>인쇄하기</span>
+                  <i class="ri-printer-line"></i>
+                </a>
               </div>
-              <div class="input" copy-attr="yes">
+              <div id="f" class="tab_content">
+                <!--폼스타일-->
+                <h4>폼스타일</h4>
+                <h5>인풋 텍스트</h5>
+                <input
+                  type="text"
+                  title=""
+                  class="input"
+                  placeholder="인풋박스"
+                  copy-attr="yes"
+                />
                 <input
                   type="text"
                   title=""
                   placeholder="인풋박스 비활성"
                   disabled=""
+                  class="input type2"
+                  copy-attr="yes"
                 />
-              </div>
-              <!--
+                <!--
                         <div class="input group_date" copy-attr='yes'>
                             <input type="text" title="" placeholder="인풋박스">
                             <div class="input_split">
@@ -709,1245 +713,396 @@
                             </div>
                         </div>
                         -->
-              <div class="input icon" copy-attr="yes">
-                <input type="text" title="" placeholder="인풋박스" />
-                <div class="input_split">
-                  <button type="button">
-                    <i class="ri-calendar-line"></i>
+                <div class="input file" copy-attr="yes">
+                  <input type="file" placeholder="파일찾기" id="file1" />
+                  <label for="file1" class="input"></label>
+                  <label for="file1" class="btn">다운로드</label>
+                </div>
+                <h5>셀렉트</h5>
+                <div class="input" copy-attr="yes">
+                  <select title="">
+                    <option>셀렉트 목록</option>
+                    <option>옵션 1</option>
+                    <option>옵션 2</option>
+                    <option>옵션 3</option>
+                  </select>
+                </div>
+                <div class="input" copy-attr="yes">
+                  <select disabled>
+                    <option>셀렉트 비활성</option>
+                    <option>옵션 1</option>
+                    <option>옵션 2</option>
+                    <option>옵션 3</option>
+                  </select>
+                </div>
+                <h6>스타일셀렉트박스</h6>
+                <div class="style_select_box" copy-attr="yes">
+                  <button
+                    type="button"
+                    title="하위메뉴 열기"
+                    class="search_select"
+                  >
+                    셀렉트박스 선택
                   </button>
-                </div>
-              </div>
-              <div class="input file" copy-attr="yes">
-                <input type="text" title="" placeholder="파일찾기" />
-                <button type="button">다운로드</button>
-              </div>
-              <h5>셀렉트</h5>
-              <div class="input" copy-attr="yes">
-                <select title="">
-                  <option>셀렉트 목록</option>
-                  <option>옵션 1</option>
-                  <option>옵션 2</option>
-                  <option>옵션 3</option>
-                </select>
-              </div>
-              <div class="input" copy-attr="yes">
-                <select disabled>
-                  <option>셀렉트 비활성</option>
-                  <option>옵션 1</option>
-                  <option>옵션 2</option>
-                  <option>옵션 3</option>
-                </select>
-              </div>
-              <h6>스타일셀렉트박스</h6>
-              <div class="style_select_box" copy-attr="yes">
-                <button
-                  type="button"
-                  title="하위메뉴 열기"
-                  class="search_select"
-                >
-                  셀랙트박스 선택
-                </button>
-                <div class="search_list">
-                  <ul>
-                    <li class="select_item">
-                      <button type="button" class="select_anchor">
-                        샐랙트 목록1
-                      </button>
-                    </li>
-                    <li class="select_item">
-                      <button type="button" class="select_anchor">
-                        샐랙트 목록2
-                      </button>
-                    </li>
-                    <li class="select_item">
-                      <button type="button" class="select_anchor">
-                        샐랙트 목록3
-                      </button>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <h5>라디오버튼</h5>
-              <span class="input" copy-attr="yes">
-                <input type="radio" name="radio" id="radio1" />
-                <label for="radio1">인풋박스1</label>
-              </span>
-              <span class="input" copy-attr="yes">
-                <input type="radio" name="radio" id="radio2" />
-                <label for="radio2">인풋박스2</label>
-              </span>
-              <span class="input" copy-attr="yes">
-                <input type="radio" id="radio3" disabled />
-                <label for="radio3">인풋 비활성</label>
-              </span>
-              <span class="input type2" copy-attr="yes">
-                <input type="radio" id="radio4" disabled />
-                <label for="radio4">인풋 비활성 type2</label>
-              </span>
-              <h5>체크박스</h5>
-              <span class="input" copy-attr="yes">
-                <input type="checkbox" name="checkbox" id="check1" />
-                <label for="check1">체크박스</label>
-              </span>
-              <span class="input" copy-attr="yes">
-                <input type="checkbox" id="check2" disabled />
-                <label for="check2">체크 비활성</label>
-              </span>
-              <span class="input type2" copy-attr="yes">
-                <input type="checkbox" id="check3" disabled />
-                <label for="check3">체크 비활성 type2</label>
-              </span>
-            </div>
-            <div id="g" class="tab_content">
-              <!--박스디자인-->
-              <h4>박스</h4>
-              <h5>.box.basic (개요박스)</h5>
-              <div class="box basic" copy-attr="yes">
-                <div class="box_wrap">
-                  <h3 class="box_title h0">청렴 동대문이란?</h3>
-                  <div class="box_text">
-                    <p>
-                      계엄을 선포한 때에는 대통령은 지체없이 국회에 통고하여야
-                      한다. 정당의 목적이나 활동이 민주적 기본질서에 위배될
-                      때에는 정부는 헌법재판소에 그 해산을 제소할 수 있고,
-                      정당은 헌법재판소의 심판에 의하여 해산된다.<br />
-                      재의의 요구가 있을 때에는 국회는 재의에 붙이고,
-                      재적의원과반수의 출석과 출석의원 3분의 2 이상의 찬성으로
-                      전과 같은 의결을 하면 그 법률안은 법률로서 확정된다.
-                    </p>
-
-                    <p class="warning">
-                      <span class="skip">안내사항</span>안내사항이 있을 때 내용
-                      넣기
-                    </p>
-
-                    <a
-                      href=""
-                      target="_blank"
-                      title="새창"
-                      class="ri_icon_btn small"
-                      >바로가기<i class="ri-links-line"></i
-                    ></a>
-                    <a
-                      href=""
-                      target="_blank"
-                      title="다운로드"
-                      class="ri_icon_btn small"
-                      >다운로드<i class="ri-download-cloud-line"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-              <p class="blt">박스 아이콘</p>
-              <br />
-              <ul class="box_icon_list">
-                <li>
-                  <img src="/site/www/images/template/box_icon.png" />
-                  <br />
-                  <span>box basic</span>
-                </li>
-                <li>
-                  <img src="/site/www/images/template/box_icon2.png" />
-                  <br />
-                  <span>box basic n2</span>
-                </li>
-                <li>
-                  <img src="/site/www/images/template/box_icon3.png" />
-                  <br />
-                  <span>box basic n3</span>
-                </li>
-              </ul>
-
-              <h5>.box.type1</h5>
-              <div class="box type1" copy-attr="yes">
-                <div class="box_title">박스 안 타이틀</div>
-                <p class="box_text">
-                  심장의 무엇을 보이는 황금시대의 사는가 이것이다. 위하여 인생에
-                  천고에 것이다.보라, 듣는다. 얼음 물방아 불러 대고, 얼음이 꾸며
-                  것이다. 아름답고 낙원을 구하지 것이다. 하는 우리 피가 꽃
-                  날카로우나 이것이야말로 못할 쓸쓸하랴? 거선의 그들은 피어나기
-                  수 있는 청춘은 대한 소담스러운 이상의 있으랴? 따뜻한 불어 없는
-                  이것이다. 우는 품으며, 이상이 그들은 청춘에서만 소담스러운
-                  인생에 원대하고, 뿐이다. 끓는 그러므로 피어나는 못하다 것은
-                  미인을 곳이 힘차게 교향악이다.
-                </p>
-              </div>
-              <h5>.box.type2</h5>
-              <div class="box type2" copy-attr="yes">
-                <div class="box_title">박스 안 타이틀</div>
-                <p class="box_text">
-                  심장의 무엇을 보이는 황금시대의 사는가 이것이다. 위하여 인생에
-                  천고에 것이다.보라, 듣는다. 얼음 물방아 불러 대고, 얼음이 꾸며
-                  것이다. 아름답고 낙원을 구하지 것이다. 하는 우리 피가 꽃
-                  날카로우나 이것이야말로 못할 쓸쓸하랴? 거선의 그들은 피어나기
-                  수 있는 청춘은 대한 소담스러운 이상의 있으랴? 따뜻한 불어 없는
-                  이것이다. 우는 품으며, 이상이 그들은 청춘에서만 소담스러운
-                  인생에 원대하고, 뿐이다. 끓는 그러므로 피어나는 못하다 것은
-                  미인을 곳이 힘차게 교향악이다.
-                </p>
-              </div>
-              <h5>.box.type3</h5>
-              <div class="box type3" copy-attr="yes">
-                <div class="box_title">박스 안 타이틀</div>
-                <p class="box_text">
-                  심장의 무엇을 보이는 황금시대의 사는가 이것이다. 위하여 인생에
-                  천고에 것이다.보라, 듣는다. 얼음 물방아 불러 대고, 얼음이 꾸며
-                  것이다. 아름답고 낙원을 구하지 것이다. 하는 우리 피가 꽃
-                  날카로우나 이것이야말로 못할 쓸쓸하랴? 거선의 그들은 피어나기
-                  수 있는 청춘은 대한 소담스러운 이상의 있으랴? 따뜻한 불어 없는
-                  이것이다. 우는 품으며, 이상이 그들은 청춘에서만 소담스러운
-                  인생에 원대하고, 뿐이다. 끓는 그러므로 피어나는 못하다 것은
-                  미인을 곳이 힘차게 교향악이다.
-                </p>
-              </div>
-              <h5>.box.bg</h5>
-              <div class="box bg" copy-attr="yes">
-                <div class="box_title">박스 안 타이틀</div>
-                <p class="box_text">
-                  심장의 무엇을 보이는 황금시대의 사는가 이것이다. 위하여 인생에
-                  천고에 것이다.보라, 듣는다. 얼음 물방아 불러 대고, 얼음이 꾸며
-                  것이다. 아름답고 낙원을 구하지 것이다. 하는 우리 피가 꽃
-                  날카로우나 이것이야말로 못할 쓸쓸하랴? 거선의 그들은 피어나기
-                  수 있는 청춘은 대한 소담스러운 이상의 있으랴? 따뜻한 불어 없는
-                  이것이다. 우는 품으며, 이상이 그들은 청춘에서만 소담스러운
-                  인생에 원대하고, 뿐이다. 끓는 그러므로 피어나는 못하다 것은
-                  미인을 곳이 힘차게 교향악이다.
-                </p>
-              </div>
-
-              <h5>icon_box_list</h5>
-              <div class="box icon_box_list" copy-attr="yes">
-                <div class="box_wrap">
-                  <div class="box_item">
-                    <div class="box_cont">
-                      <div class="box_tit">박스 안 타이틀</div>
-                      <div class="box_txt">
-                        15px 좌우 여백 최소 20px 심장의 무엇을 보이는
-                      </div>
-                    </div>
-                  </div>
-                  <div class="box_item">
-                    <div class="box_cont">
-                      <div class="box_tit">박스 안 타이틀</div>
-                      <div class="box_txt">
-                        15px 좌우 여백 최소 20px 심장의 무엇을 보이는
-                      </div>
-                    </div>
-                  </div>
-                  <div class="box_item">
-                    <div class="box_cont">
-                      <div class="box_tit">박스 안 타이틀</div>
-                      <div class="box_txt">15px 좌우 여백 최소 20px</div>
-                    </div>
-                  </div>
-                  <div class="box_item">
-                    <div class="box_cont">
-                      <div class="box_tit">박스 안 타이틀</div>
-                      <div class="box_txt">
-                        심장의 무엇을 보이는 황금시대의 사는가 이것이다.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <h5>icon_box</h5>
-              <div class="col_box" copy-attr="yes">
-                <div class="col_item">
-                  <div class="box_cont">
-                    <div class="title">박스 안 타이틀</div>
-                    <div class="text">
-                      15px 좌우 여백 최소 20px 심장의 무엇을 보이는
-                    </div>
-                  </div>
-                </div>
-                <div class="col_item even">
-                  <div class="box_cont">
-                    <div class="title">박스 안 타이틀</div>
-                    <div class="text">
-                      심장의 무엇을 보이는 황금시대의 사는가 이것이다.
-                    </div>
-                  </div>
-                </div>
-                <div class="col_item">
-                  <div class="box_cont">
-                    <div class="title">박스 안 타이틀</div>
-                    <div class="text">
-                      심장의 무엇을 보이는 황금시대의 사는가 이것이다. 사는가
-                      이것이다.
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <h5>안내박스</h5>
-              <div class="guide_box" copy-attr="yes">
-                <div class="top_tit">
-                  <span>알려드립니다!</span>
-                </div>
-                <div class="cont">
-                  <p>
-                    심장의 무엇을 보이는 황금시대의 사는가 이것이다. 위하여
-                    인생에 천고에 것이다.보라, 듣는다. 얼음 물방아 불러 대고,
-                    얼음이 꾸며 것이다. 아름답고 낙원을 구하지 것이다.
-                  </p>
-                  <ul class="bu">
-                    <li>
-                      대통령은 국회에 출석하여 발언하거나 서한으로 의견...
-                    </li>
-                    <li>
-                      국가안전보장회의는 대통령이 주재한다. 군인 또는 군...
-                    </li>
-                    <li>
-                      국회의원은 그 지위를 남용하여 국가·공공단체 또는 ...
-                    </li>
-                    <li>
-                      모든 국민은 근로의 의무를 진다. 국가는 근로의 의무...
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <h4>.box.carinfo</h4>
-              <div class="box carinfo" copy-attr="yes">
-                <div class="inner">
-                  <div class="title">거주자우선주차신청</div>
-                  <div class="text">
-                    <p>
-                      동대문구내 불법 주/정차 위반차량 지도, 단속 및 과태료 부과
-                      안내 및 관련정보를 서비스를 제공해드립니다.
-                    </p>
-                    <ul class="bu">
-                      <li>주정차위반조회(단속자료 및 위반사진 조회)</li>
-                      <li>의견진술/이의신청 등록</li>
+                  <div class="search_list">
+                    <ul>
+                      <li class="select_item">
+                        <button type="button" class="select_anchor">
+                          샐랙트 목록1
+                        </button>
+                      </li>
+                      <li class="select_item">
+                        <button type="button" class="select_anchor">
+                          샐랙트 목록2
+                        </button>
+                      </li>
+                      <li class="select_item">
+                        <button type="button" class="select_anchor">
+                          샐랙트 목록3
+                        </button>
+                      </li>
                     </ul>
                   </div>
-                  <a href="" target="_blank" title="새창" class="ri_icon_btn">
-                    <span>바로가기</span>
-                    <i class="ri-links-line"></i>
-                  </a>
                 </div>
-              </div>
 
-              <div class="box carinfo" copy-attr="yes">
-                <div class="inner">
-                  <div class="title">거주자우선주차신청</div>
-                  <div class="text">
+                <h5>라디오버튼</h5>
+                <span class="input" copy-attr="yes">
+                  <input type="radio" name="radio" id="radio1" checked />
+                  <label for="radio1">인풋박스1</label>
+                </span>
+                <span class="input" copy-attr="yes">
+                  <input type="radio" name="radio" id="radio2" />
+                  <label for="radio2">인풋박스2</label>
+                </span>
+                <span class="input" copy-attr="yes">
+                  <input type="radio" id="radio3" disabled />
+                  <label for="radio3">인풋 비활성</label>
+                </span>
+                <span class="input" copy-attr="yes">
+                  <input type="radio" id="radio4" disabled checked />
+                  <label for="radio4">인풋 비활성 - checked</label>
+                </span>
+                <h5>체크박스</h5>
+                <span class="input" copy-attr="yes">
+                  <input type="checkbox" name="checkbox" id="check1" checked />
+                  <label for="check1">체크박스</label>
+                </span>
+                <span class="input" copy-attr="yes">
+                  <input type="checkbox" name="checkbox" id="check4" />
+                  <label for="check4">체크박스</label>
+                </span>
+                <span class="input" copy-attr="yes">
+                  <input type="checkbox" id="check2" disabled />
+                  <label for="check2">체크 비활성</label>
+                </span>
+                <span class="input" copy-attr="yes">
+                  <input type="checkbox" id="check3" disabled checked />
+                  <label for="check3">체크 비활성 - checked</label>
+                </span>
+              </div>
+              <div id="g" class="tab_content">
+                <!--박스디자인-->
+                <h4>박스</h4>
+
+                <h5>.box.type1</h5>
+                <div class="box type1" copy-attr="yes">
+                  <div class="box_title">박스 안 타이틀</div>
+                  <p class="box_text">
+                    심장의 무엇을 보이는 황금시대의 사는가 이것이다. 위하여
+                    인생에 천고에 것이다.보라, 듣는다. 얼음 물방아 불러 대고,
+                    얼음이 꾸며 것이다. 아름답고 낙원을 구하지 것이다. 하는 우리
+                    피가 꽃 날카로우나 이것이야말로 못할 쓸쓸하랴? 거선의 그들은
+                    피어나기 수 있는 청춘은 대한 소담스러운 이상의 있으랴?
+                    따뜻한 불어 없는 이것이다. 우는 품으며, 이상이 그들은
+                    청춘에서만 소담스러운 인생에 원대하고, 뿐이다. 끓는 그러므로
+                    피어나는 못하다 것은 미인을 곳이 힘차게 교향악이다.
+                  </p>
+                </div>
+
+                <h5>안내박스</h5>
+                <div class="guide_box" copy-attr="yes">
+                  <div class="cont">
                     <p>
-                      동대문구내 불법 주/정차 위반차량 지도, 단속 및 과태료 부과
-                      안내 및 관련정보를 서비스를 제공해드립니다.
-                    </p>
-                  </div>
-                  <a href="" target="_blank" title="새창" class="ri_icon_btn">
-                    <span>바로가기</span>
-                    <i class="ri-links-line"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div id="h" class="tab_content">
-              <!--이미지박스-->
-              <h4>이미지 박스</h4>
-              <div class="image_box" copy-attr="yes">
-                <div class="inner">
-                  <div class="image">
-                    <img
-                      src="/site/www/images/template/box_img.png"
-                      alt="대체 텍스트"
-                    />
-                  </div>
-                  <div class="cont">
-                    <div class="title">박스 안 타이틀</div>
-                    <div class="text">
-                      15px 좌우 여백 최소 40px<br />
-                      심장의 무엇을 보이는
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <h5>목록형</h5>
-              <div class="image_box type2" copy-attr="yes">
-                <div class="inner">
-                  <div class="img_item">
-                    <div class="image">
-                      <img
-                        src="/site/www/images/template/003.jpg"
-                        alt="대체 텍스트"
-                      />
-                    </div>
-                    <div class="cont">
-                      <div class="title">박스 안 타이틀</div>
-                      <div class="text">15px 좌우 여백 최소 10px</div>
-                    </div>
-                  </div>
-                  <div class="img_item">
-                    <div class="image">
-                      <img
-                        src="/site/www/images/template/box_img.png"
-                        alt="대체 텍스트"
-                      />
-                    </div>
-                    <div class="cont">
-                      <div class="title">박스 안 타이틀</div>
-                      <div class="text">15px 좌우 여백 최소 10px</div>
-                    </div>
-                  </div>
-                  <div class="img_item">
-                    <div class="image">
-                      <img
-                        src="/site/www/images/template/box_img.png"
-                        alt="대체 텍스트"
-                      />
-                    </div>
-                    <div class="cont">
-                      <div class="title">박스 안 타이틀</div>
-                      <div class="text">15px 좌우 여백 최소 10px</div>
-                    </div>
-                  </div>
-                  <div class="img_item">
-                    <div class="image">
-                      <img
-                        src="/site/www/images/template/box_img.png"
-                        alt="대체 텍스트"
-                      />
-                    </div>
-                    <div class="cont">
-                      <div class="title">박스 안 타이틀</div>
-                      <div class="text">15px 좌우 여백 최소 10px</div>
-                    </div>
-                  </div>
-                  <div class="img_item">
-                    <div class="image">
-                      <img
-                        src="/site/www/images/template/box_img.png"
-                        alt="대체 텍스트"
-                      />
-                    </div>
-                    <div class="cont">
-                      <div class="title">박스 안 타이틀</div>
-                      <div class="text">15px 좌우 여백 최소 10px</div>
-                    </div>
-                  </div>
-                  <div class="img_item">
-                    <div class="image">
-                      <img
-                        src="/site/www/images/template/box_img.png"
-                        alt="대체 텍스트"
-                      />
-                    </div>
-                    <div class="cont">
-                      <div class="title">박스 안 타이틀</div>
-                      <div class="text">15px 좌우 여백 최소 10px</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <h5>이미지 + 텍스트 조합</h5>
-              <div class="image_box type3" copy-attr="yes">
-                <div class="box_wrap">
-                  <div class="image">
-                    <img
-                      src="/site/www/images/template/box_img.png"
-                      alt="대체 텍스트"
-                    />
-                  </div>
-                  <div class="cont">
-                    <div class="title">박스 안 타이틀</div>
-                    <div class="text">
-                      15px 좌우 여백 최소 10px
-                      <ul class="bu">
-                        <li>가나다라</li>
-                        <li>가나다라</li>
-                        <li>가나다라</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <h5>이미지확대보기</h5>
-              <div class="img_zoombox img_mobile">
-                <img src="/site/www/images/template/003.jpg" alt=" 이미지" />
-              </div>
-            </div>
-            <div id="i" class="tab_content">
-              <!--스텝박스-->
-              <h4>스텝박스</h4>
-              <h5>가로형</h5>
-              <h6>.step</h6>
-              <div class="step" copy-attr="yes">
-                <div class="step_wrap">
-                  <ol class="step_list">
-                    <li class="step_item">
-                      <div class="step_content">
-                        <div class="tit"><span>단계 타이틀</span></div>
-                        <div class="txt">단계 설명 설명입니다.</div>
-                      </div>
-                    </li>
-                    <li class="step_item">
-                      <div class="step_content">
-                        <div class="tit"><span>단계 타이틀</span></div>
-                      </div>
-                    </li>
-                    <li class="step_item">
-                      <div class="step_content">
-                        <div class="tit"><span>단계 타이틀</span></div>
-                        <div class="txt">단계 설명 설명입니다.</div>
-                      </div>
-                    </li>
-                    <li class="step_item">
-                      <div class="step_content">
-                        <div class="tit"><span>단계 타이틀</span></div>
-                        <div class="txt">단계 설명 설명입니다.</div>
-                      </div>
-                    </li>
-                    <li class="step_item">
-                      <div class="step_content">
-                        <div class="tit"><span>단계 타이틀</span></div>
-                        <div class="txt">단계 설명 설명입니다.</div>
-                      </div>
-                    </li>
-                    <li class="step_item">
-                      <div class="step_content">
-                        <div class="tit"><span>단계 타이틀</span></div>
-                        <div class="txt">단계 설명 설명입니다.</div>
-                      </div>
-                    </li>
-                    <li class="step_item">
-                      <div class="step_content">
-                        <div class="tit"><span>단계 타이틀</span></div>
-                        <div class="txt">단계 설명 설명입니다.</div>
-                      </div>
-                    </li>
-                    <li class="step_item">
-                      <div class="step_content">
-                        <div class="tit"><span>단계 타이틀</span></div>
-                        <div class="txt">단계 설명 설명입니다.</div>
-                      </div>
-                    </li>
-                  </ol>
-                </div>
-              </div>
-              <h6>.step.row3</h6>
-              <div class="step row3" copy-attr="yes">
-                <div class="step_wrap">
-                  <ol class="step_list">
-                    <li class="step_item">
-                      <div class="step_content">
-                        <div class="tit"><span>단계 타이틀</span></div>
-                        <div class="txt">단계 설명 설명입니다.</div>
-                      </div>
-                    </li>
-                    <li class="step_item">
-                      <div class="step_content">
-                        <div class="tit"><span>단계 타이틀</span></div>
-                      </div>
-                    </li>
-                    <li class="step_item">
-                      <div class="step_content">
-                        <div class="tit"><span>단계 타이틀</span></div>
-                        <div class="txt">단계 설명 설명입니다.</div>
-                      </div>
-                    </li>
-                    <li class="step_item">
-                      <div class="step_content">
-                        <div class="tit"><span>단계 타이틀</span></div>
-                        <div class="txt">단계 설명 설명입니다.</div>
-                      </div>
-                    </li>
-                    <li class="step_item">
-                      <div class="step_content">
-                        <div class="tit"><span>단계 타이틀</span></div>
-                        <div class="txt">단계 설명 설명입니다.</div>
-                      </div>
-                    </li>
-                    <li class="step_item">
-                      <div class="step_content">
-                        <div class="tit"><span>단계 타이틀</span></div>
-                        <div class="txt">단계 설명 설명입니다.</div>
-                      </div>
-                    </li>
-                  </ol>
-                </div>
-              </div>
-              <h6>아이콘+텍스트 .step.type2</h6>
-              <div class="step type2" copy-attr="yes">
-                <div class="step_wrap">
-                  <ol class="step_list">
-                    <li class="step_item">
-                      <div class="step_content">
-                        <div class="tit"><span>단계 타이틀</span></div>
-                        <div class="txt">단계 설명 설명입니다.</div>
-                      </div>
-                    </li>
-                    <li class="step_item">
-                      <div class="step_content">
-                        <div class="tit"><span>단계 타이틀</span></div>
-                        <div class="txt">단계 설명 설명입니다.</div>
-                      </div>
-                    </li>
-                    <li class="step_item">
-                      <div class="step_content">
-                        <div class="tit"><span>단계 타이틀</span></div>
-                        <div class="txt">
-                          단계 설명 설명입니다.단계 설명 설명입니다.단계 설명
-                          설명입니다.단계 설명 설명입니다.
-                        </div>
-                      </div>
-                    </li>
-                    <li class="step_item">
-                      <div class="step_content">
-                        <div class="tit"><span>단계 타이틀</span></div>
-                        <div class="txt">단계 설명 설명입니다.</div>
-                      </div>
-                    </li>
-                  </ol>
-                </div>
-              </div>
-
-              <h5>세로형</h5>
-              <h6>.step.type3</h6>
-              <div class="step type3" copy-attr="yes">
-                <div class="step_wrap">
-                  <ol class="step_list clearfix">
-                    <li class="step_box">
-                      <div class="step_item">
-                        <div class="step_content">
-                          <div class="title">단계 타이틀</div>
-                        </div>
-                      </div>
-                      <div class="step_process">
-                        <ul class="bu">
-                          <li>
-                            대통령은 국회에 출석하여 발언하거나 서한으로 의견...
-                          </li>
-                          <li>
-                            국가안전보장회의는 대통령이 주재한다. 군인 또는
-                            군...
-                          </li>
-                          <li>
-                            국가안전보장회의는 대통령이 주재한다. 군인 또는
-                            군...
-                          </li>
-                          <li>
-                            국가안전보장회의는 대통령이 주재한다. 군인 또는
-                            군...
-                          </li>
-                          <li>
-                            국가안전보장회의는 대통령이 주재한다. 군인 또는
-                            군...
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                    <li class="step_box clearfix">
-                      <div class="step_item">
-                        <div class="step_content">
-                          <div class="title">단계 타이틀</div>
-                        </div>
-                      </div>
-                      <div class="step_process">
-                        <div class="text">
-                          단계 설명 설명 입니다 설명설명입니다
-                        </div>
-                      </div>
-                    </li>
-                    <li class="step_box clearfix">
-                      <div class="step_item">
-                        <div class="step_content">
-                          <div class="title">단계 타이틀</div>
-                        </div>
-                      </div>
-                      <div class="step_process">
-                        <div class="text">
-                          단계 설명 설명 입니다 설명설명입니다
-                        </div>
-                        <ul class="bu">
-                          <li>
-                            대통령은 국회에 출석하여 발언하거나 서한으로 의견...
-                          </li>
-                          <li>
-                            국가안전보장회의는 대통령이 주재한다. 군인 또는
-                            군...
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                    <li class="step_box clearfix">
-                      <div class="step_item">
-                        <div class="step_content">
-                          <div class="title">단계 타이틀</div>
-                        </div>
-                      </div>
-                      <div class="step_process">
-                        <div class="text">
-                          단계 설명 설명 입니다 설명설명입니다
-                        </div>
-                      </div>
-                    </li>
-                  </ol>
-                </div>
-              </div>
-            </div>
-            <div id="j" class="tab_content">
-              <!--기타-->
-              <h4>라인(.line .line2)</h4>
-              <div class="line"></div>
-              <div class="line2"></div>
-
-              <h4>콘텐츠 내 안내</h4>
-              <h5>.box.point_box</h5>
-              <div class="emphasis" copy-attr="yes">
-                <div class="title">
-                  <i class="ri-phone-line"></i>
-                  <span>문의사항</span>
-                </div>
-                <div class="cont_box">
-                  <div class="cont"><span>민원과 000-000-0000</span></div>
-                </div>
-              </div>
-              <div class="box point_box" copy-attr="yes">
-                <div class="emphasis">
-                  <div class="title">
-                    <i class="ri-phone-line"></i>
-                    <span>문의사항</span>
-                  </div>
-                  <div class="cont_box">
-                    <div class="cont">
-                      <span>민원과 000-000-0000 / 민원과 000-000-0000</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <h5>.box.point_box.type2</h5>
-              <div class="box point_box type2" copy-attr="yes">
-                <div class="emphasis">
-                  <div class="title">
-                    <i class="ri-file-line"></i>
-                    <span>관련서류</span>
-                  </div>
-                  <div class="cont_box">
-                    <div class="cont"><span>관련서류 명칭명칭</span></div>
-                  </div>
-                </div>
-                <a
-                  href=""
-                  target="_blank"
-                  title="다운로드"
-                  class="emp_btn download"
-                  ><span>다운로드</span></a
-                >
-              </div>
-              <div class="box point_box type2" copy-attr="yes">
-                <div class="emphasis">
-                  <div class="title">
-                    <i class="ri-computer-line"></i>
-                    <span>홈페이지</span>
-                  </div>
-                  <div class="cont_box">
-                    <div class="cont"><span>전자정부 홈페이지</span></div>
-                  </div>
-                </div>
-                <a href="" target="_blank" title="새창" class="emp_btn homepage"
-                  ><span>바로가기</span></a
-                >
-              </div>
-
-              <h5>.col_list_box</h5>
-              <div class="col_list_box" copy-attr="yes">
-                <div class="box download">
-                  <div class="cont_box">
-                    <i class="ri-file-line"></i>
-                    <span>관련서류 명칭명칭</span>
-                  </div>
-                  <a
-                    href=""
-                    target="_blank"
-                    title="다운로드"
-                    class="emp_btn download"
-                    ><span>다운로드</span></a
-                  >
-                </div>
-                <div class="box download">
-                  <div class="cont_box">
-                    <i class="ri-file-line"></i>
-                    <span>관련서류 명칭명칭</span>
-                  </div>
-                  <a
-                    href=""
-                    target="_blank"
-                    title="다운로드"
-                    class="emp_btn download"
-                    ><span>다운로드</span></a
-                  >
-                </div>
-                <div class="box download">
-                  <div class="cont_box">
-                    <i class="ri-file-line"></i>
-                    <span>관련서류 명칭명칭</span>
-                  </div>
-                  <a
-                    href=""
-                    target="_blank"
-                    title="다운로드"
-                    class="emp_btn download"
-                    ><span>다운로드</span></a
-                  >
-                </div>
-                <div class="box download">
-                  <div class="cont_box">
-                    <i class="ri-file-line"></i>
-                    <span>관련서류 명칭명칭</span>
-                  </div>
-                  <a
-                    href=""
-                    target="_blank"
-                    title="다운로드"
-                    class="emp_btn download"
-                    ><span>다운로드</span></a
-                  >
-                </div>
-              </div>
-
-              <div class="col_list_box" copy-attr="yes">
-                <div class="box homepage">
-                  <div class="cont_box">
-                    <i class="ri-computer-line"></i>
-                    <span>전자정부 홈페이지</span>
-                  </div>
-                  <a
-                    href=""
-                    target="_blank"
-                    title="새창"
-                    class="emp_btn download"
-                    ><span>바로가기</span></a
-                  >
-                </div>
-                <div class="box homepage">
-                  <div class="cont_box">
-                    <i class="ri-computer-line"></i>
-                    <span>전자정부 홈페이지</span>
-                  </div>
-                  <a
-                    href=""
-                    target="_blank"
-                    title="새창"
-                    class="emp_btn download"
-                    ><span>바로가기</span></a
-                  >
-                </div>
-                <div class="box homepage">
-                  <div class="cont_box">
-                    <i class="ri-computer-line"></i>
-                    <span>전자정부 홈페이지</span>
-                  </div>
-                  <a
-                    href=""
-                    target="_blank"
-                    title="새창"
-                    class="emp_btn download"
-                    ><span>바로가기</span></a
-                  >
-                </div>
-                <div class="box homepage">
-                  <div class="cont_box">
-                    <i class="ri-computer-line"></i>
-                    <span>전자정부 홈페이지</span>
-                  </div>
-                  <a
-                    href=""
-                    target="_blank"
-                    title="새창"
-                    class="emp_btn download"
-                    ><span>바로가기</span></a
-                  >
-                </div>
-              </div>
-
-              <h4>레이어 팝업</h4>
-              <button type="button" class="btn small popup_btn">
-                팝업버튼
-              </button>
-              <div class="popup">
-                <div class="popup_wrap">
-                  <div class="pop_inner">
-                    <h3 class="popup_title h0">여기는 팝업 타이틀</h3>
-                    <div class="popup_con">
-                      여기는 팝업내용입니다 <br />
-                      팝업버튼 바로아래에 .popup을 넣어주세요~
-                    </div>
-
-                    <input type="button" class="popup_close" value="닫기" />
-                  </div>
-                </div>
-              </div>
-
-              <h4>지도보기</h4>
-              <div class="map_box" copy-attr="yes">
-                <div class="map_wrap">지도영역</div>
-                <div class="info_list">
-                  <ul class="clearfix">
-                    <li class="info">
-                      <i class="ri-map-pin-2-fill"></i>
-                      <span class="tit">주소</span>
-                      <span class="txt"
-                        >서울특별시 동대문구 천호대로 145 (용두동)
-                        우)02565</span
-                      >
-                    </li>
-                    <li class="info">
-                      <i class="ri-phone-fill"></i>
-                      <span class="tit">전화번호</span>
-                      <span class="txt">02-2127-4000</span>
-                    </li>
-                    <li class="info">
-                      <i class="ri-phone-fill"></i>
-                      <span class="tit">팩스번호</span>
-                      <span class="txt">02-2127-5096~7</span>
-                    </li>
-                    <li class="info">
-                      <i class="ri-briefcase-4-line"></i>
-                      <span class="tit">도시계획과</span>
-                      <span class="txt"
-                        >제기동 약령시장 내 세명빌딩 2층(동대문구 고산자로 441)
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-                <a
-                  href=""
-                  class="map_btn message"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="새창"
-                >
-                  <i class="ri-mail-send-fill"></i>
-                  <span>위치안내 문자전송</span>
-                </a>
-                <a
-                  href=""
-                  class="map_btn view"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="새창"
-                >
-                  <i class="ri-map-2-line"></i>
-                  <span>지도 크게 보기</span>
-                </a>
-              </div>
-
-              <div class="box type1 subway" copy-attr="yes">
-                <div class="box_title">지하철 이용</div>
-                <div class="box_text">
-                  <ul class="bu">
-                    <li>
-                      <span class="title">1호선</span
-                      ><span class="text">제기동역 3번 출구(도보 10분)</span>
-                    </li>
-                    <li>
-                      <span class="title">2호선</span
-                      ><span class="text">용두역 3번 출구(도보 3분)</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="box type1 bus bg_line" copy-attr="yes">
-                <div class="box_title">버스 이용</div>
-                <div class="box_text">
-                  <ul class="bu">
-                    <li>
-                      <span class="title">파랑(간선)버스</span
-                      ><span class="text"
-                        >110A고려대, 110B국민대, 120, 130, 141, 145, 148, 303,
-                        370, 421, 721<br />
-                        * 제기동역 하차 도보 10분 : 105, 147, 201, 202, 260,
-                        261, 262, 270, 271, 272, 420, 720</span
-                      >
-                    </li>
-                    <li>
-                      <span class="title">초록(지선)버스</span
-                      ><span class="text"
-                        >2015, 2112, 2222, 1227 * 제기동역 하차 도보 10분 :
-                        2221, 2233</span
-                      >
-                    </li>
-                    <li>
-                      <span class="title">빨강(광역)버스</span
-                      ><span class="text">9403</span>
-                    </li>
-                    <li>
-                      <span class="title">경기버스</span
-                      ><span class="text">9301, 3200</span>
-                    </li>
-                    <li>
-                      <span class="title">공항버스</span
-                      ><span class="text">6002, 6101</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <h4>QnA박스</h4>
-              <div class="qna">
-                <div class="qna_item">
-                  <div class="question">
-                    <button type="button" title="보기" class="qna_btn">
-                      <span class="q">Q</span>
-                      <span class="tit"
-                        >수인성 및 식품매개감염병이란 무엇인가요?</span
-                      >
-                    </button>
-                  </div>
-                  <div class="answer">
-                    <span class="a">A</span>
-                    <div class="txt">
-                      심장의 무엇을 보이는 황금시대의 사는가 이것이다. 위하여
-                      인생에 천고에 것이다.보라, 듣는다. 얼음 물방아 불러 대고,
-                      얼음이 꾸며 것이다. 아름답고 낙원을 구하지 것이다. 하는
-                      우리 피가 꽃 날카로우나 이것이야말로 못할 쓸쓸하랴? 거선의
-                      그들은 피어나기 수 있는 청춘은 대한 소담스러운 이상의
-                      있으랴? 따뜻한 불어 없는 이것이다. 우는 품으며, 이상이
-                      그들은 청춘에서만 소담스러운 인생에 원대하고, 뿐이다. 끓는
-                      그러므로 피어나는 못하다 것은 미인을 곳이 힘차게
-                      교향악이다.
-                    </div>
-                  </div>
-                </div>
-                <div class="qna_item">
-                  <div class="question">
-                    <button type="button" title="보기" class="qna_btn">
-                      <span class="q">Q</span>
-                      <span class="tit"
-                        >수인성 및 식품매개감염병이란 무엇인가요?</span
-                      >
-                    </button>
-                  </div>
-                  <div class="answer">
-                    <span class="a">A</span>
-                    <div class="txt">
-                      <ul class="bu">
-                        <li>심장의 무엇을 보이는 황금시대의 사는가 이것이다</li>
-                        <li>심장의 무엇을 보이는 황금시대의 사는가 이것이다</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="qna_item">
-                  <div class="question">
-                    <button type="button" title="보기" class="qna_btn">
-                      <span class="q">Q</span>
-                      <span class="tit"
-                        >[변상금] 30년 전 부터 집을 지어 살았고, 건물 준공도
-                        합법적으로 났는데 어느날 갑자기 도로를 점유하고 있다고
-                        도로변상금을 내라고 하는데 법이 잘 못 된 것이
-                        아닌가요?</span
-                      >
-                    </button>
-                  </div>
-                  <div class="answer">
-                    <span class="a">A</span>
-                    <div class="txt">
                       심장의 무엇을 보이는 황금시대의 사는가 이것이다. 위하여
                       인생에 천고에 것이다.보라, 듣는다. 얼음 물방아 불러 대고,
                       얼음이 꾸며 것이다. 아름답고 낙원을 구하지 것이다.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div id="k" class="tab_content">
-              <h4>연혁(정렬역순)</h4>
-              <div class="history" copy-attr="yes">
-                <div class="year_list">
-                  <div class="year"><span>2017</span></div>
-                  <div class="desc">
-                    <span class="date">2017.12.14</span>
-                    <div class="cont">
-                      <div class="list_box">
-                        <p class="tit">
-                          자치구 조례 제1209호에 의거 법정동간 경계조정
-                        </p>
-                        <div class="txt">
-                          <ul class="bu">
-                            <li>청량리동 일부를 회기동에 편입</li>
-                            <li>청량리동 일부를 회기동에 편입</li>
-                            <li>청량리동 일부를 회기동에 편입</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="year_list">
-                  <div class="year"><span>2014</span></div>
-                  <div class="desc">
-                    <span class="date">2014.10.30</span>
-                    <div class="cont">
-                      <div class="list_box">
-                        <p class="tit">
-                          자치구 조례 제 1029호에 의거 법정동간 경계조정자치구
-                          조례 제 1029호에 의거 법정동간 경계조정자치구 조례 제
-                          1029호에 의거 법정동간 경계조정자치구 조례 제 1029호에
-                          의거 법정동간 경계조정
-                        </p>
-                        <div class="txt">
-                          <ul class="bu">
-                            <li>청량리동 일부를 회기동에 편입</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="year_list">
-                  <div class="year"><span>2012</span></div>
-                  <div class="desc">
-                    <span class="date">2012.9.20</span>
-                    <div class="cont">
-                      <div class="list_box">
-                        <p class="tit">
-                          자치구 조례 제 1029호에 의거 법정동간 경계조정
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="year_list">
-                  <div class="year"><span>2009</span></div>
-                  <div class="desc">
-                    <span class="date">2009.10.4</span>
-                    <div class="cont">
-                      <div class="list_box">
-                        <p class="tit">
-                          자치구조례 제 919호에 의거 법정동간 경계조정
-                        </p>
-                        <div class="txt">
-                          <ul class="bu">
-                            <li>청량리동 일부를 회기동에 편입</li>
-                            <li>
-                              이문동(이문1동)의 일부를 휘경동(휘경1동)에 편입
-                            </li>
-                            <li>
-                              휘경동(휘경1동)의 일부를 이문동(이문1동)에 편입
-                            </li>
-                            <li>
-                              전농동(전농1동)의 일부를 휘경동(휘경2동)에 편입
-                            </li>
-                            <li>청량리동의 일부를 제기동에 편입</li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div class="list_box">
-                        <p class="tit">
-                          자치구조례 제 919호에 의거 법정동간 경계조정
-                        </p>
-                        <div class="txt">
-                          <ul class="bu">
-                            <li>청량리동 일부를 회기동에 편입</li>
-                            <li>
-                              이문동(이문1동)의 일부를 휘경동(휘경1동)에 편입
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="desc">
-                    <span class="date">2009.5.4</span>
-                    <div class="cont">
-                      <div class="list_box">
-                        <p class="tit">
-                          자치구조례 제 919호에 의거 법정동간 경계조정
-                        </p>
-                        <div class="txt">
-                          <ul class="bu">
-                            <li>청량리동 일부를 회기동에 편입</li>
-                            <li>
-                              이문동(이문1동)의 일부를 휘경동(휘경1동)에 편입
-                            </li>
-                            <li>
-                              휘경동(휘경1동)의 일부를 이문동(이문1동)에 편입
-                            </li>
-                            <li>
-                              전농동(전농1동)의 일부를 휘경동(휘경2동)에 편입
-                            </li>
-                            <li>청량리동의 일부를 제기동에 편입</li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div class="list_box">
-                        <p class="tit">
-                          자치구조례 제 919호에 의거 법정동간 경계조정
-                        </p>
-                        <div class="txt">
-                          <ul class="bu">
-                            <li>청량리동 일부를 회기동에 편입</li>
-                            <li>
-                              이문동(이문1동)의 일부를 휘경동(휘경1동)에 편입
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <h4>안전관리헌장</h4>
-              <div class="charter" copy-attr="yes">
-                <img
-                  src="/site/public/images/template/charter_top_icon.png"
-                  alt="아이콘"
-                />
-                <div class="inner">
-                  <div class="title_area">
-                    <p class="tit">안전관리헌장</p>
-                    <p class="txt">
-                      안전은 재난, 안전사고, 범죄 등의 각종 위험에서 국민의
-                      생명과 건강 그리고 재산을 지키는 가장 중요한 근본이다.<br />
-                      모든 국민은 안전할 권리가 있으며, 안전문화를 정착시키는
-                      일은 국민의 행복과 국가의 미래를 위해 반드시 필요하다.<br />
-                      이에 우리는 다음과 같이 다짐한다.
                     </p>
-                  </div>
-                  <div class="cont_area">
-                    <ul>
+                    <ul class="bu">
                       <li>
-                        모든 국민은 가정, 마을, 학교, 직장 등 사회 각 분야에서
-                        안전 수칙을 준수하고 안전 생활을 적극 실천한다.
+                        대통령은 국회에 출석하여 발언하거나 서한으로 의견...
                       </li>
                       <li>
-                        국가와 지방자치단체는 국민의 안전기본권을 보장하는 안전
-                        종합대책을 수립하고, 안전을 위한 투자에 최우선의 노력을
-                        하며, 어린이, 장애인, 노약자는 특별히 배려한다.
+                        국가안전보장회의는 대통령이 주재한다. 군인 또는 군...
                       </li>
                       <li>
-                        자원봉사기관, 시민단체, 전문가들은 사고 예방 및 구조
-                        활동, 안전 관련 연구 등에 적극 참여하고 협력한다.
+                        국회의원은 그 지위를 남용하여 국가·공공단체 또는 ...
                       </li>
                       <li>
-                        유치원, 학교 등 교육 기관은 국민이 바른 안전 의식을
-                        갖도록 교육하고, 특히 어릴 때부터 안전 습관을 들이도록
-                        지도한다.
-                      </li>
-                      <li>
-                        기업은 안전제일 경영을 실천하고, 위험 요인을 없애 사고가
-                        발생하지 않도록 적극 노력한다.
+                        모든 국민은 근로의 의무를 진다. 국가는 근로의 의무...
                       </li>
                     </ul>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
+              <div id="i" class="tab_content">
+                <!--스텝박스-->
+                <h4>스텝박스</h4>
+                <h5>가로형</h5>
+                <h6>.step</h6>
+                <div class="step" copy-attr="yes">
+                  <div class="step_wrap">
+                    <ol class="step_list">
+                      <li class="step_item">
+                        <div class="step_content">
+                          <div class="tit"><span>단계 타이틀</span></div>
+                          <div class="txt">단계 설명 설명입니다.</div>
+                        </div>
+                      </li>
+                      <li class="step_item">
+                        <div class="step_content">
+                          <div class="tit"><span>단계 타이틀</span></div>
+                        </div>
+                      </li>
+                      <li class="step_item">
+                        <div class="step_content">
+                          <div class="tit"><span>단계 타이틀</span></div>
+                          <div class="txt">단계 설명 설명입니다.</div>
+                        </div>
+                      </li>
+                      <li class="step_item">
+                        <div class="step_content">
+                          <div class="tit"><span>단계 타이틀</span></div>
+                          <div class="txt">단계 설명 설명입니다.</div>
+                        </div>
+                      </li>
+                      <li class="step_item">
+                        <div class="step_content">
+                          <div class="tit"><span>단계 타이틀</span></div>
+                          <div class="txt">단계 설명 설명입니다.</div>
+                        </div>
+                      </li>
+                      <li class="step_item">
+                        <div class="step_content">
+                          <div class="tit"><span>단계 타이틀</span></div>
+                          <div class="txt">단계 설명 설명입니다.</div>
+                        </div>
+                      </li>
+                      <li class="step_item">
+                        <div class="step_content">
+                          <div class="tit"><span>단계 타이틀</span></div>
+                          <div class="txt">단계 설명 설명입니다.</div>
+                        </div>
+                      </li>
+                      <li class="step_item">
+                        <div class="step_content">
+                          <div class="tit"><span>단계 타이틀</span></div>
+                          <div class="txt">단계 설명 설명입니다.</div>
+                        </div>
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+                <h6>.step.row3</h6>
+                <div class="step row3" copy-attr="yes">
+                  <div class="step_wrap">
+                    <ol class="step_list">
+                      <li class="step_item">
+                        <div class="step_content">
+                          <div class="tit"><span>단계 타이틀</span></div>
+                          <div class="txt">단계 설명 설명입니다.</div>
+                        </div>
+                      </li>
+                      <li class="step_item">
+                        <div class="step_content">
+                          <div class="tit"><span>단계 타이틀</span></div>
+                        </div>
+                      </li>
+                      <li class="step_item">
+                        <div class="step_content">
+                          <div class="tit"><span>단계 타이틀</span></div>
+                          <div class="txt">단계 설명 설명입니다.</div>
+                        </div>
+                      </li>
+                      <li class="step_item">
+                        <div class="step_content">
+                          <div class="tit"><span>단계 타이틀</span></div>
+                          <div class="txt">단계 설명 설명입니다.</div>
+                        </div>
+                      </li>
+                      <li class="step_item">
+                        <div class="step_content">
+                          <div class="tit"><span>단계 타이틀</span></div>
+                          <div class="txt">단계 설명 설명입니다.</div>
+                        </div>
+                      </li>
+                      <li class="step_item">
+                        <div class="step_content">
+                          <div class="tit"><span>단계 타이틀</span></div>
+                          <div class="txt">단계 설명 설명입니다.</div>
+                        </div>
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+                <h6>아이콘+텍스트 .step.type2</h6>
+                <div class="step type2" copy-attr="yes">
+                  <div class="step_wrap">
+                    <ol class="step_list">
+                      <li class="step_item">
+                        <div class="step_content">
+                          <div class="tit"><span>단계 타이틀</span></div>
+                          <div class="txt">단계 설명 설명입니다.</div>
+                        </div>
+                      </li>
+                      <li class="step_item">
+                        <div class="step_content">
+                          <div class="tit"><span>단계 타이틀</span></div>
+                          <div class="txt">단계 설명 설명입니다.</div>
+                        </div>
+                      </li>
+                      <li class="step_item">
+                        <div class="step_content">
+                          <div class="tit"><span>단계 타이틀</span></div>
+                          <div class="txt">
+                            단계 설명 설명입니다.단계 설명 설명입니다.단계 설명
+                            설명입니다.단계 설명 설명입니다.
+                          </div>
+                        </div>
+                      </li>
+                      <li class="step_item">
+                        <div class="step_content">
+                          <div class="tit"><span>단계 타이틀</span></div>
+                          <div class="txt">단계 설명 설명입니다.</div>
+                        </div>
+                      </li>
+                    </ol>
+                  </div>
+                </div>
 
-          <script>
-            /*템플릿 코드 복사 코드
+                <h5>세로형</h5>
+                <h6>.step.type3</h6>
+                <div class="step type3" copy-attr="yes">
+                  <div class="step_wrap">
+                    <ol class="step_list clearfix">
+                      <li class="step_box">
+                        <div class="step_item">
+                          <div class="step_content">
+                            <div class="title">단계 타이틀</div>
+                          </div>
+                        </div>
+                        <div class="step_process">
+                          <ul class="bu">
+                            <li>
+                              대통령은 국회에 출석하여 발언하거나 서한으로
+                              의견...
+                            </li>
+                            <li>
+                              국가안전보장회의는 대통령이 주재한다. 군인 또는
+                              군...
+                            </li>
+                            <li>
+                              국가안전보장회의는 대통령이 주재한다. 군인 또는
+                              군...
+                            </li>
+                            <li>
+                              국가안전보장회의는 대통령이 주재한다. 군인 또는
+                              군...
+                            </li>
+                            <li>
+                              국가안전보장회의는 대통령이 주재한다. 군인 또는
+                              군...
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="step_box clearfix">
+                        <div class="step_item">
+                          <div class="step_content">
+                            <div class="title">단계 타이틀</div>
+                          </div>
+                        </div>
+                        <div class="step_process">
+                          <div class="text">
+                            단계 설명 설명 입니다 설명설명입니다
+                          </div>
+                        </div>
+                      </li>
+                      <li class="step_box clearfix">
+                        <div class="step_item">
+                          <div class="step_content">
+                            <div class="title">단계 타이틀</div>
+                          </div>
+                        </div>
+                        <div class="step_process">
+                          <div class="text">
+                            단계 설명 설명 입니다 설명설명입니다
+                          </div>
+                          <ul class="bu">
+                            <li>
+                              대통령은 국회에 출석하여 발언하거나 서한으로
+                              의견...
+                            </li>
+                            <li>
+                              국가안전보장회의는 대통령이 주재한다. 군인 또는
+                              군...
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="step_box clearfix">
+                        <div class="step_item">
+                          <div class="step_content">
+                            <div class="title">단계 타이틀</div>
+                          </div>
+                        </div>
+                        <div class="step_process">
+                          <div class="text">
+                            단계 설명 설명 입니다 설명설명입니다
+                          </div>
+                        </div>
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+              <div id="j" class="tab_content">
+                <!--기타-->
+                <h4>라인(.line .line2)</h4>
+                <div class="line"></div>
+                <div class="line2"></div>
+
+                <h4>레이어 팝업</h4>
+                <button
+                  type="button"
+                  class="btn small popup_btn"
+                  data-pop="pop1"
+                >
+                  팝업버튼
+                </button>
+                <div class="popup" data-pop="pop1">
+                  <div class="popup_wrap">
+                    <div class="pop_inner">
+                      <div class="popup-title-wrap">
+                        <div class="sub-title">
+                          <strong>Option 01</strong> 생체 인식률 평가를 위한
+                          외부간섭요인 발생 시스템
+                        </div>
+                        <h3 class="popup_title h0">여기는 팝업 타이틀</h3>
+                      </div>
+                      <div class="popup_con">
+                        여기는 팝업내용입니다 <br />
+                        팝업버튼 바로아래에 .popup을 넣어주세요~
+                      </div>
+
+                      <input type="button" class="popup_close" value="닫기" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <script>
+              /*템플릿 코드 복사 코드
 
                     @name code-copy
                     * @author Kwon Oh Hwan
@@ -1959,7 +1114,7 @@
 
                     */
 
-            /*$("[copy-attr='yes']").on("click", function () {
+              /*$("[copy-attr='yes']").on("click", function () {
               var findHtml = $(this).clone();
 
               $(".copy_clone").append(findHtml);
@@ -1982,9 +1137,10 @@
               }
               return false;
             });*/
-          </script>
+            </script>
+          </div>
+          <!-- //.template -->
         </div>
-        <!-- //.template -->
       </div>
     </div>
     <footer class="footer">@@include('./include/footer.html')</footer>

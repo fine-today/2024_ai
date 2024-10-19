@@ -1,15 +1,7 @@
 <!DOCTYPE html>
 <html lang="kr" class="sub">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/default.css" />
-    <link rel="stylesheet" href="/css/service.css" />
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/plugins.js"></script>
-    <script src="/js/sub.js"></script>
-    <title>main</title>
+    @@include('./include/sub-head.html',{title : 'sub'})
   </head>
   <body>
     <div class="accessibility">
@@ -18,7 +10,13 @@
     <div id="container">
       <header class="header">@@include('./include/header.html')</header>
       <div id="content">
-        <div class="breadcrumb">@@include('./include/menu.html')</div>
+        <div class="location">@@include('./include/menu.html')</div>
+        <div class="wrap">
+          @@include('./include/breadcrumb.html')
+          <section class="section">
+            <h3>마이페이지</h3>
+          </section>
+        </div>
       </div>
       <footer class="footer">@@include('./include/footer.html')</footer>
     </div>

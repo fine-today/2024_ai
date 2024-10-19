@@ -98,12 +98,14 @@ menu,
 nav,
 section {
   display: block;
+  box-sizing: border-box;
 }
 audio,
 canvas,
 progress,
 video {
   display: inline-block;
+  box-sizing: border-box;
 }
 article,
 aside,
@@ -510,6 +512,12 @@ h6,
   }
   .margin-r-#{$i*4} {
     margin-right: 0.4rem * $i !important;
+  }
+}
+
+@for $i from 0 through 20 {
+  .w#{$i*5}p {
+    width: 5% * $i !important;
   }
 }
 
