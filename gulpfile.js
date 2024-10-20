@@ -84,7 +84,7 @@ function watchFiles() {
 function brwSync() {
   return browserSync.init({
     server: {
-      baseDir: paths.dist.server,
+      baseDir: paths.dist.src,
     },
     port: 8000,
   });
