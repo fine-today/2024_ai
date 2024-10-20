@@ -21,11 +21,11 @@ var paths = {
     ],
   },
   dist: {
-    src: "./dist",
-    css: "./dist",
-    js: "./dist",
-    html: "./dist",
-    resource: "./dist",
+    src: "./docs",
+    css: "./docs",
+    js: "./docs",
+    html: "./docs",
+    resource: "./docs",
   },
 };
 
