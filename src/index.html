@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('./pages/common/include/head.html',{'title' : '메인'})
+  </head>
+  <body>
+    <header id="header">
+      <button type="button" class="btn type5" data-href="admin">admin</button>
+      <button type="button" class="btn type5" data-href="common">common</button>
+      <button type="button" class="btn type5" data-href="menu1">
+        사업소개
+      </button>
+      <button type="button" class="btn type5" data-href="menu2">게시판</button>
+      <button type="button" class="btn type5" data-href="menu3">
+        마이페이지
+      </button>
+      <button type="button" class="btn type5" data-href="menu4">
+        사이버홍보
+      </button>
+      <button type="button" class="btn type5" data-href="menu5">로그인</button>
+      <button type="button" class="btn type5" data-href="etc">etc</button>
+    </header>
+    <div class="guide-wrap">
+      <section id="admin">
+        <h2>admin</h2>
+      </section>
+      <section id="common">
+        <h2>common</h2>
+      </section>
+      <section id="menu1">
+        <h2>사업소개</h2>
+      </section>
+      <section id="menu2">
+        <h2>게시판</h2>
+      </section>
+      <section id="menu3">
+        <h2>마이페이지</h2>
+      </section>
+      <section id="menu4">
+        <h2>로그인</h2>
+      </section>
+      <section id="etc">
+        <h2>etc</h2>
+      </section>
+    </div>
+    <script>
+      var th = [
+        "화면ID",
+        "화면명",
+        "화면경로",
+        "작업자",
+        "PC진행사항",
+        "Mobile진행사항",
+        "등록일",
+        "비고",
+      ];
+      var category = [
+        "admin",
+        "common",
+        "menu1",
+        "menu2",
+        "menu3",
+        "menu4",
+        "menu5",
+        "menu6",
+        "etc",
+      ];
+      var td = [
+        {
+          id: 1,
+          category: "common",
+          title: "공통 컴포넌트",
+          href: "/pages/common/guide.html",
+          owner: "명화",
+          stepPC: "",
+          stepMobile: "-",
+          date: "2024-09-30",
+          empty: "",
+        },
+        {
+          id: 2,
+          category: "common",
+          title: "main",
+          href: "/pages/service/main.html",
+          owner: "명화",
+          stepPC: "",
+          stepMobile: "",
+          date: "2024-09-30",
+          empty: "",
+        },
+        {
+          id: 3,
+          category: "common",
+          title: "main",
+          href: "/pages/service/sub.html",
+          owner: "명화",
+          stepPC: "",
+          stepMobile: "",
+          date: "2024-09-30",
+          empty: "",
+        },
+        {
+          id: 4,
+          category: "admin",
+          title: "로그인",
+          href: "/pages/admin/DE_US_08.html",
+          owner: "명화",
+          stepPC: "",
+          stepMobile: "",
+          date: "2024-09-30",
+          empty: "",
+        },
+        {
+          id: 5,
+          category: "admin",
+          title: "admin 가이드",
+          href: "/pages/admin/sub.html",
+          owner: "명화",
+          stepPC: "",
+          stepMobile: "",
+          date: "2024-09-30",
+          empty: "",
+        },
+        {
+          id: 6,
+          category: "menu1",
+          title: "시험안내",
+          href: "/pages/service/DE_US_12.html",
+          owner: "명화",
+          stepPC: "",
+          stepMobile: "",
+          date: "2024-09-30",
+          empty: "",
+        },
+        {
+          id: 7,
+          category: "menu1",
+          title: "시험접수",
+          href: "/pages/service/DE_US_13.html",
+          owner: "명화",
+          stepPC: "",
+          stepMobile: "",
+          date: "2024-09-30",
+          empty: "",
+        },
+        {
+          id: 8,
+          category: "menu1",
+          title: "시료입수",
+          href: "/pages/service/DE_US_14.html",
+          owner: "명화",
+          stepPC: "",
+          stepMobile: "",
+          date: "2024-09-30",
+          empty: "",
+        },
+        {
+          id: 9,
+          category: "menu2",
+          title: "FAQ",
+          href: "/pages/service/DE_US_15.html",
+          owner: "명화",
+          stepPC: "",
+          stepMobile: "",
+          date: "2024-09-30",
+          empty: "",
+        },
+        {
+          id: 10,
+          category: "menu2",
+          title: "공지사항-목록",
+          href: "/pages/service/DE_US_16.html",
+          owner: "명화",
+          stepPC: "",
+          stepMobile: "",
+          date: "2024-09-30",
+          empty: "",
+        },
+        {
+          id: 11,
+          category: "menu2",
+          title: "공지사항-상세",
+          href: "/pages/service/DE_US_17.html",
+          owner: "명화",
+          stepPC: "",
+          stepMobile: "",
+          date: "2024-09-30",
+          empty: "",
+        },
+        {
+          id: 11,
+          category: "menu2",
+          title: "공지사항-등록",
+          href: "/pages/service/DE_US_16_2.html",
+          owner: "명화",
+          stepPC: "",
+          stepMobile: "",
+          date: "2024-09-30",
+          empty: "",
+        },
+        {
+          id: 12,
+          category: "menu3",
+          title: "시스템 설정",
+          href: "/pages/service/DE_US_18.html",
+          owner: "명화",
+          stepPC: "",
+          stepMobile: "",
+          date: "2024-09-30",
+          empty: "",
+        },
+        {
+          id: 13,
+          category: "menu3",
+          title: "시스템 설정-설정메뉴",
+          href: "/pages/service/DE_US_18_1.html",
+          owner: "명화",
+          stepPC: "",
+          stepMobile: "",
+          date: "2024-09-30",
+          empty: "",
+        },
+        {
+          id: 14,
+          category: "menu3",
+          title: "시스템 설정-설정메뉴-CCTV",
+          href: "/pages/service/DE_US_18_1_1.html",
+          owner: "명화",
+          stepPC: "",
+          stepMobile: "",
+          date: "2024-09-30",
+          empty: "팝업",
+        },
+        {
+          id: 15,
+          category: "menu3",
+          title: " 마이페이지-시스템 설정-미세먼지",
+          href: "/pages/service/DE_US_19.html",
+          owner: "명화",
+          stepPC: "",
+          stepMobile: "",
+          date: "2024-09-30",
+          empty: "",
+        },
+        {
+          id: 16,
+          category: "menu3",
+          title: "마이페이지-시스템 설정-실내조명",
+          href: "/pages/service/DE_US_22.html",
+          owner: "명화",
+          stepPC: "",
+          stepMobile: "",
+          date: "2024-09-30",
+          empty: "",
+        },
+        {
+          id: 17,
+          category: "menu3",
+          title: "마이페이지-시스템 설정-인체모사",
+          href: "/pages/service/DE_US_23.html",
+          owner: "명화",
+          stepPC: "",
+          stepMobile: "",
+          date: "2024-09-30",
+          empty: "",
+        },
+        {
+          id: 18,
+          category: "menu3",
+          title: "마이페이지-시스템 설정-태양광모사",
+          href: "/pages/service/DE_US_24.html",
+          owner: "명화",
+          stepPC: "",
+          stepMobile: "",
+          date: "2024-09-30",
+          empty: "",
+        },
+        {
+          id: 19,
+          category: "menu3",
+          title: "마이페이지-시스템 설정-새집모사",
+          href: "/pages/service/DE_US_25.html",
+          owner: "명화",
+          stepPC: "",
+          stepMobile: "",
+          date: "2024-09-30",
+          empty: "",
+        },
+        {
+          id: 20,
+          category: "menu3",
+          title: "마이페이지-시스템 설정-온습도 설정",
+          href: "/pages/service/DE_US_20.html",
+          owner: "명화",
+          stepPC: "",
+          stepMobile: "",
+          date: "2024-09-30",
+          empty: "",
+        },
+        {
+          id: 21,
+          category: "menu3",
+          title: "마이페이지-시스템 설정-온습도 설정",
+          href: "/pages/service/DE_US_21.html",
+          owner: "명화",
+          stepPC: "",
+          stepMobile: "",
+          date: "2024-09-30",
+          empty: "",
+        },
+        {
+          id: 22,
+          category: "menu3",
+          title: "마이페이지 - 수집자료 확인(주거환경모사)",
+          href: "/pages/service/DE_US_26_1.html",
+          owner: "명화",
+          stepPC: "",
+          stepMobile: "",
+          date: "2024-09-30",
+          empty: "",
+        },
+        {
+          id: 23,
+          category: "menu3",
+          title: "마이페이지 - 정보수정 - 기업정보 수정(정보확인)",
+          href: "/pages/service/DE_US_27.html",
+          owner: "명화",
+          stepPC: "",
+          stepMobile: "",
+          date: "2024-09-30",
+          empty: "",
+        },
+        {
+          id: 24,
+          category: "menu3",
+          title: "마이페이지 - 정보수정 - 기업정보 수정(정보수정)",
+          href: "/pages/service/DE_US_28.html",
+          owner: "명화",
+          stepPC: "",
+          stepMobile: "",
+          date: "2024-09-30",
+          empty: "",
+        },
+        {
+          id: 25,
+          category: "menu3",
+          title: "마이페이지 - 정보수정 - 기업정보 수정(정보수정)",
+          href: "/pages/service/DE_US_29.html",
+          owner: "명화",
+          stepPC: "",
+          stepMobile: "",
+          date: "2024-09-30",
+          empty: "",
+        },
+        {
+          id: 26,
+          category: "admin",
+          title: "아이디 비밀번호 찾기 - 아이디 찾기",
+          href: "/pages/admin/DE_US_09.html",
+          owner: "명화",
+          stepPC: "",
+          stepMobile: "",
+          date: "2024-09-30",
+          empty: "",
+        },
+        {
+          id: 27,
+          category: "admin",
+          title: "아이디 비밀번호 찾기 - 아이디 찾기 완료",
+          href: "/pages/admin/DE_US_09_1.html",
+          owner: "명화",
+          stepPC: "",
+          stepMobile: "",
+          date: "2024-09-30",
+          empty: "",
+        },
+        {
+          id: 28,
+          category: "admin",
+          title: "아이디 비밀번호 찾기 - 비밀번호 찾기",
+          href: "/pages/admin/DE_US_10.html",
+          owner: "명화",
+          stepPC: "",
+          stepMobile: "",
+          date: "2024-09-30",
+          empty: "",
+        },
+        {
+          id: 28,
+          category: "admin",
+          title: "아이디 비밀번호 찾기 - 비밀번호 재설정",
+          href: "/pages/admin/DE_US_11.html",
+          owner: "명화",
+          stepPC: "",
+          stepMobile: "",
+          date: "2024-09-30",
+          empty: "",
+        },
+      ];
+      $(function () {
+        var $header = $("#header"),
+          $headerBtn = $header.find("button");
+        // header btn click
+        $headerBtn.on("click", function () {
+          var $this = $(this),
+            thisHref = $this.attr("data-href");
+          var elemTop = $("body")
+            .find("#" + thisHref)
+            .offset().top;
+          $("html,body").animate({ scrollTop: elemTop }, 300);
+        });
+
+        // table
+        var $section = $("section");
+        $section.each(function () {
+          var $this = $(this);
+          var thisId = $this.attr("id");
+          var thisData = td.filter((x) => x.category === thisId);
+          var $table = $(
+            `<table style="text-align:center" class="guide-table">
+              <colgroup>
+                <col style="width:9%">
+                <col style="width:15%">
+                <col>
+                <col style="width:9%">
+                <col style="width:9%">
+                <col style="width:9%">
+                <col style="width:10%">
+                <col style="width:15%">
+              </colgroup>
+              <thead>
+                <tr></tr>
+              </thead>
+              <tbody></tbody>
+            </table>`
+          );
+          th.forEach(function (thElem) {
+            var $th = $("<th></th>");
+            $th.text(thElem);
+            $table.find("thead tr").append($th);
+          });
+          thisData.forEach(function (trElem) {
+            var {
+              category,
+              title,
+              href,
+              owner,
+              stepPC,
+              stepMobile,
+              date,
+              empty,
+            } = trElem;
+            var $tr = $(
+              `<tr>
+                <td data-category><label>${category}</label></td>
+                <td data-title>${title}</td>
+                <td data-href>
+                  <a href="${href}" target="_blank">${href}</a>
+                </td>
+                <td data-owner>${owner}</td>
+                <td data-stepPC>${stepPC}</td>
+                <td data-stepMobile>${stepMobile}</td>
+                <td data-date>${date}</td>
+                <td data-empty>${empty}</td>
+              </tr>`
+            );
+            $table.find("tbody").append($tr);
+          });
+          $this.append($table);
+        });
+      });
+    </script>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+      }
+      .guide-wrap {
+        padding: 20px;
+        border-top: 10px solid #666;
+      }
+      h2 {
+        font-size: 24px;
+      }
+      .guide-table {
+        font-size: 14px;
+        line-height: 1.5;
+        margin: 20px 0;
+      }
+      .guide-table thead {
+      }
+      .guide-table th,
+      .guide-table td {
+        border: 1px solid #ccc;
+        border-left: 0;
+        padding: 5px 10px;
+      }
+      .guide-table th:last-child,
+      .guide-table td:last-child {
+        border-right: 0;
+      }
+      .guide-table th {
+        background-color: #f4f4f4;
+      }
+      .guide-table tbody {
+      }
+      .guide-table {
+      }
+      .guide-table {
+      }
+    </style>
+  </body>
+</html>
