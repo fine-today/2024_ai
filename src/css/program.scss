@@ -148,7 +148,7 @@
 
 .p-datepicker__head .prev {
   left: 0;
-  background-image: url(/images/common/prev.svg);
+  background-image: url(../images/common/prev.svg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 22px 22px;
@@ -156,7 +156,7 @@
 
 .p-datepicker__head .next {
   right: 0;
-  background-image: url(/images/common/prev.svg);
+  background-image: url(../images/common/prev.svg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 22px 22px;
@@ -479,7 +479,7 @@
       right: 5px;
       width: 30px;
       height: 30px;
-      background: url(/images/common/calendar.svg) no-repeat center center;
+      background: url(../images/common/calendar.svg) no-repeat center center;
       background-size: 24px 24px;
     }
   }

@@ -65,7 +65,7 @@
                 top: calc(50% - 12px);
                 width: 24px;
                 height: 24px;
-                background: url(/images/common/depth-has.svg) no-repeat center
+                background: url(../images/common/depth-has.svg) no-repeat center
                   center;
                 background-size: 16px 16px;
               }
@@ -78,7 +78,7 @@
             }
             &.has > .depth-anchor {
               &::before {
-                background-image: url(/images/common/depth-has-active.svg);
+                background-image: url(../images/common/depth-has-active.svg);
               }
             }
             .depth3-list {
@@ -167,7 +167,7 @@
               color: #114a73;
             }
             &.has .depth2-anchor::after {
-              background: url(/images/service/sub/header-title-arrow-active.svg)
+              background: url(../images/service/sub/header-title-arrow-active.svg)
                 no-repeat center center;
             }
           }
@@ -176,7 +176,7 @@
               display: block;
               width: 24px;
               height: 24px;
-              background: url(/images/service/sub/header-title-arrow-default.svg)
+              background: url(../images/service/sub/header-title-arrow-default.svg)
                 no-repeat center center;
             }
             &.active {
@@ -490,16 +490,16 @@
 }
 
 .p-page__control .prev-end:before {
-  background-image: url(/images/service/sub/board-arrow-fast-foward.svg);
+  background-image: url(../images/service/sub/board-arrow-fast-foward.svg);
 }
 
 .p-page__control .next-one:before,
 .p-page__control .next:before {
-  background-image: url(/images/service/sub/board-arrow-prev.svg);
+  background-image: url(../images/service/sub/board-arrow-prev.svg);
 }
 
 .p-page__control .next-end:before {
-  background-image: url(/images/service/sub/board-arrow-fast-foward.svg);
+  background-image: url(../images/service/sub/board-arrow-fast-foward.svg);
 }
 
 .p-page__control .prev-one {

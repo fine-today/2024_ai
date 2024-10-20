@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    @@include('../service/include/sub-head.html',{'title' : '가이드'})
+    @@include('./include/sub-head.html',{'title' : '가이드'})
   </head>
   <body>
     <div id="container">
-      <header class="header">
-        @@include('../service/include/header.html')
-      </header>
+      <header class="header">@@include('./include/header.html')</header>
 
       <div id="content">
         <div class="location">
-          @@include('../service/include/menu.html',{code : 'DE_US_16'})
+          @@include('./include/menu.html',{code : 'DE_US_16'})
         </div>
         <div class="wrap">
-          @@include('../service/include/breadcrumb.html',{ depth1 : '게시판',
-          depth2 : '공지사항', })
+          @@include('./include/breadcrumb.html',{ depth1 : '게시판', depth2 :
+          '공지사항', })
           <section class="section">
             <div class="tab">
               <div class="tab_menu type2 depth6">
@@ -1188,6 +1186,6 @@
         </div>
       </div>
     </div>
-    <footer class="footer">@@include('../service/include/footer.html')</footer>
+    <footer class="footer">@@include('./include/footer.html')</footer>
   </body>
 </html>

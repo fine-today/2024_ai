@@ -422,7 +422,7 @@ a.btn {
   left: 0;
   width: 16px;
   height: 16px;
-  background: url(/images/common/warning.svg) no-repeat center center;
+  background: url(../images/common/warning.svg) no-repeat center center;
   background-size: 16px 16px;
 }
 .warning.type2:before {
@@ -1364,7 +1364,7 @@ input.input {
     top: calc(50% - 16px);
     width: 32px;
     height: 32px;
-    @include imgBg("/images/common/show-btn-disabled.svg");
+    @include imgBg("../images/common/show-btn-disabled.svg");
     &[disabled] {
       &::after {
         content: "비밀번호 보이기";
@@ -1480,7 +1480,7 @@ select.input {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: url(/images/service/sub/input-select-arrow.svg) no-repeat center
+  background: url(../images/service/sub/input-select-arrow.svg) no-repeat center
     right 10px;
 }
 select::-ms-expand {
@@ -1602,7 +1602,7 @@ select.input[disabled] {
 }
 .input input[type="checkbox"]:checked + label:before {
   border: 0;
-  background: url(/images/common/check-checked.svg) #3182f6 no-repeat center
+  background: url(../images/common/check-checked.svg) #3182f6 no-repeat center
     center;
 }
 /* 비활성화*/
@@ -1627,7 +1627,7 @@ select.input[disabled] {
   box-sizing: border-box;
 }
 .input input[type="checkbox"][disabled]:checked + label:before {
-  background: url(/images/common/check-checked.svg) #c5c9d6 no-repeat center
+  background: url(../images/common/check-checked.svg) #c5c9d6 no-repeat center
     center;
 }
 
@@ -2301,7 +2301,8 @@ html.popup_open body {
   position: relative;
   overflow: hidden;
   width: 860px;
-  height: 500px;
+  height: auto;
+  min-height: 500px;
   margin: 0 auto;
   border-radius: 30px;
   background-color: #fff;

@@ -204,11 +204,11 @@
           position: absolute;
           right: 14px;
           top: 14px;
-          background: url(/images/common/show-btn-disabled.svg) no-repeat center
-            center;
+          background: url(../images/common/show-btn-disabled.svg) no-repeat
+            center center;
         }
         &.show .show-hide {
-          background-image: url(/images/common/show-btn-default.svg);
+          background-image: url(../images/common/show-btn-default.svg);
           background-size: 20px 20px;
         }
       }
