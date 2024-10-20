@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="kr" class="sub">
+  <head>
+    @@include('./include/sub-head.html',{title : '시스템설정 - 마이페이지'})
+  </head>
+  <body>
+    <div class="accessibility">
+      <a href="#content">본문 바로가기</a>
+    </div>
+    <div id="container" class="de_us_19">
+      <!-- code substring 으로 key class 생성-->
+      <header class="header">@@include('./include/header.html')</header>
+      <div id="content">
+        <div class="location">
+          @@include('./include/menu.html',{code : 'DE_US_16'})
+        </div>
+        <div class="wrap">
+          @@include('./include/breadcrumb.html',{ depth1 : '게시판', depth2 :
+          '공지사항', })
+          <section class="section">
+            <div class="tab">
+              <div class="tab_menu">
+                <button type="button" class="tab_select">
+                  <span>미세먼지</span>
+                </button>
+                <div class="tab_panel">
+                  <ul class="tab_list clearfix">
+                    <li class="tab_item active">
+                      <button type="button" class="tab_button" title="선택됨">
+                        <span>태양광모사</span>
+                      </button>
+                    </li>
+                    <li class="tab_item">
+                      <button type="button" class="tab_button">
+                        <span>Map</span>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+                <div class="tab_content active">
+                  <!-- tab con1 -->
+
+                  시험 시간 분 경과 시간 163 분 시험 결과 파일 다운로드 일사량
+                  선택 드롭다운박스 ▼ W/㎡
+
+                  <div class="mypage-head-setting">
+                    <div class="column">
+                      <h3>온습도 설정</h3>
+                      <button type="button" class="btn">설정하기</button>
+                    </div>
+                    <div class="column">
+                      <h3>모바일 로봇</h3>
+                      <button type="button" class="btn">설정하기</button>
+                    </div>
+                  </div>
+                  <div class="mypage-con">
+                    <div class="column" data-ratio="1-2">
+                      <h3>시험 조건</h3>
+                      <div class="table">
+                        <table>
+                          <caption></caption>
+                          <colgroup>
+                            <col style="width: 18%" />
+                            <col style="width: 35%" />
+                            <col style="width: 15%" />
+                            <col />
+                          </colgroup>
+                          <tbody>
+                            <tr>
+                              <th scope="row">일사량 선택</th>
+                              <td colspan="3">
+                                <select name="" id="" class="input">
+                                  <option value="">일사량 선택</option>
+                                  <option value="">일사량 선택</option>
+                                  <option value="">일사량 선택</option>
+                                </select>
+                                W/㎡
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">시험 시간</th>
+                              <td>
+                                <input type="text" class="input" />
+                                분
+                              </td>
+                              <th scope="row">경과 시간</th>
+                              <td>163 분</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">시험 결과</th>
+                              <td colspan="3">
+                                <button type="button" class="btn">
+                                  파일 다운로드
+                                </button>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+
+                      <h3>이력관리</h3>
+                      <div class="table">
+                        <table>
+                          <caption></caption>
+                          <colgroup>
+                            <col style="width: 30%" />
+                            <col />
+                            <col style="width: 15%" />
+                            <col style="width: 15%" />
+                            <col style="width: 100px" />
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th scope="col">날짜</th>
+                              <th scope="col">발생기</th>
+                              <th scope="col">시험농도</th>
+                              <th scope="col">농도값</th>
+                              <th scope="col">재적용</th>
+                            </tr>
+                          </thead>
+                          <tbody class="align-center">
+                            <tr>
+                              <td>2024.10.14 10:20:34</td>
+                              <td>분진(SAG410)</td>
+                              <td>PM1</td>
+                              <td>160</td>
+                              <td>
+                                <button type="button" class="btn type3 w100p">
+                                  적용
+                                </button>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>2024.10.14 10:20:34</td>
+                              <td>분진(SAG410)</td>
+                              <td>PM1</td>
+                              <td>160</td>
+                              <td>
+                                <button type="button" class="btn type3 w100p">
+                                  적용
+                                </button>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+
+                    <div class="column" data-ratio="1-2">
+                      <div class="img-wrap">
+                        <img
+                          src="/images/service/sub/mypage-img1.png"
+                          alt="마이페이지 도면"
+                        />
+                      </div>
+                      <div class="guide_box type1" copy-attr="yes">
+                        <div class="cont"></div>
+                        <p>안내 가이드</p>
+                        <ul class="bu half">
+                          <li>봄: 200</li>
+                          <li>여름: 800</li>
+                          <li>가을:600</li>
+                          <li>겨울:200</li>
+                        </ul>
+                        <p class="warning" title="안내사항">
+                          거실 창 측정 기준
+                        </p>
+                        <p class="warning" title="안내사항">
+                          실외 설정 온도는 15도로 고정됩니다.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="btn-wrap center">
+                    <button type="button" class="btn large">시험 시작</button>
+                    <button type="button" class="btn large">시험 종료</button>
+                  </div>
+                </div>
+                <div class="tab_content"></div>
+              </div>
+            </div>
+            @@include('./include/mypage-option.html')
+          </section>
+        </div>
+      </div>
+      <footer class="footer">@@include('./include/footer.html')</footer>
+    </div>
+  </body>
+</html>

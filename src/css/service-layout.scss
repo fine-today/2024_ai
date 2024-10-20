@@ -22,28 +22,113 @@
     }
     .depth1-list {
       display: flex;
-      gap: 60px;
     }
     .depth1-anchor {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 200px;
+      padding: 10px 30px;
       font-size: 24px;
       line-height: 28.8px;
       font-weight: 700;
       color: #191f28;
     }
+
+    .depth1-item {
+      position: relative;
+      &.active {
+        .depth2-list {
+          display: flex;
+          position: absolute;
+          width: 100%;
+        }
+        .depth2-item {
+          display: flex;
+          position: relative;
+          .depth2-anchor {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 15px;
+            font-size: 18px;
+            line-height: 1.5;
+          }
+          &.has {
+            > .depth-anchor {
+              font-weight: 600;
+              &::before {
+                display: block;
+                position: absolute;
+                right: 5px;
+                top: calc(50% - 12px);
+                width: 24px;
+                height: 24px;
+                background: url(/images/common/depth-has.svg) no-repeat center
+                  center;
+                background-size: 16px 16px;
+              }
+            }
+          }
+          &.active {
+            .depth2-anchor {
+              background-color: #0b6dcf;
+              color: #fff;
+            }
+            &.has > .depth-anchor {
+              &::before {
+                background-image: url(/images/common/depth-has-active.svg);
+              }
+            }
+            .depth3-list {
+              display: flex;
+              position: absolute;
+              left: 100%;
+              width: auto;
+              min-width: 170px;
+              .depth3-item {
+                width: 100%;
+                position: relative;
+                .depth3-anchor {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  padding: 15px;
+                  font-size: 18px;
+                  line-height: 1.5;
+                  color: #fff;
+                  background-color: #0b6dcf;
+                }
+                &.active {
+                  .depth3-anchor {
+                    font-weight: 600;
+                    background-color: rgba(11, 109, 207, 0.5);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
     .depth2-list {
-      display: none;
       position: absolute;
       flex-direction: column;
+      left: 0;
     }
 
-    .depth1-item .depth2-list {
-      display: none !important;
+    .depth-list:not(.depth1-list) {
+      display: none;
+      flex-direction: column;
+      background-color: #fff;
     }
   }
 }
 
 #content {
   position: relative;
+  padding-bottom: 10px;
   > .location {
     padding: 20px 70px;
     background-color: #daeaf4;
@@ -74,8 +159,9 @@
             color: #7694aa;
             font-size: 16px;
             font-weight: 500;
+            padding: 10px 0;
           }
-          &.actived {
+          &.active {
             .depth2-anchor {
               font-weight: 700;
               color: #114a73;
@@ -99,18 +185,28 @@
                 flex-direction: column;
                 gap: 5px;
                 position: absolute;
-                top: calc(100% + 10px);
+                top: 100%;
                 left: 0;
                 background-color: #fff;
                 min-width: 100%;
-                padding: 10px;
-                border-radius: 5px;
-                box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+                padding: 10px 0;
+                // border-radius: 5px;
+                // box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
               }
               .depth3-item {
                 .depth3-anchor {
+                  display: flex;
+                  align-items: center;
+                  height: 30px;
                   font-size: 14px;
                   line-height: 20px;
+                  width: 100%;
+                  padding: 10px 20px;
+                }
+                &.active {
+                  .depth3-anchor {
+                    font-weight: 600;
+                  }
                 }
               }
             }

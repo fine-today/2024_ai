@@ -55,6 +55,31 @@ $(function () {
     }
   });
 
+  /* 서브탭메뉴 */
+  $(".tab_button").click(function () {
+    var $this = $(this),
+      index = $this.closest(".tab_item").index(),
+      tabBtnText = $this.text(),
+      $tab_panel = $this.closest(".tab_panel"),
+      $tabMenu = $this.closest(".tab_menu"),
+      $tabContent = $tabMenu.find(">.tab_content");
+    console.log(index);
+    $this
+      .attr("title", "선택됨")
+      .closest(".tab_item")
+      .addClass("active")
+      .siblings(".tab_item")
+      .removeClass("active")
+      .find(".tab_button")
+      .removeAttr("title");
+    $this.closest(".tab").find(">.tab_menu .tab_select span").text(tabBtnText);
+    $tabContent
+      .eq(index)
+      .addClass("active")
+      .siblings(".tab_content")
+      .removeClass("active");
+  });
+
   //테이블.responsive 반응형
   $("table.table.responsive").each(function () {
     var RowSpanExist = $(this).find("td, th").is("[rowspan]"),
@@ -178,6 +203,19 @@ $(function () {
       $this.removeAttr("title");
       $parentmenu.find(".search_list").stop().slideUp("250", "easeOutExpo");
       $parentmenu.removeClass("active");
+    }
+  });
+
+  // password input
+  $(".password .show-hide").on("click", function () {
+    var $this = $(this),
+      $thisInput = $this.siblings("input"),
+      $thisParent = $this.closest(".password");
+    $thisParent.toggleClass("show");
+    if ($thisParent.hasClass("show")) {
+      $thisInput.attr("type", "text");
+    } else {
+      $thisInput.attr("type", "password");
     }
   });
 });
