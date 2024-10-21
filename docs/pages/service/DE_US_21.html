@@ -359,7 +359,12 @@
                         <h3>경로선택</h3>
                         <div>
                           <span class="input">
-                            <input type="radio" id="radio1-1" name="radio1" />
+                            <input
+                              type="radio"
+                              id="radio1-1"
+                              name="radio1"
+                              checked
+                            />
                             <label for="radio1-1">수동</label>
                           </span>
                           <span class="input">
@@ -367,26 +372,45 @@
                             <label for="radio1-2">자동</label>
                           </span>
                         </div>
-                        <div>
-                          <ul class="bu">
-                            <li>경로1 : 1-1</li>
-                            <li>경로2 : 2-1</li>
-                            <li>
-                              경로3 :
-                              <button type="button" class="btn small">
-                                선택
-                              </button>
-                            </li>
-                            <li>
-                              경로4 :
-                              <button type="button" class="btn small">
-                                선택
-                              </button>
-                            </li>
-                          </ul>
+                        <div class="table radio-item1">
+                          <table>
+                            <caption></caption>
+                            <colgroup>
+                              <col style="width: 30%" />
+                              <col />
+                            </colgroup>
+                            <tbody>
+                              <tr>
+                                <th scope="row">경로1</th>
+                                <td>1-1</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">경로2</th>
+                                <td>2-1</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">경로3</th>
+                                <td>
+                                  <button type="button" class="btn small">
+                                    선택
+                                  </button>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row">경로4</th>
+                                <td>
+                                  <button type="button" class="btn small">
+                                    선택
+                                  </button>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
                         </div>
-                        <h3>이동 위치</h3>
-                        <p>1-1 &gt; 2-1 &gt; 3-1</p>
+                        <div class="radio-item2">
+                          <h3>이동 위치</h3>
+                          <p>1-1 &gt; 2-1 &gt; 3-1</p>
+                        </div>
                         <div class="btn-wrap">
                           <button type="button" class="btn w100p">
                             저장하기
@@ -394,6 +418,24 @@
                         </div>
                       </div>
                     </div>
+
+                    <script>
+                      $(".radio-item2").hide();
+                      $('[name="radio1"]').on("input", function () {
+                        $('[name="radio1"]').each(function () {
+                          var $this = $(this);
+                          if ($this.prop("checked") === true) {
+                            if ($this.attr("id") === "radio1-1") {
+                              $(".radio-item1").show();
+                              $(".radio-item2").hide();
+                            } else if ($this.attr("id") === "radio1-2") {
+                              $(".radio-item1").hide();
+                              $(".radio-item2").show();
+                            }
+                          }
+                        });
+                      });
+                    </script>
 
                     <div class="guide_box">
                       <div class="cont">

@@ -40,9 +40,6 @@
                 <div class="tab_content active">
                   <!-- tab con1 -->
 
-                  시험 시간 분 경과 시간 163 분 시험 결과 파일 다운로드 일사량
-                  선택 드롭다운박스 ▼ W/㎡
-
                   <div class="mypage-head-setting">
                     <div class="column">
                       <h3>온습도 설정</h3>
@@ -104,26 +101,23 @@
                           <caption></caption>
                           <colgroup>
                             <col style="width: 30%" />
+                            <col style="width: 20%" />
                             <col />
-                            <col style="width: 15%" />
-                            <col style="width: 15%" />
                             <col style="width: 100px" />
                           </colgroup>
                           <thead>
                             <tr>
                               <th scope="col">날짜</th>
-                              <th scope="col">발생기</th>
-                              <th scope="col">시험농도</th>
-                              <th scope="col">농도값</th>
+                              <th scope="col"></th>
+                              <th scope="col">일사량</th>
                               <th scope="col">재적용</th>
                             </tr>
                           </thead>
                           <tbody class="align-center">
                             <tr>
                               <td>2024.10.14 10:20:34</td>
-                              <td>분진(SAG410)</td>
-                              <td>PM1</td>
-                              <td>160</td>
+                              <td>봄</td>
+                              <td>50%</td>
                               <td>
                                 <button type="button" class="btn type3 w100p">
                                   적용
@@ -132,9 +126,8 @@
                             </tr>
                             <tr>
                               <td>2024.10.14 10:20:34</td>
-                              <td>분진(SAG410)</td>
-                              <td>PM1</td>
-                              <td>160</td>
+                              <td>봄</td>
+                              <td>61%</td>
                               <td>
                                 <button type="button" class="btn type3 w100p">
                                   적용
@@ -153,7 +146,7 @@
                           alt="마이페이지 도면"
                         />
                       </div>
-                      <div class="guide_box type1" copy-attr="yes">
+                      <div class="guide_box type1">
                         <div class="cont"></div>
                         <p>안내 가이드</p>
                         <ul class="bu half">
@@ -179,6 +172,7 @@
                 <div class="tab_content"></div>
               </div>
             </div>
+            @@include('./include/mypage-cctv.html')
             @@include('./include/mypage-option.html')
           </section>
         </div>

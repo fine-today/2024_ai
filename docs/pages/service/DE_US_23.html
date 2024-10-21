@@ -408,32 +408,70 @@
 
                     <div class="column" data-ratio="1-2">
                       <h3>경로 선택</h3>
-                      <div class="table">
-                        <table>
-                          <caption></caption>
-                          <colgroup>
-                            <col style="width: 15%" />
-                            <col style="width: 35%" />
-                            <col style="width: 15%" />
-                            <col />
-                          </colgroup>
-                          <tbody>
-                            <tr>
+                      <div class="flex gap20">
+                        <div class="table column" data-ratio="1-2">
+                          <table>
+                            <caption></caption>
+                            <colgroup>
+                              <col style="width: 30%" />
+                              <col />
+                            </colgroup>
+                            <tbody>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>1-1 > 2-1</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">2</th>
+                                <td>2-1 > 3-2</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">3</th>
+                                <td>
+                                  <button type="button" class="btn">
+                                    선택
+                                  </button>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row">4</th>
+                                <td>
+                                  <button type="button" class="btn">
+                                    선택
+                                  </button>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row">5</th>
+                                <td>
+                                  <button type="button" class="btn">
+                                    선택
+                                  </button>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div class="table column" data-ratio="1-2">
+                          <table>
+                            <caption></caption>
+                            <colgroup>
+                              <col style="width: 30%" />
+                              <col />
+                            </colgroup>
+                            <tbody>
+                              <!-- <tr>
                               <td colspan="4">
                                 <ul class="bu half">
-                                  <li>1 : 1-1 > 2-1</li>
-                                  <li>2 : 2-1 > 3-2</li>
+                                  <li>1 : </li>
+                                  <li>2 : </li>
                                   <li>
                                     3 :
-                                    <button type="button" class="btn small">
-                                      선택
-                                    </button>
+                                    
                                   </li>
                                   <li>
                                     4 :
-                                    <button type="button" class="btn small">
-                                      선택
-                                    </button>
+                                    
                                   </li>
                                   <li>
                                     5 :
@@ -443,26 +481,29 @@
                                   </li>
                                 </ul>
                               </td>
-                            </tr>
-                            <tr>
-                              <th scope="row">시험 시간</th>
-                              <td>
-                                <input type="text" class="input" />
-                                분
-                              </td>
-                              <th scope="row">경과 시간</th>
-                              <td>163 분</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">시험 결과</th>
-                              <td colspan="3">
-                                <button type="button" class="btn">
-                                  파일 다운로드
-                                </button>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
+                            </tr> -->
+                              <tr>
+                                <th scope="row">시험 시간</th>
+                                <td>
+                                  <input type="text" class="input" />
+                                  분
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row">경과 시간</th>
+                                <td>163 분</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">시험 결과</th>
+                                <td colspan="3">
+                                  <button type="button" class="btn">
+                                    파일 다운로드
+                                  </button>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
                       </div>
 
                       <h3>이력관리</h3>
@@ -472,25 +513,19 @@
                           <colgroup>
                             <col style="width: 30%" />
                             <col />
-                            <col style="width: 15%" />
-                            <col style="width: 15%" />
                             <col style="width: 100px" />
                           </colgroup>
                           <thead>
                             <tr>
                               <th scope="col">날짜</th>
-                              <th scope="col">발생기</th>
-                              <th scope="col">시험농도</th>
-                              <th scope="col">농도값</th>
+                              <th scope="col">경로</th>
                               <th scope="col">재적용</th>
                             </tr>
                           </thead>
                           <tbody class="align-center">
                             <tr>
                               <td>2024.10.14 10:20:34</td>
-                              <td>분진(SAG410)</td>
-                              <td>PM1</td>
-                              <td>160</td>
+                              <td>1-1 > 2-1 > 3-1</td>
                               <td>
                                 <button type="button" class="btn type3 w100p">
                                   적용
@@ -499,9 +534,7 @@
                             </tr>
                             <tr>
                               <td>2024.10.14 10:20:34</td>
-                              <td>분진(SAG410)</td>
-                              <td>PM1</td>
-                              <td>160</td>
+                              <td>4-1</td>
                               <td>
                                 <button type="button" class="btn type3 w100p">
                                   적용
@@ -521,6 +554,47 @@
                 <div class="tab_content"></div>
               </div>
             </div>
+            
+<div class="cctv">
+    <ul class="video-list">
+      <li class="video-item">
+        <div href="#n" class="video-anchor">
+          <div class="img-wrap"><img
+            src="../../images/service/sub/mypage-video1.png"
+            alt="CCTV 01"
+          /></div>
+          <div class="title">CCTV 01</div>
+        </a>
+      </li>
+      <li class="video-item">
+        <div href="#n" class="video-anchor">
+          <div class="img-wrap"><img
+            src="../../images/service/sub/mypage-video2.png"
+            alt="CCTV 02"
+          /></div>
+          <div class="title">CCTV 02</div>
+        </a>
+      </li>
+      <li class="video-item">
+        <div href="#n" class="video-anchor">
+          <div class="img-wrap"><img
+            src="../../images/service/sub/mypage-video3.png"
+            alt="CCTV 03"
+          /></div>
+          <div class="title">CCTV 03</div>
+        </a>
+      </li>
+      <li class="video-item">
+        <div href="#n" class="video-anchor">
+          <div class="img-wrap"><img
+            src="../../images/service/sub/mypage-video4.png"
+            alt="CCTV 04"
+          /></div>
+          <div class="title">CCTV 04</div>
+        </a>
+      </li>
+    </ul>
+  </div>
             <div class="mypage-option">
   <h3>옵션 설정하기</h3>
   <div class="btn-wrap">

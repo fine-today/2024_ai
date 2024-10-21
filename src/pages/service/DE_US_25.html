@@ -59,7 +59,7 @@
                   <ul class="tab_list clearfix">
                     <li class="tab_item active">
                       <button type="button" class="tab_button" title="선택됨">
-                        <span>태양광모사</span>
+                        <span>새집모사</span>
                       </button>
                     </li>
                     <li class="tab_item">
@@ -245,25 +245,22 @@
                           <colgroup>
                             <col style="width: 30%" />
                             <col />
-                            <col style="width: 15%" />
-                            <col style="width: 15%" />
-                            <col style="width: 12%" />
+                            <col style="width: 20%" />
+                            <col style="width: 16%" />
                           </colgroup>
                           <thead>
                             <tr>
                               <th scope="col">날짜</th>
-                              <th scope="col">발생기</th>
-                              <th scope="col">시험농도</th>
-                              <th scope="col">농도값</th>
+                              <th scope="col">가스종류</th>
+                              <th scope="col">가스농도</th>
                               <th scope="col">재적용</th>
                             </tr>
                           </thead>
                           <tbody class="align-center">
                             <tr>
                               <td>2024.10.14 10:20:34</td>
-                              <td>분진(SAG410)</td>
-                              <td>PM1</td>
-                              <td>160</td>
+                              <td>포름알데히드</td>
+                              <td>1200ppm</td>
                               <td>
                                 <button type="button" class="btn type3 w100p">
                                   적용
@@ -272,9 +269,8 @@
                             </tr>
                             <tr>
                               <td>2024.10.14 10:20:34</td>
-                              <td>분진(SAG410)</td>
-                              <td>PM1</td>
-                              <td>160</td>
+                              <td>포름알데히드</td>
+                              <td>1200ppm</td>
                               <td>
                                 <button type="button" class="btn type3 w100p">
                                   적용
@@ -294,6 +290,7 @@
                 <div class="tab_content"></div>
               </div>
             </div>
+            @@include('./include/mypage-cctv.html')
             @@include('./include/mypage-option.html')
           </section>
         </div>
