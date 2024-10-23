@@ -17,6 +17,7 @@
         <div class="wrap">
           @@include('./include/breadcrumb.html',{ depth1 : '게시판', depth2 :
           '공지사항', })
+          @@include('./include/board-tab.html')
           <section class="section">
             <form action="#n">
               <fieldset>
@@ -263,6 +264,9 @@
         </div>
       </div>
       <footer class="footer">@@include('./include/footer.html')</footer>
+      <script>
+        $('.tab_item').eq(1).addClass('active');
+      </script>
     </div>
   </body>
 </html>

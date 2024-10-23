@@ -13,10 +13,12 @@
       <div id="content">
         <div class="location">
           @@include('./include/menu.html',{code : 'DE_US_16'})
+          
         </div>
         <div class="wrap">
           @@include('./include/breadcrumb.html',{ depth1 : '게시판', depth2 :
           '공지사항', })
+          @@include('./include/board-tab.html')
           <section class="section">
             <div class="p-wrap bbs bbs-write">
               <div class="table-responsive">
@@ -77,6 +79,9 @@
         </div>
       </div>
       <footer class="footer">@@include('./include/footer.html')</footer>
+      <script>
+        $('.tab_item').eq(1).addClass('active');
+      </script>
     </div>
   </body>
 </html>

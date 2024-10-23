@@ -1,3 +1,4 @@
+@use "sass:map";
 @mixin tablet {
   @media (max-width: 1199px) {
     @content;
@@ -320,7 +321,7 @@ $colors: (
 );
 
 @function setColor($key, $type: "type1") {
-  @each $name, $color in map-get($colors, $type) {
+  @each $name, $color in map.get($colors, $type) {
     @if ($key == $name) {
       @return $color;
     }
@@ -336,4 +337,4 @@ $colors: (
 
 // section {
 //   @include color(background-color, black);
-// }
+// } 

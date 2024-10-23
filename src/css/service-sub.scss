@@ -1,6 +1,6 @@
-@import "./_mixin";
-@import "./guide";
-@import "./service-layout";
+@use "./_mixin" as *;
+@use "./guide" as *;
+@use "./service-layout" as *;
 
 h3 {
   margin: 20px 0 14px;
@@ -229,8 +229,20 @@ p {
     gap: 20px;
     align-items: stretch;
     .floor {
+      position:relative;
       img {
         height: 641px;
+      }
+      .label {
+        position:absolute;
+        background:#005f9e;
+        color:#fff;
+        font-weight:600;
+        font-size:16px;
+        line-height:1.5;
+        padding:5px 10px;
+        border-radius:5px;
+        
       }
     }
   }
@@ -388,5 +400,15 @@ p {
 .de_us_21 {
   .control {
     gap: 30px;
+  }
+}
+
+.video-wrap {
+  position:relative;
+  overflow:hidden;
+  width:100%;
+  video {
+    display:block;width:100%;height:auto;
+    margin-bottom:-1px;
   }
 }

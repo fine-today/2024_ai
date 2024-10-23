@@ -233,13 +233,23 @@
                     <button type="button" class="btn large">시험 시작</button>
                     <button type="button" class="btn large">시험 종료</button>
                   </div>
+                  @@include('./include/mypage-cctv.html')
+                  @@include('./include/mypage-option.html')
                 </div>
-                <div class="tab_content"></div>
+                <div class="tab_content">
+                  <div class="video-wrap">
+                  <video src="../../images/common/map.mp4" id="map-video" loop>
+                  </div>
+
+                  <script>
+                    $('.tab_button').on('click', function(){
+                      $('#map-video').get(0).play();
+                    })
+                  </script>
+                </div>
               </div>
-            </div>
-            @@include('./include/mypage-cctv.html')
-            @@include('./include/mypage-option.html')
-          </section>
+            </section>
+          </div>
         </div>
       </div>
       <footer class="footer">@@include('./include/footer.html')</footer>

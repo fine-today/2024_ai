@@ -7,7 +7,7 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
-  z-index: 30;
+  z-index: 110;
   .logo-wrap {
     padding: 56px 0;
   }
@@ -128,8 +128,10 @@
 
 #content {
   position: relative;
-  padding-bottom: 10px;
+  padding-bottom: 40px;
   > .location {
+    position:relative;
+    z-index:100;
     padding: 20px 70px;
     background-color: #daeaf4;
     .depth1-item {
