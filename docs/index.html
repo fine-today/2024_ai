@@ -467,7 +467,7 @@
             var $tr = $(
               `<tr>
                 <td data-category><label>_</label></td>
-                <td data-title>${title}</td>
+                <td data-title><a href="${href}" target="_blank">${title}</a></td>
                 <td data-href>
                   <a href="${href}" target="_blank">${href}</a>
                 </td>
@@ -531,6 +531,9 @@
       .guide-table {
       }
       .guide-table {
+      }
+      a {
+        text-decoration: underline;
       }
     </style>
   </body>
