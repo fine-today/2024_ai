@@ -17,6 +17,7 @@
         <div class="wrap">
           @@include('./include/breadcrumb.html',{ depth1 : '게시판', depth2 :
           'FAQ', })
+          @@include('./include/board-tab.html')
           <section class="section">
             <div class="p-wrap bbs bbs__faq">
               <ul class="p-accordion p-accordion--faq margin_t_5">
@@ -166,6 +167,9 @@
         </div>
       </div>
       <footer class="footer">@@include('./include/footer.html')</footer>
+      <script>
+        $('.tab_item').eq(0).addClass('active');
+      </script>
     </div>
   </body>
 </html>

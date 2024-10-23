@@ -17,6 +17,7 @@
         <div class="wrap">
           @@include('./include/breadcrumb.html',{ depth1 : '사업소개', depth2 :
           '시험안내', })
+          @@include('./include/introduce-tab.html')
           <section class="section">
             <p>
               KETI전자기술연구원은 방문 또는 이메일을 통해 시험접수를 받고
@@ -99,6 +100,9 @@
         </div>
       </div>
       <footer class="footer">@@include('./include/footer.html')</footer>
+      <script>
+        $('.tab_item').eq(1).addClass('active');
+      </script>
     </div>
   </body>
 </html>

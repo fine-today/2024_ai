@@ -274,7 +274,11 @@
                     <button type="button" class="btn large">시험 시작</button>
                     <button type="button" class="btn large">시험 종료</button>
                   </div>
+                  
+            @@include('./include/mypage-cctv.html')
+            @@include('./include/mypage-option.html')
                 </div>
+
                 <div class="tab_content">
                   <!-- tab con1 -->
                   <div class="mypage-head-setting">
@@ -288,23 +292,23 @@
                     </div>
                   </div>
                   <div class="mypage-con">
-                    <div class="column" data-ratio="1-3">
+                    <div class="column" data-ratio="1-2">
                       <img
                         src="../../images/service/sub/mypage-img1.png"
                         alt="마이페이지 도면"
                       />
                     </div>
 
-                    <div class="column" data-ratio="2-3">
+                    <div class="column" data-ratio="1-2">
                       <h3>시험 조건</h3>
                       <div class="table">
                         <table>
                           <caption></caption>
                           <colgroup>
-                            <col style="width: 15%" />
-                            <col style="width: 35%" />
-                            <col style="width: 15%" />
                             <col />
+                            <col style="width: 26%" />
+                            <col style="width: 20%" />
+                            <col style="width: 20%" />
                           </colgroup>
                           <thead>
                             <tr>
@@ -321,18 +325,18 @@
                                 <span class="input">
                                   <input
                                     type="radio"
-                                    name="radio1"
-                                    id="radio1-1"
+                                    name="radio10"
+                                    id="radio10-1"
                                   />
-                                  <label for="radio1-1">On</label>
+                                  <label for="radio10-1">On</label>
                                 </span>
                                 <span class="input">
                                   <input
                                     type="radio"
-                                    name="radio1"
-                                    id="radio1-2"
+                                    name="radio10"
+                                    id="radio10-2"
                                   />
-                                  <label for="radio1-2">Off</label>
+                                  <label for="radio10-2">Off</label>
                                 </span>
                               </td>
                               <td>
@@ -362,18 +366,18 @@
                                 <span class="input">
                                   <input
                                     type="radio"
-                                    name="radio1"
-                                    id="radio1-1"
+                                    name="radio11"
+                                    id="radio11-1"
                                   />
-                                  <label for="radio1-1">On</label>
+                                  <label for="radio11-1">On</label>
                                 </span>
                                 <span class="input">
                                   <input
                                     type="radio"
-                                    name="radio1"
-                                    id="radio1-2"
+                                    name="radio11"
+                                    id="radio11-2"
                                   />
-                                  <label for="radio1-2">Off</label>
+                                  <label for="radio11-2">Off</label>
                                 </span>
                               </td>
                               <td>
@@ -403,18 +407,18 @@
                                 <span class="input">
                                   <input
                                     type="radio"
-                                    name="radio2"
-                                    id="radio2-1"
+                                    name="radio12"
+                                    id="radio12-1"
                                   />
-                                  <label for="radio2-1">On</label>
+                                  <label for="radio12-1">On</label>
                                 </span>
                                 <span class="input">
                                   <input
                                     type="radio"
-                                    name="radio2"
-                                    id="radio2-2"
+                                    name="radio12"
+                                    id="radio12-2"
                                   />
-                                  <label for="radio2-2">Off</label>
+                                  <label for="radio12-2">Off</label>
                                 </span>
                               </td>
                               <td>
@@ -444,18 +448,18 @@
                                 <span class="input">
                                   <input
                                     type="radio"
-                                    name="radio3"
-                                    id="radio3-1"
+                                    name="radio13"
+                                    id="radio13-1"
                                   />
-                                  <label for="radio3-1">On</label>
+                                  <label for="radio13-1">On</label>
                                 </span>
                                 <span class="input">
                                   <input
                                     type="radio"
-                                    name="radio3"
-                                    id="radio3-2"
+                                    name="radio13"
+                                    id="radio13-2"
                                   />
-                                  <label for="radio3-2">Off</label>
+                                  <label for="radio13-2">Off</label>
                                 </span>
                               </td>
                               <td>
@@ -485,18 +489,18 @@
                                 <span class="input">
                                   <input
                                     type="radio"
-                                    name="radio4"
-                                    id="radio4-1"
+                                    name="radio14"
+                                    id="radio14-1"
                                   />
-                                  <label for="radio4-1">On</label>
+                                  <label for="radio14-1">On</label>
                                 </span>
                                 <span class="input">
                                   <input
                                     type="radio"
-                                    name="radio4"
-                                    id="radio4-2"
+                                    name="radio14"
+                                    id="radio14-2"
                                   />
-                                  <label for="radio4-2">Off</label>
+                                  <label for="radio14-2">Off</label>
                                 </span>
                               </td>
                               <td>
@@ -526,18 +530,18 @@
                                 <span class="input">
                                   <input
                                     type="radio"
-                                    name="radio5"
-                                    id="radio5-1"
+                                    name="radio15"
+                                    id="radio15-1"
                                   />
-                                  <label for="radio5-1">On</label>
+                                  <label for="radio15-1">On</label>
                                 </span>
                                 <span class="input">
                                   <input
                                     type="radio"
-                                    name="radio5"
-                                    id="radio5-2"
+                                    name="radio15"
+                                    id="radio15-2"
                                   />
-                                  <label for="radio5-2">Off</label>
+                                  <label for="radio15-2">Off</label>
                                 </span>
                               </td>
                               <td>
@@ -602,25 +606,22 @@
                           <colgroup>
                             <col style="width: 30%" />
                             <col />
-                            <col style="width: 15%" />
-                            <col style="width: 15%" />
-                            <col style="width: 12%" />
+                            <col style="width: 22%" />
+                            <col style="width: 80px" />
                           </colgroup>
                           <thead>
                             <tr>
                               <th scope="col">날짜</th>
-                              <th scope="col">발생기</th>
-                              <th scope="col">시험농도</th>
-                              <th scope="col">농도값</th>
+                              <th scope="col">조명ON/조도</th>
+                              <th scope="col">색온도</th>
                               <th scope="col">재적용</th>
                             </tr>
                           </thead>
                           <tbody class="align-center">
                             <tr>
                               <td>2024.10.14 10:20:34</td>
-                              <td>분진(SAG410)</td>
-                              <td>PM1</td>
-                              <td>160</td>
+                              <td>방1 - 70, 주방 - 80</td>
+                              <td>낮은 색온도</td>
                               <td>
                                 <button type="button" class="btn type3 w100p">
                                   적용
@@ -629,9 +630,8 @@
                             </tr>
                             <tr>
                               <td>2024.10.14 10:20:34</td>
-                              <td>분진(SAG410)</td>
-                              <td>PM1</td>
-                              <td>160</td>
+                              <td>방1 - 70, 주방 - 80</td>
+                              <td>낮은 색온도</td>
                               <td>
                                 <button type="button" class="btn type3 w100p">
                                   적용
@@ -647,12 +647,22 @@
                     <button type="button" class="btn large">시험 시작</button>
                     <button type="button" class="btn large">시험 종료</button>
                   </div>
+                  @@include('./include/mypage-cctv.html')
+                  @@include('./include/mypage-option.html')
                 </div>
-                <div class="tab_content">3</div>
+                <div class="tab_content">
+                  <div class="video-wrap">
+                  <video src="../../images/common/map.mp4" id="map-video" loop>
+                  </div>
+
+                  <script>
+                    $('.tab_button').on('click', function(){
+                      $('#map-video').get(0).play();
+                    })
+                  </script>
+                </div>
               </div>
             </div>
-            @@include('./include/mypage-cctv.html')
-            @@include('./include/mypage-option.html')
           </section>
         </div>
       </div>

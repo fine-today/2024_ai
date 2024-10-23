@@ -17,6 +17,8 @@
         <div class="wrap">
           @@include('./include/breadcrumb.html',{ depth1 : '사업소개', depth2 :
           '시험안내', })
+          @@include('./include/introduce-tab.html')
+          
           <section class="section">
             <h3>
               '미래를 만들어가는 글로벌 기술리더, <br />한국전자기술연구원
@@ -52,6 +54,9 @@
         </div>
       </div>
       <footer class="footer">@@include('./include/footer.html')</footer>
+      <script>
+        $('.tab_item').eq(0).addClass('active');
+      </script>
     </div>
   </body>
 </html>

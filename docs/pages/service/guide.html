@@ -1435,6 +1435,14 @@
                   >
                     팝업버튼
                   </button>
+
+                  <button
+                    type="button"
+                    class="btn small popup_btn"
+                    data-pop="pop2"
+                  >
+                    alert
+                  </button>
                   <div class="popup" data-pop="pop1">
                     <div class="popup_wrap">
                       <div class="pop_inner">
@@ -1448,6 +1456,23 @@
                         <div class="popup_con">
                           여기는 팝업내용입니다 <br />
                           팝업버튼 바로아래에 .popup을 넣어주세요~
+                        </div>
+
+                        <input type="button" class="popup_close" value="닫기" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="popup alert-pop" data-pop="pop2">                    
+                    <div class="popup_wrap">
+                      <div class="pop_inner">
+                        <div class="popup-title-wrap">
+                          <h3 class="popup_title h0">비밀번호 변경</h3>
+                        </div>
+                        <div class="popup_con">
+                          <p class="em-red">작성된 비밀번호 양식이 틀립니다.</p>
+                          <div class="popup_footer">
+                            <button type="button" class="btn type2" data-pop-close="pop2">확인</button>
+                          </div>
                         </div>
 
                         <input type="button" class="popup_close" value="닫기" />

@@ -550,11 +550,7 @@
                     <button type="button" class="btn large">시험 시작</button>
                     <button type="button" class="btn large">시험 종료</button>
                   </div>
-                </div>
-                <div class="tab_content"></div>
-              </div>
-            </div>
-            
+                  
 <div class="cctv">
     <ul class="video-list">
       <li class="video-item">
@@ -595,7 +591,7 @@
       </li>
     </ul>
   </div>
-            <div class="mypage-option">
+                  <div class="mypage-option">
   <h3>옵션 설정하기</h3>
   <div class="btn-wrap">
     <button type="button" class="btn icon" data-pop="pop1">
@@ -704,7 +700,21 @@
   </div>
 </div>
 
-          </section>
+                </div>
+                <div class="tab_content">
+                  <div class="video-wrap">
+                  <video src="../../images/common/map.mp4" id="map-video" loop>
+                  </div>
+
+                  <script>
+                    $('.tab_button').on('click', function(){
+                      $('#map-video').get(0).play();
+                    })
+                  </script>
+                </div>
+              </div>
+            </section>
+          </div>
         </div>
       </div>
       <footer class="footer"><div class="footer-menu">

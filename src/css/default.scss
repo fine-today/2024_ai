@@ -1,12 +1,12 @@
-@import "./mixin";
+@use "./mixin" as *;
 
 @font-face {
   font-family: "Pretendard";
   font-weight: 900;
   font-display: swap;
   src: local("Pretendard Black"),
-    url(/common/fonts/pretendard/Pretendard-Black.subset.woff2) format("woff2"),
-    url(/common/fonts/pretendard/retendard-Black.subset.woff) format("woff");
+    url(../fonts/pretendard/Pretendard-Black.subset.woff2) format("woff2"),
+    url(../fonts/pretendard/retendard-Black.subset.woff) format("woff");
 }
 
 @font-face {
@@ -14,9 +14,9 @@
   font-weight: 800;
   font-display: swap;
   src: local("Pretendard ExtraBold"),
-    url(/common/fonts/pretendard/Pretendard-ExtraBold.subset.woff2)
+    url(../fonts/pretendard/Pretendard-ExtraBold.subset.woff2)
       format("woff2"),
-    url(/common/fonts/pretendard/retendard-ExtraBold.subset.woff) format("woff");
+    url(../fonts/pretendard/retendard-ExtraBold.subset.woff) format("woff");
 }
 
 @font-face {
@@ -24,8 +24,8 @@
   font-weight: 700;
   font-display: swap;
   src: local("Pretendard Bold"),
-    url(/common/fonts/pretendard/Pretendard-Bold.subset.woff2) format("woff2"),
-    url(/common/fonts/pretendard/retendard-Bold.subset.woff) format("woff");
+    url(../fonts/pretendard/Pretendard-Bold.subset.woff2) format("woff2"),
+    url(../fonts/pretendard/retendard-Bold.subset.woff) format("woff");
 }
 
 @font-face {
@@ -33,9 +33,9 @@
   font-weight: 600;
   font-display: swap;
   src: local("Pretendard SemiBold"),
-    url(/common/fonts/pretendard/Pretendard-SemiBold.subset.woff2)
+    url(../fonts/pretendard/Pretendard-SemiBold.subset.woff2)
       format("woff2"),
-    url(/common/fonts/pretendard/retendard-SemiBold.subset.woff) format("woff");
+    url(../fonts/pretendard/retendard-SemiBold.subset.woff) format("woff");
 }
 
 @font-face {
@@ -43,8 +43,8 @@
   font-weight: 500;
   font-display: swap;
   src: local("Pretendard Medium"),
-    url(/common/fonts/pretendard/Pretendard-Medium.subset.woff2) format("woff2"),
-    url(/common/fonts/pretendard/retendard-Medium.subset.woff) format("woff");
+    url(../fonts/pretendard/Pretendard-Medium.subset.woff2) format("woff2"),
+    url(../fonts/pretendard/retendard-Medium.subset.woff) format("woff");
 }
 
 @font-face {
@@ -52,9 +52,9 @@
   font-weight: 400;
   font-display: swap;
   src: local("Pretendard Regular"),
-    url(/common/fonts/pretendard/Pretendard-Regular.subset.woff2)
+    url(../fonts/pretendard/Pretendard-Regular.subset.woff2)
       format("woff2"),
-    url(/common/fonts/pretendard/retendard-Regular.subset.woff) format("woff");
+    url(../fonts/pretendard/retendard-Regular.subset.woff) format("woff");
 }
 
 @font-face {
@@ -62,8 +62,8 @@
   font-weight: 300;
   font-display: swap;
   src: local("Pretendard Light"),
-    url(/common/fonts/pretendard/Pretendard-Light.subset.woff2) format("woff2"),
-    url(/common/fonts/pretendard/retendard-Light.subset.woff) format("woff");
+    url(../fonts/pretendard/Pretendard-Light.subset.woff2) format("woff2"),
+    url(../fonts/pretendard/retendard-Light.subset.woff) format("woff");
 }
 
 @font-face {
@@ -71,9 +71,9 @@
   font-weight: 200;
   font-display: swap;
   src: local("Pretendard ExtraLight"),
-    url(/common/fonts/pretendard/Pretendard-ExtraLight.subset.woff2)
+    url(../fonts/pretendard/Pretendard-ExtraLight.subset.woff2)
       format("woff2"),
-    url(/common/fonts/pretendard/retendard-ExtraLight.subset.woff)
+    url(../fonts/pretendard/retendard-ExtraLight.subset.woff)
       format("woff");
 }
 
@@ -82,8 +82,8 @@
   font-weight: 100;
   font-display: swap;
   src: local("Pretendard Thin"),
-    url(/common/fonts/pretendard/Pretendard-Thin.subset.woff2) format("woff2"),
-    url(/common/fonts/pretendard/retendard-Thin.subset.woff) format("woff");
+    url(../fonts/pretendard/Pretendard-Thin.subset.woff2) format("woff2"),
+    url(../fonts/pretendard/retendard-Thin.subset.woff) format("woff");
 }
 
 article,

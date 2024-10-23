@@ -17,6 +17,7 @@
         <div class="wrap">
           @@include('./include/breadcrumb.html',{ depth1 : '사업소개', depth2 :
           '시험안내', })
+          @@include('./include/introduce-tab.html')
           <section class="section">
             <p class="margin-b-20">
               KETI전자기술연구원에서 시험할 AI가전의 시료는 직접 또는 택배,
@@ -47,6 +48,9 @@
         </div>
       </div>
       <footer class="footer">@@include('./include/footer.html')</footer>
+      <script>
+        $('.tab_item').eq(2).addClass('active');
+      </script>
     </div>
   </body>
 </html>

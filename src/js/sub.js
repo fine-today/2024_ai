@@ -16,44 +16,32 @@ $(function () {
   });
 
   //레이어팝업
-  $(".popup_btn").click(function () {
+  $("[data-pop]").click(function () {
     var $this = $(this),
       thisId = $this.attr("data-pop"),
       $thisPop = $(`.popup[data-pop="${thisId}"]`);
-    $("html").addClass("popup_open");
+    $html.addClass("popup_open");
     $thisPop.addClass("active");
     if ($thisPop.find(".dim").length < 1) {
       $thisPop.prepend('<button type="button" class="dim">닫기</button>');
     }
-    $thisPop.find(".dim").on("click", function () {
-      $thisPop.removeClass("active");
-      $thisPop.find(".dim").remove();
-      $this.focus();
-    });
-  });
-  $(".popup_close,[data-close]").click(function () {
-    var $thisPop = $(this).closest(".popup"),
-      thisId = $thisPop.attr("data-pop");
-    $("html").removeClass("popup_open");
-    $thisPop.removeClass("active");
-    $(`.popup_btn[data-pop="${thisId}"]`).focus();
   });
 
   setTimeout(function () {
     $(".popup.active").prepend(
       '<button type="button" class="dim">닫기</button>'
     );
-    $(".popup.active").on("click", function () {
+    $(document).on("click",'.popup.active .dim,.popup_close,[data-close]', function () {
       var $this = $(this),
-        thisId = $this.attr("data-pop"),
-        $thisBtn = $(`.popup_btn[data-pop="${thisId}"]`);
-      $this.removeClass("active");
-      $this.find(".dim").remove();
+        $thisPop = $this.closest("[data-pop]"),
+        thisId = $thisPop.attr("data-pop"),
+        $thisBtn = $(`[data-pop="${thisId}"]:not(.popup)`);
+      $thisPop.removeClass("active");
+      $thisPop.find(".dim").remove();
       $thisBtn.focus();
+      $html.removeClass("popup_open");
+      console.log($thisPop.attr('class'))
     });
-    if ($(".popup").hasClass("active")) {
-      $("html").addClass("popup_open");
-    }
   }, 0);
 
   /* 아코디언 열고 닫기*/
