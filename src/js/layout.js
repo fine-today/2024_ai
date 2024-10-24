@@ -41,8 +41,7 @@ $(function () {
             $depth2Item.find(">.depth3-anchor").attr("title", "열림");
           }
         });
-      } else {
-      }
+      } 
     } else if ($this.closest("header.header").length > 0) {
       var $headerMenu = $(".header .depth1"),
         $headerMenuItem = $headerMenu.find(".depth-item");
@@ -61,9 +60,18 @@ $(function () {
           $thisItemList.removeAttr("title");
         }
       });
-    } else {
-    }
+    } 
   });
+  $menuAnchor.on('click', function(e){
+    if ($(this).closest("header.header").length > 0){
+      if($(this).closest('.depth-item').hasClass('has')){
+        console.log(1)
+        e.preventDefault();
+      }
+    }
+    
+  })
+  
   $menuItem.on("mouseleave", function () {
     var $this = $(this),
       $thisItem = $this.closest(".depth-item");

@@ -44,6 +44,7 @@ function setHtml() {
     .pipe(
       fileinclude({
         prefix: "@@",
+        surffix: "##",
         basepath: "@file",
       })
     )

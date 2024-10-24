@@ -15,8 +15,11 @@
           @@include('./include/menu.html',{code : 'DE_US_16'})
         </div>
         <div class="wrap">
-          @@include('./include/breadcrumb.html',{ depth1 : '게시판', depth2 :
-          '공지사항', })
+          @@include('./include/breadcrumb.html',{ 
+            'depth1' : {title:'마이페이지', anchor : '#n'}, 
+            'depth2': {title:'수집자료 확인', anchor : '#n'}, 
+            'depthCount' : 2,
+          })
           <section class="section">
             <form action="#n">
               <fieldset>
@@ -140,14 +143,78 @@
                         </td>
                         <td>2024.09.24 11:20:00</td>
                         <td>
-                          <a href="#n" class="btn small type3">다운로드</a>
+                          <a href="../../download/test_download.csv" target="_blank" class="btn small type3">다운로드</a>
                         </td>
                         <td>
-                          <a href="#n" class="btn small type3">다운로드</a>
+                          <a href="../../download/test_download.csv" target="_blank" class="btn small type3">다운로드</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="input empty">
+                            <input type="checkbox" id="check1-2" />
+                            <label for="" check1-2></label>
+                          </span>
+                        </td>
+                        <td>10</td>
+                        <td class="p-subject">
+                          <a href="#n">실내환경모사-미세먼지 </a>
+                        </td>
+                        <td>2024.09.24 11:20:00</td>
+                        <td>
+                          <a href="../../download/test_download.csv" target="_blank" class="btn small type3">다운로드</a>
+                        </td>
+                        <td>
+                          <a href="../../download/test_download.csv" target="_blank" class="btn small type3">다운로드</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="input empty">
+                            <input type="checkbox" id="check1-2" />
+                            <label for="" check1-2></label>
+                          </span>
+                        </td>
+                        <td>10</td>
+                        <td class="p-subject">
+                          <a href="#n">실내환경모사-미세먼지 </a>
+                        </td>
+                        <td>2024.09.24 11:20:00</td>
+                        <td>
+                          <a href="../../download/test_download.csv" target="_blank" class="btn small type3">다운로드</a>
+                        </td>
+                        <td>
+                          <a href="../../download/test_download.csv" target="_blank" class="btn small type3">다운로드</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="input empty">
+                            <input type="checkbox" id="check1-2" />
+                            <label for="" check1-2></label>
+                          </span>
+                        </td>
+                        <td>10</td>
+                        <td class="p-subject">
+                          <a href="#n">실내환경모사-미세먼지 </a>
+                        </td>
+                        <td>2024.09.24 11:20:00</td>
+                        <td>
+                          <a href="../../download/test_download.csv" target="_blank" class="btn small type3">다운로드</a>
+                        </td>
+                        <td>
+                          <a href="../../download/test_download.csv" target="_blank" class="btn small type3">다운로드</a>
                         </td>
                       </tr>
                     </tbody>
                   </table>
+                  <script>
+                    $('.btn').on('click', function(e){
+                      e.preventDefault();
+                      console.log($(this).attr('href'));
+
+                    })
+                  </script>
                 </div>
                 <div class="p-pagination" data-brl-use="NO">
                   <div class="p-page">
