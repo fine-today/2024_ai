@@ -15,8 +15,11 @@
           @@include('./include/menu.html',{code : 'DE_US_16'})
         </div>
         <div class="wrap">
-          @@include('./include/breadcrumb.html',{ depth1 : '게시판', depth2 :
-          '공지사항', })
+          @@include('./include/breadcrumb.html',{ 
+            'depth1' : {title:'게시판', anchor : '#n'}, 
+            'depth2': {title:'공지사항', anchor : '#n'}, 
+            'depthCount' : 2,
+          })
           @@include('./include/board-tab.html')
           <section class="section">
             <form action="#n">

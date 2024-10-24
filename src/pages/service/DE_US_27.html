@@ -15,8 +15,11 @@
           @@include('./include/menu.html',{code : 'DE_US_16'})
         </div>
         <div class="wrap">
-          @@include('./include/breadcrumb.html',{ depth1 : '게시판', depth2 :
-          '공지사항', })
+          @@include('./include/breadcrumb.html',{ 
+            'depth1' : {title:'마이페이지', anchor : '#n'}, 
+            'depth2': {title:'정보수정', anchor : '#n'}, 
+            'depthCount' : 2,
+          })
           <section class="section">
             <h3>기업정보 수정</h3>
             <div class="table">
