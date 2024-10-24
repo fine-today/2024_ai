@@ -1607,8 +1607,6 @@ select.input[disabled] {
   background-color: transparent;
   border: 1px solid #d1d6db;
 }
-.input input[type="checkbox"] + label:before {
-}
 .input input[type="checkbox"]:checked + label:before,
 .p-form-checkbox--single
   input[type="checkbox"]:checked

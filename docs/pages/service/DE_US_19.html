@@ -36,16 +36,28 @@
           title: "Company Performance",
           curveType: "function",
           legend: { position: "bottom" },
-          width: "100%",
+          width: 388,
           height: 400,
         };
-
         var chart = new google.visualization.LineChart(
           document.getElementById("curve_chart")
         );
-
+        var chart2 = new google.visualization.LineChart(
+          document.getElementById("curve_chart2")
+        );
         chart.draw(data, options);
+        chart2.draw(data, options);
       }
+
+      $(window).on('load', function(){
+        setTimeout(function(){
+          google.charts.setOnLoadCallback(drawChart);
+        },100);
+        
+          $('.tab_button').on('click', function(){ 
+            google.charts.setOnLoadCallback(drawChart);
+        });
+      });
     </script>
   </head>
   <body>
@@ -250,7 +262,14 @@
                             </div>
                           </div>
                         </div>
-                        <div class="tab_content">2</div>
+                        <div class="tab_content">
+                          <!-- 차트 영역 -->
+                          <div class="chart-wrap">
+                            <div id="curve_chart2" class="chart"></div>
+                            <div class="unit">
+                              <span>현재 농도 : <strong>00</strong>㎍/㎥ </span>
+                            </div>
+                          </div></div>
                       </div>
                     </div>
 
