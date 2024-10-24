@@ -31,17 +31,21 @@ $(function () {
     $(".popup.active").prepend(
       '<button type="button" class="dim">닫기</button>'
     );
-    $(document).on("click",'.popup.active .dim,.popup_close,[data-close]', function () {
-      var $this = $(this),
-        $thisPop = $this.closest("[data-pop]"),
-        thisId = $thisPop.attr("data-pop"),
-        $thisBtn = $(`[data-pop="${thisId}"]:not(.popup)`);
-      $thisPop.removeClass("active");
-      $thisPop.find(".dim").remove();
-      $thisBtn.focus();
-      $html.removeClass("popup_open");
-      console.log($thisPop.attr('class'))
-    });
+    $(document).on(
+      "click",
+      ".popup.active .dim,.popup_close,[data-close]",
+      function () {
+        var $this = $(this),
+          $thisPop = $this.closest("[data-pop]"),
+          thisId = $thisPop.attr("data-pop"),
+          $thisBtn = $(`[data-pop="${thisId}"]:not(.popup)`);
+        $thisPop.removeClass("active");
+        $thisPop.find(".dim").remove();
+        $thisBtn.focus();
+        $html.removeClass("popup_open");
+        console.log($thisPop.attr("class"));
+      }
+    );
   }, 0);
 
   /* 아코디언 열고 닫기*/
@@ -70,7 +74,6 @@ $(function () {
       $tab_panel = $this.closest(".tab_panel"),
       $tabMenu = $this.closest(".tab_menu"),
       $tabContent = $tabMenu.find(">.tab_content");
-    console.log(index);
     $this
       .attr("title", "선택됨")
       .closest(".tab_item")
