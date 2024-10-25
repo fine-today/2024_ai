@@ -15,8 +15,11 @@
           @@include('./include/menu.html',{code : 'DE_US_12'})
         </div>
         <div class="wrap">
-          @@include('./include/breadcrumb.html',{ depth1 : '사업소개', depth2 :
-          '시험안내', })
+          @@include('./include/breadcrumb.html',{ 
+            'depth1' : {title:'사업소개', anchor : '#n'}, 
+            'depth2': {title:'시료입수', anchor : '#n'}, 
+            'depthCount' : 2,
+          })
           @@include('./include/introduce-tab.html')
           <section class="section">
             <p class="margin-b-20">

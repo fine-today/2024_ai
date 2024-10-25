@@ -15,8 +15,11 @@
           @@include('./include/menu.html',{code : 'DE_US_12'})
         </div>
         <div class="wrap">
-          @@include('./include/breadcrumb.html',{ depth1 : '게시판', depth2 :
-          'FAQ', })
+          @@include('./include/breadcrumb.html',{ 
+            'depth1' : {title:'게시판', anchor : '#n'}, 
+            'depth2': {title:'FAQ', anchor : '#n'}, 
+            'depthCount' : 2,
+          })
           @@include('./include/board-tab.html')
           <section class="section">
             <div class="p-wrap bbs bbs__faq">

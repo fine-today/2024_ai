@@ -1,0 +1,10 @@
+USER,###,,,,,,,,,,,,,,,,
+DATE,###,,,,,,,,,,,,,,,,
+Com.No,0,,,,,,,,,,,,,,,,
+A,TempC1,,HumC1,,FuncC1,,B,Gen,,C,Func,,D,Set,,E,Gas
+,TempC2,,HumC2,,FuncC2,,,PM,,,Way,,,Lamp,,,Conc
+,TempC3,,HumC3,,FuncC3,,,Conc,,,Head,,,Tilt,,,Func
+,TempC4,,HumC4,,FuncC4,,,Func,,,,,,Swivel,,,
+,TempC5,,HumC5,,FuncC5,,,,,,,,,Power,,,
+,TempC6,,HumC6,,FuncC6,,,,,,,,,Func,,,
+,TempC7,,HumC7,,FuncC7,,,,,,,,,,,,
