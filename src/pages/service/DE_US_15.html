@@ -15,12 +15,9 @@
           @@include('./include/menu.html',{code : 'DE_US_12'})
         </div>
         <div class="wrap">
-          @@include('./include/breadcrumb.html',{ 
-            'depth1' : {title:'게시판', anchor : '#n'}, 
-            'depth2': {title:'FAQ', anchor : '#n'}, 
-            'depthCount' : 2,
-          })
-          @@include('./include/board-tab.html')
+          @@include('./include/breadcrumb.html',{ 'depth1' : {title:'게시판',
+          anchor : '#n'}, 'depth2': {title:'FAQ', anchor : '#n'}, 'depthCount' :
+          2, }) @@include('./include/board-tab.html')
           <section class="section">
             <div class="p-wrap bbs bbs__faq">
               <ul class="p-accordion p-accordion--faq margin_t_5">
@@ -57,7 +54,7 @@
                   >
                     <span class="p-icon p-icon__answer">답변</span>
                     <div class="p-accordion__content">
-                      시료정보는 마이페이지 > 수집자료 확인 을 통해 확인
+                      시료정보는 마이페이지 > 데이터 수집 을 통해 확인
                       가능합니다.
                     </div>
                     <!-- <div class="p-accordion__link-group">
@@ -171,7 +168,7 @@
       </div>
       <footer class="footer">@@include('./include/footer.html')</footer>
       <script>
-        $('.tab_item').eq(0).addClass('active');
+        $(".tab_item").eq(0).addClass("active");
       </script>
     </div>
   </body>
