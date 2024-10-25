@@ -19,7 +19,9 @@
   box-shadow: 3px 4px 5px 0 rgba(0, 0, 0, 0.5);
 }
 
-.em-red {color:#ff0000}
+.em-red {
+  color: #ff0000;
+}
 /* 본문제목 */
 h3,
 h4,
@@ -834,7 +836,6 @@ p.blt.type3:before {
 }
 
 .tab_menu.type2.depth6 {
-  
 }
 
 @media all and (max-width: 640px) {
@@ -2341,13 +2342,28 @@ html.popup_open body {
   padding: 34px 18px 34px 38px;
 }
 .popup.alert-pop {
-  .sub-title {display:none;}
-  .popup_wrap {width:500px;min-height:0}
-  .pop_inner {min-height:0;}
-  .popup_footer {margin-top:20px;display: flex;gap:5px;justify-content: flex-end;
-    .btn {min-width:100px;}
+  .sub-title {
+    display: none;
   }
-  .popup_title {color:#000;}
+  .popup_wrap {
+    width: 500px;
+    min-height: 0;
+  }
+  .pop_inner {
+    min-height: 0;
+  }
+  .popup_footer {
+    margin-top: 20px;
+    display: flex;
+    gap: 5px;
+    justify-content: flex-end;
+    .btn {
+      min-width: 100px;
+    }
+  }
+  .popup_title {
+    color: #000;
+  }
 }
 .popup .pop_inner {
   min-height: calc(500px - 200px);
@@ -2441,13 +2457,16 @@ html.popup_open body {
     }
   }
 }
-.popup .popup_close {
+.popup .pop_inner > .popup_close {
   position: absolute;
   top: 40px;
-  right: 30px;
-  width: 14px;
-  height: 14px;
-  text-indent: -9999px;
+  right: 35px;
+  width: 34px;
+  height: 34px;
+  font-size: 0;
+  line-height: 0;
+  background: url(../../images/common/close.svg) no-repeat center center;
+  background-size: 34px 34px;
 }
 
 .popup .table {
@@ -2791,8 +2810,6 @@ html.popup_open body {
   padding: 0;
   vertical-align: middle;
 }
-
-
 
 .admin-login {
   .login-wrap {

@@ -43,7 +43,7 @@ $(function () {
         $thisPop.find(".dim").remove();
         $thisBtn.focus();
         $html.removeClass("popup_open");
-        console.log($thisPop.attr("class"));
+        console.log($thisBtn);
       }
     );
   }, 0);
