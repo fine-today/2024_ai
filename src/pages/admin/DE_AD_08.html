@@ -18,51 +18,145 @@
             <form action="#n">
               <fieldset>
                 <legend>게시물 목록</legend>
+                <div class="p-search-box">
+                  <div class="left">
+                    <div class="p-form-group">
+                      <span class="p-form-group__label">
+                        <label for="input1-1">등록일</label>
+                      </span>
+
+                      <div class="p-date first" data-date="datepicker">
+                        <input
+                          type="text"
+                          title=""
+                          placeholder="yyyy-mm-dd"
+                          class="input"
+                          id="input1-1"
+                        />
+                        <div class="p-datepicker__wrap">
+                          <button
+                            type="button"
+                            class="p-input__item p-date__icon"
+                          >
+                            달력열기
+                            <i class="ri-calendar-line"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <span class="p-form__split">~</span>
+                      <div class="p-date" data-date="datepicker">
+                        <input
+                          type="text"
+                          title=""
+                          placeholder="yyyy-mm-dd"
+                          class="input"
+                        />
+                        <div class="input_split">
+                          <div class="p-datepicker__wrap">
+                            <button
+                              type="button"
+                              class="p-input__item p-date__icon"
+                            >
+                              달력열기
+                              <i class="ri-calendar-line"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="p-form-group">
+                      <span class="p-form-group__label">
+                        <label for="input1-2">상태</label>
+                      </span>
+                      <select class="input" title="전체" id="input1-2">
+                        <option value="">전체</option>
+                        <option value="">1</option>
+                      </select>
+                    </div>
+
+                    <div class="p-form-group">
+                      <span class="p-form-group__label">
+                        <label for="input1-3">검색</label>
+                      </span>
+                      <select class="input" title="전체" id="input1-3">
+                        <option value="">이름</option>
+                        <option value="">1</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="right">
+                    <div class="p-form-group">
+                      <input type="text" class="input" />
+                      <div class="p-form-group__button">
+                        <button type="submit" class="btn type3">조회</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
                 <div class="table-unit">
-                  <span class="legend">전체 <strong>0</strong>건</span>
-                  <div class="p-search">
-                    <select name="" id="" class="input">
-                      <option value="">default</option>
-                      <option value="">default2</option>
-                    </select>
-                    <input type="text" class="input" />
-                    <button type="button" class="btn type3">검색</button>
+                  <div class="flex">
+                    <span class="legend"><strong>10/10</strong>건</span>
+                    <div class="p-search">
+                      조회기간 : 2024-01-01 ~ 2024-12-31
+                    </div>
                   </div>
                 </div>
                 <div class="table">
                   <table class="p-board" data-table="rwd">
                     <caption>
-                      게시판 - 번호, 분류, 제목, 등록일, 조회수 정보 제공
+                      게시판 - 가입일, 이름, 아이디, 부서, 연락처, 이메일, 상태
+                      정보 제공
                     </caption>
                     <colgroup>
-                      <col style="width: 80px" />
-                      <col style="width: 80px" />
+                      <col style="width: 14%" />
+                      <col style="width: 13%" />
                       <col />
-                      <col style="width: 120px" />
-                      <col style="width: 80px" />
+                      <col style="width: 14%" />
+                      <col style="width: 18%" />
+                      <col style="width: 18%" />
+                      <col style="width: 10%" />
                     </colgroup>
                     <thead>
                       <tr>
-                        <th scope="col" class="first">번호</th>
-                        <th scope="col">분류</th>
-                        <th scope="col">제목</th>
-                        <th scope="col">등록일</th>
-                        <th scope="col">조회수</th>
+                        <th scope="col" class="first">가입일</th>
+                        <th scope="col">이름</th>
+                        <th scope="col">아이디</th>
+                        <th scope="col">부서</th>
+                        <th scope="col">연락처</th>
+                        <th scope="col">이메일</th>
+                        <th scope="col">상태</th>
                       </tr>
                     </thead>
-                    <tbody class="align_center">
+                    <tbody class="align-center">
                       <tr>
-                        <td>10</td>
-                        <td>공지</td>
-                        <td class="p-subject">
-                          <a href="#n"
-                            >2024년 홀로그램기술사업화실증지원 사업 통합
-                            추가공고
-                            <i class="attatch" title="첨부파일"></i>
-                          </a>
-                        </td>
-                        <td>2024-09-04</td>
-                        <td>172</td>
+                        <td>2024.10.10</td>
+                        <td>홍***</td>
+                        <td>abc*****</td>
+                        <td>1팀</td>
+                        <td>043-****-****</td>
+                        <td>****@go.kr</td>
+                        <td>정상</td>
+                      </tr>
+                      <tr>
+                        <td>2024.10.10</td>
+                        <td>홍***</td>
+                        <td>abc*****</td>
+                        <td>1팀</td>
+                        <td>043-****-****</td>
+                        <td>****@go.kr</td>
+                        <td>정지</td>
+                      </tr>
+                      <tr>
+                        <td>2024.10.10</td>
+                        <td>홍***</td>
+                        <td>abc*****</td>
+                        <td>1팀</td>
+                        <td>043-****-****</td>
+                        <td>****@go.kr</td>
+                        <td>정상</td>
                       </tr>
                     </tbody>
                   </table>
@@ -111,35 +205,40 @@
                     </div>
                   </div>
                 </div>
-                <!--<div class="p-btn-wrap align-right">
-                  <a href="#n" class="btn">btn1</a>
-                  <a href="#n" class="btn type2">btn2</a>
-                </div>-->
+                <div class="p-btn-wrap align-right">
+                  <!-- <a href="#n" class="btn">btn1</a> -->
+                  <a href="#n" class="btn type2">관리자 등록</a>
+                </div>
 
                 <div class="table">
                   <table class="p-board" data-table="rwd">
                     <caption>
-                      게시판 - 번호, 분류, 제목, 등록일, 조회수 정보 제공
+                      게시판 - 가입일, 이름, 아이디, 부서, 연락처, 이메일, 상태
+                      정보 제공
                     </caption>
                     <colgroup>
-                      <col style="width: 80px" />
-                      <col style="width: 80px" />
+                      <col style="width: 14%" />
+                      <col style="width: 13%" />
                       <col />
-                      <col style="width: 120px" />
-                      <col style="width: 80px" />
+                      <col style="width: 14%" />
+                      <col style="width: 18%" />
+                      <col style="width: 18%" />
+                      <col style="width: 10%" />
                     </colgroup>
                     <thead>
                       <tr>
-                        <th scope="col" class="first">번호</th>
-                        <th scope="col">분류</th>
-                        <th scope="col">제목</th>
-                        <th scope="col">등록일</th>
-                        <th scope="col">조회수</th>
+                        <th scope="col" class="first">가입일</th>
+                        <th scope="col">이름</th>
+                        <th scope="col">아이디</th>
+                        <th scope="col">부서</th>
+                        <th scope="col">연락처</th>
+                        <th scope="col">이메일</th>
+                        <th scope="col">상태</th>
                       </tr>
                     </thead>
-                    <tbody class="align_center">
+                    <tbody class="align-center">
                       <tr>
-                        <td colspan="5">조회 결과가 존재하지 않습니다.</td>
+                        <td colspan="7">조회 결과가 존재하지 않습니다.</td>
                       </tr>
                     </tbody>
                   </table>

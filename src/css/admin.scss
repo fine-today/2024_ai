@@ -182,7 +182,31 @@
     }
   }
 }
-
+.p-search-box {
+  display: flex;
+  justify-content: space-between;
+  .left,
+  .right {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+  .p-form-group__label {
+    text-align: right;
+    padding-right: 20px;
+    min-width: 0;
+  }
+  .p-form-group + .p-form-group {
+    margin-top: 0;
+  }
+}
+.table-unit {
+  font-size: 16px;
+  .flex {
+    @include flexbox;
+    gap: 20px;
+  }
+}
 .footer {
   grid-area: footer;
   @include flexbox;
