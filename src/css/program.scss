@@ -464,31 +464,31 @@
   background-color: #fff;
   padding: 20px 30px;
   margin-bottom: 30px;
-  .p-form-group {
-    display: flex;
-    align-items: center;
-    & + .p-form-group {
-      margin-top: 10px;
-    }
+}
+.p-form-group {
+  display: flex;
+  align-items: center;
+  & + .p-form-group {
+    margin-top: 10px;
   }
-  .p-date {
-    position: relative;
-    .p-datepicker__wrap {
-      position: absolute;
-      top: calc(50% - 15px);
-      right: 5px;
-      width: 30px;
-      height: 30px;
-      background: url(../images/common/calendar.svg) no-repeat center center;
-      background-size: 24px 24px;
-    }
+}
+.p-date {
+  position: relative;
+  .p-datepicker__wrap {
+    position: absolute;
+    top: calc(50% - 15px);
+    right: 5px;
+    width: 30px;
+    height: 30px;
+    background: url(../images/common/calendar.svg) no-repeat center center;
+    background-size: 24px 24px;
   }
-  .p-form-group__label {
-    min-width: 120px;
-    font-size: 16px;
-    line-height: 1.5;
-    font-weight: 600;
-  }
+}
+.p-form-group__label {
+  min-width: 120px;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 600;
 }
 
 /* board */
@@ -754,6 +754,8 @@
           font-size: 13px;
           line-height: 15.6px;
           color: #6b7684;
+          padding-top: 20px;
+          vertical-align: top;
         }
         td {
           background-color: #fff;

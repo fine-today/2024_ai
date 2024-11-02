@@ -9,7 +9,7 @@
       <div id="content">
         <aside id="menu" class="menu">@@include('./include/menu.html')</aside>
         <div id="main" class="main">
-          @@include('./include/con-header.html',{depth1: '계정',depth2:
+          @@include('./include/con-header.html',{depth1: '사용자 등록',depth2:
           '상세보기'})
 
           <section class="section">
@@ -60,7 +60,7 @@
                       </td>
                     </tr>
                     <tr>
-                      <th scope="row">부서</th>
+                      <th scope="row">기관명</th>
                       <td>
                         <input type="text" class="input" />
                       </td>
@@ -84,6 +84,51 @@
                       </td>
                     </tr>
                     <tr>
+                      <th scope="row">계약기간</th>
+                      <td>
+                        <div class="p-form-group">
+                          <div class="p-date first" data-date="datepicker">
+                            <input
+                              type="text"
+                              title=""
+                              placeholder="yyyy-mm-dd"
+                              class="input"
+                              id="input1-1"
+                            />
+                            <div class="p-datepicker__wrap">
+                              <button
+                                type="button"
+                                class="p-input__item p-date__icon"
+                              >
+                                달력열기
+                                <i class="ri-calendar-line"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <span class="p-form__split">~</span>
+                          <div class="p-date" data-date="datepicker">
+                            <input
+                              type="text"
+                              title=""
+                              placeholder="yyyy-mm-dd"
+                              class="input"
+                            />
+                            <div class="input_split">
+                              <div class="p-datepicker__wrap">
+                                <button
+                                  type="button"
+                                  class="p-input__item p-date__icon"
+                                >
+                                  달력열기
+                                  <i class="ri-calendar-line"></i>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
                       <th scope="row">메모</th>
                       <td>
                         <textarea
@@ -94,7 +139,6 @@
                         ></textarea>
                       </td>
                     </tr>
-
                     <tr>
                       <th scope="row">계정상태</th>
                       <td>
@@ -121,10 +165,14 @@
                   </tbody>
                 </table>
               </div>
-
-              <div class="btn-wrap right">
-                <button type="button" class="btn large">저장</button>
-                <button type="button" class="btn large type2">목록</button>
+              <div class="flex-between">
+                <div class="btn-wrap">
+                  <button type="button" class="btn large">권한설정</button>
+                </div>
+                <div class="btn-wrap right">
+                  <button type="button" class="btn large">저장</button>
+                  <button type="button" class="btn large type2">목록</button>
+                </div>
               </div>
             </div>
           </section>

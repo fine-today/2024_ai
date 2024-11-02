@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('./include/head.html',{'title' : 'FAQ(상세)'})
+  </head>
+  <body>
+    <div id="container" class="admin sub">
+      <header class="header">@@include('./include/header.html')</header>
+      <div id="content">
+        <aside id="menu" class="menu">@@include('./include/menu.html')</aside>
+        <div id="main" class="main">
+          @@include('./include/con-header.html',{depth1: '게시판',depth2:
+          'FAQ(상세)'})
+
+          <section class="section">
+            <h3>FAQ</h3>
+
+            <div class="p-wrap bbs bbs-view">
+              <div class="table-responsive">
+                <table class="p-table scroll" data-table="rwd">
+                  <caption>
+                    공지사항 상세보기 - 제목, 등록일, 조회수, 작성자, 내용,
+                    첨부파일 정보 제공
+                  </caption>
+                  <colgroup>
+                    <col style="width: 120px" />
+                    <col />
+                    <col style="width: 120px" />
+                    <col />
+                    <col style="width: 120px" />
+                    <col />
+                  </colgroup>
+                  <tbody class="p-table--th-left">
+                    <tr class="bbs-view-title">
+                      <th scope="row">제목</th>
+                      <td colspan="5">
+                        2024년 홀로그램기술사업화실증지원 사업 통합 추가공고 |
+                        공지
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">등록일</th>
+                      <td colspan="5">2024.09.09</td>
+                      <!-- <th scope="row">조회수</th>
+                      <td>333</td>
+                      <th scope="row">작성자</th>
+                      <td>관리자</td> -->
+                    </tr>
+                    <tr>
+                      <th scope="row">내용</th>
+                      <td colspan="5">
+                        올해 KEIT는 한-캐 연계 지원사업을 시범 도입할 예정으로,
+                        국제공동연구를 통해 양국 협력 유도 및 효율적 예산 추진
+                        등 다양한 시너지 효과가 기대된다.<br />
+                        이어 7월 30~8월 2일 영국 버밍햄에서 진행된
+                        한영과학기술인학술대회(EKC)에서는 KEIT가 추진하는 데이터
+                        기반 미래 기술 발굴 및 혁신 역량 진단 시스템을 소개해
+                        참석자들의 호응을 끌어냈다.<br />
+                        마지막으로, KEIT는 이달 21일부터 24일까지 미국
+                        샌프란시스코에서 열린 한미과학기술인학술대회(UKC)를 통해
+                        미국 첨단 기업인 'Broadcom', 글로벌 최상급 대학인
+                        캘리포니아대 버클리 캠퍼스(UC버클리), 스탠포드대학 및
+                        대표 비영리 연구기관인 SRI 인터내셔널(Stanford Research
+                        Institue International)에 방문했다.<br />
+                        이 자리에서는 국제 공동연구를 위한 아이디어 피칭 활동을
+                        통해 한미 간 산업기술 협력 방향을 논의했으며, 특히
+                        캘리포니아 한국기업협회(KITA)와 함께 미국 현지
+                        기업들과의 간담회를 열어 국제 협력 애로사항 등을
+                        청취했다.<br />
+                        서용원 KEIT 부원장은 "반도체와 이차전지, 바이오 등
+                        첨단산업에서 글로벌 초격차 기술개발을 달성하기 위해,
+                        산업기술 국제공동 R&amp;D를 통한 해외 기관과의 협력은
+                        필수"라며 "캐나다와 유럽, 미국의 한인 과학자 및 현지
+                        연구기관과의 협력과 지원을 강화해 한국의 국제협력 정책에
+                        부합하는 국제공동 연구과제를 지속해서 확대 추진할
+                        계획"이라고 말했다.
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">첨부파일</th>
+                      <td colspan="5">
+                        <a href="#n" target="_blank" title="새 창"
+                          >keit.jpg (120kb)</a
+                        >
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="flex-between">
+                <div class="btn-wrap">
+                  <button type="button" class="btn large">삭제</button>
+                </div>
+                <div class="btn-wrap right">
+                  <button type="button" class="btn large">수정</button>
+                  <button type="button" class="btn large type2">목록</button>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <footer class="footer">@@include('./include/footer.html')</footer>
+    </div>
+  </body>
+</html>

@@ -13,6 +13,7 @@
   </head>
   <body>
     <header id="header">
+      <button type="button" class="btn type3" data-href="admin">admin</button>
       <button type="button" class="btn type3" data-href="common">common</button>
       <button type="button" class="btn type3" data-href="menu1">
         사업소개
@@ -22,10 +23,12 @@
         마이페이지
       </button>
       <button type="button" class="btn type3" data-href="menu4">login</button>
-      <button type="button" class="btn type3" data-href="admin">admin</button>
       <button type="button" class="btn type3" data-href="etc">etc</button>
     </header>
     <div class="guide-wrap">
+      <section id="admin">
+        <h2>admin</h2>
+      </section>
       <section id="common">
         <h2>common</h2>
       </section>
@@ -40,9 +43,6 @@
       </section>
       <section id="menu4">
         <h2>login</h2>
-      </section>
-      <section id="admin">
-        <h2>admin</h2>
       </section>
       <section id="etc">
         <h2>etc</h2>
@@ -449,6 +449,146 @@
           date: "2024-09-30",
           empty: "",
         },
+        {
+          id: 38,
+          category: "admin",
+          title: "계정 - 상세페이지/등록-비밀번호 초기화 팝업",
+          href: "./pages/admin/DE_AD_09_1.html",
+          owner: "신명화",
+          stepPC: "",
+          date: "2024-09-30",
+          empty: "",
+        },
+        {
+          id: 39,
+          category: "admin",
+          title: "사용자 등록 > 리스트",
+          href: "./pages/admin/DE_AD_10.html",
+          owner: "신명화",
+          stepPC: "",
+          date: "2024-09-30",
+          empty: "",
+        },
+        {
+          id: 40,
+          category: "admin",
+          title: "사용자 등록 > 등록/수정",
+          href: "./pages/admin/DE_AD_11.html",
+          owner: "신명화",
+          stepPC: "",
+          date: "2024-09-30",
+          empty: "",
+        },
+        {
+          id: 41,
+          category: "admin",
+          title: "사용자 등록 > 권한설정 등록/수정",
+          href: "./pages/admin/DE_AD_12.html",
+          owner: "신명화",
+          stepPC: "",
+          date: "2024-09-30",
+          empty: "",
+        },
+        {
+          id: 42,
+          category: "admin",
+          title: "게시판 > 공지사항",
+          href: "./pages/admin/DE_AD_13.html",
+          owner: "신명화",
+          stepPC: "",
+          date: "2024-09-30",
+          empty: "",
+        },
+        {
+          id: 43,
+          category: "admin",
+          title: "게시판 > 공지사항(등록)",
+          href: "./pages/admin/DE_AD_14.html",
+          owner: "신명화",
+          stepPC: "",
+          date: "2024-09-30",
+          empty: "",
+        },
+        {
+          id: 44,
+          category: "admin",
+          title: "게시판 > 공지사항(상세)",
+          href: "./pages/admin/DE_AD_15.html",
+          owner: "신명화",
+          stepPC: "",
+          date: "2024-09-30",
+          empty: "",
+        },
+        {
+          id: 45,
+          category: "admin",
+          title: "게시판 > FAQ",
+          href: "./pages/admin/DE_AD_16.html",
+          owner: "신명화",
+          stepPC: "",
+          date: "2024-09-30",
+          empty: "",
+        },
+        {
+          id: 46,
+          category: "admin",
+          title: "게시판 > FAQ(등록)",
+          href: "./pages/admin/DE_AD_17.html",
+          owner: "신명화",
+          stepPC: "",
+          date: "2024-09-30",
+          empty: "",
+        },
+        {
+          id: 47,
+          category: "admin",
+          title: "게시판 > FAQ(상세)",
+          href: "./pages/admin/DE_AD_18.html",
+          owner: "신명화",
+          stepPC: "",
+          date: "2024-09-30",
+          empty: "",
+        },
+        {
+          id: 48,
+          category: "admin",
+          title: "팝업/메인설정 > 팝업 리스트",
+          href: "./pages/admin/DE_AD_19.html",
+          owner: "신명화",
+          stepPC: "",
+          date: "2024-09-30",
+          empty: "",
+        },
+        {
+          id: 49,
+          category: "admin",
+          title: "팝업/메인설정 > 팝업 상세/등록",
+          href: "./pages/admin/DE_AD_20.html",
+          owner: "신명화",
+          stepPC: "",
+          date: "2024-09-30",
+          empty: "",
+        },
+        {
+          id: 50,
+          category: "admin",
+          title: "비주얼 > 리스트",
+          href: "./pages/admin/DE_AD_21.html",
+          owner: "신명화",
+          stepPC: "",
+          date: "2024-09-30",
+          empty: "",
+        },
+        {
+          id: 51,
+          category: "admin",
+          title: "비주얼 > 상세/등록",
+          href: "./pages/admin/DE_AD_22.html",
+          owner: "신명화",
+          stepPC: "",
+          date: "2024-09-30",
+          empty: "",
+        },
       ];
       $(function () {
         var $header = $("#header"),
@@ -471,20 +611,20 @@
           var thisData = td.filter((x) => x.category === thisId);
           var $table = $(
             `<table style="text-align:center" class="guide-table">
-              <colgroup>
-                <col style="width:9%">
-                <col style="width:20%">
-                <col>
-                <col style="width:9%">
-                <col style="width:9%">
-                <col style="width:10%">
-                <col style="width:15%">
-              </colgroup>
-              <thead>
-                <tr></tr>
-              </thead>
-              <tbody></tbody>
-            </table>`
+                    <colgroup>
+                      <col style="width:9%">
+                      <col style="width:20%">
+                      <col>
+                      <col style="width:9%">
+                      <col style="width:9%">
+                      <col style="width:10%">
+                      <col style="width:15%">
+                    </colgroup>
+                    <thead>
+                      <tr></tr>
+                    </thead>
+                    <tbody></tbody>
+                  </table>`
           );
           th.forEach(function (thElem) {
             var $th = $("<th></th>");
@@ -496,16 +636,16 @@
               trElem;
             var $tr = $(
               `<tr>
-                <td data-category><label>_</label></td>
-                <td data-title><a href="${href}" target="_blank">${title}</a></td>
-                <td data-href>
-                  <a href="${href}" target="_blank">${href}</a>
-                </td>
-                <td data-owner>${owner}</td>
-                <td data-stepPC>${stepPC}</td>
-                <td data-date>${date}</td>
-                <td data-empty>${empty}</td>
-              </tr>`
+                      <td data-category><label>_</label></td>
+                      <td data-title><a href="${href}" target="_blank">${title}</a></td>
+                      <td data-href>
+                        <a href="${href}" target="_blank">${href}</a>
+                      </td>
+                      <td data-owner>${owner}</td>
+                      <td data-stepPC>${stepPC}</td>
+                      <td data-date>${date}</td>
+                      <td data-empty>${empty}</td>
+                    </tr>`
             );
             $table.find("tbody").append($tr);
           });

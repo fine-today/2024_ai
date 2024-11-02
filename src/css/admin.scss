@@ -1,6 +1,15 @@
 @use "_mixin" as *;
 @use "program" as *;
 
+p {
+  font-size: 16px;
+  line-height: 1.4;
+}
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 #container {
   display: grid;
   grid-template-rows: 11rem 1fr auto;
@@ -198,6 +207,64 @@
   }
   .p-form-group + .p-form-group {
     margin-top: 0;
+  }
+}
+.p-board tbody.align_center th,
+.p-board tbody.align_center td {
+  text-align: center;
+  &.p-subject {
+    text-align: left;
+  }
+}
+.p-table {
+  border-top: 1px solid #6b7684;
+  .limit {
+    padding-left: 10px;
+    line-height: 36px;
+  }
+}
+.p-wrap.bbs-write {
+  .input:not(:has(> input[type="radio"], > input[type="checkbox"])):not(.file) {
+    min-width: 300px;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+  }
+  .p-date .input:not(:has(> input[type="radio"], > input[type="checkbox"])) {
+    min-width: 200px;
+  }
+  .p-time .input:not(:has(> input[type="radio"], > input[type="checkbox"])) {
+    min-width: 50px;
+    width: 80px;
+  }
+  .p-subject .input input[type="radio"] + label,
+  .p-subject .input input[type="checkbox"] + label {
+    margin-top: 6px;
+  }
+}
+.p-subject {
+  .input input[type="checkbox"] + label {
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+  & + .p-desc {
+    margin-top: 4px;
+    padding-left: 20px;
+  }
+}
+.attatch {
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  background: url(../images/common/file.svg) no-repeat center center;
+  background-size: 14px 14px;
+}
+.p-wrap.bbs .p-table .p-table--th-left {
+  th,
+  td {
+    height: 50px;
   }
 }
 .table-unit {

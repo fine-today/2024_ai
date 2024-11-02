@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('./include/head.html',{'title' : '팝업 상세/등록'})
+  </head>
+  <body>
+    <div id="container" class="admin sub">
+      <header class="header">@@include('./include/header.html')</header>
+      <div id="content">
+        <aside id="menu" class="menu">@@include('./include/menu.html')</aside>
+        <div id="main" class="main">
+          @@include('./include/con-header.html',{depth1: '팝업/메인설정',depth2:
+          '팝업 상세/등록'})
+
+          <section class="section">
+            <h3>팝업</h3>
+
+            <div class="p-wrap bbs bbs-write">
+              <div class="table-responsive">
+                <table class="p-table scroll" data-table="rwd">
+                  <caption>
+                    공지사항 작성하기 - 제목, 내용, 첨부파일 정보 제공
+                  </caption>
+                  <colgroup>
+                    <col style="width: 200px" />
+                    <col />
+                  </colgroup>
+                  <tbody class="p-table--th-left">
+                    <tr>
+                      <th scope="row">
+                        제목
+                        <i class="required" title="필수">*</i>
+                      </th>
+                      <td>
+                        <input type="text" class="input w50p" />
+                        <span class="limit"
+                          ><em class="em-blue">0</em> / 50자</span
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">랜딩URL</th>
+                      <td>
+                        <input type="text" class="input w100p" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row" rowspan="2">
+                        팝업 이미지 파일 <i class="required" title="필수">*</i>
+                      </th>
+                      <td>
+                        <span class="input file">
+                          <input
+                            type="file"
+                            placeholder="파일찾기"
+                            id="file1"
+                          />
+                          <label for="file1" class="input"></label>
+                          <label for="file1" class="btn type2">파일선택</label>
+                        </span>
+                        <span class="limit"
+                          >팝업 이미지 사이즈(크기) : 000 X 000
+                        </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="#n" target="_blank" title="새 창"
+                          >팝업 이미지 파일명.jpg (120kb)</a
+                        ><button type="button" class="btn margin-l-12">
+                          삭제
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        팝업내용 <i class="required" title="필수">*</i>
+                      </th>
+                      <td>
+                        에디터 구성(팝업 내용을 입력해주세요)
+                        <textarea name="" id="" class="input w100p"></textarea>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">노출 기간</th>
+                      <td>
+                        <div class="p-form-group">
+                          <div class="p-date first" data-date="datepicker">
+                            <input
+                              type="text"
+                              title=""
+                              placeholder="yyyy-mm-dd"
+                              class="input"
+                              id="input1-1"
+                            />
+                            <div class="p-datepicker__wrap">
+                              <button
+                                type="button"
+                                class="p-input__item p-date__icon"
+                              >
+                                달력열기
+                                <i class="ri-calendar-line"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="p-time">
+                            <input
+                              type="text"
+                              title=""
+                              placeholder=""
+                              class="input"
+                              id="time1-1"
+                            />
+                          </div>
+                          <span class="p-form__split"
+                            >&nbsp;시&nbsp;&nbsp;</span
+                          >
+                          <div class="p-time">
+                            <input
+                              type="text"
+                              title=""
+                              placeholder=""
+                              class="input"
+                              id="time1-2"
+                            />
+                          </div>
+                          <span class="p-form__split">&nbsp;분 ~ </span>
+                          <div class="p-date" data-date="datepicker">
+                            <input
+                              type="text"
+                              title=""
+                              placeholder="yyyy-mm-dd"
+                              class="input"
+                            />
+                            <div class="input_split">
+                              <div class="p-datepicker__wrap">
+                                <button
+                                  type="button"
+                                  class="p-input__item p-date__icon"
+                                >
+                                  달력열기
+                                  <i class="ri-calendar-line"></i>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="p-time">
+                            <input
+                              type="text"
+                              title=""
+                              placeholder=""
+                              class="input"
+                              id="time3-1"
+                            />
+                          </div>
+                          <span class="p-form__split"
+                            >&nbsp;시&nbsp;&nbsp;</span
+                          >
+                          <div class="p-time">
+                            <input
+                              type="text"
+                              title=""
+                              placeholder=""
+                              class="input"
+                              id="time4-1"
+                            />
+                          </div>
+                          <span class="p-form__split">&nbsp;분</span>
+                        </div>
+
+                        <div class="p-form-group">
+                          <span class="input">
+                            <input
+                              type="radio"
+                              name="radio3"
+                              id="radio3-1"
+                              checked=""
+                            />
+                            <label for="radio3-1">영구표시</label>
+                          </span>
+                          <span class="input">
+                            <input type="radio" name="radio3" id="radio3-2" />
+                            <label for="radio3-2">1주</label>
+                          </span>
+                          <span class="input">
+                            <input type="radio" name="radio3" id="radio3-3" />
+                            <label for="radio3-3">1개월</label>
+                          </span>
+                          <span class="input">
+                            <input type="radio" name="radio3" id="radio3-4" />
+                            <label for="radio3-4">2개월</label>
+                          </span>
+                          <span class="input">
+                            <input type="radio" name="radio3" id="radio3-5" />
+                            <label for="radio3-5">3개월</label>
+                          </span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">노출상태</th>
+                      <td>
+                        <span class="input">
+                          <input
+                            type="radio"
+                            name="radio"
+                            id="radio1"
+                            checked=""
+                          />
+                          <label for="radio1">정상</label>
+                        </span>
+                        <span class="input">
+                          <input type="radio" name="radio" id="radio2" />
+                          <label for="radio2">정지</label>
+                        </span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="btn-wrap right">
+                <button type="button" class="btn large type3">삭제</button>
+                <button type="button" class="btn large">저장</button>
+                <button type="button" class="btn large type2">목록</button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <footer class="footer">@@include('./include/footer.html')</footer>
+    </div>
+  </body>
+</html>

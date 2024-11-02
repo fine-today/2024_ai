@@ -22,6 +22,9 @@
 .em-red {
   color: #ff0000;
 }
+.em-blue {
+  color: #0b6dcf;
+}
 /* 본문제목 */
 h3,
 h4,
@@ -1548,6 +1551,12 @@ select.input[disabled] {
   color: #6b7684;
   vertical-align: top;
 }
+
+.input input[type="radio"] + label.empty,
+.input input[type="checkbox"] + label.empty {
+  padding-left: 6px;
+  height: 20px;
+}
 .input input[type="radio"] + label:before {
   display: block;
   position: absolute;
@@ -2398,6 +2407,7 @@ html.popup_open body {
   padding-bottom: 16px;
   border-bottom: 3px solid #37516d;
   color: #0b6dcf;
+  padding-right: 34px;
 }
 .popup .popup_con {
   input.input {
@@ -2459,7 +2469,7 @@ html.popup_open body {
 }
 .popup .pop_inner > .popup_close {
   position: absolute;
-  top: 40px;
+  top: 45px;
   right: 35px;
   width: 34px;
   height: 34px;
@@ -2959,4 +2969,8 @@ html.popup_open body {
       }
     }
   }
+}
+
+i.required {
+  color: #ff0000;
 }
