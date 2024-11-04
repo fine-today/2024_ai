@@ -229,19 +229,20 @@ p {
     gap: 20px;
     align-items: stretch;
     .floor {
-      position: relative;
+      position:relative;
       img {
         height: 641px;
       }
       .label {
-        position: absolute;
-        background: #005f9e;
-        color: #fff;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 1.5;
-        padding: 5px 10px;
-        border-radius: 5px;
+        position:absolute;
+        background:#005f9e;
+        color:#fff;
+        font-weight:600;
+        font-size:16px;
+        line-height:1.5;
+        padding:5px 10px;
+        border-radius:5px;
+        
       }
     }
   }
@@ -403,24 +404,16 @@ p {
 }
 
 .video-wrap {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
+  position:relative;
+  overflow:hidden;
+  width:100%;
   video {
-    display: block;
-    width: auto;
-    height: auto;
-    margin: 0 auto;
+    display:block;width:100%;height:auto;
+    margin-bottom:-1px;
   }
 }
 
-.my-page #content .breadcrumb-wrap {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-.my-page .mypage {
-  padding: 0 32px;
-}
-.my-page .mypage-head-setting {
-  margin-top: 10px;
-}
+
+.my-page #content .breadcrumb-wrap {padding-top:20px;padding-bottom:20px;}
+.my-page .mypage {padding:0 32px;}
+.my-page .mypage-head-setting {margin-top:10px;}

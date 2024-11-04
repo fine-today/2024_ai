@@ -20,7 +20,6 @@ $(function () {
     var $this = $(this),
       thisId = $this.attr("data-pop"),
       $thisPop = $(`.popup[data-pop="${thisId}"]`);
-    console.log("popup_btn");
     $html.addClass("popup_open");
     $thisPop.addClass("active");
     if ($thisPop.find(".dim").length < 1) {
@@ -44,6 +43,7 @@ $(function () {
         $thisPop.find(".dim").remove();
         $thisBtn.focus();
         $html.removeClass("popup_open");
+        console.log($thisBtn);
       }
     );
   }, 0);
