@@ -980,7 +980,7 @@ p.blt.type3:before {
   margin: 17px 0 23px;
   font-size: 16px;
 }
-.table thead tr:first-child th {
+.table thead tr th {
   border-top: 2px solid #414a73;
   border-bottom: 1px solid #c5c9d6;
   border-right: 1px solid #414a73;
@@ -988,6 +988,7 @@ p.blt.type3:before {
 }
 .table thead th {
   font-weight: 600;
+  border: 1px solid #414a73;
 }
 .table tbody th {
   font-weight: 400;
@@ -1026,7 +1027,6 @@ p.blt.type3:before {
 .table td:first-child {
   border-left: none;
 }
-.table th:last-child,
 .table td:last-child {
   border-right: none;
   border-left: 1px solid #ebecf2;
@@ -1035,10 +1035,7 @@ p.blt.type3:before {
 .table td.first {
   border-left: 1px solid #ebecf2;
 }
-/*tr_over*/
-.table thead tr:nth-child(n + 2) th {
-  font-weight: 400;
-}
+
 /*.table tbody th, .table tbody td, .table tfoot th, .table tfoot td {border-right:1px solid #ebecf2;}*/
 .table tbody th,
 .table tfoot th {
@@ -1116,17 +1113,17 @@ td .num {
 /* thead에 tr이 두 개 이상일 때 */
 .table.tr_over {
 }
-.table.tr_over thead tr th {
-  background-color: #f9fafc;
-}
-.table.tr_over thead tr:first-child th {
-  background-color: #4e5968;
-  border-bottom-color: #e7e8ec;
-  border-right: 1px solid #191f28;
-}
-.table.tr_over thead tr th:last-child {
-  border-right: none;
-}
+// .table.tr_over thead tr th {
+//   background-color: #f9fafc;
+// }
+// .table.tr_over thead tr:first-child th {
+//   background-color: #4e5968;
+//   border-bottom-color: #e7e8ec;
+//   border-right: 1px solid #191f28;
+// }
+// .table.tr_over thead tr th:last-child {
+//   border-right: none;
+// }
 
 /* 스크롤 테이블 */
 .table_scroll {
@@ -1177,6 +1174,7 @@ td .num {
   }
   .table thead th {
     padding: 10px 5px;
+    border: 1px solid #414a73;
   }
   .table tbody th,
   .table tbody td,
@@ -1474,7 +1472,7 @@ input.input {
 select.input {
   width: 180px;
   height: 36px;
-  padding: 4px 35px 4px 8px;
+  padding: 4px 27px 4px 8px;
   border: 1px solid #4e5968;
   border-radius: 3px;
   font-size: 16px;
@@ -2340,7 +2338,7 @@ html.popup_open body {
   overflow: hidden;
   width: 860px;
   height: auto;
-  min-height: 500px;
+  min-height: 420px;
   margin: 0 auto;
   border-radius: 30px;
   background-color: #fff;
@@ -2517,6 +2515,12 @@ html.popup_open body {
         }
       }
       &.align-center {
+        td {
+          text-align: center;
+        }
+      }
+      tr.align-center {
+        th,
         td {
           text-align: center;
         }
