@@ -552,6 +552,17 @@
                           </colgroup>
                           <tbody>
                             <tr>
+                              <th scope="row">계절선택</th>
+                              <td colspan="3">
+                                <div class="flex">
+                                  <button type="button" class="btn type1 w100p">봄</button>
+                                  <button type="button" class="btn type1 w100p">여름</button>
+                                  <button type="button" class="btn type1 w100p">가을</button>
+                                  <button type="button" class="btn type1 w100p">겨울</button>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
                               <th scope="row">일사량 선택</th>
                               <td colspan="3">
                                 <select name="" id="" class="input">
@@ -569,7 +580,13 @@
                                 분
                               </td>
                               <th scope="row">경과 시간</th>
-                              <td>163 분</td>
+                              <td>163 분
+                                <div class="flex">
+                                  <button type="button" class="btn type1" data-pop="pop10">스케줄링</button>
+                                  <button type="button" class="btn type1" data-pop="pop11">각도조절</button>
+                                </div>
+                                
+                              </td>
                             </tr>
                             <tr>
                               <th scope="row">시험 결과</th>
@@ -583,29 +600,38 @@
                         </table>
                       </div>
 
-                      <h3>이력관리</h3>
+                      <h3>변경이력관리</h3>
                       <div class="table">
                         <table>
                           <caption>이력관리</caption>
                           <colgroup>
                             <col style="width: 30%" /> 
-                            <col style="width: 20%" />
+                            <col style="width: 5%" /> 
+                            <col style="width: 20%" /> 
+                            <col style="width: 15%" />
                             <col />
                             <col style="width: 100px" />
                           </colgroup>
                           <thead>
                             <tr>
-                              <th scope="col">날짜</th>
+                              <th scope="col" rowspan="2">날짜</th>
+                              <th scope="col" rowspan="2"></th>
+                              <th scope="col" rowspan="2">태양광 출력</th>
+                              <th scope="col" colspan=2></th>
+                              <th scope="col" rowspan="2">재적용</th>
+                            </tr>
+                            <tr>
+                              <th scope="col">시험시간</th>
                               <th scope="col"></th>
-                              <th scope="col">일사량</th>
-                              <th scope="col">재적용</th>
                             </tr>
                           </thead>
                           <tbody class="align-center">
                             <tr>
                               <td>2024.10.14 10:20:34</td>
-                              <td>봄</td>
+                              <td></td>
                               <td>50%</td>
+                              <td>120</td>
+                              <td></td>
                               <td>
                                 <button type="button" class="btn type3 w100p">
                                   적용
@@ -614,8 +640,10 @@
                             </tr>
                             <tr>
                               <td>2024.10.14 10:20:34</td>
-                              <td>봄</td>
+                              <td></td>
                               <td>61%</td>
+                              <td></td>
+                              <td></td>
                               <td>
                                 <button type="button" class="btn type3 w100p">
                                   적용
@@ -817,6 +845,172 @@
                       $('#map-video').get(0).play();
                     })
                   </script>
+                </div>
+              </div>
+            </div>
+
+            <!-- 스케줄링 -->
+            <div class="popup de_us_20" data-pop="pop10">
+              <div class="popup_wrap">
+                <div class="pop_inner">
+                  <div class="popup-title-wrap">
+                    <!-- <div class="sub-title">
+                      <strong>Option 01</strong> 생체 인식률 평가를 위한
+                      외부간섭요인 발생 시스템
+                    </div> -->
+                    <h3 class="popup_title h0">스케쥴링</h3>
+                  </div>
+                  <div class="popup_con">
+                    <div class="table">
+                      <table>
+                        <caption></caption>
+                        <colgroup>
+                          <col />
+                          <col style="width: 20%" />
+                          <col style="width: 20%" />
+                          <col style="width: 20%" />
+                          <col style="width: 20%" />
+                        </colgroup>
+                        <tbody>
+                          <tr>
+                            <th scope="col">회차</th>
+                            <th scope="col">1회차</th>
+                            <th scope="col">2회차</th>
+                            <th scope="col">3회차</th>
+                            <th scope="col">4회차</th>                            
+                          </tr>
+                          <tr>
+                            <th scope="row">일사량</th>
+                            <td>
+                              <input type="text" class="input" />
+                            </td>
+                            <td>
+                              <input type="text" class="input" />
+                            </td>
+                            <td>
+                              <input type="text" class="input" />
+                            </td>
+                            <td>
+                              <input type="text" class="input" />
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">분</th>
+                            <td>
+                              <input type="text" class="input" />
+                            </td>
+                            <td>
+                              <input type="text" class="input" />
+                            </td>
+                            <td>
+                              <input type="text" class="input" />
+                            </td>
+                            <td>
+                              <input type="text" class="input" />
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="popup-footer">
+                    <div class="btn-wrap">
+                      <button type="button" class="btn large popup_close">적용</button>
+                    </div>
+                  </div>
+
+                  <input type="button" class="popup_close" value="닫기" />
+                </div>
+              </div>
+            </div>
+
+            <!-- 각도조절 -->
+            <div class="popup de_us_20" data-pop="pop11">
+              <div class="popup_wrap">
+                <div class="pop_inner">
+                  <div class="popup-title-wrap">
+                    <!-- <div class="sub-title">
+                      <strong>Option 01</strong> 생체 인식률 평가를 위한
+                      외부간섭요인 발생 시스템
+                    </div> -->
+                    <h3 class="popup_title h0">각도조절</h3>
+                  </div>
+                  <div class="popup_con">
+                    <div class="table">
+                      <table>
+                        <caption></caption>
+                        <colgroup>
+                          <col />
+                          <col style="width: 14%" />
+                          <col style="width: 14%" />
+                          <col style="width: 14%" />
+                          <col style="width: 14%" />
+                          <col style="width: 14%" />
+                          <col style="width: 14%" />
+                        </colgroup>
+                        <tbody>
+                          <tr>
+                            <th scope="col">램프</th>
+                            <th scope="col">1회차</th>
+                            <th scope="col">2회차</th>
+                            <th scope="col">3회차</th>
+                            <th scope="col">4회차</th> 
+                            <th scope="col">5회차</th> 
+                            <th scope="col">6회차</th>                            
+                          </tr>
+                          <tr>
+                            <th scope="row">가로 각도</th>
+                            <td>
+                              <input type="text" class="input" />
+                            </td>
+                            <td>
+                              <input type="text" class="input" />
+                            </td>
+                            <td>
+                              <input type="text" class="input" />
+                            </td>
+                            <td>
+                              <input type="text" class="input" />
+                            </td>
+                            <td>
+                              <input type="text" class="input" />
+                            </td>
+                            <td>
+                              <input type="text" class="input" />
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">세로 각도</th>
+                            <td>
+                              <input type="text" class="input" />
+                            </td>
+                            <td>
+                              <input type="text" class="input" />
+                            </td>
+                            <td>
+                              <input type="text" class="input" />
+                            </td>
+                            <td>
+                              <input type="text" class="input" />
+                            </td>
+                            <td>
+                              <input type="text" class="input" />
+                            </td>
+                            <td>
+                              <input type="text" class="input" />
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="popup-footer">
+                    <div class="btn-wrap">
+                      <button type="button" class="btn large popup_close">적용</button>
+                    </div>
+                  </div>
+
+                  <input type="button" class="popup_close" value="닫기" />
                 </div>
               </div>
             </div>
