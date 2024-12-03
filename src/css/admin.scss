@@ -217,6 +217,14 @@ p {
   text-align: center;
   &.p-subject {
     text-align: left;
+    > a {
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      word-break: break-all;
+      max-width: 1000px;
+    }
   }
 }
 .p-table {

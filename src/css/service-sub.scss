@@ -70,6 +70,12 @@ p {
       }
       .p-subject {
         text-align: left;
+        > a {
+          display: block;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
       }
     }
     th,
