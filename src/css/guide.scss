@@ -1612,7 +1612,7 @@ select.input[disabled] {
   height: 16px;
   border-radius: 2px;
   box-sizing: border-box;
-  background-color: transparent;
+  background-color: #fff;
   border: 1px solid #d1d6db;
 }
 .input input[type="checkbox"]:checked + label:before,
