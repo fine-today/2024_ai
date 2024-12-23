@@ -210,9 +210,9 @@
                               <input
                                 type="checkbox"
                                 name="checkbox"
-                                id="check1"
+                                id="check2"
                               />
-                              <label for="check1"></label>
+                              <label for="check2"></label>
                             </span>
                           </td>
                           <td>10</td>
@@ -233,9 +233,9 @@
                               <input
                                 type="checkbox"
                                 name="checkbox"
-                                id="check1"
+                                id="check3"
                               />
-                              <label for="check1"></label>
+                              <label for="check3"></label>
                             </span>
                           </td>
                           <td>9</td>
@@ -256,9 +256,9 @@
                               <input
                                 type="checkbox"
                                 name="checkbox"
-                                id="check1"
+                                id="check4"
                               />
-                              <label for="check1"></label>
+                              <label for="check4"></label>
                             </span>
                           </td>
                           <td>8</td>
@@ -279,9 +279,9 @@
                               <input
                                 type="checkbox"
                                 name="checkbox"
-                                id="check1"
+                                id="check5"
                               />
-                              <label for="check1"></label>
+                              <label for="check5"></label>
                             </span>
                           </td>
                           <td>7</td>
@@ -301,9 +301,9 @@
                               <input
                                 type="checkbox"
                                 name="checkbox"
-                                id="check1"
+                                id="check6"
                               />
-                              <label for="check1"></label>
+                              <label for="check6"></label>
                             </span>
                           </td>
                           <td>6</td>
@@ -323,9 +323,9 @@
                               <input
                                 type="checkbox"
                                 name="checkbox"
-                                id="check1"
+                                id="check7"
                               />
-                              <label for="check1"></label>
+                              <label for="check7"></label>
                             </span>
                           </td>
                           <td>5</td>
@@ -345,9 +345,9 @@
                               <input
                                 type="checkbox"
                                 name="checkbox"
-                                id="check1"
+                                id="check8"
                               />
-                              <label for="check1"></label>
+                              <label for="check8"></label>
                             </span>
                           </td>
                           <td>4</td>
@@ -367,9 +367,9 @@
                               <input
                                 type="checkbox"
                                 name="checkbox"
-                                id="check1"
+                                id="check9"
                               />
-                              <label for="check1"></label>
+                              <label for="check9"></label>
                             </span>
                           </td>
                           <td>3</td>
@@ -389,9 +389,9 @@
                               <input
                                 type="checkbox"
                                 name="checkbox"
-                                id="check1"
+                                id="check10"
                               />
-                              <label for="check1"></label>
+                              <label for="check10"></label>
                             </span>
                           </td>
                           <td>2</td>
@@ -411,9 +411,9 @@
                               <input
                                 type="checkbox"
                                 name="checkbox"
-                                id="check1"
+                                id="check11"
                               />
-                              <label for="check1"></label>
+                              <label for="check11"></label>
                             </span>
                           </td>
                           <td>1</td>
@@ -519,6 +519,21 @@
           </section>
         </div>
       </div>
+      <script>
+        $("#check1").on("click", function () {
+          var $this = $(this),
+            checked = $this.is(":checked");
+          $("[name=checkbox]").each(function () {
+            if ($(this).attr("id") !== "#check1") {
+              if (checked) {
+                $(this).prop("checked", true);
+              } else {
+                $(this).prop("checked", false);
+              }
+            }
+          });
+        });
+      </script>
       <footer class="footer"><div class="copyright">
   Copyright(C) 2024 KOREA ELECTORNICS TECHNOLOGY INSTITUTE., All Rights
   Reserved.
