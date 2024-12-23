@@ -148,9 +148,9 @@
                             <input
                               type="checkbox"
                               name="checkbox"
-                              id="check1"
+                              id="check2"
                             />
-                            <label for="check1"></label>
+                            <label for="check2"></label>
                           </span>
                         </td>
                         <td>2024.10.10</td>
@@ -167,9 +167,9 @@
                             <input
                               type="checkbox"
                               name="checkbox"
-                              id="check1"
+                              id="check3"
                             />
-                            <label for="check1"></label>
+                            <label for="check3"></label>
                           </span>
                         </td>
                         <td>2024.10.10</td>
@@ -186,9 +186,9 @@
                             <input
                               type="checkbox"
                               name="checkbox"
-                              id="check1"
+                              id="check4"
                             />
-                            <label for="check1"></label>
+                            <label for="check4"></label>
                           </span>
                         </td>
                         <td>2024.10.10</td>
@@ -202,6 +202,7 @@
                     </tbody>
                   </table>
                 </div>
+
                 <div class="p-pagination" data-brl-use="NO">
                   <div class="p-page">
                     <div class="p-page__control">
@@ -289,6 +290,21 @@
           </section>
         </div>
       </div>
+      <script>
+        $("#check1").on("click", function () {
+          var $this = $(this),
+            checked = $this.is(":checked");
+          $("[name=checkbox]").each(function () {
+            if ($(this).attr("id") !== "#check1") {
+              if (checked) {
+                $(this).prop("checked", true);
+              } else {
+                $(this).prop("checked", false);
+              }
+            }
+          });
+        });
+      </script>
       <footer class="footer">@@include('./include/footer.html')</footer>
     </div>
   </body>

@@ -44,8 +44,12 @@
                         <tr>
                           <th scope="col" class="first">
                             <span class="input">
-                              <input type="checkbox" id="check1-0" />
-                              <label for="check1-0" class="empty"></label>
+                              <input
+                                type="checkbox"
+                                id="check1"
+                                name="checkbox"
+                              />
+                              <label for="check1" class="empty"></label>
                             </span>
                           </th>
                           <th scope="col">제목</th>
@@ -57,7 +61,11 @@
                         <tr>
                           <td>
                             <span class="input">
-                              <input type="checkbox" id="check1-1" />
+                              <input
+                                type="checkbox"
+                                id="check1-1"
+                                name="checkbox"
+                              />
                               <label for="check1-1" class="empty"></label>
                             </span>
                           </td>
@@ -161,6 +169,21 @@
           </section>
         </div>
       </div>
+      <script>
+        $("#check1").on("click", function () {
+          var $this = $(this),
+            checked = $this.is(":checked");
+          $("[name=checkbox]").each(function () {
+            if ($(this).attr("id") !== "#check1") {
+              if (checked) {
+                $(this).prop("checked", true);
+              } else {
+                $(this).prop("checked", false);
+              }
+            }
+          });
+        });
+      </script>
       <footer class="footer">@@include('./include/footer.html')</footer>
     </div>
   </body>
