@@ -245,6 +245,30 @@
             }
           });
         });
+        $(
+          '[name="check1"],[name="check2"],[name="check3"],[name="check4"],[name="check5"]'
+        ).on("change", function () {
+          var $this = $(this),
+            thisName = $this.attr("name"),
+            isTrue = {
+              length: $(`[name="${thisName}"]`).length - 1,
+              true: 0,
+              false: 0,
+            };
+          $(`[name="${thisName}"]:not('#${thisName}')`).each(function () {
+            if ($(this).prop("checked")) {
+              isTrue.true++;
+            } else {
+              isTrue.false++;
+            }
+          });
+          console.log(isTrue);
+          if (isTrue.length === isTrue.true) {
+            $(`[id="${thisName}"]`).prop("checked", true);
+          } else {
+            $(`[id="${thisName}"]`).prop("checked", false);
+          }
+        });
       </script>
       <footer class="footer">@@include('./include/footer.html')</footer>
     </div>
