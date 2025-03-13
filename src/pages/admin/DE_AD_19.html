@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('./include/head.html',{'title' : '팝업 리스트'})
+  </head>
+  <body>
+    <div id="container" class="admin sub">
+      <header class="header">@@include('./include/header.html')</header>
+      <div id="content">
+        <aside id="menu" class="menu">@@include('./include/menu.html')</aside>
+        <div id="main" class="main">
+          @@include('./include/con-header.html',{depth1: '팝업/메인설정',depth2:
+          '팝업 리스트'})
+
+          <section class="section">
+            <h3>팝업</h3>
+            <form action="#n">
+              <fieldset>
+                <legend>게시물 목록</legend>
+                <div class="table-unit">
+                  <span class="legend">전체 <strong>0</strong>건</span>
+                  <div class="p-search">
+                    <select name="" id="" class="input">
+                      <option value="">default</option>
+                      <option value="">default2</option>
+                    </select>
+                    <input type="text" class="input" />
+                    <button type="button" class="btn type3">검색</button>
+                  </div>
+                </div>
+                <div class="table">
+                  <div class="table-responsive">
+                    <table class="p-board scroll" data-table="rwd">
+                      <caption>
+                        게시판 - 번호, 분류, 제목, 등록일, 조회수 정보 제공
+                      </caption>
+                      <colgroup>
+                        <col style="width: 40px" />
+                        <col style="width: 160px" />
+                        <col />
+                        <col style="width: 300px" />
+                        <col style="width: 120px" />
+                        <col style="width: 120px" />
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th scope="col" class="first">
+                            <span class="input empty">
+                              <input
+                                type="checkbox"
+                                name="checkbox"
+                                id="check1"
+                              />
+                              <label for="check1"></label>
+                            </span>
+                          </th>
+                          <th scope="col">등록일</th>
+                          <th scope="col">제목</th>
+                          <th scope="col">노출기간</th>
+                          <th scope="col">상태</th>
+                          <th scope="col">등록자</th>
+                        </tr>
+                      </thead>
+                      <tbody class="align_center">
+                        <tr>
+                          <td>
+                            <span class="input empty">
+                              <input
+                                type="checkbox"
+                                name="checkbox"
+                                id="check1-1"
+                              />
+                              <label for="check1-1"></label>
+                            </span>
+                          </td>
+                          <td>2024.10.04</td>
+                          <td class="p-subject">
+                            <a href="#n">AI가전 관제 플랫폼 팝업1 </a>
+                          </td>
+                          <td>2024.10.04 ~2024.10.08</td>
+                          <td>정상</td>
+                          <td>관리자</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <span class="input empty">
+                              <input
+                                type="checkbox"
+                                name="checkbox"
+                                id="check1-2"
+                              />
+                              <label for="check1-2"></label>
+                            </span>
+                          </td>
+                          <td>2024.10.04</td>
+                          <td class="p-subject">
+                            <a href="#n">AI가전 관제 플랫폼 팝업1 </a>
+                          </td>
+                          <td>2024.10.04 ~2024.10.08</td>
+                          <td>정상</td>
+                          <td>관리자</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <span class="input empty">
+                              <input
+                                type="checkbox"
+                                name="checkbox"
+                                id="check1-3"
+                              />
+                              <label for="check1-3"></label>
+                            </span>
+                          </td>
+                          <td>2024.10.04</td>
+                          <td class="p-subject">
+                            <a href="#n">AI가전 관제 플랫폼 팝업1 </a>
+                          </td>
+                          <td>2024.10.04 ~2024.10.08</td>
+                          <td>정상</td>
+                          <td>관리자</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="p-pagination" data-brl-use="NO">
+                  <div class="p-page">
+                    <div class="p-page__control">
+                      <a href="#n" class="p-page__link prev-end"
+                        ><span class="skip">처음 페이지</span></a
+                      ><a href="#n" class="p-page__link prev"
+                        ><span class="skip">이전 10 페이지</span></a
+                      ><a href="#n" class="p-page__link prev-one"
+                        >이전 페이지</a
+                      >
+                    </div>
+                    <div class="p-page__link-group">
+                      <strong title="현재 1페이지" class="p-page__link active"
+                        >1</strong
+                      ><a href="#n" title="2페이지 이동" class="p-page__link"
+                        >2</a
+                      ><a href="#n" title="3페이지 이동" class="p-page__link"
+                        >3</a
+                      ><a href="#n" title="4페이지 이동" class="p-page__link"
+                        >4</a
+                      ><a href="#n" title="5페이지 이동" class="p-page__link"
+                        >5</a
+                      ><a href="#n" title="6페이지 이동" class="p-page__link"
+                        >6</a
+                      ><a href="#n" title="7페이지 이동" class="p-page__link"
+                        >7</a
+                      ><a href="#n" title="8페이지 이동" class="p-page__link"
+                        >8</a
+                      ><a href="#n" title="9페이지 이동" class="p-page__link"
+                        >9</a
+                      ><a href="0" title="10페이지 이동" class="p-page__link"
+                        >10</a
+                      >
+                    </div>
+                    <div class="p-page__control">
+                      <a href="#n" class="p-page__link next-one">다음 페이지</a>
+                      <a href="1" class="p-page__link next"
+                        ><span class="skip">다음 10 페이지</span></a
+                      ><a href="#n81" class="p-page__link next-end"
+                        ><span class="skip">끝 페이지</span></a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="p-btn-wrap flex-between">
+                  <div class="left">
+                    <a href="#n" class="btn type3">삭제</a>
+                  </div>
+                  <div class="right">
+                    <a href="#n" class="btn type2">등록</a>
+                  </div>
+                </div>
+
+                <div class="table">
+                  <div class="table-responsive">
+                    <table class="p-board scroll" data-table="rwd">
+                      <caption>
+                        게시판 - 번호, 분류, 제목, 등록일, 조회수 정보 제공
+                      </caption>
+
+                      <colgroup>
+                        <col style="width: 160px" />
+                        <col />
+                        <col style="width: 300px" />
+                        <col style="width: 120px" />
+                        <col style="width: 120px" />
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th scope="col" class="first">등록일</th>
+                          <th scope="col">제목</th>
+                          <th scope="col">노출기간</th>
+                          <th scope="col">상태</th>
+                          <th scope="col">등록자</th>
+                        </tr>
+                      </thead>
+                      <tbody class="align_center">
+                        <tr>
+                          <td colspan="5">조회 결과가 존재하지 않습니다.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </section>
+        </div>
+      </div>
+      <script>
+        $("#check1").on("click", function () {
+          var $this = $(this),
+            checked = $this.is(":checked");
+          $("[name=checkbox]").each(function () {
+            if ($(this).attr("id") !== "#check1") {
+              if (checked) {
+                $(this).prop("checked", true);
+              } else {
+                $(this).prop("checked", false);
+              }
+            }
+          });
+        });
+      </script>
+      <footer class="footer">@@include('./include/footer.html')</footer>
+    </div>
+  </body>
+</html>

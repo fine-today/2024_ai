@@ -1,0 +1,1947 @@
+<!DOCTYPE html>
+<html lang="kr" class="sub">
+  <head>
+    <meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="../../css/default.css" />
+<link rel="stylesheet" href="../../css/program.css" />
+<link rel="stylesheet" href="../../css/service-layout.css" />
+<link rel="stylesheet" href="../../css/service-sub.css" />
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/plugins.js"></script>
+<script src="../../js/program.min.js"></script>
+<script src="../../js/layout.js"></script>
+<script src="../../js/sub.js"></script>
+<title>시스템설정 - 마이페이지</title>
+
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script type="text/javascript">
+      google.charts.load("current", { packages: ["corechart"] });
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ["Year", "Sales", "Expenses"],
+          ["2004", 1000, 400],
+          ["2005", 1170, 460],
+          ["2006", 660, 1120],
+          ["2007", 1030, 540],
+        ]);
+
+        var options = {
+          title: "Company Performance",
+          curveType: "function",
+          legend: { position: "bottom" },
+          width: 388,
+          height: 400,
+        };
+        var chart = new google.visualization.LineChart(
+          document.getElementById("curve_chart")
+        );
+        var chart2 = new google.visualization.LineChart(
+          document.getElementById("curve_chart2")
+        );
+        chart.draw(data, options);
+        chart2.draw(data, options);
+      }
+
+      $(window).on('load', function(){
+        setTimeout(function(){
+          google.charts.setOnLoadCallback(drawChart);
+        },100);
+        
+          $('.tab_button').on('click', function(){ 
+            google.charts.setOnLoadCallback(drawChart);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="accessibility">
+      <a href="#content">본문 바로가기</a>
+    </div>
+    <div id="container" class="de_us_19 my-page">
+      <!-- code substring 으로 key class 생성-->
+      
+      <div id="content">
+        <!-- <div class="location">
+          <div class="depth depth1">
+  <ul class="depth-list depth1-list">
+    <li class="depth-item depth1-item">
+      <a class="depth-anchor depth1-anchor" href="./DE_US_12.html">
+        <span>사업소개</span>
+      </a>
+      <ul class="depth-list depth2-list">
+        <li class="depth-item depth2-item">
+          <a
+            href="./DE_US_12.html"
+            class="depth-anchor depth2-anchor"
+            data-code="DE_US_12"
+          >
+            <span>시험안내</span>
+          </a>
+        </li>
+        <li class="depth-item depth2-item">
+          <a href="./DE_US_13.html" class="depth-anchor depth2-anchor">
+            <span>시험접수</span>
+          </a>
+        </li>
+        <li class="depth-item depth2-item">
+          <a href="./DE_US_14.html" class="depth-anchor depth2-anchor">
+            <span>시료입수</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li class="depth-item depth1-item">
+      <a
+        class="depth-anchor depth1-anchor"
+        href="./DE_US_15.html"
+        data-code="DE_US_05"
+      >
+        <span>게시판</span>
+      </a>
+      <ul class="depth-list depth2-list">
+        <li class="depth-item depth2-item">
+          <a href="./DE_US_15.html" class="depth-anchor depth2-anchor">
+            <span>FAQ</span>
+          </a>
+        </li>
+        <li class="depth-item depth2-item">
+          <a href="./DE_US_16.html" class="depth-anchor depth2-anchor">
+            <span>공지사항</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li class="depth-item depth1-item">
+      <a class="depth-anchor depth1-anchor" href="./DE_US_18.html">
+        <span>마이페이지</span>
+      </a>
+      <ul class="depth-list depth2-list">
+        <li class="depth-item depth2-item">
+          <a href="./DE_US_18.html" class="depth-anchor depth2-anchor">
+            <span>시스템 설정</span>
+          </a>
+          <ul class="depth-list depth3-list">
+            <li class="depth-item depth3-item">
+              <a href="./DE_US_18.html" class="depth-anchor depth3-anchor">
+                <span>정보입력</span>
+              </a>
+            </li>
+            <li class="depth-item depth3-item">
+              <a href="./DE_US_18_1_1.html" class="depth-anchor depth3-anchor">
+                <span>CCTV</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="depth-item depth2-item">
+          <a href="./DE_US_26_1.html" class="depth-anchor depth2-anchor">
+            <span>데이터 수집</span>
+          </a>
+        </li>
+        <li class="depth-item depth2-item">
+          <a href="./DE_US_27.html" class="depth-anchor depth2-anchor">
+            <span>정보수정</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li class="depth-item depth1-item">
+      <a class="depth-anchor depth1-anchor" href="#n">
+        <span>로그인</span>
+      </a>
+      <ul class="depth-list depth2-list">
+        <li class="depth-item depth2-item">
+          <a href="./DE_US_08.html" class="depth-anchor depth2-anchor">
+            <span>로그인</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+        </div> -->
+        <div class="wrap">
+          <div class="breadcrumb-wrap">
+  <ol class="breadcrumb">
+    <li class="bread-item home">
+      <a href="#n" class="bread-anchor" title="홈">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M19 21H5C4.44772 21 4 20.5523 4 20V11H1L11.3273 1.6115C11.7087 1.26475 12.2913 1.26475 12.6727 1.6115L23 11H20V20C20 20.5523 19.5523 21 19 21ZM13 19H18V9.15745L12 3.7029L6 9.15745V19H11V13H13V19Z"
+            fill="#8B95A1"
+          />
+        </svg>
+      </a>
+    </li>
+    <li class="bread-item"><a href=#n class="bread-anchor"><span>마이페이지</span></a></li>
+    <li class="bread-item">
+      <a href=#n class="bread-anchor"><span>시스템 설정</span></a>
+    </li>
+    
+      <li class="bread-item">
+        <a href=#n class="bread-anchor"><span>정보입력</span></a>
+      </li>
+    
+  </ol>
+</div>
+
+          <section class="section">
+            <div class="tab">
+              <div class="tab_menu">
+                <button type="button" class="tab_select">
+                  <span>미세먼지</span>
+                </button>
+                <div class="tab_panel">
+                  <ul class="tab_list clearfix">
+                    <li class="tab_item active">
+                      <button type="button" class="tab_button" title="선택됨">
+                        <span>미세먼지</span>
+                      </button>
+                    </li>
+                    <li class="tab_item">
+                      <button type="button" class="tab_button">
+                        <span>조명</span>
+                      </button>
+                    </li>
+                    <li class="tab_item">
+                      <button type="button" class="tab_button">
+                        <span>Map</span>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+                <div class="tab_content active">
+                  <!-- tab con1 -->
+                  <div class="mypage-head-setting">
+  <div class="column">
+    <h3>온습도 설정</h3>
+    <button type="button" class="btn" data-pop="pop1">설정하기</button>
+  </div>
+  <div class="column">
+    <h3>모바일 로봇</h3>
+    <button type="button" class="btn" data-pop="pop2">설정하기</button>
+  </div>
+</div>
+
+<!-- 온습도 -->
+<div class="popup de_us_20" data-pop="pop1">
+  <div class="popup_wrap">
+    <div class="pop_inner">
+      <div class="popup-title-wrap">
+        <!-- <div class="sub-title">
+          <strong>Option 01</strong> 생체 인식률 평가를 위한
+          외부간섭요인 발생 시스템
+        </div> -->
+        <h3 class="popup_title h0">온습도 설정</h3>
+      </div>
+      <div class="popup_con">
+        <div class="table">
+          <table>
+            <caption></caption>
+            <colgroup>
+              <col />
+              <col style="width: 10%" />
+              <col style="width: 10%" />
+              <col style="width: 10%" />
+              <col style="width: 10%" />
+              <col style="width: 10%" />
+              <col style="width: 10%" />
+              <col style="width: 10%" />
+              <col style="width: 10%" />
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">
+                  <span class="input">
+                    <input type="checkbox" id="check1-1" />
+                    <label for="check1-1">실내</label>
+                  </span>
+                </th>
+                <th scope="col">
+                  <span class="input">
+                    <input type="checkbox" id="check1-1" />
+                    <label for="check1-1">실외</label>
+                  </span>
+                </th>
+                <th scope="col">
+                  <span class="input">
+                    <input type="checkbox" id="check1-1" />
+                    <label for="check1-1">복도</label>
+                  </span>
+                </th>
+                <th scope="col">
+                  <span class="input">
+                    <input type="checkbox" id="check1-1" />
+                    <label for="check1-1">뒷집</label>
+                  </span>
+                </th>
+                <th scope="col">
+                  <span class="input">
+                    <input type="checkbox" id="check1-1" />
+                    <label for="check1-1">옆집</label>
+                  </span>
+                </th>
+                <th scope="col">
+                  <span class="input">
+                    <input type="checkbox" id="check1-1" />
+                    <label for="check1-1">아래층</label>
+                  </span>
+                </th>
+                <th scope="col">
+                  <span class="input">
+                    <input type="checkbox" id="check1-1" />
+                    <label for="check1-1">위층</label>
+                  </span>
+                </th>
+                <th scope="col">
+                  <span class="input">
+                    <input type="checkbox" id="check1-1" />
+                    <label for="check1-1">전체</label>
+                  </span>
+                </th>
+              </tr>
+              <tr>
+                <th scope="row">설정온도</th>
+                <td>
+                  <input type="text" class="input" />
+                </td>
+                <td>
+                  <input type="text" class="input" />
+                </td>
+                <td>
+                  <input type="text" class="input" />
+                </td>
+                <td>
+                  <input type="text" class="input" />
+                </td>
+                <td>
+                  <input type="text" class="input" />
+                </td>
+                <td>
+                  <input type="text" class="input" />
+                </td>
+                <td>
+                  <input type="text" class="input" />
+                </td>
+                <td>
+                  <input type="text" class="input" />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">설정습도</th>
+                <td>
+                  <input type="text" class="input" />
+                </td>
+                <td>
+                  <input type="text" class="input" />
+                </td>
+                <td>
+                  <input type="text" class="input" />
+                </td>
+                <td>
+                  <input type="text" class="input" />
+                </td>
+                <td>
+                  <input type="text" class="input" />
+                </td>
+                <td>
+                  <input type="text" class="input" />
+                </td>
+                <td>
+                  <input type="text" class="input" />
+                </td>
+                <td>
+                  <input type="text" class="input" />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">작동</th>
+                <td colspan="8">
+                  <span class="input">
+                    <input type="radio" name="radio2" id="radio2-1" checked />
+                    <label for="radio2-1">공조</label>
+                  </span>
+                  <span class="input">
+                    <input type="radio" name="radio2" id="radio2-1" checked />
+                    <label for="radio2-1">공조</label>
+                  </span>
+                  <span class="input">
+                    <input type="radio" name="radio2" id="radio2-1" checked />
+                    <label for="radio2-1">정지</label>
+                  </span>
+                  <span class="input">
+                    <input type="radio" name="radio2" id="radio2-1" checked />
+                    <label for="radio2-1">공조</label>
+                  </span>
+                  <span class="input">
+                    <input type="radio" name="radio2" id="radio2-1" checked />
+                    <label for="radio2-1">정지</label>
+                  </span>
+                  <span class="input">
+                    <input type="radio" name="radio2" id="radio2-1" checked />
+                    <label for="radio2-1">공조</label>
+                  </span>
+                  <span class="input">
+                    <input type="radio" name="radio2" id="radio2-1" checked />
+                    <label for="radio2-1">공조</label>
+                  </span>
+                  <span class="input">
+                    <input type="radio" name="radio2" id="radio2-1" checked />
+                    <label for="radio2-1">공조</label>
+                  </span>
+                  <span class="input">
+                    <input type="radio" name="radio2" id="radio2-1" checked />
+                    <label for="radio2-1">공조</label>
+                  </span>
+                  <span class="input">
+                    <input type="radio" name="radio2" id="radio2-1" checked />
+                    <label for="radio2-1">공조</label>
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="popup-footer">
+        <div class="btn-wrap">
+          <button type="button" class="btn large popup_close">설정 완료</button>
+        </div>
+      </div>
+
+      <input type="button" class="popup_close" value="닫기" />
+    </div>
+  </div>
+</div>
+
+<!-- 로봇 -->
+<div class="popup de_us_21" data-pop="pop2">
+  <div class="popup_wrap">
+    <div class="pop_inner">
+      <div class="popup-title-wrap">
+        <!-- <div class="sub-title">
+          <strong>Option 01</strong> 생체 인식률 평가를 위한
+          외부간섭요인 발생 시스템
+        </div> -->
+        <h3 class="popup_title h0">모바일로봇</h3>
+      </div>
+      <div class="popup_con">
+        <div class="control flex">
+          <div class="column" data-ratio="2-3">
+            <div class="img-wrap">
+              <img src="../../images/service/sub/mypage-img1.png" alt="마이페이지 도면">
+            </div>
+          </div>
+          <div class="column" data-ratio="1-3">
+            <h3>경로선택</h3>
+            <div>
+              <span class="input">
+                <input type="radio" id="radio1-1" name="radio1" checked />
+                <label for="radio1-1">수동</label>
+              </span>
+              <span class="input">
+                <input type="radio" id="radio1-2" name="radio1" />
+                <label for="radio1-2">자동</label>
+              </span>
+            </div>
+            <div class="table radio-item1">
+              <table>
+                <caption></caption>
+                <colgroup>
+                  <col style="width: 30%" />
+                  <col />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">경로1</th>
+                    <td>1-1</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">경로2</th>
+                    <td>2-1</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">경로3</th>
+                    <td>
+                      <button type="button" class="btn small">선택</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">경로4</th>
+                    <td>
+                      <button type="button" class="btn small">선택</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="radio-item2">
+              <h3>이동 위치</h3>
+              <p>1-1 &gt; 2-1 &gt; 3-1</p>
+            </div>
+            <div class="btn-wrap">
+              <button type="button" class="btn w100p">저장하기</button>
+            </div>
+          </div>
+        </div>
+
+        <script>
+          $(".radio-item2").hide();
+          $('[name="radio1"]').on("input", function () {
+            $('[name="radio1"]').each(function () {
+              var $this = $(this);
+              if ($this.prop("checked") === true) {
+                if ($this.attr("id") === "radio1-1") {
+                  $(".radio-item1").show();
+                  $(".radio-item2").hide();
+                } else if ($this.attr("id") === "radio1-2") {
+                  $(".radio-item1").hide();
+                  $(".radio-item2").show();
+                }
+              }
+            });
+          });
+        </script>
+
+        <div class="guide_box">
+          <div class="cont">
+            <ul class="bu">
+              <li>로봇을 이동할 지점을 선택 후주행 시작을 누르시오.</li>
+              <li>
+                모바일로봇 이동 중 배터리가 부족할 시 자동으로 충전 지점으로
+                돌아갑니다.
+              </li>
+              <li>충전 시간은 n시간 이상이니 유의하십시오.</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3>이력관리</h3>
+        <div class="table">
+          <table>
+            <caption></caption>
+            <colgroup>
+              <col style="width: 30%" />
+              <col style="width: 15%" />
+              <col />
+              <col style="width: 15%" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">날짜</th>
+                <th scope="col">이동방법</th>
+                <th scope="col">경로</th>
+                <th scope="col">재적용</th>
+              </tr>
+            </thead>
+            <tbody class="align-center">
+              <tr>
+                <td>2024.10.14 10:20:34</td>
+                <td>수동</td>
+                <td>1-1 &gt; 2-1 &gt; 3-1</td>
+                <td>
+                  <button type="button" class="btn type3 w100p">적용</button>
+                </td>
+              </tr>
+              <tr>
+                <td>2024.10.14 10:20:34</td>
+                <td>수동</td>
+                <td>1-1 &gt; 2-1 &gt; 3-1</td>
+                <td>
+                  <button type="button" class="btn type3 w100p">적용</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="popup-footer">
+        <div class="btn-wrap">
+          <button type="button" class="btn large popup_close">작동 시작</button>
+          <button type="button" class="btn large popup_close">작동 정지</button>
+        </div>
+      </div>
+
+      <input type="button" class="popup_close" value="닫기" />
+    </div>
+  </div>
+</div>
+
+                  <div class="mypage-con">
+                    <div class="tab column" data-ratio="1-3">
+                      <div class="tab_menu">
+                        <button type="button" class="tab_select">
+                          <span>스텝박스</span>
+                        </button>
+                        <div class="tab_panel">
+                          <ul class="tab_list clearfix">
+                            <li class="tab_item active">
+                              <button
+                                type="button"
+                                class="tab_button"
+                                title="선택됨"
+                              >
+                                <span>탭1</span>
+                              </button>
+                            </li>
+                            <li class="tab_item">
+                              <button type="button" class="tab_button">
+                                <span>탭2</span>
+                              </button>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="tab_content active">
+                          <!-- 차트 영역 -->
+                          <div class="chart-wrap">
+                            <div id="curve_chart" class="chart"></div>
+                            <div class="unit">
+                              <span>현재 농도 : <strong>00</strong>㎍/㎥ </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tab_content">
+                          <!-- 차트 영역 -->
+                          <div class="chart-wrap">
+                            <div id="curve_chart2" class="chart"></div>
+                            <div class="unit">
+                              <span>현재 농도 : <strong>00</strong>㎍/㎥ </span>
+                            </div>
+                          </div></div>
+                      </div>
+                    </div>
+
+                    <div class="column" data-ratio="2-3">
+                      <h3>시험 조건</h3>
+                      <div class="table">
+                        <table>
+                          <caption></caption>
+                          <colgroup>
+                            <col style="width: 15%" />
+                            <col style="width: 35%" />
+                            <col style="width: 15%" />
+                            <col />
+                          </colgroup>
+                          <tbody>
+                            <tr>
+                              <th scope="row">발생기 선택</th>
+                              <td colspan="3">
+                                <span class="input">
+                                  <input
+                                    type="radio"
+                                    name="radio1"
+                                    id="radio1-1"
+                                  />
+                                  <label for="radio1-1">분진(SAG410)</label>
+                                </span>
+                                <span class="input">
+                                  <input
+                                    type="radio"
+                                    name="radio1"
+                                    id="radio1-2"
+                                  />
+                                  <label for="radio1-2">실내미세먼지</label>
+                                </span>
+                                <span class="input">
+                                  <input
+                                    type="radio"
+                                    name="radio1"
+                                    id="radio1-3"
+                                  />
+                                  <label for="radio1-3">조리모사</label>
+                                </span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row" rowspan="2">시험 농도</th>
+                              <td colspan="3">
+                                <span class="input">
+                                  <input
+                                    type="radio"
+                                    name="radio2"
+                                    id="radio2-1"
+                                  />
+                                  <label for="radio2-1">PM1</label>
+                                </span>
+
+                                <span class="input">
+                                  <input
+                                    type="radio"
+                                    name="radio2"
+                                    id="radio2-2"
+                                  />
+                                  <label for="radio2-2">PM2.5</label>
+                                </span>
+
+                                <span class="input">
+                                  <input
+                                    type="radio"
+                                    name="radio2"
+                                    id="radio2-3"
+                                  />
+                                  <label for="radio2-3">PM10</label>
+                                </span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td colspan="3">
+                                <input type="text" class="input" />
+                                ㎍/㎥
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">시험 시간</th>
+                              <td>
+                                <input type="text" class="input" />
+                                분
+                              </td>
+                              <th scope="row">경과 시간</th>
+                              <td>163 분</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">시험 결과</th>
+                              <td colspan="3">
+                                <button type="button" class="btn">
+                                  파일 다운로드
+                                </button>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+
+                      <h3>이력관리</h3>
+                      <div class="table">
+                        <table>
+                          <caption></caption>
+                          <colgroup>
+                            <col style="width: 30%" />
+                            <col />
+                            <col style="width: 15%" />
+                            <col style="width: 15%" />
+                            <col style="width: 12%" />
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th scope="col">날짜</th>
+                              <th scope="col">발생기</th>
+                              <th scope="col">시험농도</th>
+                              <th scope="col">농도값</th>
+                              <th scope="col">재적용</th>
+                            </tr>
+                          </thead>
+                          <tbody class="align-center">
+                            <tr>
+                              <td>2024.10.14 10:20:34</td>
+                              <td>분진(SAG410)</td>
+                              <td>PM1</td>
+                              <td>160</td>
+                              <td>
+                                <button type="button" class="btn type3 w100p">
+                                  적용
+                                </button>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>2024.10.14 10:20:34</td>
+                              <td>분진(SAG410)</td>
+                              <td>PM1</td>
+                              <td>160</td>
+                              <td>
+                                <button type="button" class="btn type3 w100p">
+                                  적용
+                                </button>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="btn-wrap center">
+                    <button type="button" class="btn large">시험 시작</button>
+                    <button type="button" class="btn large">시험 종료</button>
+                  </div>
+                  
+            
+<div class="cctv">
+    <ul class="video-list">
+      <li class="video-item">
+        <div href="#n" class="video-anchor">
+          <div class="img-wrap"><img
+            src="../../images/service/sub/mypage-video1.png"
+            alt="CCTV 01"
+          /></div>
+          <div class="title">CCTV 01</div>
+        </a>
+      </li>
+      <li class="video-item">
+        <div href="#n" class="video-anchor">
+          <div class="img-wrap"><img
+            src="../../images/service/sub/mypage-video2.png"
+            alt="CCTV 02"
+          /></div>
+          <div class="title">CCTV 02</div>
+        </a>
+      </li>
+      <li class="video-item">
+        <div href="#n" class="video-anchor">
+          <div class="img-wrap"><img
+            src="../../images/service/sub/mypage-video3.png"
+            alt="CCTV 03"
+          /></div>
+          <div class="title">CCTV 03</div>
+        </a>
+      </li>
+      <li class="video-item">
+        <div href="#n" class="video-anchor">
+          <div class="img-wrap"><img
+            src="../../images/service/sub/mypage-video4.png"
+            alt="CCTV 04"
+          /></div>
+          <div class="title">CCTV 04</div>
+        </a>
+      </li>
+    </ul>
+  </div>
+            <div class="mypage-option">
+  <h3>옵션 설정하기</h3>
+  <div class="btn-wrap">
+    <a href="./DE_US_19.html" class="btn icon">
+      <i>
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M4 16V20H8V22H2V16H4ZM22 16V22H16V20H20V16H22ZM7.5 7C7.5 9.1416 8.99603 10.9338 11 11.3885V17H13L13.001 11.3883C15.0045 10.9332 16.5 9.14125 16.5 7H18.5C18.5 9.50729 17.0804 11.683 15.0011 12.7672L15 19H9L8.99992 12.7677C6.92007 11.6837 5.5 9.50769 5.5 7H7.5ZM12 5C13.3807 5 14.5 6.11929 14.5 7.5C14.5 8.88071 13.3807 10 12 10C10.6193 10 9.5 8.88071 9.5 7.5C9.5 6.11929 10.6193 5 12 5ZM8 2V4L4 3.999V8H2V2H8ZM22 2V8H20V4H16V2H22Z"
+            fill="white"
+          />
+        </svg>
+      </i>
+      생체인식률 시스템
+    </a>
+    <a href="./DE_US_23.html" class="btn icon">
+      <i>
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M17.841 15.659L18.017 15.836L18.1945 15.659C19.0732 14.7803 20.4978 14.7803 21.3765 15.659C22.2552 16.5377 22.2552 17.9623 21.3765 18.841L18.0178 22.1997L14.659 18.841C13.7803 17.9623 13.7803 16.5377 14.659 15.659C15.5377 14.7803 16.9623 14.7803 17.841 15.659ZM12 14V16C8.68629 16 6 18.6863 6 22H4C4 17.6651 7.44784 14.1355 11.7508 14.0038L12 14ZM12 1C15.315 1 18 3.685 18 7C18 10.2397 15.4357 12.8776 12.225 12.9959L12 13C8.685 13 6 10.315 6 7C6 3.76034 8.56434 1.12237 11.775 1.00414L12 1ZM12 3C9.78957 3 8 4.78957 8 7C8 9.21043 9.78957 11 12 11C14.2104 11 16 9.21043 16 7C16 4.78957 14.2104 3 12 3Z"
+            fill="white"
+          />
+        </svg>
+      </i>
+      인체모사 환경시스템
+    </a>
+    <a href="./DE_US_24.html" class="btn icon">
+      <i>
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z"
+            fill="white"
+          />
+        </svg>
+      </i>
+      태양광 모사장치 제어시스템
+    </a>
+    <a href="./DE_US_25.html" class="btn icon">
+      <i>
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M20 20C20 20.5523 19.5523 21 19 21H5C4.44772 21 4 20.5523 4 20V11H1L11.3273 1.6115C11.7087 1.26475 12.2913 1.26475 12.6727 1.6115L23 11H20V20ZM8.59208 13.808L7.60099 14.3802L8.6017 16.1133L9.5943 15.5402C9.98756 15.9116 10.467 16.193 10.9994 16.3512V17.4956H13.0007V16.3512C13.5331 16.1929 14.0125 15.9115 14.4057 15.5401L15.3984 16.1132L16.399 14.3801L15.4079 13.8078C15.4696 13.5478 15.5022 13.2766 15.5022 12.9978C15.5022 12.7189 15.4696 12.4477 15.4078 12.1877L16.399 11.6154L15.3983 9.88225L14.4056 10.4554C14.0124 10.084 13.533 9.80264 13.0006 9.64436V8.49998H10.9993V9.64436C10.4669 9.80265 9.98747 10.084 9.59421 10.4554L8.60164 9.88234L7.60099 11.6155L8.59205 12.1877C8.53034 12.4477 8.49768 12.7189 8.49768 12.9978C8.49768 13.2767 8.53035 13.5479 8.59208 13.808ZM12 14.4971C11.171 14.4971 10.499 13.8258 10.499 12.9978C10.499 12.1698 11.171 11.4985 12 11.4985C12.8289 11.4985 13.5009 12.1698 13.5009 12.9978C13.5009 13.8258 12.8289 14.4971 12 14.4971Z"
+            fill="white"
+          />
+        </svg>
+      </i>
+      새집모사 환경 제어 시스템
+    </a>
+    <a href="#n" class="btn icon">
+      <i>
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M4 5V19H20V5H4ZM3 3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3ZM7.05025 7.12132L8.46447 8.53553C7.55964 9.44036 7 10.6904 7 12.0711C7 13.4518 7.55964 14.7018 8.46447 15.6066L7.05025 17.0208C5.7835 15.7541 5 14.0041 5 12.0711C5 10.1381 5.7835 8.38807 7.05025 7.12132ZM16.9497 7.12132C18.2165 8.38807 19 10.1381 19 12.0711C19 14.0041 18.2165 15.7541 16.9497 17.0208L15.5355 15.6066C16.4404 14.7018 17 13.4518 17 12.0711C17 10.6904 16.4404 9.44036 15.5355 8.53553L16.9497 7.12132ZM12 13.0711C12.5523 13.0711 13 12.6234 13 12.0711C13 11.5188 12.5523 11.0711 12 11.0711C11.4477 11.0711 11 11.5188 11 12.0711C11 12.6234 11.4477 13.0711 12 13.0711ZM12 15.0711C10.3431 15.0711 9 13.7279 9 12.0711C9 10.4142 10.3431 9.07107 12 9.07107C13.6569 9.07107 15 10.4142 15 12.0711C15 13.7279 13.6569 15.0711 12 15.0711Z"
+            fill="white"
+          />
+        </svg>
+      </i>
+      음성/소음 발생 시스템
+    </a>
+    <!-- <a href="" class="btn icon" >
+        <i>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.5 2C13.5 2.44425 13.3069 2.84339 13 3.11805V5H18C19.6569 5 21 6.34315 21 8V18C21 19.6569 19.6569 21 18 21H6C4.34315 21 3 19.6569 3 18V8C3 6.34315 4.34315 5 6 5H11V3.11805C10.6931 2.84339 10.5 2.44425 10.5 2C10.5 1.17157 11.1716 0.5 12 0.5C12.8284 0.5 13.5 1.17157 13.5 2ZM6 7C5.44772 7 5 7.44772 5 8V18C5 18.5523 5.44772 19 6 19H18C18.5523 19 19 18.5523 19 18V8C19 7.44772 18.5523 7 18 7H13H11H6ZM2 10H0V16H2V10ZM22 10H24V16H22V10ZM9 14.5C9.82843 14.5 10.5 13.8284 10.5 13C10.5 12.1716 9.82843 11.5 9 11.5C8.17157 11.5 7.5 12.1716 7.5 13C7.5 13.8284 8.17157 14.5 9 14.5ZM15 14.5C15.8284 14.5 16.5 13.8284 16.5 13C16.5 12.1716 15.8284 11.5 15 11.5C14.1716 11.5 13.5 12.1716 13.5 13C13.5 13.8284 14.1716 14.5 15 14.5Z" fill="white"/>
+            </svg>
+            
+        </i>
+        모바일 로봇
+      </a>
+      <a href="" class="btn icon" >
+        <i>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 5C8 2.79086 9.79086 1 12 1C14.2091 1 16 2.79086 16 5V10.2547C17.8135 11.5196 19 13.6213 19 16C19 19.866 15.866 23 12 23C8.13401 23 5 19.866 5 16C5 13.6213 6.18652 11.5196 8 10.2547V5ZM9.1442 11.8951C7.80943 12.8261 7 14.3432 7 16C7 18.7614 9.23858 21 12 21C14.7614 21 17 18.7614 17 16C17 14.3432 16.1906 12.8261 14.8558 11.8951L14 11.2981V5C14 3.89543 13.1046 3 12 3C10.8954 3 10 3.89543 10 5V11.2981L9.1442 11.8951ZM8 16H16C16 18.2091 14.2091 20 12 20C9.79086 20 8 18.2091 8 16Z" fill="white"/>
+            </svg>
+            
+        </i>
+        온도/습도
+      </a> -->
+  </div>
+</div>
+
+                </div>
+
+                <div class="tab_content">
+                  <!-- tab con1 -->
+                  <div class="mypage-head-setting">
+  <div class="column">
+    <h3>온습도 설정</h3>
+    <button type="button" class="btn" data-pop="pop3">설정하기</button>
+  </div>
+  <div class="column">
+    <h3>모바일 로봇</h3>
+    <button type="button" class="btn" data-pop="pop4">설정하기</button>
+  </div>
+</div>
+
+<!-- 온습도 -->
+<div class="popup de_us_20" data-pop="pop3">
+  <div class="popup_wrap">
+    <div class="pop_inner">
+      <div class="popup-title-wrap">
+        <!-- <div class="sub-title">
+          <strong>Option 01</strong> 생체 인식률 평가를 위한
+          외부간섭요인 발생 시스템
+        </div> -->
+        <h3 class="popup_title h0">온습도 설정</h3>
+      </div>
+      <div class="popup_con">
+        <div class="table">
+          <table>
+            <caption></caption>
+            <colgroup>
+              <col />
+              <col style="width: 10%" />
+              <col style="width: 10%" />
+              <col style="width: 10%" />
+              <col style="width: 10%" />
+              <col style="width: 10%" />
+              <col style="width: 10%" />
+              <col style="width: 10%" />
+              <col style="width: 10%" />
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">
+                  <span class="input">
+                    <input type="checkbox" id="check1-1" />
+                    <label for="check1-1">실내</label>
+                  </span>
+                </th>
+                <th scope="col">
+                  <span class="input">
+                    <input type="checkbox" id="check1-1" />
+                    <label for="check1-1">실외</label>
+                  </span>
+                </th>
+                <th scope="col">
+                  <span class="input">
+                    <input type="checkbox" id="check1-1" />
+                    <label for="check1-1">복도</label>
+                  </span>
+                </th>
+                <th scope="col">
+                  <span class="input">
+                    <input type="checkbox" id="check1-1" />
+                    <label for="check1-1">뒷집</label>
+                  </span>
+                </th>
+                <th scope="col">
+                  <span class="input">
+                    <input type="checkbox" id="check1-1" />
+                    <label for="check1-1">옆집</label>
+                  </span>
+                </th>
+                <th scope="col">
+                  <span class="input">
+                    <input type="checkbox" id="check1-1" />
+                    <label for="check1-1">아래층</label>
+                  </span>
+                </th>
+                <th scope="col">
+                  <span class="input">
+                    <input type="checkbox" id="check1-1" />
+                    <label for="check1-1">위층</label>
+                  </span>
+                </th>
+                <th scope="col">
+                  <span class="input">
+                    <input type="checkbox" id="check1-1" />
+                    <label for="check1-1">전체</label>
+                  </span>
+                </th>
+              </tr>
+              <tr>
+                <th scope="row">설정온도</th>
+                <td>
+                  <input type="text" class="input" />
+                </td>
+                <td>
+                  <input type="text" class="input" />
+                </td>
+                <td>
+                  <input type="text" class="input" />
+                </td>
+                <td>
+                  <input type="text" class="input" />
+                </td>
+                <td>
+                  <input type="text" class="input" />
+                </td>
+                <td>
+                  <input type="text" class="input" />
+                </td>
+                <td>
+                  <input type="text" class="input" />
+                </td>
+                <td>
+                  <input type="text" class="input" />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">설정습도</th>
+                <td>
+                  <input type="text" class="input" />
+                </td>
+                <td>
+                  <input type="text" class="input" />
+                </td>
+                <td>
+                  <input type="text" class="input" />
+                </td>
+                <td>
+                  <input type="text" class="input" />
+                </td>
+                <td>
+                  <input type="text" class="input" />
+                </td>
+                <td>
+                  <input type="text" class="input" />
+                </td>
+                <td>
+                  <input type="text" class="input" />
+                </td>
+                <td>
+                  <input type="text" class="input" />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">작동</th>
+                <td colspan="8">
+                  <span class="input">
+                    <input type="radio" name="radio2" id="radio2-1" checked />
+                    <label for="radio2-1">공조</label>
+                  </span>
+                  <span class="input">
+                    <input type="radio" name="radio2" id="radio2-1" checked />
+                    <label for="radio2-1">공조</label>
+                  </span>
+                  <span class="input">
+                    <input type="radio" name="radio2" id="radio2-1" checked />
+                    <label for="radio2-1">정지</label>
+                  </span>
+                  <span class="input">
+                    <input type="radio" name="radio2" id="radio2-1" checked />
+                    <label for="radio2-1">공조</label>
+                  </span>
+                  <span class="input">
+                    <input type="radio" name="radio2" id="radio2-1" checked />
+                    <label for="radio2-1">정지</label>
+                  </span>
+                  <span class="input">
+                    <input type="radio" name="radio2" id="radio2-1" checked />
+                    <label for="radio2-1">공조</label>
+                  </span>
+                  <span class="input">
+                    <input type="radio" name="radio2" id="radio2-1" checked />
+                    <label for="radio2-1">공조</label>
+                  </span>
+                  <span class="input">
+                    <input type="radio" name="radio2" id="radio2-1" checked />
+                    <label for="radio2-1">공조</label>
+                  </span>
+                  <span class="input">
+                    <input type="radio" name="radio2" id="radio2-1" checked />
+                    <label for="radio2-1">공조</label>
+                  </span>
+                  <span class="input">
+                    <input type="radio" name="radio2" id="radio2-1" checked />
+                    <label for="radio2-1">공조</label>
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="popup-footer">
+        <div class="btn-wrap">
+          <button type="button" class="btn large popup_close">설정 완료</button>
+        </div>
+      </div>
+
+      <input type="button" class="popup_close" value="닫기" />
+    </div>
+  </div>
+</div>
+
+<!-- 로봇 -->
+<div class="popup de_us_21" data-pop="pop4">
+  <div class="popup_wrap">
+    <div class="pop_inner">
+      <div class="popup-title-wrap">
+        <!-- <div class="sub-title">
+          <strong>Option 01</strong> 생체 인식률 평가를 위한
+          외부간섭요인 발생 시스템
+        </div> -->
+        <h3 class="popup_title h0">모바일로봇</h3>
+      </div>
+      <div class="popup_con">
+        <div class="control flex">
+          <div class="column" data-ratio="2-3">
+            <div class="img-wrap">
+              <img src="../../images/service/sub/mypage-img1.png" alt="마이페이지 도면">
+            </div>
+          </div>
+          <div class="column" data-ratio="1-3">
+            <h3>경로선택</h3>
+            <div>
+              <span class="input">
+                <input type="radio" id="radio1-1" name="radio1" checked />
+                <label for="radio1-1">수동</label>
+              </span>
+              <span class="input">
+                <input type="radio" id="radio1-2" name="radio1" />
+                <label for="radio1-2">자동</label>
+              </span>
+            </div>
+            <div class="table radio-item1">
+              <table>
+                <caption></caption>
+                <colgroup>
+                  <col style="width: 30%" />
+                  <col />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">경로1</th>
+                    <td>1-1</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">경로2</th>
+                    <td>2-1</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">경로3</th>
+                    <td>
+                      <button type="button" class="btn small">선택</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">경로4</th>
+                    <td>
+                      <button type="button" class="btn small">선택</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="radio-item2">
+              <h3>이동 위치</h3>
+              <p>1-1 &gt; 2-1 &gt; 3-1</p>
+            </div>
+            <div class="btn-wrap">
+              <button type="button" class="btn w100p">저장하기</button>
+            </div>
+          </div>
+        </div>
+
+        <script>
+          $(".radio-item2").hide();
+          $('[name="radio1"]').on("input", function () {
+            $('[name="radio1"]').each(function () {
+              var $this = $(this);
+              if ($this.prop("checked") === true) {
+                if ($this.attr("id") === "radio1-1") {
+                  $(".radio-item1").show();
+                  $(".radio-item2").hide();
+                } else if ($this.attr("id") === "radio1-2") {
+                  $(".radio-item1").hide();
+                  $(".radio-item2").show();
+                }
+              }
+            });
+          });
+        </script>
+
+        <div class="guide_box">
+          <div class="cont">
+            <ul class="bu">
+              <li>로봇을 이동할 지점을 선택 후주행 시작을 누르시오.</li>
+              <li>
+                모바일로봇 이동 중 배터리가 부족할 시 자동으로 충전 지점으로
+                돌아갑니다.
+              </li>
+              <li>충전 시간은 n시간 이상이니 유의하십시오.</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3>이력관리</h3>
+        <div class="table">
+          <table>
+            <caption></caption>
+            <colgroup>
+              <col style="width: 30%" />
+              <col style="width: 15%" />
+              <col />
+              <col style="width: 15%" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">날짜</th>
+                <th scope="col">이동방법</th>
+                <th scope="col">경로</th>
+                <th scope="col">재적용</th>
+              </tr>
+            </thead>
+            <tbody class="align-center">
+              <tr>
+                <td>2024.10.14 10:20:34</td>
+                <td>수동</td>
+                <td>1-1 &gt; 2-1 &gt; 3-1</td>
+                <td>
+                  <button type="button" class="btn type3 w100p">적용</button>
+                </td>
+              </tr>
+              <tr>
+                <td>2024.10.14 10:20:34</td>
+                <td>수동</td>
+                <td>1-1 &gt; 2-1 &gt; 3-1</td>
+                <td>
+                  <button type="button" class="btn type3 w100p">적용</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="popup-footer">
+        <div class="btn-wrap">
+          <button type="button" class="btn large popup_close">작동 시작</button>
+          <button type="button" class="btn large popup_close">작동 정지</button>
+        </div>
+      </div>
+
+      <input type="button" class="popup_close" value="닫기" />
+    </div>
+  </div>
+</div>
+
+                  <div class="mypage-con">
+                    <div class="column" data-ratio="1-2">
+                      <img
+                        src="../../images/service/sub/mypage-img1.png"
+                        alt="마이페이지 도면"
+                      />
+                    </div>
+
+                    <div class="column" data-ratio="1-2">
+                      <h3>시험 조건</h3>
+                      <div class="table">
+                        <table>
+                          <caption></caption>
+                          <colgroup>
+                            <col />
+                            <col style="width: 26%" />
+                            <col style="width: 20%" />
+                            <col style="width: 20%" />
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th scope="col"></th>
+                              <th scope="col">작동</th>
+                              <th scope="col">조도</th>
+                              <th scope="col">색온도</th>
+                            </tr>
+                          </thead>
+                          <tbody class="align-center">
+                            <tr>
+                              <td>큰방</td>
+                              <td>
+                                <span class="input">
+                                  <input
+                                    type="radio"
+                                    name="radio10"
+                                    id="radio10-1"
+                                  />
+                                  <label for="radio10-1">On</label>
+                                </span>
+                                <span class="input">
+                                  <input
+                                    type="radio"
+                                    name="radio10"
+                                    id="radio10-2"
+                                  />
+                                  <label for="radio10-2">Off</label>
+                                </span>
+                              </td>
+                              <td>
+                                <select name="" id="" class="input">
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                </select>
+                              </td>
+                              <td>
+                                <select name="" id="" class="input">
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                </select>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>작은방</td>
+                              <td>
+                                <span class="input">
+                                  <input
+                                    type="radio"
+                                    name="radio11"
+                                    id="radio11-1"
+                                  />
+                                  <label for="radio11-1">On</label>
+                                </span>
+                                <span class="input">
+                                  <input
+                                    type="radio"
+                                    name="radio11"
+                                    id="radio11-2"
+                                  />
+                                  <label for="radio11-2">Off</label>
+                                </span>
+                              </td>
+                              <td>
+                                <select name="" id="" class="input">
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                </select>
+                              </td>
+                              <td>
+                                <select name="" id="" class="input">
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                </select>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>주방</td>
+                              <td>
+                                <span class="input">
+                                  <input
+                                    type="radio"
+                                    name="radio12"
+                                    id="radio12-1"
+                                  />
+                                  <label for="radio12-1">On</label>
+                                </span>
+                                <span class="input">
+                                  <input
+                                    type="radio"
+                                    name="radio12"
+                                    id="radio12-2"
+                                  />
+                                  <label for="radio12-2">Off</label>
+                                </span>
+                              </td>
+                              <td>
+                                <select name="" id="" class="input">
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                </select>
+                              </td>
+                              <td>
+                                <select name="" id="" class="input">
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                </select>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>거실1</td>
+                              <td>
+                                <span class="input">
+                                  <input
+                                    type="radio"
+                                    name="radio13"
+                                    id="radio13-1"
+                                  />
+                                  <label for="radio13-1">On</label>
+                                </span>
+                                <span class="input">
+                                  <input
+                                    type="radio"
+                                    name="radio13"
+                                    id="radio13-2"
+                                  />
+                                  <label for="radio13-2">Off</label>
+                                </span>
+                              </td>
+                              <td>
+                                <select name="" id="" class="input">
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                </select>
+                              </td>
+                              <td>
+                                <select name="" id="" class="input">
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                </select>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>거실2</td>
+                              <td>
+                                <span class="input">
+                                  <input
+                                    type="radio"
+                                    name="radio14"
+                                    id="radio14-1"
+                                  />
+                                  <label for="radio14-1">On</label>
+                                </span>
+                                <span class="input">
+                                  <input
+                                    type="radio"
+                                    name="radio14"
+                                    id="radio14-2"
+                                  />
+                                  <label for="radio14-2">Off</label>
+                                </span>
+                              </td>
+                              <td>
+                                <select name="" id="" class="input">
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                </select>
+                              </td>
+                              <td>
+                                <select name="" id="" class="input">
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                </select>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>거실3</td>
+                              <td>
+                                <span class="input">
+                                  <input
+                                    type="radio"
+                                    name="radio15"
+                                    id="radio15-1"
+                                  />
+                                  <label for="radio15-1">On</label>
+                                </span>
+                                <span class="input">
+                                  <input
+                                    type="radio"
+                                    name="radio15"
+                                    id="radio15-2"
+                                  />
+                                  <label for="radio15-2">Off</label>
+                                </span>
+                              </td>
+                              <td>
+                                <select name="" id="" class="input">
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                </select>
+                              </td>
+                              <td>
+                                <select name="" id="" class="input">
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                </select>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="table">
+                        <table>
+                          <caption></caption>
+                          <colgroup>
+                            <col style="width: 15%" />
+                            <col style="width: 35%" />
+                            <col style="width: 15%" />
+                            <col />
+                          </colgroup>
+                          <tbody>
+                            <tr>
+                              <th scope="row">시험 시간</th>
+                              <td>
+                                <input type="text" class="input" />
+                                분
+                              </td>
+                              <th scope="row">경과 시간</th>
+                              <td>163 분</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">시험 결과</th>
+                              <td colspan="3">
+                                <button type="button" class="btn">
+                                  파일 다운로드
+                                </button>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+
+                      <h3>이력관리</h3>
+                      <div class="table">
+                        <table>
+                          <caption></caption>
+                          <colgroup>
+                            <col style="width: 30%" />
+                            <col />
+                            <col style="width: 22%" />
+                            <col style="width: 80px" />
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th scope="col">날짜</th>
+                              <th scope="col">조명ON/조도</th>
+                              <th scope="col">색온도</th>
+                              <th scope="col">재적용</th>
+                            </tr>
+                          </thead>
+                          <tbody class="align-center">
+                            <tr>
+                              <td>2024.10.14 10:20:34</td>
+                              <td>방1 - 70, 주방 - 80</td>
+                              <td>낮은 색온도</td>
+                              <td>
+                                <button type="button" class="btn type3 w100p">
+                                  적용
+                                </button>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>2024.10.14 10:20:34</td>
+                              <td>방1 - 70, 주방 - 80</td>
+                              <td>낮은 색온도</td>
+                              <td>
+                                <button type="button" class="btn type3 w100p">
+                                  적용
+                                </button>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="btn-wrap center">
+                    <button type="button" class="btn large">시험 시작</button>
+                    <button type="button" class="btn large">시험 종료</button>
+                  </div>
+                  
+<div class="cctv">
+    <ul class="video-list">
+      <li class="video-item">
+        <div href="#n" class="video-anchor">
+          <div class="img-wrap"><img
+            src="../../images/service/sub/mypage-video1.png"
+            alt="CCTV 01"
+          /></div>
+          <div class="title">CCTV 01</div>
+        </a>
+      </li>
+      <li class="video-item">
+        <div href="#n" class="video-anchor">
+          <div class="img-wrap"><img
+            src="../../images/service/sub/mypage-video2.png"
+            alt="CCTV 02"
+          /></div>
+          <div class="title">CCTV 02</div>
+        </a>
+      </li>
+      <li class="video-item">
+        <div href="#n" class="video-anchor">
+          <div class="img-wrap"><img
+            src="../../images/service/sub/mypage-video3.png"
+            alt="CCTV 03"
+          /></div>
+          <div class="title">CCTV 03</div>
+        </a>
+      </li>
+      <li class="video-item">
+        <div href="#n" class="video-anchor">
+          <div class="img-wrap"><img
+            src="../../images/service/sub/mypage-video4.png"
+            alt="CCTV 04"
+          /></div>
+          <div class="title">CCTV 04</div>
+        </a>
+      </li>
+    </ul>
+  </div>
+                  <div class="mypage-option">
+  <h3>옵션 설정하기</h3>
+  <div class="btn-wrap">
+    <a href="./DE_US_19.html" class="btn icon">
+      <i>
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M4 16V20H8V22H2V16H4ZM22 16V22H16V20H20V16H22ZM7.5 7C7.5 9.1416 8.99603 10.9338 11 11.3885V17H13L13.001 11.3883C15.0045 10.9332 16.5 9.14125 16.5 7H18.5C18.5 9.50729 17.0804 11.683 15.0011 12.7672L15 19H9L8.99992 12.7677C6.92007 11.6837 5.5 9.50769 5.5 7H7.5ZM12 5C13.3807 5 14.5 6.11929 14.5 7.5C14.5 8.88071 13.3807 10 12 10C10.6193 10 9.5 8.88071 9.5 7.5C9.5 6.11929 10.6193 5 12 5ZM8 2V4L4 3.999V8H2V2H8ZM22 2V8H20V4H16V2H22Z"
+            fill="white"
+          />
+        </svg>
+      </i>
+      생체인식률 시스템
+    </a>
+    <a href="./DE_US_23.html" class="btn icon">
+      <i>
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M17.841 15.659L18.017 15.836L18.1945 15.659C19.0732 14.7803 20.4978 14.7803 21.3765 15.659C22.2552 16.5377 22.2552 17.9623 21.3765 18.841L18.0178 22.1997L14.659 18.841C13.7803 17.9623 13.7803 16.5377 14.659 15.659C15.5377 14.7803 16.9623 14.7803 17.841 15.659ZM12 14V16C8.68629 16 6 18.6863 6 22H4C4 17.6651 7.44784 14.1355 11.7508 14.0038L12 14ZM12 1C15.315 1 18 3.685 18 7C18 10.2397 15.4357 12.8776 12.225 12.9959L12 13C8.685 13 6 10.315 6 7C6 3.76034 8.56434 1.12237 11.775 1.00414L12 1ZM12 3C9.78957 3 8 4.78957 8 7C8 9.21043 9.78957 11 12 11C14.2104 11 16 9.21043 16 7C16 4.78957 14.2104 3 12 3Z"
+            fill="white"
+          />
+        </svg>
+      </i>
+      인체모사 환경시스템
+    </a>
+    <a href="./DE_US_24.html" class="btn icon">
+      <i>
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z"
+            fill="white"
+          />
+        </svg>
+      </i>
+      태양광 모사장치 제어시스템
+    </a>
+    <a href="./DE_US_25.html" class="btn icon">
+      <i>
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M20 20C20 20.5523 19.5523 21 19 21H5C4.44772 21 4 20.5523 4 20V11H1L11.3273 1.6115C11.7087 1.26475 12.2913 1.26475 12.6727 1.6115L23 11H20V20ZM8.59208 13.808L7.60099 14.3802L8.6017 16.1133L9.5943 15.5402C9.98756 15.9116 10.467 16.193 10.9994 16.3512V17.4956H13.0007V16.3512C13.5331 16.1929 14.0125 15.9115 14.4057 15.5401L15.3984 16.1132L16.399 14.3801L15.4079 13.8078C15.4696 13.5478 15.5022 13.2766 15.5022 12.9978C15.5022 12.7189 15.4696 12.4477 15.4078 12.1877L16.399 11.6154L15.3983 9.88225L14.4056 10.4554C14.0124 10.084 13.533 9.80264 13.0006 9.64436V8.49998H10.9993V9.64436C10.4669 9.80265 9.98747 10.084 9.59421 10.4554L8.60164 9.88234L7.60099 11.6155L8.59205 12.1877C8.53034 12.4477 8.49768 12.7189 8.49768 12.9978C8.49768 13.2767 8.53035 13.5479 8.59208 13.808ZM12 14.4971C11.171 14.4971 10.499 13.8258 10.499 12.9978C10.499 12.1698 11.171 11.4985 12 11.4985C12.8289 11.4985 13.5009 12.1698 13.5009 12.9978C13.5009 13.8258 12.8289 14.4971 12 14.4971Z"
+            fill="white"
+          />
+        </svg>
+      </i>
+      새집모사 환경 제어 시스템
+    </a>
+    <a href="#n" class="btn icon">
+      <i>
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M4 5V19H20V5H4ZM3 3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3ZM7.05025 7.12132L8.46447 8.53553C7.55964 9.44036 7 10.6904 7 12.0711C7 13.4518 7.55964 14.7018 8.46447 15.6066L7.05025 17.0208C5.7835 15.7541 5 14.0041 5 12.0711C5 10.1381 5.7835 8.38807 7.05025 7.12132ZM16.9497 7.12132C18.2165 8.38807 19 10.1381 19 12.0711C19 14.0041 18.2165 15.7541 16.9497 17.0208L15.5355 15.6066C16.4404 14.7018 17 13.4518 17 12.0711C17 10.6904 16.4404 9.44036 15.5355 8.53553L16.9497 7.12132ZM12 13.0711C12.5523 13.0711 13 12.6234 13 12.0711C13 11.5188 12.5523 11.0711 12 11.0711C11.4477 11.0711 11 11.5188 11 12.0711C11 12.6234 11.4477 13.0711 12 13.0711ZM12 15.0711C10.3431 15.0711 9 13.7279 9 12.0711C9 10.4142 10.3431 9.07107 12 9.07107C13.6569 9.07107 15 10.4142 15 12.0711C15 13.7279 13.6569 15.0711 12 15.0711Z"
+            fill="white"
+          />
+        </svg>
+      </i>
+      음성/소음 발생 시스템
+    </a>
+    <!-- <a href="" class="btn icon" >
+        <i>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.5 2C13.5 2.44425 13.3069 2.84339 13 3.11805V5H18C19.6569 5 21 6.34315 21 8V18C21 19.6569 19.6569 21 18 21H6C4.34315 21 3 19.6569 3 18V8C3 6.34315 4.34315 5 6 5H11V3.11805C10.6931 2.84339 10.5 2.44425 10.5 2C10.5 1.17157 11.1716 0.5 12 0.5C12.8284 0.5 13.5 1.17157 13.5 2ZM6 7C5.44772 7 5 7.44772 5 8V18C5 18.5523 5.44772 19 6 19H18C18.5523 19 19 18.5523 19 18V8C19 7.44772 18.5523 7 18 7H13H11H6ZM2 10H0V16H2V10ZM22 10H24V16H22V10ZM9 14.5C9.82843 14.5 10.5 13.8284 10.5 13C10.5 12.1716 9.82843 11.5 9 11.5C8.17157 11.5 7.5 12.1716 7.5 13C7.5 13.8284 8.17157 14.5 9 14.5ZM15 14.5C15.8284 14.5 16.5 13.8284 16.5 13C16.5 12.1716 15.8284 11.5 15 11.5C14.1716 11.5 13.5 12.1716 13.5 13C13.5 13.8284 14.1716 14.5 15 14.5Z" fill="white"/>
+            </svg>
+            
+        </i>
+        모바일 로봇
+      </a>
+      <a href="" class="btn icon" >
+        <i>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 5C8 2.79086 9.79086 1 12 1C14.2091 1 16 2.79086 16 5V10.2547C17.8135 11.5196 19 13.6213 19 16C19 19.866 15.866 23 12 23C8.13401 23 5 19.866 5 16C5 13.6213 6.18652 11.5196 8 10.2547V5ZM9.1442 11.8951C7.80943 12.8261 7 14.3432 7 16C7 18.7614 9.23858 21 12 21C14.7614 21 17 18.7614 17 16C17 14.3432 16.1906 12.8261 14.8558 11.8951L14 11.2981V5C14 3.89543 13.1046 3 12 3C10.8954 3 10 3.89543 10 5V11.2981L9.1442 11.8951ZM8 16H16C16 18.2091 14.2091 20 12 20C9.79086 20 8 18.2091 8 16Z" fill="white"/>
+            </svg>
+            
+        </i>
+        온도/습도
+      </a> -->
+  </div>
+</div>
+
+                </div>
+                <div class="tab_content">
+                  <div class="video-wrap">
+                  <video src="../../images/service/sub/map_test.mp4" id="map-video" loop>
+                  </div>
+
+                  <script>
+                    $('.tab_button').on('click', function(){
+                      $('#map-video').get(0).play();
+                    })
+                  </script>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <footer class="footer"><div class="footer-menu">
+  <div class="wrap"><div class="depth depth1">
+  <ul class="depth-list depth1-list">
+    <li class="depth-item depth1-item">
+      <a class="depth-anchor depth1-anchor" href="./DE_US_12.html">
+        <span>사업소개</span>
+      </a>
+      <ul class="depth-list depth2-list">
+        <li class="depth-item depth2-item">
+          <a
+            href="./DE_US_12.html"
+            class="depth-anchor depth2-anchor"
+            data-code="DE_US_12"
+          >
+            <span>시험안내</span>
+          </a>
+        </li>
+        <li class="depth-item depth2-item">
+          <a href="./DE_US_13.html" class="depth-anchor depth2-anchor">
+            <span>시험접수</span>
+          </a>
+        </li>
+        <li class="depth-item depth2-item">
+          <a href="./DE_US_14.html" class="depth-anchor depth2-anchor">
+            <span>시료입수</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li class="depth-item depth1-item">
+      <a
+        class="depth-anchor depth1-anchor"
+        href="./DE_US_15.html"
+        data-code="DE_US_05"
+      >
+        <span>게시판</span>
+      </a>
+      <ul class="depth-list depth2-list">
+        <li class="depth-item depth2-item">
+          <a href="./DE_US_15.html" class="depth-anchor depth2-anchor">
+            <span>FAQ</span>
+          </a>
+        </li>
+        <li class="depth-item depth2-item">
+          <a href="./DE_US_16.html" class="depth-anchor depth2-anchor">
+            <span>공지사항</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li class="depth-item depth1-item">
+      <a class="depth-anchor depth1-anchor" href="./DE_US_18.html">
+        <span>마이페이지</span>
+      </a>
+      <ul class="depth-list depth2-list">
+        <li class="depth-item depth2-item">
+          <a href="./DE_US_18.html" class="depth-anchor depth2-anchor">
+            <span>시스템 설정</span>
+          </a>
+          <ul class="depth-list depth3-list">
+            <li class="depth-item depth3-item">
+              <a href="./DE_US_18.html" class="depth-anchor depth3-anchor">
+                <span>정보입력</span>
+              </a>
+            </li>
+            <li class="depth-item depth3-item">
+              <a href="./DE_US_18_1_1.html" class="depth-anchor depth3-anchor">
+                <span>CCTV</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="depth-item depth2-item">
+          <a href="./DE_US_26_1.html" class="depth-anchor depth2-anchor">
+            <span>데이터 수집</span>
+          </a>
+        </li>
+        <li class="depth-item depth2-item">
+          <a href="./DE_US_27.html" class="depth-anchor depth2-anchor">
+            <span>정보수정</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li class="depth-item depth1-item">
+      <a class="depth-anchor depth1-anchor" href="#n">
+        <span>로그인</span>
+      </a>
+      <ul class="depth-list depth2-list">
+        <li class="depth-item depth2-item">
+          <a href="./DE_US_08.html" class="depth-anchor depth2-anchor">
+            <span>로그인</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="footer-info-wrap">
+  <div class="wrap">
+    <div class="footer-logo">
+      <img
+        src="../../images/common/footer-logo.svg"
+        alt="KETI Korea Electronics Technology Institute"
+      />
+    </div>
+    <div class="footer-info-box">
+      <div class="anchor-list">
+        <a href="./DE_US_14.html" class="anchor-item">찾아오시는 길</a>
+        <!-- <a href="#n" class="anchor-item">방문예약</a>
+        <a href="#n" class="anchor-item"><strong>개인정보보호정책</strong></a>
+        <a href="#n" class="anchor-item">저작권정책</a>
+        <a href="#n" class="anchor-item">이메일주소무단수집거부</a>
+        <a href="#n" class="anchor-item">안전환경/보건/보안 경영방침</a> -->
+      </div>
+      <div class="info">
+        <div class="address-wrap">
+          <div class="address">광주광역시 북구 첨단과기로 226 (오룡동)</div>
+          <div class="tel">TEL : 062-975-7000, 7114 FAX : 062-975-7029</div>
+        </div>
+        <div class="copyright">
+          Copyright(C) 2024 KOREA ELECTORNICS TECHNOLOGY INSTITUTE., All Rights
+          Reserved.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</footer>
+    </div>
+  </body>
+</html>

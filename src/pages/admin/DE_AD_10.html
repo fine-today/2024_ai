@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('./include/head.html',{'title' : '리스트'})
+  </head>
+  <body>
+    <div id="container" class="admin sub">
+      <header class="header">@@include('./include/header.html')</header>
+      <div id="content">
+        <aside id="menu" class="menu">@@include('./include/menu.html')</aside>
+        <div id="main" class="main">
+          @@include('./include/con-header.html',{depth1: ' 사용자 등록',depth2:
+          '리스트'})
+
+          <section class="section">
+            <h3>회원관리</h3>
+
+            <form action="#n">
+              <fieldset>
+                <legend>게시물 목록</legend>
+                <div class="p-search-box">
+                  <div class="left">
+                    <div class="p-form-group">
+                      <span class="p-form-group__label">
+                        <label for="input1-1">등록일</label>
+                      </span>
+
+                      <div class="p-date first" data-date="datepicker">
+                        <input
+                          type="text"
+                          title=""
+                          placeholder="yyyy-mm-dd"
+                          class="input"
+                          id="input1-1"
+                        />
+                        <div class="p-datepicker__wrap">
+                          <button
+                            type="button"
+                            class="p-input__item p-date__icon"
+                          >
+                            달력열기
+                            <i class="ri-calendar-line"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <span class="p-form__split">~</span>
+                      <div class="p-date" data-date="datepicker">
+                        <input
+                          type="text"
+                          title=""
+                          placeholder="yyyy-mm-dd"
+                          class="input"
+                        />
+                        <div class="input_split">
+                          <div class="p-datepicker__wrap">
+                            <button
+                              type="button"
+                              class="p-input__item p-date__icon"
+                            >
+                              달력열기
+                              <i class="ri-calendar-line"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="p-form-group">
+                      <span class="p-form-group__label">
+                        <label for="input1-2">상태</label>
+                      </span>
+                      <select class="input" title="전체" id="input1-2">
+                        <option value="">전체</option>
+                        <option value="">1</option>
+                      </select>
+                    </div>
+
+                    <div class="p-form-group">
+                      <span class="p-form-group__label">
+                        <label for="input1-3">검색</label>
+                      </span>
+                      <select class="input" title="전체" id="input1-3">
+                        <option value="">이름</option>
+                        <option value="">1</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="right">
+                    <div class="p-form-group">
+                      <input type="text" class="input" />
+                      <div class="p-form-group__button">
+                        <button type="submit" class="btn type3">조회</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="table-unit">
+                  <div class="flex">
+                    <span class="legend"><strong>10/10</strong>건</span>
+                    <div class="p-search">
+                      조회기간 : 2024-01-01 ~ 2024-12-31
+                    </div>
+                  </div>
+                </div>
+                <div class="table">
+                  <table class="p-board" data-table="rwd">
+                    <caption>
+                      게시판 - 가입일, 이름, 아이디, 부서, 연락처, 이메일, 상태
+                      정보 제공
+                    </caption>
+                    <colgroup>
+                      <col style="width: 40px" />
+                      <col style="width: 14%" />
+                      <col style="width: 13%" />
+                      <col />
+                      <col style="width: 14%" />
+                      <col style="width: 18%" />
+                      <col style="width: 18%" />
+                      <col style="width: 10%" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col" class="first">
+                          <span class="input empty">
+                            <input
+                              type="checkbox"
+                              name="checkbox"
+                              id="check1"
+                            />
+                            <label for="check1"></label>
+                          </span>
+                        </th>
+                        <th scope="col">가입일</th>
+                        <th scope="col">이름</th>
+                        <th scope="col">아이디</th>
+                        <th scope="col">기관명</th>
+                        <th scope="col">연락처</th>
+                        <th scope="col">이메일</th>
+                        <th scope="col">상태</th>
+                      </tr>
+                    </thead>
+                    <tbody class="align-center">
+                      <tr>
+                        <td>
+                          <span class="input empty">
+                            <input
+                              type="checkbox"
+                              name="checkbox"
+                              id="check1-1"
+                            />
+                            <label for="check1-1"></label>
+                          </span>
+                        </td>
+                        <td>2024.10.10</td>
+                        <td>홍***</td>
+                        <td>abc*****</td>
+                        <td>기관1</td>
+                        <td>043-****-****</td>
+                        <td>****@go.kr</td>
+                        <td>정상</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="input empty">
+                            <input
+                              type="checkbox"
+                              name="checkbox"
+                              id="check1-2"
+                            />
+                            <label for="check1-2"></label>
+                          </span>
+                        </td>
+                        <td>2024.10.10</td>
+                        <td>홍***</td>
+                        <td>abc*****</td>
+                        <td>기관1</td>
+                        <td>043-****-****</td>
+                        <td>****@go.kr</td>
+                        <td>정지</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="input empty">
+                            <input
+                              type="checkbox"
+                              name="checkbox"
+                              id="check1-3"
+                            />
+                            <label for="check1-3"></label>
+                          </span>
+                        </td>
+                        <td>2024.10.10</td>
+                        <td>홍***</td>
+                        <td>abc*****</td>
+                        <td>기관1</td>
+                        <td>043-****-****</td>
+                        <td>****@go.kr</td>
+                        <td>정상</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="p-pagination" data-brl-use="NO">
+                  <div class="p-page">
+                    <div class="p-page__control">
+                      <a href="#n" class="p-page__link prev-end"
+                        ><span class="skip">처음 페이지</span></a
+                      ><a href="#n" class="p-page__link prev"
+                        ><span class="skip">이전 10 페이지</span></a
+                      ><a href="#n" class="p-page__link prev-one"
+                        >이전 페이지</a
+                      >
+                    </div>
+                    <div class="p-page__link-group">
+                      <strong title="현재 1페이지" class="p-page__link active"
+                        >1</strong
+                      ><a href="#n" title="2페이지 이동" class="p-page__link"
+                        >2</a
+                      ><a href="#n" title="3페이지 이동" class="p-page__link"
+                        >3</a
+                      ><a href="#n" title="4페이지 이동" class="p-page__link"
+                        >4</a
+                      ><a href="#n" title="5페이지 이동" class="p-page__link"
+                        >5</a
+                      ><a href="#n" title="6페이지 이동" class="p-page__link"
+                        >6</a
+                      ><a href="#n" title="7페이지 이동" class="p-page__link"
+                        >7</a
+                      ><a href="#n" title="8페이지 이동" class="p-page__link"
+                        >8</a
+                      ><a href="#n" title="9페이지 이동" class="p-page__link"
+                        >9</a
+                      ><a href="0" title="10페이지 이동" class="p-page__link"
+                        >10</a
+                      >
+                    </div>
+                    <div class="p-page__control">
+                      <a href="#n" class="p-page__link next-one">다음 페이지</a>
+                      <a href="1" class="p-page__link next"
+                        ><span class="skip">다음 10 페이지</span></a
+                      ><a href="#n81" class="p-page__link next-end"
+                        ><span class="skip">끝 페이지</span></a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="p-btn-wrap align-right">
+                  <!-- <a href="#n" class="btn">btn1</a> -->
+                  <a href="#n" class="btn type2">관리자 등록</a>
+                </div>
+
+                <div class="table">
+                  <table class="p-board" data-table="rwd">
+                    <caption>
+                      게시판 - 가입일, 이름, 아이디, 부서, 연락처, 이메일, 상태
+                      정보 제공
+                    </caption>
+                    <colgroup>
+                      <col style="width: 14%" />
+                      <col style="width: 13%" />
+                      <col />
+                      <col style="width: 14%" />
+                      <col style="width: 18%" />
+                      <col style="width: 18%" />
+                      <col style="width: 10%" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col" class="first">가입일</th>
+                        <th scope="col">이름</th>
+                        <th scope="col">아이디</th>
+                        <th scope="col">부서</th>
+                        <th scope="col">연락처</th>
+                        <th scope="col">이메일</th>
+                        <th scope="col">상태</th>
+                      </tr>
+                    </thead>
+                    <tbody class="align-center">
+                      <tr>
+                        <td colspan="7">조회 결과가 존재하지 않습니다.</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </fieldset>
+            </form>
+          </section>
+        </div>
+      </div>
+      <script>
+        $("#check1").on("click", function () {
+          var $this = $(this),
+            checked = $this.is(":checked");
+          $("[name=checkbox]").each(function () {
+            if ($(this).attr("id") !== "#check1") {
+              if (checked) {
+                $(this).prop("checked", true);
+              } else {
+                $(this).prop("checked", false);
+              }
+            }
+          });
+        });
+      </script>
+      <footer class="footer">@@include('./include/footer.html')</footer>
+    </div>
+  </body>
+</html>

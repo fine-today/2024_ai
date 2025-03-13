@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="kr" class="sub">
+  <head>
+    @@include('./include/sub-head.html',{title : '시험안내 - 사업소개'})
+  </head>
+  <body>
+    <div class="accessibility">
+      <a href="#content">본문 바로가기</a>
+    </div>
+    <div id="container" class="de_us_12">
+      <!-- code substring 으로 key class 생성-->
+      <header class="header">@@include('./include/header.html')</header>
+      <div id="content">
+        <div class="location">
+          @@include('./include/menu.html',{code : 'DE_US_12'})
+        </div>
+        <div class="wrap">
+          @@include('./include/breadcrumb.html',{ 
+            'depth1' : {title:'사업소개', anchor : '#n'}, 
+            'depth2': {title:'시험접수', anchor : '#n'}, 
+            'depthCount' : 2,
+          })
+          @@include('./include/introduce-tab.html')
+          <section class="section">
+            <p>
+              KETI전자기술연구원은 방문 또는 이메일을 통해 시험접수를 받고
+              있습니다.<br />
+              시험접수는 다음과 같은 절차에 따라 진행되며, 문의사항은 연구원으로
+              문의 바랍니다.
+            </p>
+
+            <div class="step type3">
+              <div class="step_wrap">
+                <ol class="step_list clearfix">
+                  <li class="step_box">
+                    <div class="step_item">
+                      <div class="step_content">
+                        <div class="title">1.접수</div>
+                      </div>
+                    </div>
+                    <div class="step_process">
+                      <div class="text">
+                        사업자등록증 사본, 시험신청서를 준비하여 방문 또는
+                        이메일로 접수하시면 됩니다. 접수가 완료되면 신청자
+                        이메일을 통해 접수 내역이 안내됩니다.
+                      </div>
+                      <ul class="bu">
+                        <li>
+                          접수처 - 경기도 성남시 분당구 새나리로 25 KETI
+                          한국전자기술연구원
+                        </li>
+                        <li>이메일 - abc@keri.re.kr</li>
+                      </ul>
+                      <a href="#n" class="btn">신청서양식다운로드</a>
+                    </div>
+                  </li>
+                  <li class="step_box clearfix">
+                    <div class="step_item">
+                      <div class="step_content">
+                        <div class="title">2. 수수료 결제</div>
+                      </div>
+                    </div>
+                    <div class="step_process">
+                      <div class="text">
+                        결제방법 : 현금결제, 카드결제, 온라인 송금
+                        <p class="blt">
+                          ※ 수수료 결제가 완료되어야 접속이 가능합니다.
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="step_box clearfix">
+                    <div class="step_item">
+                      <div class="step_content">
+                        <div class="title">3. 시료 발송</div>
+                      </div>
+                    </div>
+                    <div class="step_process">
+                      <div class="text">
+                        실험 시료는 직접 방문 또는 택배를 통해 전달하여야
+                        합니다.
+                      </div>
+                    </div>
+                  </li>
+                  <li class="step_box clearfix">
+                    <div class="step_item">
+                      <div class="step_content">
+                        <div class="title">4. 성적서 발급</div>
+                      </div>
+                    </div>
+                    <div class="step_process">
+                      <div class="text">
+                        시험이 완료되면 신청자 E-mail을 통해 결과가 안내됩니다.
+                        Ex) 성적서 발급 방법 : E-mail 전송 / 성적서 발급 / 원본
+                        등기 발송
+                      </div>
+                    </div>
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <footer class="footer">@@include('./include/footer.html')</footer>
+      <script>
+        $('.tab_item').eq(1).addClass('active');
+      </script>
+    </div>
+  </body>
+</html>
