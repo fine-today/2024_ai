@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="kr" class="sub">
+  <head>
+    @@include('./include/sub-head.html',{title : '시스템 설정 - 마이페이지'})
+  </head>
+  <body>
+    <div class="accessibility">
+      <a href="#content">본문 바로가기</a>
+    </div>
+    <div id="container" class="de_us_20 my-page">
+      <!-- code substring 으로 key class 생성-->
+      <header class="header">@@include('./include/header.html')</header>
+      <div id="content">
+        <div class="location">
+          @@include('./include/menu.html',{code : 'DE_US_16'})
+        </div>
+        <div class="wrap">
+          @@include('./include/breadcrumb.html',{ depth1 : '게시판', depth2 :
+          '공지사항', })
+          <section class="section">
+            <div class="popup active de_us_20" data-pop="pop1">
+              <div class="popup_wrap">
+                <div class="pop_inner">
+                  <div class="popup-title-wrap">
+                    <!-- <div class="sub-title">
+                      <strong>Option 01</strong> 생체 인식률 평가를 위한
+                      외부간섭요인 발생 시스템
+                    </div> -->
+                    <h3 class="popup_title h0">온습도 설정</h3>
+                  </div>
+                  <div class="popup_con">
+                    <div class="table">
+                      <table>
+                        <caption></caption>
+                        <colgroup>
+                          <col />
+                          <col style="width: 10%" />
+                          <col style="width: 10%" />
+                          <col style="width: 10%" />
+                          <col style="width: 10%" />
+                          <col style="width: 10%" />
+                          <col style="width: 10%" />
+                          <col style="width: 10%" />
+                          <col style="width: 10%" />
+                        </colgroup>
+                        <tbody>
+                          <tr>
+                            <th scope="col"></th>
+                            <th scope="col">
+                              <span class="input">
+                                <input type="checkbox" id="check1-1" />
+                                <label for="check1-1">실내</label>
+                              </span>
+                            </th>
+                            <th scope="col">
+                              <span class="input">
+                                <input type="checkbox" id="check1-1" />
+                                <label for="check1-1">실외</label>
+                              </span>
+                            </th>
+                            <th scope="col">
+                              <span class="input">
+                                <input type="checkbox" id="check1-1" />
+                                <label for="check1-1">복도</label>
+                              </span>
+                            </th>
+                            <th scope="col">
+                              <span class="input">
+                                <input type="checkbox" id="check1-1" />
+                                <label for="check1-1">뒷집</label>
+                              </span>
+                            </th>
+                            <th scope="col">
+                              <span class="input">
+                                <input type="checkbox" id="check1-1" />
+                                <label for="check1-1">옆집</label>
+                              </span>
+                            </th>
+                            <th scope="col">
+                              <span class="input">
+                                <input type="checkbox" id="check1-1" />
+                                <label for="check1-1">아래층</label>
+                              </span>
+                            </th>
+                            <th scope="col">
+                              <span class="input">
+                                <input type="checkbox" id="check1-1" />
+                                <label for="check1-1">위층</label>
+                              </span>
+                            </th>
+                            <th scope="col">
+                              <span class="input">
+                                <input type="checkbox" id="check1-1" />
+                                <label for="check1-1">전체</label>
+                              </span>
+                            </th>
+                          </tr>
+                          <tr>
+                            <th scope="row">설정온도</th>
+                            <td>
+                              <input type="text" class="input" />
+                            </td>
+                            <td>
+                              <input type="text" class="input" />
+                            </td>
+                            <td>
+                              <input type="text" class="input" />
+                            </td>
+                            <td>
+                              <input type="text" class="input" />
+                            </td>
+                            <td>
+                              <input type="text" class="input" />
+                            </td>
+                            <td>
+                              <input type="text" class="input" />
+                            </td>
+                            <td>
+                              <input type="text" class="input" />
+                            </td>
+                            <td>
+                              <input type="text" class="input" />
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">설정습도</th>
+                            <td>
+                              <input type="text" class="input" />
+                            </td>
+                            <td>
+                              <input type="text" class="input" />
+                            </td>
+                            <td>
+                              <input type="text" class="input" />
+                            </td>
+                            <td>
+                              <input type="text" class="input" />
+                            </td>
+                            <td>
+                              <input type="text" class="input" />
+                            </td>
+                            <td>
+                              <input type="text" class="input" />
+                            </td>
+                            <td>
+                              <input type="text" class="input" />
+                            </td>
+                            <td>
+                              <input type="text" class="input" />
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">작동</th>
+                            <td colspan="8">
+                              <span class="input">
+                                <input
+                                  type="radio"
+                                  name="radio2"
+                                  id="radio2-1"
+                                  checked
+                                />
+                                <label for="radio2-1">공조</label>
+                              </span>
+                              <span class="input">
+                                <input
+                                  type="radio"
+                                  name="radio2"
+                                  id="radio2-1"
+                                  checked
+                                />
+                                <label for="radio2-1">공조</label>
+                              </span>
+                              <span class="input">
+                                <input
+                                  type="radio"
+                                  name="radio2"
+                                  id="radio2-1"
+                                  checked
+                                />
+                                <label for="radio2-1">정지</label>
+                              </span>
+                              <span class="input">
+                                <input
+                                  type="radio"
+                                  name="radio2"
+                                  id="radio2-1"
+                                  checked
+                                />
+                                <label for="radio2-1">공조</label>
+                              </span>
+                              <span class="input">
+                                <input
+                                  type="radio"
+                                  name="radio2"
+                                  id="radio2-1"
+                                  checked
+                                />
+                                <label for="radio2-1">정지</label>
+                              </span>
+                              <span class="input">
+                                <input
+                                  type="radio"
+                                  name="radio2"
+                                  id="radio2-1"
+                                  checked
+                                />
+                                <label for="radio2-1">공조</label>
+                              </span>
+                              <span class="input">
+                                <input
+                                  type="radio"
+                                  name="radio2"
+                                  id="radio2-1"
+                                  checked
+                                />
+                                <label for="radio2-1">공조</label>
+                              </span>
+                              <span class="input">
+                                <input
+                                  type="radio"
+                                  name="radio2"
+                                  id="radio2-1"
+                                  checked
+                                />
+                                <label for="radio2-1">공조</label>
+                              </span>
+                              <span class="input">
+                                <input
+                                  type="radio"
+                                  name="radio2"
+                                  id="radio2-1"
+                                  checked
+                                />
+                                <label for="radio2-1">공조</label>
+                              </span>
+                              <span class="input">
+                                <input
+                                  type="radio"
+                                  name="radio2"
+                                  id="radio2-1"
+                                  checked
+                                />
+                                <label for="radio2-1">공조</label>
+                              </span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="popup-footer">
+                    <div class="btn-wrap">
+                      <button type="button" class="btn large popup_close">
+                        설정 완료
+                      </button>
+                    </div>
+                  </div>
+
+                  <input type="button" class="popup_close" value="닫기" />
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <footer class="footer">@@include('./include/footer.html')</footer>
+    </div>
+  </body>
+</html>

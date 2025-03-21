@@ -1,0 +1,134 @@
+<div class="wrap">
+  <div class="tab-wrap">
+    <div class="btn-wrap">
+      <button type="button" class="tab-btn active" data-tab="0">
+        <span>공지사항</span>
+      </button>
+      <button type="button" class="tab-btn" data-tab="1">
+        <span>FAQ</span>
+      </button>
+    </div>
+    <div class="con-wrap">
+      <div class="tab-con active" data-tab="0">
+        <ul class="board-list">
+          <li class="board-item">
+            <a href="#n" class="board-anchor">
+              <span class="title"
+                >111111[연구원 관련기사] 7월31일(수), 과기정통부 AI PM 정혜동 전
+                KETI센터장 낙점, 지디넷코리아</span
+              >
+              <span class="date">2024.07.31</span>
+            </a>
+          </li>
+          <li class="board-item">
+            <a href="#n" class="board-anchor">
+              <span class="title"
+                >[연구원 관련기사] 7월31일(수), 레벨4+ 자율주행 활발,
+                전자신문</span
+              >
+              <span class="date">2024.07.31</span>
+            </a>
+          </li>
+          <li class="board-item">
+            <a href="#n" class="board-anchor">
+              <span class="title"
+                >[연구원 관련기사] 7월 24일(수), KETI, '강남 로봇플러스
+                테스트필드' 개소…지능형 로봇 확산, 뉴시스 등</span
+              >
+              <span class="date">2024.07.24</span>
+            </a>
+          </li>
+          <li class="board-item">
+            <a href="#n" class="board-anchor">
+              <span class="title"
+                >KETI, 강남 로봇플러스 테스트필드 기반 제조산업 로봇화
+                추진</span
+              >
+              <span class="date">2024.07.24</span>
+            </a>
+          </li>
+          <li class="board-item">
+            <a href="#n" class="board-anchor">
+              <span class="title"
+                >[연구원 관련기사] 7월 23일(화), AI 자율제조 동맹…민관 2.5조
+                투자 전망, 전자신문 등</span
+              >
+              <span class="date">2024.07.23</span>
+            </a>
+          </li>
+        </ul>
+        <a href="../service/DE_US_16.html" class="more"><span>더보기</span></a>
+      </div>
+      <div class="tab-con" data-tab="1">
+        <ul class="board-list">
+          <li class="board-item">
+            <a href="#n" class="board-anchor">
+              <span class="title"
+                >22222222[연구원 관련기사] 7월31일(수), 과기정통부 AI PM 정혜동
+                전 KETI센터장 낙점, 지디넷코리아</span
+              >
+              <span class="date">2024.07.31</span>
+            </a>
+          </li>
+          <li class="board-item">
+            <a href="#n" class="board-anchor">
+              <span class="title"
+                >[연구원 관련기사] 7월31일(수), 레벨4+ 자율주행 활발,
+                전자신문</span
+              >
+              <span class="date">2024.07.31</span>
+            </a>
+          </li>
+          <li class="board-item">
+            <a href="#n" class="board-anchor">
+              <span class="title"
+                >[연구원 관련기사] 7월 24일(수), KETI, '강남 로봇플러스
+                테스트필드' 개소…지능형 로봇 확산, 뉴시스 등</span
+              >
+              <span class="date">2024.07.24</span>
+            </a>
+          </li>
+          <li class="board-item">
+            <a href="#n" class="board-anchor">
+              <span class="title"
+                >KETI, 강남 로봇플러스 테스트필드 기반 제조산업 로봇화
+                추진</span
+              >
+              <span class="date">2024.07.24</span>
+            </a>
+          </li>
+          <li class="board-item">
+            <a href="#n" class="board-anchor">
+              <span class="title"
+                >[연구원 관련기사] 7월 23일(화), AI 자율제조 동맹…민관 2.5조
+                투자 전망, 전자신문 등</span
+              >
+              <span class="date">2024.07.23</span>
+            </a>
+          </li>
+        </ul>
+        <a href="../service/DE_US_15.html" class="more"><span>더보기</span></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(".tab-btn").on("click", function () {
+    var $this = $(this),
+      thisTab = $this.attr("data-tab"),
+      thisTitle = $this.text(),
+      $thisParent = $this.closest(".tab-wrap"),
+      $tabCon = $thisParent.find(".tab-con");
+    $this.siblings(".tab-btn").removeClass("active").removeAttr("title");
+    $this.addClass("active").attr("title", "열림");
+    $tabCon.each(function (i, elem) {
+      var $elem = $(elem);
+      if ($elem.attr("data-tab") == thisTab) {
+        $elem.addClass("active").attr("title", `${thisTitle} 열림`);
+      } else {
+        $elem.removeClass("active").attr("title", thisTitle);
+      }
+    });
+  });
+</script>

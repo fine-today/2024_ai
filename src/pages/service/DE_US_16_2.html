@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="kr" class="sub">
+  <head>
+    @@include('./include/sub-head.html',{title : '공지사항 - 게시판'})
+  </head>
+  <body>
+    <div class="accessibility">
+      <a href="#content">본문 바로가기</a>
+    </div>
+    <div id="container" class="de_us_12">
+      <!-- code substring 으로 key class 생성-->
+      <header class="header">@@include('./include/header.html')</header>
+      <div id="content">
+        <div class="location">
+          @@include('./include/menu.html',{code : 'DE_US_16'})
+          
+        </div>
+        <div class="wrap">
+          @@include('./include/breadcrumb.html',{ depth1 : '게시판', depth2 :
+          '공지사항', })
+          @@include('./include/board-tab.html')
+          <section class="section">
+            <div class="p-wrap bbs bbs-write">
+              <div class="table-responsive">
+                <table class="p-table" data-table="rwd">
+                  <caption>
+                    공지사항 작성하기 - 제목, 내용, 첨부파일 정보 제공
+                  </caption>
+                  <colgroup>
+                    <col style="width: 120px" />
+                    <col />
+                  </colgroup>
+                  <tbody class="p-table--th-left">
+                    <tr class="bbs-write-title">
+                      <th scope="row">제목</th>
+                      <td>
+                        <input
+                          type="text"
+                          class="input w100p"
+                          placeholder="제목을 입력해주세요"
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">내용</th>
+                      <td>
+                        <textarea
+                          name=""
+                          id=""
+                          class="input w100p"
+                          placeholder="내용을 입력해주세요"
+                        ></textarea>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">첨부파일</th>
+                      <td colspan="5">
+                        <div class="input file">
+                          <input
+                            type="file"
+                            placeholder="찾아보기"
+                            id="file1"
+                          />
+                          <label for="file1" class="btn type3 small"
+                            >찾아보기</label
+                          >
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="btn-wrap right">
+                <button type="button" class="btn large">등록하기</button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <footer class="footer">@@include('./include/footer.html')</footer>
+      <script>
+        $('.tab_item').eq(1).addClass('active');
+      </script>
+    </div>
+  </body>
+</html>

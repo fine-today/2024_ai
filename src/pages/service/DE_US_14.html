@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="kr" class="sub">
+  <head>
+    @@include('./include/sub-head.html',{title : '시험안내 - 사업소개'})
+  </head>
+  <body>
+    <div class="accessibility">
+      <a href="#content">본문 바로가기</a>
+    </div>
+    <div id="container" class="de_us_12">
+      <!-- code substring 으로 key class 생성-->
+      <header class="header">@@include('./include/header.html')</header>
+      <div id="content">
+        <div class="location">
+          @@include('./include/menu.html',{code : 'DE_US_12'})
+        </div>
+        <div class="wrap">
+          @@include('./include/breadcrumb.html',{ 
+            'depth1' : {title:'사업소개', anchor : '#n'}, 
+            'depth2': {title:'시료입수', anchor : '#n'}, 
+            'depthCount' : 2,
+          })
+          @@include('./include/introduce-tab.html')
+          <section class="section">
+            <p class="margin-b-20">
+              KETI전자기술연구원에서 시험할 AI가전의 시료는 직접 또는 택배,
+              퀵배송으로 전달해 주셔야 합니다.
+            </p>
+            <div
+              id="daumRoughmapContainer1728612077433"
+              class="root_daum_roughmap root_daum_roughmap_landing"
+            ></div>
+            <p class="margin-t-20">
+              시료 접수처 : 경기도 성남시 분당구 새나리로 25 KETI
+              한국전자기술연구원
+            </p>
+            <script
+              charset="UTF-8"
+              class="daum_roughmap_loader_script"
+              src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"
+            ></script>
+            <script charset="UTF-8">
+              new daum.roughmap.Lander({
+                timestamp: "1728612077433",
+                key: "2kux3",
+                mapWidth: "1316",
+                mapHeight: "600",
+              }).render();
+            </script>
+          </section>
+        </div>
+      </div>
+      <footer class="footer">@@include('./include/footer.html')</footer>
+      <script>
+        $('.tab_item').eq(2).addClass('active');
+      </script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="kr" class="sub">
+  <head>
+    @@include('./include/sub-head.html',{title : '시험안내 - 사업소개'})
+  </head>
+  <body>
+    <div class="accessibility">
+      <a href="#content">본문 바로가기</a>
+    </div>
+    <div id="container" class="de_us_12">
+      <!-- code substring 으로 key class 생성-->
+      <header class="header">@@include('./include/header.html')</header>
+      <div id="content">
+        <div class="location">
+          @@include('./include/menu.html',{code : 'DE_US_12'})
+        </div>
+        <div class="wrap">
+          @@include('./include/breadcrumb.html',{ 
+            'depth1' : {title:'사업소개', anchor : '#n'}, 
+            'depth2': {title:'시험안내', anchor : '#n'}, 
+            'depthCount' : 2,
+          })
+      
+          @@include('./include/introduce-tab.html')
+          
+          <section class="section">
+            <h3>
+              '미래를 만들어가는 글로벌 기술리더, <br />한국전자기술연구원
+              방문을 환영합니다'
+            </h3>
+            <div class="hello">
+              <p>
+                안녕하십니까?<br />
+                KETI 원장 신희동입니다.
+              </p>
+
+              <p>
+                KETI는 산업통상자원부 산하 전자·IT분야 전문생산연구기관으로,<br />
+                1991년 설립 이래 우리 중소·중견기업의 든든한 동반자가 되어<br />
+                왔습니다. 최근 코로나19로 인한 어려운 대외환경 속에서도
+                연구원이<br />
+                보유한 미래 유망 기술, 역량, 인프라 등을 맞춤형으로
+                제공함으로써<br />
+                기업 성장의 플랫폼이 되어 왔습니다.
+              </p>
+              <p>
+                오늘날 세계는 자국의 산업 핵심기술을 기반으로 한 신공급망
+                구축과<br />
+                산업 대전환을 주도하는 디지털·그린 기술 리더십 확보에 사활을<br />
+                걸고 있습니다. 규모보다는 '속도'가 중요한 산업 대전환의
+                시대인<br />
+                것입니다. 이는 우리나라에게 커다란 위협이지만, 동시에
+                명실상부한<br />
+                선진국으로 자리매김할 수 있는 기회이기도 합니다.
+              </p>
+            </div>
+          </section>
+        </div>
+      </div>
+      <footer class="footer">@@include('./include/footer.html')</footer>
+      <script>
+        $('.tab_item').eq(0).addClass('active');
+      </script>
+    </div>
+  </body>
+</html>
