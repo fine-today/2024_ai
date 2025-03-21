@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="kr" class="sub">
+  <head>
+    @@include('./include/sub-head.html',{title : '수집자료확인 - 마이페이지'})
+  </head>
+  <body>
+    <div class="accessibility">
+      <a href="#content">본문 바로가기</a>
+    </div>
+    <div id="container" class="de_us_26">
+      <!-- code substring 으로 key class 생성-->
+      <header class="header">@@include('./include/header.html')</header>
+      <div id="content">
+        <div class="location">
+          @@include('./include/menu.html',{code : 'DE_US_16'})
+        </div>
+        <div class="wrap">
+          @@include('./include/breadcrumb.html',{ 'depth1' :
+          {title:'마이페이지', anchor : '#n'}, 'depth2': {title:'데이터 수집',
+          anchor : '#n'}, 'depthCount' : 2, })
+          <section class="section">
+            <form action="#n">
+              <fieldset>
+                <legend>게시물 목록</legend>
+                <div class="p-search-box">
+                  <div class="p-form-group">
+                    <span class="p-form-group__label">
+                      <label for="">일자</label>
+                    </span>
+
+                    <div class="p-date first" data-date="datepicker">
+                      <input
+                        type="text"
+                        title=""
+                        placeholder="yyyy-mm-dd"
+                        class="input"
+                      />
+                      <div class="p-datepicker__wrap">
+                        <button
+                          type="button"
+                          class="p-input__item p-date__icon"
+                        >
+                          달력열기
+                          <i class="ri-calendar-line"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <span class="p-form__split">~</span>
+                    <div class="p-date" data-date="datepicker">
+                      <input
+                        type="text"
+                        title=""
+                        placeholder="yyyy-mm-dd"
+                        class="input"
+                      />
+                      <div class="input_split">
+                        <div class="p-datepicker__wrap">
+                          <button
+                            type="button"
+                            class="p-input__item p-date__icon"
+                          >
+                            달력열기
+                            <i class="ri-calendar-line"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="p-btn-wrap">
+                      <button type="button" class="btn">오늘</button>
+                      <button type="button" class="btn">1일</button>
+                      <button type="button" class="btn">7일</button>
+                      <button type="button" class="btn">15일</button>
+                      <button type="button" class="btn">30일</button>
+                    </div>
+                  </div>
+
+                  <div class="p-form-group">
+                    <span class="p-form-group__label">
+                      <label for="">분류</label>
+                    </span>
+                    <select class="input" title="전체">
+                      <option value="">전체</option>
+                      <option value="">#1. 생체모사</option>
+                      <option value="">#2. 인체모사</option>
+                      <option value="">#3. 태양광모사</option>
+                      <option value="">#4. 새집모사</option>
+                      <option value="">#5. 환경설정</option>
+                      <option value="">#6 모바일로봇</option>
+                    </select>
+                    <div class="p-form-group__button">
+                      <button type="submit" class="btn">확인</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="table-unit">
+                  <span class="legend">전체 <strong>10</strong>건</span>
+                  <div class="p-search">
+                    <select name="" id="" class="input">
+                      <option value="">전체</option>
+                    </select>
+                    <input type="text" class="input" />
+                    <button type="button" class="btn type3">검색</button>
+                  </div>
+                </div>
+                <div class="table">
+                  <table class="p-board" data-table="rwd">
+                    <caption>
+                      게시판 - 선택, 번호, 실험, 날짜, 파일 다운로드, 계측기
+                      정보 제공
+                    </caption>
+                    <colgroup>
+                      <col style="width: 90px" />
+                      <col style="width: 80px" />
+                      <col />
+                      <col style="width: 200px" />
+                      <col style="width: 120px" />
+                      <col style="width: 120px" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">
+                          <span class="input empty">
+                            <input type="checkbox" id="check1-1" />
+                            <label for="check1-1"></label>
+                          </span>
+                        </th>
+                        <th scope="col">번호</th>
+                        <th scope="col">실험</th>
+                        <th scope="col">날짜</th>
+                        <th scope="col">파일 다운로드</th>
+                        <th scope="col">계측기</th>
+                      </tr>
+                    </thead>
+                    <tbody class="align_center">
+                      <tr>
+                        <td>
+                          <span class="input empty">
+                            <input type="checkbox" id="check1-2" />
+                            <label for="" check1-2></label>
+                          </span>
+                        </td>
+                        <td>10</td>
+                        <td class="p-subject">
+                          <a href="#n">실내환경모사-미세먼지 </a>
+                        </td>
+                        <td>2024.09.24 11:20:00</td>
+                        <td>
+                          <a
+                            href="../../download/Grimm_data.xlsx"
+                            target="_blank"
+                            class="btn small type3"
+                            >다운로드</a
+                          >
+                        </td>
+                        <td>
+                          <a
+                            href="../../download/Grimm_data.xlsx"
+                            target="_blank"
+                            class="btn small type3"
+                            >다운로드</a
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="input empty">
+                            <input type="checkbox" id="check1-2" />
+                            <label for="" check1-2></label>
+                          </span>
+                        </td>
+                        <td>9</td>
+                        <td class="p-subject">
+                          <a href="#n">인체모사환경시스템 </a>
+                        </td>
+                        <td>2024.09.24 11:20:00</td>
+                        <td>
+                          <a
+                            href="../../download/Grimm_data.xlsx"
+                            target="_blank"
+                            class="btn small type3"
+                            >다운로드</a
+                          >
+                        </td>
+                        <td>
+                          <a
+                            href="../../download/Grimm_data.xlsx"
+                            target="_blank"
+                            class="btn small type3"
+                            >다운로드</a
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="input empty">
+                            <input type="checkbox" id="check1-2" />
+                            <label for="" check1-2></label>
+                          </span>
+                        </td>
+                        <td>8</td>
+                        <td class="p-subject">
+                          <a href="#n">새집모사환경 제어 시스템 </a>
+                        </td>
+                        <td>2024.09.24 11:20:00</td>
+                        <td>
+                          <a
+                            href="../../download/Grimm_data.xlsx"
+                            target="_blank"
+                            class="btn small type3"
+                            >다운로드</a
+                          >
+                        </td>
+                        <td>
+                          <a
+                            href="../../download/Grimm_data.xlsx"
+                            target="_blank"
+                            class="btn small type3"
+                            >다운로드</a
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="input empty">
+                            <input type="checkbox" id="check1-2" />
+                            <label for="" check1-2></label>
+                          </span>
+                        </td>
+                        <td>7</td>
+                        <td class="p-subject">
+                          <a href="#n">태양광 모사장치 </a>
+                        </td>
+                        <td>2024.09.24 11:20:00</td>
+                        <td>
+                          <a
+                            href="../../download/Grimm_data.xlsx"
+                            target="_blank"
+                            class="btn small type3"
+                            >다운로드</a
+                          >
+                        </td>
+                        <td>
+                          <a
+                            href="../../download/Grimm_data.xlsx"
+                            target="_blank"
+                            class="btn small type3"
+                            >다운로드</a
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="input empty">
+                            <input type="checkbox" id="check1-2" />
+                            <label for="" check1-2></label>
+                          </span>
+                        </td>
+                        <td>6</td>
+                        <td class="p-subject">
+                          <a href="#n">실내환경모사-미세먼지 </a>
+                        </td>
+                        <td>2024.09.24 11:20:00</td>
+                        <td>
+                          <a
+                            href="../../download/Grimm_data.xlsx"
+                            target="_blank"
+                            class="btn small type3"
+                            >다운로드</a
+                          >
+                        </td>
+                        <td>
+                          <a
+                            href="../../download/Grimm_data.xlsx"
+                            target="_blank"
+                            class="btn small type3"
+                            >다운로드</a
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="input empty">
+                            <input type="checkbox" id="check1-2" />
+                            <label for="" check1-2></label>
+                          </span>
+                        </td>
+                        <td>5</td>
+                        <td class="p-subject">
+                          <a href="#n">새집모사환경 제어 시스템 </a>
+                        </td>
+                        <td>2024.09.24 11:20:00</td>
+                        <td>
+                          <a
+                            href="../../download/Grimm_data.xlsx"
+                            target="_blank"
+                            class="btn small type3"
+                            >다운로드</a
+                          >
+                        </td>
+                        <td>
+                          <a
+                            href="../../download/Grimm_data.xlsx"
+                            target="_blank"
+                            class="btn small type3"
+                            >다운로드</a
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="input empty">
+                            <input type="checkbox" id="check1-2" />
+                            <label for="" check1-2></label>
+                          </span>
+                        </td>
+                        <td>4</td>
+                        <td class="p-subject">
+                          <a href="#n">태양광 모사장치 </a>
+                        </td>
+                        <td>2024.09.24 11:20:00</td>
+                        <td>
+                          <a
+                            href="../../download/Grimm_data.xlsx"
+                            target="_blank"
+                            class="btn small type3"
+                            >다운로드</a
+                          >
+                        </td>
+                        <td>
+                          <a
+                            href="../../download/Grimm_data.xlsx"
+                            target="_blank"
+                            class="btn small type3"
+                            >다운로드</a
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="input empty">
+                            <input type="checkbox" id="check1-2" />
+                            <label for="" check1-2></label>
+                          </span>
+                        </td>
+                        <td>3</td>
+                        <td class="p-subject">
+                          <a href="#n">실내환경모사-미세먼지 </a>
+                        </td>
+                        <td>2024.09.24 11:20:00</td>
+                        <td>
+                          <a
+                            href="../../download/Grimm_data.xlsx"
+                            target="_blank"
+                            class="btn small type3"
+                            >다운로드</a
+                          >
+                        </td>
+                        <td>
+                          <a
+                            href="../../download/Grimm_data.xlsx"
+                            target="_blank"
+                            class="btn small type3"
+                            >다운로드</a
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="input empty">
+                            <input type="checkbox" id="check1-2" />
+                            <label for="" check1-2></label>
+                          </span>
+                        </td>
+                        <td>2</td>
+                        <td class="p-subject">
+                          <a href="#n">인체모사환경시스템</a>
+                        </td>
+                        <td>2024.09.24 11:20:00</td>
+                        <td>
+                          <a
+                            href="../../download/Grimm_data.xlsx"
+                            target="_blank"
+                            class="btn small type3"
+                            >다운로드</a
+                          >
+                        </td>
+                        <td>
+                          <a
+                            href="../../download/Grimm_data.xlsx"
+                            target="_blank"
+                            class="btn small type3"
+                            >다운로드</a
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="input empty">
+                            <input type="checkbox" id="check1-2" />
+                            <label for="" check1-2></label>
+                          </span>
+                        </td>
+                        <td>1</td>
+                        <td class="p-subject">
+                          <a href="#n">실내환경모사-미세먼지 </a>
+                        </td>
+                        <td>2024.09.24 11:20:00</td>
+                        <td>
+                          <a
+                            href="../../download/Grimm_data.xlsx"
+                            target="_blank"
+                            class="btn small type3"
+                            >다운로드</a
+                          >
+                        </td>
+                        <td>
+                          <a
+                            href="../../download/Grimm_data.xlsx"
+                            target="_blank"
+                            class="btn small type3"
+                            >다운로드</a
+                          >
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="p-pagination" data-brl-use="NO">
+                  <div class="p-page">
+                    <div class="p-page__control">
+                      <a href="#n" class="p-page__link prev-end"
+                        ><span class="skip">처음 페이지</span></a
+                      ><a href="#n" class="p-page__link prev"
+                        ><span class="skip">이전 10 페이지</span></a
+                      ><a href="#n" class="p-page__link prev-one"
+                        >이전 페이지</a
+                      >
+                    </div>
+                    <div class="p-page__link-group">
+                      <strong title="현재 1페이지" class="p-page__link active"
+                        >1</strong
+                      ><a href="#n" title="2페이지 이동" class="p-page__link"
+                        >2</a
+                      ><a href="#n" title="3페이지 이동" class="p-page__link"
+                        >3</a
+                      ><a href="#n" title="4페이지 이동" class="p-page__link"
+                        >4</a
+                      ><a href="#n" title="5페이지 이동" class="p-page__link"
+                        >5</a
+                      ><a href="#n" title="6페이지 이동" class="p-page__link"
+                        >6</a
+                      ><a href="#n" title="7페이지 이동" class="p-page__link"
+                        >7</a
+                      ><a href="#n" title="8페이지 이동" class="p-page__link"
+                        >8</a
+                      ><a href="#n" title="9페이지 이동" class="p-page__link"
+                        >9</a
+                      ><a href="0" title="10페이지 이동" class="p-page__link"
+                        >10</a
+                      >
+                    </div>
+                    <div class="p-page__control">
+                      <a href="#n" class="p-page__link next-one">다음 페이지</a>
+                      <a href="1" class="p-page__link next"
+                        ><span class="skip">다음 10 페이지</span></a
+                      ><a href="#n81" class="p-page__link next-end"
+                        ><span class="skip">끝 페이지</span></a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!--<div class="p-btn-wrap align-right">
+                  <a href="#n" class="btn">btn1</a>
+                  <a href="#n" class="btn type2">btn2</a>
+                </div>-->
+
+                <!-- <div class="table">
+                  <table class="p-board" data-table="rwd">
+                    <caption>
+                      게시판 - 번호, 분류, 제목, 등록일, 조회수 정보 제공
+                    </caption>
+                    <colgroup>
+                      <col style="width: 80px" />
+                      <col style="width: 80px" />
+                      <col />
+                      <col style="width: 120px" />
+                      <col style="width: 80px" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col" class="first">번호</th>
+                        <th scope="col">분류</th>
+                        <th scope="col">제목</th>
+                        <th scope="col">등록일</th>
+                        <th scope="col">조회수</th>
+                      </tr>
+                    </thead>
+                    <tbody class="align_center">
+                      <tr>
+                        <td colspan="5">조회 결과가 존재하지 않습니다.</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div> -->
+              </fieldset>
+            </form>
+          </section>
+        </div>
+      </div>
+      <footer class="footer">@@include('./include/footer.html')</footer>
+    </div>
+  </body>
+</html>

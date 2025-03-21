@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="../../css/default.css" />
+<link rel="stylesheet" href="../../css/guide.css" />
+<link rel="stylesheet" href="../../css/admin.css" />
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/plugins.js"></script>
+<script src="../../js/sub.js"></script>
+<title>상세보기</title>
+
+  </head>
+  <body>
+    <div id="container" class="admin sub">
+      <header class="header"><div class="logo-wrap">
+  <h1 class="logo">
+    <img
+      src="../../images/common/logo.svg"
+      alt="KETI Korea Electronics Technology Institute"
+    />
+  </h1>
+  <div class="site">Admin</div>
+</div>
+<div class="version">ver.01</div>
+</header>
+      <div id="content">
+        <aside id="menu" class="menu"><div class="depth depth1">
+  <ul class="depth-list depth1-list">
+    <li class="depth-item depth1-item">
+      <a class="depth-anchor depth1-anchor" href="#n">
+        <span>사업소개 편집</span>
+      </a>
+    </li>
+    <li class="depth-item depth1-item">
+      <a class="depth-anchor depth1-anchor" href="#n">
+        <span>계정</span>
+      </a>
+      <ul class="depth-list depth2-list">
+        <li class="depth-item depth2-item">
+          <a href="#n" class="depth-anchor depth2-anchor">
+            <span>리스트</span>
+          </a>
+        </li>
+        <li class="depth-item depth2-item">
+          <a href="#n" class="depth-anchor depth2-anchor">
+            <span>상세페이지</span>
+          </a>
+        </li>
+        <li class="depth-item depth2-item">
+          <a href="#n" class="depth-anchor depth2-anchor">
+            <span>2dep menu03</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li class="depth-item depth1-item">
+      <a class="depth-anchor depth1-anchor" href="#n">
+        <span>1dep menu03</span>
+      </a>
+      <ul class="depth-list depth2-list">
+        <li class="depth-item depth2-item">
+          <a href="#n" class="depth-anchor depth2-anchor">
+            <span>2dep menu01</span>
+          </a>
+        </li>
+        <li class="depth-item depth2-item">
+          <a href="#n" class="depth-anchor depth2-anchor">
+            <span>2dep menu02</span>
+          </a>
+        </li>
+        <li class="depth-item depth2-item">
+          <a href="#n" class="depth-anchor depth2-anchor">
+            <span>2dep menu03</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<script>
+  $(function () {
+    var $menu = $(".depth1"),
+      $menuItem = $menu.find(".depth-item"),
+      $menuAnchor = $menu.find(".depth-anchor");
+    $menuItem.each(function (i, elem) {
+      var $elem = $(elem);
+      if ($elem.find(".depth-list").length > 0) {
+        $elem.addClass("has");
+      }
+      if ($elem.hasClass("actived")) {
+        $elem.find(">.depth-anchor").attr("title", "현재 위치");
+        $elem.parents(".depth-item").addClass("actived");
+      }
+    });
+    $menuItem.each(function (i, elem) {
+      var $elem = $(elem);
+      if ($elem.hasClass("actived")) {
+        $elem
+          .parents(".depth-item")
+          .find(".depth-list")
+          .slideDown(0)
+          .css("display", "flex");
+      }
+    });
+    $menuAnchor.on("click", function () {
+      var $this = $(this),
+        $thisItem = $this.closest(".depth-item");
+      $menu.find(".actived > .depth-anchor").removeAttr("title");
+      $menuItem.removeClass("active");
+      $this.parents(".depth-item").addClass("active");
+      $thisItem.siblings().removeClass("active");
+      $menuItem.each(function (i, item) {
+        var $item = $(item);
+        if ($item.hasClass("has") && $item.hasClass("active")) {
+          $item.find(".depth-list").slideDown(150).css("display", "flex");
+          $item.find(">.depth-anchor").attr("title", "열림");
+        } else {
+          $item.find(".depth-list").slideUp(150);
+          $item.find(">.depth-list").removeAttr("title");
+        }
+      });
+    });
+  });
+</script>
+</aside>
+        <div id="main" class="main">
+          <div class="breadcrumb-wrap">
+  <ol class="breadcrumb">
+    <li class="depth1">사용자 등록</li>
+    <li class="depth2">
+      <i
+        ><svg
+          width="14"
+          height="27"
+          viewBox="0 0 14 27"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M12.3744 13.5004L0 1.12605L0.707107 0.418945L13.7886 13.5004L0.707107 26.5819L0 25.8748L12.3744 13.5004Z"
+            fill="#4E5968"
+          />
+        </svg>
+      </i>
+      상세보기
+    </li>
+  </ol>
+</div>
+
+
+          <section class="section">
+            <h3>권한설정</h3>
+
+            <div class="p-wrap bbs bbs-write">
+              <div class="table-responsive">
+                <table class="p-table scroll" data-table="rwd">
+                  <caption>
+                    공지사항 작성하기 - 제목, 내용, 첨부파일 정보 제공
+                  </caption>
+                  <colgroup>
+                    <col style="width: 120px" />
+                    <col />
+                  </colgroup>
+                  <tbody class="p-table--th-left">
+                    <tr>
+                      <th scope="row">아이디</th>
+                      <td>test01</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">기관명</th>
+                      <td>기관 1</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="table-responsive margin-t-32">
+                <table class="p-table scroll" data-table="rwd">
+                  <caption>
+                    공지사항 작성하기 - 제목, 내용, 첨부파일 정보 제공
+                  </caption>
+                  <colgroup>
+                    <col />
+                  </colgroup>
+                  <tbody class="p-table--th-left">
+                    <tr>
+                      <th scope="row">권한설정</th>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="p-subject">
+                          <span class="input">
+                            <input type="checkbox" id="check1" name="check1" />
+                            <label for="check1"
+                              >생체인식률 평가를 위한 외부간섭요인
+                              발생시스템</label
+                            >
+                          </span>
+                        </div>
+                        <div class="p-desc">
+                          <span class="input">
+                            <input
+                              type="checkbox"
+                              id="check1-1"
+                              name="check1"
+                            />
+                            <label for="check1-1">실내미세먼지</label>
+                          </span>
+
+                          <span class="input">
+                            <input
+                              type="checkbox"
+                              id="check1-2"
+                              name="check1"
+                            />
+                            <label for="check1-2">실내조명</label>
+                          </span>
+
+                          <span class="input">
+                            <input
+                              type="checkbox"
+                              id="check1-3"
+                              name="check1"
+                            />
+                            <label for="check1-3">온습도</label>
+                          </span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="p-subject">
+                          <span class="input">
+                            <input type="checkbox" id="check2" name="check2" />
+                            <label for="check2">인체모사 환경시스템</label>
+                          </span>
+                        </div>
+                        <div class="p-desc">
+                          <span class="input">
+                            <input
+                              type="checkbox"
+                              id="check2-1"
+                              name="check2"
+                            />
+                            <label for="check2-1">이동로봇</label>
+                          </span>
+
+                          <span class="input">
+                            <input
+                              type="checkbox"
+                              id="check2-2"
+                              name="check2"
+                            />
+                            <label for="check2-2">인체체온</label>
+                          </span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="p-subject">
+                          <span class="input">
+                            <input type="checkbox" id="check3" name="check3" />
+                            <label for="check3"
+                              >태양광 모사장치 제어시스템
+                            </label>
+                          </span>
+                        </div>
+                        <div class="p-desc">
+                          <span class="input">
+                            <input
+                              type="checkbox"
+                              id="check3-1"
+                              name="check3"
+                            />
+                            <label for="check3-1">태양광</label>
+                          </span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="p-subject">
+                          <span class="input">
+                            <input type="checkbox" id="check4" name="check4" />
+                            <label for="check4">새집모사 환경 시스템 </label>
+                          </span>
+                        </div>
+                        <div class="p-desc">
+                          <span class="input">
+                            <input
+                              type="checkbox"
+                              id="check4-1"
+                              name="check4"
+                            />
+                            <label for="check4-1">가스 발생기 </label>
+                          </span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="p-subject">
+                          <span class="input">
+                            <input type="checkbox" id="check5" name="check5" />
+                            <label for="check5">음성/소음 발생 시스템 </label>
+                          </span>
+                        </div>
+
+                        <div class="p-desc">
+                          <span class="input">
+                            <input
+                              type="checkbox"
+                              id="check5-1"
+                              name="check5"
+                            />
+                            <label for="check5-1"
+                              >음성명령(이동형 스피커)</label
+                            >
+                          </span>
+
+                          <span class="input">
+                            <input
+                              type="checkbox"
+                              id="check5-2"
+                              name="check5"
+                            />
+                            <label for="check5-2"
+                              >음성명령(고정형 스피커)
+                            </label>
+                          </span>
+
+                          <span class="input">
+                            <input
+                              type="checkbox"
+                              id="check5-3"
+                              name="check5"
+                            />
+                            <label for="check5-3">음성명령(TTL)</label>
+                          </span>
+
+                          <span class="input">
+                            <input
+                              type="checkbox"
+                              id="check5-4"
+                              name="check5"
+                            />
+                            <label for="check5-4">소음발생</label>
+                          </span>
+
+                          <span class="input">
+                            <input
+                              type="checkbox"
+                              id="check5-5"
+                              name="check5"
+                            />
+                            <label for="check5-5">음성 및 주파수 측정 </label>
+                          </span>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="btn-wrap right">
+                <button type="button" class="btn large">저장</button>
+                <button type="button" class="btn large type2">취소</button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <script>
+        $("#check1,#check2,#check3, #check4,#check5").on("change", function () {
+          var $this = $(this),
+            thisName = $this.attr("name");
+          $(`[name="${thisName}"]`).each(function () {
+            if ($this.prop("checked")) {
+              $(this).prop("checked", true);
+            } else {
+              $(this).prop("checked", false);
+            }
+          });
+        });
+        $(
+          '[name="check1"],[name="check2"],[name="check3"],[name="check4"],[name="check5"]'
+        ).on("change", function () {
+          var $this = $(this),
+            thisName = $this.attr("name"),
+            isTrue = {
+              length: $(`[name="${thisName}"]`).length - 1,
+              true: 0,
+              false: 0,
+            };
+          $(`[name="${thisName}"]:not('#${thisName}')`).each(function () {
+            if ($(this).prop("checked")) {
+              isTrue.true++;
+            } else {
+              isTrue.false++;
+            }
+          });
+          console.log(isTrue);
+          if (isTrue.length === isTrue.true) {
+            $(`[id="${thisName}"]`).prop("checked", true);
+          } else {
+            $(`[id="${thisName}"]`).prop("checked", false);
+          }
+        });
+      </script>
+      <footer class="footer"><div class="copyright">
+  Copyright(C) 2024 KOREA ELECTORNICS TECHNOLOGY INSTITUTE., All Rights
+  Reserved.
+</div>
+<div class="address-wrap">
+  <div class="address">
+    (13509) 경기도 성남시 분당구 새나리로 25(야탑동)KETI 한국전자기술연구원
+  </div>
+  <div class="tel">대표전화 : 031 789 7000</div>
+</div>
+</footer>
+    </div>
+  </body>
+</html>

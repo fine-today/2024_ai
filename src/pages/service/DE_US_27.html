@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="kr" class="sub">
+  <head>
+    @@include('./include/sub-head.html',{title : '정보 수정 - 마이페이지'})
+  </head>
+  <body>
+    <div class="accessibility">
+      <a href="#content">본문 바로가기</a>
+    </div>
+    <div id="container" class="de_us_19">
+      <!-- code substring 으로 key class 생성-->
+      <header class="header">@@include('./include/header.html')</header>
+      <div id="content">
+        <div class="location">
+          @@include('./include/menu.html',{code : 'DE_US_16'})
+        </div>
+        <div class="wrap">
+          @@include('./include/breadcrumb.html',{ 
+            'depth1' : {title:'마이페이지', anchor : '#n'}, 
+            'depth2': {title:'정보수정', anchor : '#n'}, 
+            'depthCount' : 2,
+          })
+          <section class="section">
+            <h3>기업정보 수정</h3>
+            <div class="table">
+              <table>
+                <caption></caption>
+                <colgroup>
+                  <col style="width: 15%" />
+                  <col />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">회원유형</th>
+                    <td>기업회원</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">아이디</th>
+                    <td>Abc123</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">비밀번호</th>
+                    <td>
+                      <button type="button" class="btn">비밀번호 수정</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h4>기업 정보</h4>
+            <div class="table">
+              <table>
+                <caption></caption>
+                <colgroup>
+                  <col style="width: 15%" />
+                  <col style="width: 35%" />
+                  <col style="width: 15%" />
+                  <col />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">업체명</th>
+                    <td>기업업체명 표시</td>
+                    <th scope="row">대표자명</th>
+                    <td>대표자 성명</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">사업자 등록번호</th>
+                    <td colspan="3">123-45-67890</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">주소</th>
+                    <td colspan="3">
+                      경기도 성남시 분당구 새나리로 25(야탑동)
+                      한국전자기술연구원
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h4>관리자 정보</h4>
+            <div class="table">
+              <table>
+                <caption></caption>
+                <colgroup>
+                  <col style="width: 15%" />
+                  <col style="width: 35%" />
+                  <col style="width: 15%" />
+                  <col />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">담당자</th>
+                    <td>홍길동</td>
+                    <th scope="row">이메일</th>
+                    <td>abc123@abc.net</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">핸드폰 번호</th>
+                    <td>010-1234-5678</td>
+                    <th scope="row">전화 번호</th>
+                    <td>031-1111-2222</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">세금계산서용 이메일</th>
+                    <td colspan="3">abc123@abc.net</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="btn-wrap">
+              <button type="button" class="btn large">수정</button>
+            </div>
+          </section>
+        </div>
+      </div>
+      <footer class="footer">@@include('./include/footer.html')</footer>
+    </div>
+  </body>
+</html>

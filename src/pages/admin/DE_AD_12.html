@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('./include/head.html',{'title' : '상세보기'})
+  </head>
+  <body>
+    <div id="container" class="admin sub">
+      <header class="header">@@include('./include/header.html')</header>
+      <div id="content">
+        <aside id="menu" class="menu">@@include('./include/menu.html')</aside>
+        <div id="main" class="main">
+          @@include('./include/con-header.html',{depth1: '사용자 등록',depth2:
+          '상세보기'})
+
+          <section class="section">
+            <h3>권한설정</h3>
+
+            <div class="p-wrap bbs bbs-write">
+              <div class="table-responsive">
+                <table class="p-table scroll" data-table="rwd">
+                  <caption>
+                    공지사항 작성하기 - 제목, 내용, 첨부파일 정보 제공
+                  </caption>
+                  <colgroup>
+                    <col style="width: 120px" />
+                    <col />
+                  </colgroup>
+                  <tbody class="p-table--th-left">
+                    <tr>
+                      <th scope="row">아이디</th>
+                      <td>test01</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">기관명</th>
+                      <td>기관 1</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="table-responsive margin-t-32">
+                <table class="p-table scroll" data-table="rwd">
+                  <caption>
+                    공지사항 작성하기 - 제목, 내용, 첨부파일 정보 제공
+                  </caption>
+                  <colgroup>
+                    <col />
+                  </colgroup>
+                  <tbody class="p-table--th-left">
+                    <tr>
+                      <th scope="row">권한설정</th>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="p-subject">
+                          <span class="input">
+                            <input type="checkbox" id="check1" name="check1" />
+                            <label for="check1"
+                              >생체인식률 평가를 위한 외부간섭요인
+                              발생시스템</label
+                            >
+                          </span>
+                        </div>
+                        <div class="p-desc">
+                          <span class="input">
+                            <input
+                              type="checkbox"
+                              id="check1-1"
+                              name="check1"
+                            />
+                            <label for="check1-1">실내미세먼지</label>
+                          </span>
+
+                          <span class="input">
+                            <input
+                              type="checkbox"
+                              id="check1-2"
+                              name="check1"
+                            />
+                            <label for="check1-2">실내조명</label>
+                          </span>
+
+                          <span class="input">
+                            <input
+                              type="checkbox"
+                              id="check1-3"
+                              name="check1"
+                            />
+                            <label for="check1-3">온습도</label>
+                          </span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="p-subject">
+                          <span class="input">
+                            <input type="checkbox" id="check2" name="check2" />
+                            <label for="check2">인체모사 환경시스템</label>
+                          </span>
+                        </div>
+                        <div class="p-desc">
+                          <span class="input">
+                            <input
+                              type="checkbox"
+                              id="check2-1"
+                              name="check2"
+                            />
+                            <label for="check2-1">이동로봇</label>
+                          </span>
+
+                          <span class="input">
+                            <input
+                              type="checkbox"
+                              id="check2-2"
+                              name="check2"
+                            />
+                            <label for="check2-2">인체체온</label>
+                          </span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="p-subject">
+                          <span class="input">
+                            <input type="checkbox" id="check3" name="check3" />
+                            <label for="check3"
+                              >태양광 모사장치 제어시스템
+                            </label>
+                          </span>
+                        </div>
+                        <div class="p-desc">
+                          <span class="input">
+                            <input
+                              type="checkbox"
+                              id="check3-1"
+                              name="check3"
+                            />
+                            <label for="check3-1">태양광</label>
+                          </span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="p-subject">
+                          <span class="input">
+                            <input type="checkbox" id="check4" name="check4" />
+                            <label for="check4">새집모사 환경 시스템 </label>
+                          </span>
+                        </div>
+                        <div class="p-desc">
+                          <span class="input">
+                            <input
+                              type="checkbox"
+                              id="check4-1"
+                              name="check4"
+                            />
+                            <label for="check4-1">가스 발생기 </label>
+                          </span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="p-subject">
+                          <span class="input">
+                            <input type="checkbox" id="check5" name="check5" />
+                            <label for="check5">음성/소음 발생 시스템 </label>
+                          </span>
+                        </div>
+
+                        <div class="p-desc">
+                          <span class="input">
+                            <input
+                              type="checkbox"
+                              id="check5-1"
+                              name="check5"
+                            />
+                            <label for="check5-1"
+                              >음성명령(이동형 스피커)</label
+                            >
+                          </span>
+
+                          <span class="input">
+                            <input
+                              type="checkbox"
+                              id="check5-2"
+                              name="check5"
+                            />
+                            <label for="check5-2"
+                              >음성명령(고정형 스피커)
+                            </label>
+                          </span>
+
+                          <span class="input">
+                            <input
+                              type="checkbox"
+                              id="check5-3"
+                              name="check5"
+                            />
+                            <label for="check5-3">음성명령(TTL)</label>
+                          </span>
+
+                          <span class="input">
+                            <input
+                              type="checkbox"
+                              id="check5-4"
+                              name="check5"
+                            />
+                            <label for="check5-4">소음발생</label>
+                          </span>
+
+                          <span class="input">
+                            <input
+                              type="checkbox"
+                              id="check5-5"
+                              name="check5"
+                            />
+                            <label for="check5-5">음성 및 주파수 측정 </label>
+                          </span>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="btn-wrap right">
+                <button type="button" class="btn large">저장</button>
+                <button type="button" class="btn large type2">취소</button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <script>
+        $("#check1,#check2,#check3, #check4,#check5").on("change", function () {
+          var $this = $(this),
+            thisName = $this.attr("name");
+          $(`[name="${thisName}"]`).each(function () {
+            if ($this.prop("checked")) {
+              $(this).prop("checked", true);
+            } else {
+              $(this).prop("checked", false);
+            }
+          });
+        });
+        $(
+          '[name="check1"],[name="check2"],[name="check3"],[name="check4"],[name="check5"]'
+        ).on("change", function () {
+          var $this = $(this),
+            thisName = $this.attr("name"),
+            isTrue = {
+              length: $(`[name="${thisName}"]`).length - 1,
+              true: 0,
+              false: 0,
+            };
+          $(`[name="${thisName}"]:not('#${thisName}')`).each(function () {
+            if ($(this).prop("checked")) {
+              isTrue.true++;
+            } else {
+              isTrue.false++;
+            }
+          });
+          console.log(isTrue);
+          if (isTrue.length === isTrue.true) {
+            $(`[id="${thisName}"]`).prop("checked", true);
+          } else {
+            $(`[id="${thisName}"]`).prop("checked", false);
+          }
+        });
+      </script>
+      <footer class="footer">@@include('./include/footer.html')</footer>
+    </div>
+  </body>
+</html>

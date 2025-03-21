@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="../../css/default.css" />
+<link rel="stylesheet" href="../../css/guide.css" />
+<link rel="stylesheet" href="../../css/service-sub.css" />
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/plugins.js"></script>
+<script src="../../js/sub.js"></script>
+<title>로그인 - admin</title>
+
+  </head>
+  <body>
+    <div id="container" class="admin-login find">
+      <header class="header"><div class="logo-wrap">
+  <h1 class="logo">
+    <a href="./main.html">
+      <img
+        src="../../images/common/logo.svg"
+        alt="KETI Korea Electronics Technology Institute"
+      />
+    </a>
+  </h1>
+</div>
+<nav class="gnb">
+  <div id="menu"><div class="depth depth1">
+  <ul class="depth-list depth1-list">
+    <li class="depth-item depth1-item">
+      <a class="depth-anchor depth1-anchor" href="./DE_US_12.html">
+        <span>사업소개</span>
+      </a>
+      <ul class="depth-list depth2-list">
+        <li class="depth-item depth2-item">
+          <a
+            href="./DE_US_12.html"
+            class="depth-anchor depth2-anchor"
+            data-code="DE_US_12"
+          >
+            <span>시험안내</span>
+          </a>
+        </li>
+        <li class="depth-item depth2-item">
+          <a href="./DE_US_13.html" class="depth-anchor depth2-anchor">
+            <span>시험접수</span>
+          </a>
+        </li>
+        <li class="depth-item depth2-item">
+          <a href="./DE_US_14.html" class="depth-anchor depth2-anchor">
+            <span>시료입수</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li class="depth-item depth1-item">
+      <a
+        class="depth-anchor depth1-anchor"
+        href="./DE_US_15.html"
+        data-code="DE_US_05"
+      >
+        <span>게시판</span>
+      </a>
+      <ul class="depth-list depth2-list">
+        <li class="depth-item depth2-item">
+          <a href="./DE_US_15.html" class="depth-anchor depth2-anchor">
+            <span>FAQ</span>
+          </a>
+        </li>
+        <li class="depth-item depth2-item">
+          <a href="./DE_US_16.html" class="depth-anchor depth2-anchor">
+            <span>공지사항</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li class="depth-item depth1-item">
+      <a class="depth-anchor depth1-anchor" href="./DE_US_18.html">
+        <span>마이페이지</span>
+      </a>
+      <ul class="depth-list depth2-list">
+        <li class="depth-item depth2-item">
+          <a href="./DE_US_18.html" class="depth-anchor depth2-anchor">
+            <span>시스템 설정</span>
+          </a>
+          <ul class="depth-list depth3-list">
+            <li class="depth-item depth3-item">
+              <a href="./DE_US_18.html" class="depth-anchor depth3-anchor">
+                <span>정보입력</span>
+              </a>
+            </li>
+            <li class="depth-item depth3-item">
+              <a href="./DE_US_18_1_1.html" class="depth-anchor depth3-anchor">
+                <span>CCTV</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="depth-item depth2-item">
+          <a href="./DE_US_26_1.html" class="depth-anchor depth2-anchor">
+            <span>데이터 수집</span>
+          </a>
+        </li>
+        <li class="depth-item depth2-item">
+          <a href="./DE_US_27.html" class="depth-anchor depth2-anchor">
+            <span>정보수정</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li class="depth-item depth1-item">
+      <a class="depth-anchor depth1-anchor" href="#n">
+        <span>로그인</span>
+      </a>
+      <ul class="depth-list depth2-list">
+        <li class="depth-item depth2-item">
+          <a href="./DE_US_08.html" class="depth-anchor depth2-anchor">
+            <span>로그인</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+</div>
+</nav>
+</header>
+      <div id="content">
+        <div class="wrap">
+          <div class="login-wrap">
+            <header class="find-header-wrap">
+              <div class="find-header">아이디·비밀번호 찾기</div>
+              <p>
+                회원 정보로 입력하신 아이디 또는 비밀번호를 찾을 수 있습니다
+              </p>
+            </header>
+            <div class="find-tab">
+              <a href="#n" class="tab-btn">
+                <span>아이디 찾기</span>
+              </a>
+              <a href="#n" class="tab-btn active">
+                <span>비밀번호 찾기</span>
+              </a>
+            </div>
+            <div class="input-wrap">
+              <p>새로운 비밀번호를 입력해주세요.</p>
+              <div class="password w100p">
+                <input
+                  type="password"
+                  class="input w100p"
+                  placeholder="특수문자,영문숫자를 포함하여 8~20자 
+                  "
+                />
+                <button type="button" class="show-hide"></button>
+              </div>
+
+              <div class="password w100p">
+                <input
+                  type="password"
+                  class="input w100p"
+                  placeholder="비밀번호를 재입력"
+                />
+                <button type="button" class="show-hide"></button>
+              </div>
+            </div>
+            <div class="btn-wrap">
+              <button type="button" class="btn type3 large">
+                <span>취소</span>
+              </button>
+              <button type="button" class="btn large">
+                <span>확인</span>
+              </button>
+            </div>
+          </div>
+
+          
+          <div class="btn-wrap">
+            <button type="button" class="btn popup_btn" data-pop="pop1">양식 오류</button>
+            <button type="button" class="btn popup_btn" data-pop="pop2">비밀번호 오류</button>
+            <button type="button" class="btn popup_btn" data-pop="pop3">변경 완료</button>
+          </div>
+          
+          <div class="popup alert-pop" data-pop="pop1">                    
+            <div class="popup_wrap">
+              <div class="pop_inner">
+                <div class="popup-title-wrap">
+                  <h3 class="popup_title h0">비밀번호 변경</h3>
+                </div>
+                <div class="popup_con">
+                  <p class="em-red">작성된 비밀번호 양식이 틀립니다.</p>
+                  <div class="popup_footer">
+                    <button type="button" class="btn type2" data-close="pop1">확인</button>
+                  </div>
+                </div>
+
+                <input type="button" class="popup_close" value="닫기" />
+              </div>
+            </div>
+          </div>
+          
+          <div class="popup alert-pop" data-pop="pop2">                    
+            <div class="popup_wrap">
+              <div class="pop_inner">
+                <div class="popup-title-wrap">
+                  <h3 class="popup_title h0">비밀번호 변경</h3>
+                </div>
+                <div class="popup_con">
+                  <p class="em-red">비밀번호가 틀립니다.</p>
+                  <div class="popup_footer">
+                    <button type="button" class="btn type2" data-close="pop2">확인</button>
+                  </div>
+                </div>
+
+                <input type="button" class="popup_close" value="닫기" />
+              </div>
+            </div>
+          </div>
+          
+          <div class="popup alert-pop" data-pop="pop3">                    
+            <div class="popup_wrap">
+              <div class="pop_inner">
+                <div class="popup-title-wrap">
+                  <h3 class="popup_title h0">비밀번호 변경</h3>
+                </div>
+                <div class="popup_con">
+                  <p>비밀번호가 변경되었습니다.</p>
+                  <div class="popup_footer">
+                    <button type="button" class="btn type2" data-close="pop3">확인</button>
+                  </div>
+                </div>
+
+                <input type="button" class="popup_close" value="닫기" />
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <footer class="footer"><div class="footer-menu">
+  <div class="wrap"><div class="depth depth1">
+  <ul class="depth-list depth1-list">
+    <li class="depth-item depth1-item">
+      <a class="depth-anchor depth1-anchor" href="./DE_US_12.html">
+        <span>사업소개</span>
+      </a>
+      <ul class="depth-list depth2-list">
+        <li class="depth-item depth2-item">
+          <a
+            href="./DE_US_12.html"
+            class="depth-anchor depth2-anchor"
+            data-code="DE_US_12"
+          >
+            <span>시험안내</span>
+          </a>
+        </li>
+        <li class="depth-item depth2-item">
+          <a href="./DE_US_13.html" class="depth-anchor depth2-anchor">
+            <span>시험접수</span>
+          </a>
+        </li>
+        <li class="depth-item depth2-item">
+          <a href="./DE_US_14.html" class="depth-anchor depth2-anchor">
+            <span>시료입수</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li class="depth-item depth1-item">
+      <a
+        class="depth-anchor depth1-anchor"
+        href="./DE_US_15.html"
+        data-code="DE_US_05"
+      >
+        <span>게시판</span>
+      </a>
+      <ul class="depth-list depth2-list">
+        <li class="depth-item depth2-item">
+          <a href="./DE_US_15.html" class="depth-anchor depth2-anchor">
+            <span>FAQ</span>
+          </a>
+        </li>
+        <li class="depth-item depth2-item">
+          <a href="./DE_US_16.html" class="depth-anchor depth2-anchor">
+            <span>공지사항</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li class="depth-item depth1-item">
+      <a class="depth-anchor depth1-anchor" href="./DE_US_18.html">
+        <span>마이페이지</span>
+      </a>
+      <ul class="depth-list depth2-list">
+        <li class="depth-item depth2-item">
+          <a href="./DE_US_18.html" class="depth-anchor depth2-anchor">
+            <span>시스템 설정</span>
+          </a>
+          <ul class="depth-list depth3-list">
+            <li class="depth-item depth3-item">
+              <a href="./DE_US_18.html" class="depth-anchor depth3-anchor">
+                <span>정보입력</span>
+              </a>
+            </li>
+            <li class="depth-item depth3-item">
+              <a href="./DE_US_18_1_1.html" class="depth-anchor depth3-anchor">
+                <span>CCTV</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="depth-item depth2-item">
+          <a href="./DE_US_26_1.html" class="depth-anchor depth2-anchor">
+            <span>데이터 수집</span>
+          </a>
+        </li>
+        <li class="depth-item depth2-item">
+          <a href="./DE_US_27.html" class="depth-anchor depth2-anchor">
+            <span>정보수정</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li class="depth-item depth1-item">
+      <a class="depth-anchor depth1-anchor" href="#n">
+        <span>로그인</span>
+      </a>
+      <ul class="depth-list depth2-list">
+        <li class="depth-item depth2-item">
+          <a href="./DE_US_08.html" class="depth-anchor depth2-anchor">
+            <span>로그인</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="footer-info-wrap">
+  <div class="wrap">
+    <div class="footer-logo">
+      <img
+        src="../../images/common/footer-logo.svg"
+        alt="KETI Korea Electronics Technology Institute"
+      />
+    </div>
+    <div class="footer-info-box">
+      <div class="anchor-list">
+        <a href="./DE_US_14.html" class="anchor-item">찾아오시는 길</a>
+        <!-- <a href="#n" class="anchor-item">방문예약</a>
+        <a href="#n" class="anchor-item"><strong>개인정보보호정책</strong></a>
+        <a href="#n" class="anchor-item">저작권정책</a>
+        <a href="#n" class="anchor-item">이메일주소무단수집거부</a>
+        <a href="#n" class="anchor-item">안전환경/보건/보안 경영방침</a> -->
+      </div>
+      <div class="info">
+        <div class="address-wrap">
+          <div class="address">광주광역시 북구 첨단과기로 226 (오룡동)</div>
+          <div class="tel">TEL : 062-975-7000, 7114 FAX : 062-975-7029</div>
+        </div>
+        <div class="copyright">
+          Copyright(C) 2024 KOREA ELECTORNICS TECHNOLOGY INSTITUTE., All Rights
+          Reserved.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</footer>
+    </div>
+  </body>
+</html>
