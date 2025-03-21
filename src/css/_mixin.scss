@@ -1,0 +1,340 @@
+@use "sass:map";
+@mixin tablet {
+  @media (max-width: 1199px) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+@mixin pc_only {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin hidden {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  white-space: nowrap;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(1px);
+}
+@mixin shadow($depth: 1) {
+  @if ($depth == 1) {
+    box-shadow: 0 0.1rem rgba(0, 0, 0, 0.25);
+  }
+}
+
+@mixin ellipsis($line: 1) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @if ($line == 1) {
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+  }
+}
+
+@mixin flexbox {
+  display: flex;
+  align-items: center;
+}
+
+@mixin bodySpace {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+// font
+@mixin title($size: p3, $weight: 400) {
+  @if ($size == h3) {
+    font-size: 2.6rem;
+    letter-spacing: -0.04em;
+    line-height: 3.8rem;
+    font-weight: $weight;
+  } @else if($size == h4) {
+    font-size: 2.2rem;
+    letter-spacing: -0.04em;
+    line-height: 3.2rem;
+    font-weight: $weight;
+  } @else if($size == h5) {
+    font-size: 1.8rem;
+    letter-spacing: -0.04em;
+    line-height: 2.6rem;
+    font-weight: $weight;
+  } @else if($size == p1) {
+    font-size: 1.6rem;
+    letter-spacing: -0.04em;
+    line-height: 2.6rem;
+    font-weight: $weight;
+  } @else if ($size == p2) {
+    font-size: 1.4rem;
+    letter-spacing: -0.04em;
+    line-height: 2.2rem;
+    font-weight: $weight;
+  } @else if ($size == p3) {
+    font-size: 1.2rem;
+    letter-spacing: -0.03em;
+    line-height: 1.8rem;
+    font-weight: $weight;
+  } @else if ($size == caption1) {
+    font-size: 1.1rem;
+    letter-spacing: -0.03em;
+    line-height: 1.6rem;
+    font-weight: $weight;
+  } @else if ($size == caption2) {
+    font-size: 1rem;
+    letter-spacing: -0.03em;
+    line-height: 1.6rem;
+    font-weight: $weight;
+  }
+}
+
+// bg
+@mixin imgBg($url: null, $size: null) {
+  background-image: url($url);
+  background-position: center center;
+  background-size: $size;
+  background-repeat: no-repeat;
+}
+$colors: (
+  type1: (
+    black: #000,
+    white: #fff,
+    fasseto-green: #00855b,
+    brand: #005f9e,
+    fg-400: #8ec7b5,
+
+    gray-900: #191f28,
+    gray-800: #333d4b,
+    gray-700: #4e5968,
+    gray-600: #6b7684,
+    gray-500: #8b95a1,
+    gray-400: #b0b8c1,
+    gray-300: #d1d6db,
+    gray-200: #e5e8eb,
+    gray-100: #f2f4f6,
+    gray-50: #f9fafb,
+
+    green-900: #005c36,
+    green-800: #007544,
+    green-700: #008a50,
+    green-600: #009959,
+    green-500: #00a661,
+    green-400: #05c072,
+    green-300: #1cd98a,
+    green-200: #5ae9ad,
+    green-100: #abf2d4,
+    green-50: #e5fff4,
+
+    s-green-900: #025c46,
+    s-green-800: #007558,
+    s-green-700: #028a69,
+    s-green-600: #009974,
+    s-green-500: #00b488,
+    s-green-400: #06c093,
+    s-green-300: #1ed9ab,
+    s-green-200: #5ae9c6,
+    s-green-100: #abf2e1,
+    s-green-50: #e5fff9,
+
+    yellow-900: #f57f17,
+    yellow-800: #f9a825,
+    yellow-700: #fbc02d,
+    yellow-600: #fdd835,
+    yellow-500: #ffeb3b,
+    yellow-400: #ffee58,
+    yellow-300: #fff176,
+    yellow-200: #fff59d,
+    yellow-100: #fff9c4,
+    yellow-50: #fffde7,
+
+    teal-900: #004d4d,
+    teal-800: #006369,
+    teal-700: #007278,
+    teal-600: #00818a,
+    teal-500: #008c96,
+    teal-400: #269da6,
+    teal-300: #4caeb5,
+    teal-200: #81c7cc,
+    teal-100: #b1dade,
+    teal-50: #e1f0f2,
+
+    blue-900: #194aa6,
+    blue-800: #1957c2,
+    blue-700: #1b64da,
+    blue-600: #2272eb,
+    blue-500: #3182f6,
+    blue-400: #4593fc,
+    blue-300: #64a8ff,
+    blue-200: #90c2ff,
+    blue-100: #c9e2ff,
+    blue-50: #e8f3ff,
+
+    red-900: #b71c1c,
+    red-800: #c62828,
+    red-700: #d32f2f,
+    red-600: #e53935,
+    red-500: #f44336,
+    red-400: #ef5350,
+    red-300: #e57373,
+    red-200: #ef9a9a,
+    red-100: #ffcdd2,
+    red-50: #ffebee,
+
+    purple-900: #4a148c,
+    purple-800: #6a1b9a,
+    purple-700: #7b1fa2,
+    purple-600: #8e24aa,
+    purple-500: #9c27b0,
+    purple-400: #ab47bc,
+    purple-300: #ba68c8,
+    purple-200: #ce93d8,
+    purple-100: #e1bee7,
+    purple-50: #f3e5f5,
+
+    o-gray-900: rgba(2, 9, 19, 0.91),
+    o-gray-800: rgba(0, 12, 30, 0.8),
+    o-gray-700: rgba(3, 18, 40, 0.7),
+    o-gray-600: rgba(0, 19, 43, 0.58),
+    o-gray-500: rgba(3, 24, 50, 0.46),
+    o-gray-400: rgba(0, 29, 54, 0.31),
+    o-gray-300: rgba(0, 29, 58, 0.18),
+    o-gray-200: rgba(0, 27, 55, 0.1),
+    o-gray-100: rgba(2, 32, 71, 0.05),
+    o-gray-50: rgba(0, 23, 51, 0.02),
+  ),
+  dark: (
+    black: #000,
+    white: #fff,
+    fasseto-green: #00855b,
+    brand: #005f9e,
+    fg-400: #8ec7b5,
+
+    gray-900: #191f28,
+    gray-800: #333d4b,
+    gray-700: #4e5968,
+    gray-600: #6b7684,
+    gray-500: #8b95a1,
+    gray-400: #b0b8c1,
+    gray-300: #d1d6db,
+    gray-200: #e5e8eb,
+    gray-100: #f2f4f6,
+    gray-50: #f9fafb,
+
+    green-900: #005c36,
+    green-800: #007544,
+    green-700: #008a50,
+    green-600: #009959,
+    green-500: #00a661,
+    green-400: #05c072,
+    green-300: #1cd98a,
+    green-200: #5ae9ad,
+    green-100: #abf2d4,
+    green-50: #e5fff4,
+
+    s-green-900: #025c46,
+    s-green-800: #007558,
+    s-green-700: #028a69,
+    s-green-600: #009974,
+    s-green-500: #00b488,
+    s-green-400: #06c093,
+    s-green-300: #1ed9ab,
+    s-green-200: #5ae9c6,
+    s-green-100: #abf2e1,
+    s-green-50: #e5fff9,
+
+    yellow-900: #f57f17,
+    yellow-800: #f9a825,
+    yellow-700: #fbc02d,
+    yellow-600: #fdd835,
+    yellow-500: #ffeb3b,
+    yellow-400: #ffee58,
+    yellow-300: #fff176,
+    yellow-200: #fff59d,
+    yellow-100: #fff9c4,
+    yellow-50: #fffde7,
+
+    teal-900: #004d4d,
+    teal-800: #006369,
+    teal-700: #007278,
+    teal-600: #00818a,
+    teal-500: #008c96,
+    teal-400: #269da6,
+    teal-300: #4caeb5,
+    teal-200: #81c7cc,
+    teal-100: #b1dade,
+    teal-50: #e1f0f2,
+
+    blue-900: #194aa6,
+    blue-800: #1957c2,
+    blue-700: #1b64da,
+    blue-600: #2272eb,
+    blue-500: #3182f6,
+    blue-400: #4593fc,
+    blue-300: #64a8ff,
+    blue-200: #90c2ff,
+    blue-100: #c9e2ff,
+    blue-50: #e8f3ff,
+
+    red-900: #b71c1c,
+    red-800: #c62828,
+    red-700: #d32f2f,
+    red-600: #e53935,
+    red-500: #f44336,
+    red-400: #ef5350,
+    red-300: #e57373,
+    red-200: #ef9a9a,
+    red-100: #ffcdd2,
+    red-50: #ffebee,
+
+    purple-900: #4a148c,
+    purple-800: #6a1b9a,
+    purple-700: #7b1fa2,
+    purple-600: #8e24aa,
+    purple-500: #9c27b0,
+    purple-400: #ab47bc,
+    purple-300: #ba68c8,
+    purple-200: #ce93d8,
+    purple-100: #e1bee7,
+    purple-50: #f3e5f5,
+
+    o-gray-900: rgba(2, 9, 19, 0.91),
+    o-gray-800: rgba(0, 12, 30, 0.8),
+    o-gray-700: rgba(3, 18, 40, 0.7),
+    o-gray-600: rgba(0, 19, 43, 0.58),
+    o-gray-500: rgba(3, 24, 50, 0.46),
+    o-gray-400: rgba(0, 29, 54, 0.31),
+    o-gray-300: rgba(0, 29, 58, 0.18),
+    o-gray-200: rgba(0, 27, 55, 0.1),
+    o-gray-100: rgba(2, 32, 71, 0.05),
+    o-gray-50: rgba(0, 23, 51, 0.02),
+  ),
+);
+
+@function setColor($key, $type: "type1") {
+  @each $name, $color in map.get($colors, $type) {
+    @if ($key == $name) {
+      @return $color;
+    }
+  }
+}
+
+@mixin color($property, $color, $important: false) {
+  #{$property}: setColor($color) #{if($important, "!important", "")};
+  @at-root body.dark & {
+    #{$property}: setColor($color, dark) #{if($important, "!important", "")};
+  }
+}
+
+// section {
+//   @include color(background-color, black);
+// } 

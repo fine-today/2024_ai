@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('./include/head.html',{'title' : '상세보기'})
+  </head>
+  <body>
+    <div id="container" class="admin sub">
+      <header class="header">@@include('./include/header.html')</header>
+      <div id="content">
+        <aside id="menu" class="menu">@@include('./include/menu.html')</aside>
+        <div id="main" class="main">
+          @@include('./include/con-header.html',{depth1: '계정',depth2:
+          '상세보기'})
+
+          <section class="section">
+            <h3>상세보기</h3>
+
+            <div class="p-wrap bbs bbs-write">
+              <div class="table-responsive">
+                <table class="p-table scroll" data-table="rwd">
+                  <caption>
+                    공지사항 작성하기 - 제목, 내용, 첨부파일 정보 제공
+                  </caption>
+                  <colgroup>
+                    <col style="width: 120px" />
+                    <col />
+                  </colgroup>
+                  <tbody class="p-table--th-left">
+                    <tr>
+                      <th scope="row">등록일시</th>
+                      <td>2024-01-01 10:10</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">최종접속일시</th>
+                      <td>2024-01-01 10:10</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">아이디</th>
+                      <td>
+                        <input type="text" class="input" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">비밀번호</th>
+                      <td>
+                        <input type="password" class="input" />
+                        <button type="button" class="btn">변경</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">이름</th>
+                      <td>
+                        <input type="text" class="input" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">생년월일</th>
+                      <td>
+                        <input type="text" class="input" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">부서</th>
+                      <td>
+                        <input type="text" class="input" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">사무실</th>
+                      <td>
+                        <input type="text" class="input" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">연락처</th>
+                      <td>
+                        <input type="text" class="input" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">이메일</th>
+                      <td>
+                        <input type="text" class="input" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">메모</th>
+                      <td>
+                        <textarea
+                          name=""
+                          id=""
+                          class="input w100p"
+                          placeholder="내용을 입력해주세요"
+                        ></textarea>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row">계정상태</th>
+                      <td>
+                        <span class="input">
+                          <input
+                            type="radio"
+                            name="radio"
+                            id="radio1"
+                            checked=""
+                          />
+                          <label for="radio1">정상</label>
+                        </span>
+                        <span class="input">
+                          <input
+                            type="radio"
+                            name="radio"
+                            id="radio2"
+                            checked=""
+                          />
+                          <label for="radio2">정지</label>
+                        </span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="btn-wrap right">
+                <button type="button" class="btn large">저장</button>
+                <button type="button" class="btn large type2">목록</button>
+              </div>
+            </div>
+          </section>
+
+          <div class="popup alert-pop active" data-pop="pop2">
+            <div class="popup_wrap">
+              <div class="pop_inner">
+                <div class="popup-title-wrap">
+                  <h3 class="popup_title h0">
+                    비밀번호를 초기화 하시겠습니까?
+                  </h3>
+                </div>
+                <div class="popup_con">
+                  <p>
+                    비밀번호를 초기화 시 등록된 이메일로 임시 비밀번호가
+                    발송됩니다.
+                  </p>
+                  <div class="popup_footer">
+                    <button type="button" class="btn" data-pop-close="pop2">
+                      확인
+                    </button>
+                    <button
+                      type="button"
+                      class="btn type3"
+                      data-pop-close="pop2"
+                    >
+                      확인
+                    </button>
+                  </div>
+                </div>
+
+                <input type="button" class="popup_close" value="닫기" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">@@include('./include/footer.html')</footer>
+    </div>
+  </body>
+</html>

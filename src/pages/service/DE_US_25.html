@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="kr" class="sub">
+  <head>
+    @@include('./include/sub-head.html',{title : '시스템설정 - 마이페이지'})
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script type="text/javascript">
+      google.charts.load("current", { packages: ["corechart"] });
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ["Year", "Sales", "Expenses"],
+          ["2004", 1000, 400],
+          ["2005", 1170, 460],
+          ["2006", 660, 1120],
+          ["2007", 1030, 540],
+        ]);
+
+        var options = {
+          title: "Company Performance",
+          curveType: "function",
+          legend: { position: "bottom" },
+          width: 388,
+          height: 400,
+        };
+        var chart = new google.visualization.LineChart(
+          document.getElementById("curve_chart")
+        );
+        var chart2 = new google.visualization.LineChart(
+          document.getElementById("curve_chart2")
+        );
+        chart.draw(data, options);
+        chart2.draw(data, options);
+      }
+
+      $(window).on('load', function(){
+        setTimeout(function(){
+          google.charts.setOnLoadCallback(drawChart);
+        },100);
+        
+          $('.tab_button').on('click', function(){ 
+            google.charts.setOnLoadCallback(drawChart);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="accessibility">
+      <a href="#content">본문 바로가기</a>
+    </div>
+    <div id="container" class="de_us_19 my-page">
+      <!-- code substring 으로 key class 생성-->
+      <!-- <header class="header">@@include('./include/header.html')</header> -->
+      <div id="content">
+        <!-- <div class="location">
+          @@include('./include/menu.html',{code : 'DE_US_16'})
+        </div> -->
+        <div class="wrap">
+          @@include('./include/breadcrumb.html',{ 
+            'depth1' : {title:'마이페이지', anchor : '#n'}, 
+            'depth2': {title:'시스템 설정', anchor : '#n'}, 
+            'depth3': {title:'정보입력', anchor : '#n'}, 
+            'depthCount' : 3,
+          })
+          <section class="section">
+            <div class="tab">
+              <div class="tab_menu">
+                <button type="button" class="tab_select">
+                  <span>미세먼지</span>
+                </button>
+                <div class="tab_panel">
+                  <ul class="tab_list clearfix">
+                    <li class="tab_item active">
+                      <button type="button" class="tab_button" title="선택됨">
+                        <span>새집모사</span>
+                      </button>
+                    </li>
+                    <li class="tab_item">
+                      <button type="button" class="tab_button">
+                        <span>Map</span>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+                <div class="tab_content active">
+                  <!-- tab con1 -->
+                  @@include('./include/mypage-header.html')
+                  <div class="mypage-con">
+                    <div class="tab column" data-ratio="1-3">
+                      <div class="tab_menu">
+                        <button type="button" class="tab_select">
+                          <span>스텝박스</span>
+                        </button>
+                        <div class="tab_panel">
+                          <ul class="tab_list clearfix">
+                            <li class="tab_item active">
+                              <button
+                                type="button"
+                                class="tab_button"
+                                title="선택됨"
+                              >
+                                <span>탭1</span>
+                              </button>
+                            </li>
+                            <li class="tab_item">
+                              <button type="button" class="tab_button">
+                                <span>탭2</span>
+                              </button>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="tab_content active">
+                          <!-- 차트 영역 -->
+                          <div class="chart-wrap">
+                            <div id="curve_chart" class="chart"></div>
+                            <div class="unit">
+                              <span>현재 농도 : <strong>00</strong>ppm </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tab_content">
+                          <!-- 차트 영역 -->
+                          <div class="chart-wrap">
+                            <div id="curve_chart2" class="chart"></div>
+                            <div class="unit">
+                              <span>현재 농도 : <strong>00</strong>ppm </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="column" data-ratio="2-3">
+                      <h3>시험 조건</h3>
+                      <div class="table">
+                        <table>
+                          <caption></caption>
+                          <colgroup>
+                            <col style="width: 15%" />
+                            <col style="width: 35%" />
+                            <col style="width: 15%" />
+                            <col />
+                          </colgroup>
+                          <tbody>
+                            <tr>
+                              <th scope="row">가스종류</th>
+                              <td colspan="3">
+                                <span class="input">
+                                  <input
+                                    type="radio"
+                                    name="radio1"
+                                    id="radio1-1"
+                                  />
+                                  <label for="radio1-1"
+                                    >포름알데히드 (0~10)</label
+                                  >
+                                </span>
+                                <span class="input">
+                                  <input
+                                    type="radio"
+                                    name="radio1"
+                                    id="radio1-2"
+                                  />
+                                  <label for="radio1-2">암모니아 (0~10)</label>
+                                </span>
+                                <span class="input">
+                                  <input
+                                    type="radio"
+                                    name="radio1"
+                                    id="radio1-3"
+                                  />
+                                  <label for="radio1-3"
+                                    >아세트알데히드 (0~10)</label
+                                  >
+                                </span>
+                                <span class="input">
+                                  <input
+                                    type="radio"
+                                    name="radio1"
+                                    id="radio1-3"
+                                  />
+                                  <label for="radio1-3">톨루엔 (0~10)</label>
+                                </span>
+                                <span class="input">
+                                  <input
+                                    type="radio"
+                                    name="radio1"
+                                    id="radio1-4"
+                                  />
+                                  <label for="radio1-4">초산 (0~10)</label>
+                                </span>
+                                <span class="input">
+                                  <input
+                                    type="radio"
+                                    name="radio1"
+                                    id="radio1-5"
+                                  />
+                                  <label for="radio1-5">이산화황 (0~1)</label>
+                                </span>
+                                <span class="input">
+                                  <input
+                                    type="radio"
+                                    name="radio1"
+                                    id="radio1-6"
+                                  />
+                                  <label for="radio1-6">이산화질소 (0~1)</label>
+                                </span>
+                                <span class="input">
+                                  <input
+                                    type="radio"
+                                    name="radio1"
+                                    id="radio1-7"
+                                  />
+                                  <label for="radio1-7"
+                                    >이산화탄소 (0~2000)</label
+                                  >
+                                </span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">가스농도</th>
+                              <td><input type="text" class="input" /> ppm</td>
+                              <td colspan="2">
+                                <button type="button" class="btn">
+                                  발생시작
+                                </button>
+                                <button type="button" class="btn">
+                                  발생종료
+                                </button>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">시험 시간<br />(최대480분)</th>
+                              <td>
+                                <input type="text" class="input" />
+                                분
+                              </td>
+                              <th scope="row">경과 시간</th>
+                              <td>163 분</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">시험 결과</th>
+                              <td colspan="3">
+                                <button type="button" class="btn">
+                                  파일 다운로드
+                                </button>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+
+                      <h3>변경이력관리</h3>
+                      <div class="table">
+                        <table>
+                          <caption></caption>
+                          <colgroup>
+                            <col style="width: 30%" />
+                            <col />
+                            <col style="width: 20%" />
+                            <col style="width: 16%" />
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th scope="col">날짜</th>
+                              <th scope="col">가스종류</th>
+                              <th scope="col">가스농도</th>
+                              <th scope="col">재적용</th>
+                            </tr>
+                          </thead>
+                          <tbody class="align-center">
+                            <tr>
+                              <td>2024.10.14 10:20:34</td>
+                              <td>포름알데히드</td>
+                              <td>1200ppm</td>
+                              <td>
+                                <button type="button" class="btn type3 w100p">
+                                  적용
+                                </button>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>2024.10.14 10:20:34</td>
+                              <td>포름알데히드</td>
+                              <td>1200ppm</td>
+                              <td>
+                                <button type="button" class="btn type3 w100p">
+                                  적용
+                                </button>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="btn-wrap center">
+                    <button type="button" class="btn large">시험 시작</button>
+                    <button type="button" class="btn large">시험 종료</button>
+                  </div>
+                  @@include('./include/mypage-cctv.html')
+                  @@include('./include/mypage-option.html')
+                </div>
+                <div class="tab_content">
+                  <div class="video-wrap">
+                  <video src="../../images/service/sub/map_test.mp4" id="map-video" loop>
+                  </div>
+
+                  <script>
+                    $('.tab_button').on('click', function(){
+                      $('#map-video').get(0).play();
+                    })
+                  </script>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <footer class="footer">@@include('./include/footer.html')</footer>
+    </div>
+  </body>
+</html>

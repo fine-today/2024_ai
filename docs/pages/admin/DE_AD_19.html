@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="../../css/default.css" />
+<link rel="stylesheet" href="../../css/guide.css" />
+<link rel="stylesheet" href="../../css/admin.css" />
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/plugins.js"></script>
+<script src="../../js/sub.js"></script>
+<title>팝업 리스트</title>
+
+  </head>
+  <body>
+    <div id="container" class="admin sub">
+      <header class="header"><div class="logo-wrap">
+  <h1 class="logo">
+    <img
+      src="../../images/common/logo.svg"
+      alt="KETI Korea Electronics Technology Institute"
+    />
+  </h1>
+  <div class="site">Admin</div>
+</div>
+<div class="version">ver.01</div>
+</header>
+      <div id="content">
+        <aside id="menu" class="menu"><div class="depth depth1">
+  <ul class="depth-list depth1-list">
+    <li class="depth-item depth1-item">
+      <a class="depth-anchor depth1-anchor" href="#n">
+        <span>사업소개 편집</span>
+      </a>
+    </li>
+    <li class="depth-item depth1-item">
+      <a class="depth-anchor depth1-anchor" href="#n">
+        <span>계정</span>
+      </a>
+      <ul class="depth-list depth2-list">
+        <li class="depth-item depth2-item">
+          <a href="#n" class="depth-anchor depth2-anchor">
+            <span>리스트</span>
+          </a>
+        </li>
+        <li class="depth-item depth2-item">
+          <a href="#n" class="depth-anchor depth2-anchor">
+            <span>상세페이지</span>
+          </a>
+        </li>
+        <li class="depth-item depth2-item">
+          <a href="#n" class="depth-anchor depth2-anchor">
+            <span>2dep menu03</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li class="depth-item depth1-item">
+      <a class="depth-anchor depth1-anchor" href="#n">
+        <span>1dep menu03</span>
+      </a>
+      <ul class="depth-list depth2-list">
+        <li class="depth-item depth2-item">
+          <a href="#n" class="depth-anchor depth2-anchor">
+            <span>2dep menu01</span>
+          </a>
+        </li>
+        <li class="depth-item depth2-item">
+          <a href="#n" class="depth-anchor depth2-anchor">
+            <span>2dep menu02</span>
+          </a>
+        </li>
+        <li class="depth-item depth2-item">
+          <a href="#n" class="depth-anchor depth2-anchor">
+            <span>2dep menu03</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<script>
+  $(function () {
+    var $menu = $(".depth1"),
+      $menuItem = $menu.find(".depth-item"),
+      $menuAnchor = $menu.find(".depth-anchor");
+    $menuItem.each(function (i, elem) {
+      var $elem = $(elem);
+      if ($elem.find(".depth-list").length > 0) {
+        $elem.addClass("has");
+      }
+      if ($elem.hasClass("actived")) {
+        $elem.find(">.depth-anchor").attr("title", "현재 위치");
+        $elem.parents(".depth-item").addClass("actived");
+      }
+    });
+    $menuItem.each(function (i, elem) {
+      var $elem = $(elem);
+      if ($elem.hasClass("actived")) {
+        $elem
+          .parents(".depth-item")
+          .find(".depth-list")
+          .slideDown(0)
+          .css("display", "flex");
+      }
+    });
+    $menuAnchor.on("click", function () {
+      var $this = $(this),
+        $thisItem = $this.closest(".depth-item");
+      $menu.find(".actived > .depth-anchor").removeAttr("title");
+      $menuItem.removeClass("active");
+      $this.parents(".depth-item").addClass("active");
+      $thisItem.siblings().removeClass("active");
+      $menuItem.each(function (i, item) {
+        var $item = $(item);
+        if ($item.hasClass("has") && $item.hasClass("active")) {
+          $item.find(".depth-list").slideDown(150).css("display", "flex");
+          $item.find(">.depth-anchor").attr("title", "열림");
+        } else {
+          $item.find(".depth-list").slideUp(150);
+          $item.find(">.depth-list").removeAttr("title");
+        }
+      });
+    });
+  });
+</script>
+</aside>
+        <div id="main" class="main">
+          <div class="breadcrumb-wrap">
+  <ol class="breadcrumb">
+    <li class="depth1">팝업/메인설정</li>
+    <li class="depth2">
+      <i
+        ><svg
+          width="14"
+          height="27"
+          viewBox="0 0 14 27"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M12.3744 13.5004L0 1.12605L0.707107 0.418945L13.7886 13.5004L0.707107 26.5819L0 25.8748L12.3744 13.5004Z"
+            fill="#4E5968"
+          />
+        </svg>
+      </i>
+      팝업 리스트
+    </li>
+  </ol>
+</div>
+
+
+          <section class="section">
+            <h3>팝업</h3>
+            <form action="#n">
+              <fieldset>
+                <legend>게시물 목록</legend>
+                <div class="table-unit">
+                  <span class="legend">전체 <strong>0</strong>건</span>
+                  <div class="p-search">
+                    <select name="" id="" class="input">
+                      <option value="">default</option>
+                      <option value="">default2</option>
+                    </select>
+                    <input type="text" class="input" />
+                    <button type="button" class="btn type3">검색</button>
+                  </div>
+                </div>
+                <div class="table">
+                  <div class="table-responsive">
+                    <table class="p-board scroll" data-table="rwd">
+                      <caption>
+                        게시판 - 번호, 분류, 제목, 등록일, 조회수 정보 제공
+                      </caption>
+                      <colgroup>
+                        <col style="width: 40px" />
+                        <col style="width: 160px" />
+                        <col />
+                        <col style="width: 300px" />
+                        <col style="width: 120px" />
+                        <col style="width: 120px" />
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th scope="col" class="first">
+                            <span class="input empty">
+                              <input
+                                type="checkbox"
+                                name="checkbox"
+                                id="check1"
+                              />
+                              <label for="check1"></label>
+                            </span>
+                          </th>
+                          <th scope="col">등록일</th>
+                          <th scope="col">제목</th>
+                          <th scope="col">노출기간</th>
+                          <th scope="col">상태</th>
+                          <th scope="col">등록자</th>
+                        </tr>
+                      </thead>
+                      <tbody class="align_center">
+                        <tr>
+                          <td>
+                            <span class="input empty">
+                              <input
+                                type="checkbox"
+                                name="checkbox"
+                                id="check1-1"
+                              />
+                              <label for="check1-1"></label>
+                            </span>
+                          </td>
+                          <td>2024.10.04</td>
+                          <td class="p-subject">
+                            <a href="#n">AI가전 관제 플랫폼 팝업1 </a>
+                          </td>
+                          <td>2024.10.04 ~2024.10.08</td>
+                          <td>정상</td>
+                          <td>관리자</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <span class="input empty">
+                              <input
+                                type="checkbox"
+                                name="checkbox"
+                                id="check1-2"
+                              />
+                              <label for="check1-2"></label>
+                            </span>
+                          </td>
+                          <td>2024.10.04</td>
+                          <td class="p-subject">
+                            <a href="#n">AI가전 관제 플랫폼 팝업1 </a>
+                          </td>
+                          <td>2024.10.04 ~2024.10.08</td>
+                          <td>정상</td>
+                          <td>관리자</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <span class="input empty">
+                              <input
+                                type="checkbox"
+                                name="checkbox"
+                                id="check1-3"
+                              />
+                              <label for="check1-3"></label>
+                            </span>
+                          </td>
+                          <td>2024.10.04</td>
+                          <td class="p-subject">
+                            <a href="#n">AI가전 관제 플랫폼 팝업1 </a>
+                          </td>
+                          <td>2024.10.04 ~2024.10.08</td>
+                          <td>정상</td>
+                          <td>관리자</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="p-pagination" data-brl-use="NO">
+                  <div class="p-page">
+                    <div class="p-page__control">
+                      <a href="#n" class="p-page__link prev-end"
+                        ><span class="skip">처음 페이지</span></a
+                      ><a href="#n" class="p-page__link prev"
+                        ><span class="skip">이전 10 페이지</span></a
+                      ><a href="#n" class="p-page__link prev-one"
+                        >이전 페이지</a
+                      >
+                    </div>
+                    <div class="p-page__link-group">
+                      <strong title="현재 1페이지" class="p-page__link active"
+                        >1</strong
+                      ><a href="#n" title="2페이지 이동" class="p-page__link"
+                        >2</a
+                      ><a href="#n" title="3페이지 이동" class="p-page__link"
+                        >3</a
+                      ><a href="#n" title="4페이지 이동" class="p-page__link"
+                        >4</a
+                      ><a href="#n" title="5페이지 이동" class="p-page__link"
+                        >5</a
+                      ><a href="#n" title="6페이지 이동" class="p-page__link"
+                        >6</a
+                      ><a href="#n" title="7페이지 이동" class="p-page__link"
+                        >7</a
+                      ><a href="#n" title="8페이지 이동" class="p-page__link"
+                        >8</a
+                      ><a href="#n" title="9페이지 이동" class="p-page__link"
+                        >9</a
+                      ><a href="0" title="10페이지 이동" class="p-page__link"
+                        >10</a
+                      >
+                    </div>
+                    <div class="p-page__control">
+                      <a href="#n" class="p-page__link next-one">다음 페이지</a>
+                      <a href="1" class="p-page__link next"
+                        ><span class="skip">다음 10 페이지</span></a
+                      ><a href="#n81" class="p-page__link next-end"
+                        ><span class="skip">끝 페이지</span></a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="p-btn-wrap flex-between">
+                  <div class="left">
+                    <a href="#n" class="btn type3">삭제</a>
+                  </div>
+                  <div class="right">
+                    <a href="#n" class="btn type2">등록</a>
+                  </div>
+                </div>
+
+                <div class="table">
+                  <div class="table-responsive">
+                    <table class="p-board scroll" data-table="rwd">
+                      <caption>
+                        게시판 - 번호, 분류, 제목, 등록일, 조회수 정보 제공
+                      </caption>
+
+                      <colgroup>
+                        <col style="width: 160px" />
+                        <col />
+                        <col style="width: 300px" />
+                        <col style="width: 120px" />
+                        <col style="width: 120px" />
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th scope="col" class="first">등록일</th>
+                          <th scope="col">제목</th>
+                          <th scope="col">노출기간</th>
+                          <th scope="col">상태</th>
+                          <th scope="col">등록자</th>
+                        </tr>
+                      </thead>
+                      <tbody class="align_center">
+                        <tr>
+                          <td colspan="5">조회 결과가 존재하지 않습니다.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </section>
+        </div>
+      </div>
+      <script>
+        $("#check1").on("click", function () {
+          var $this = $(this),
+            checked = $this.is(":checked");
+          $("[name=checkbox]").each(function () {
+            if ($(this).attr("id") !== "#check1") {
+              if (checked) {
+                $(this).prop("checked", true);
+              } else {
+                $(this).prop("checked", false);
+              }
+            }
+          });
+        });
+      </script>
+      <footer class="footer"><div class="copyright">
+  Copyright(C) 2024 KOREA ELECTORNICS TECHNOLOGY INSTITUTE., All Rights
+  Reserved.
+</div>
+<div class="address-wrap">
+  <div class="address">
+    (13509) 경기도 성남시 분당구 새나리로 25(야탑동)KETI 한국전자기술연구원
+  </div>
+  <div class="tel">대표전화 : 031 789 7000</div>
+</div>
+</footer>
+    </div>
+  </body>
+</html>

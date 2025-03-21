@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="kr" class="sub">
+  <head>
+    @@include('./include/sub-head.html',{title : '시스템설정 - 마이페이지'})
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script type="text/javascript">
+
+      
+      $(window).on('load', function(){
+        $('.tab_button').on('click', function(){ 
+            google.charts.load("current", { packages: ["corechart"] });
+            google.charts.setOnLoadCallback(drawChart);
+            function drawChart() {
+              var data = google.visualization.arrayToDataTable([
+                ["Year", "Sales", "Expenses"],
+                ["2004", 1000, 400],
+                ["2005", 1170, 460],
+                ["2006", 660, 1120],
+                ["2007", 1030, 540],
+              ]);
+
+              var options = {
+                title: "Company Performance",
+                curveType: "function",
+                legend: { position: "bottom" },
+                width: 388,
+                height: 400,
+              };
+              var chart = new google.visualization.LineChart(
+                document.getElementById("curve_chart")
+              );
+              var chart2 = new google.visualization.LineChart(
+                document.getElementById("curve_chart2")
+              );
+              chart.draw(data, options);
+              chart2.draw(data, options);
+            }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="accessibility">
+      <a href="#content">본문 바로가기</a>
+    </div>
+    <div id="container" class="de_us_19 my-page">
+      <!-- code substring 으로 key class 생성-->
+      <!-- <header class="header">@@include('./include/header.html')</header> -->
+      <div id="content">
+        <!-- <div class="location">
+          @@include('./include/menu.html',{code : 'DE_US_16'})
+        </div> -->
+        <div class="wrap">
+          @@include('./include/breadcrumb.html',{ 
+            'depth1' : {title:'마이페이지', anchor : '#n'}, 
+            'depth2': {title:'시스템 설정', anchor : '#n'}, 
+            'depth3': {title:'정보입력', anchor : '#n'}, 
+            'depthCount' : 3,
+          })
+          <section class="section">
+            <div class="tab">
+              <div class="tab_menu">
+                <button type="button" class="tab_select">
+                  <span>미세먼지</span>
+                </button>
+                <div class="tab_panel">
+                  <ul class="tab_list clearfix">
+                    <li class="tab_item">
+                      <button type="button" class="tab_button" title="선택됨">
+                        <span>미세먼지</span>
+                      </button>
+                    </li>
+                    <li class="tab_item active">
+                      <button type="button" class="tab_button">
+                        <span>조명</span>
+                      </button>
+                    </li>
+                    <li class="tab_item">
+                      <button type="button" class="tab_button">
+                        <span>Map</span>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+                <div class="tab_content">
+                  <!-- tab con1 -->
+                  @@include('./include/mypage-header.html')
+                  <div class="mypage-con">
+                    <div class="tab column" data-ratio="1-3">
+                      <div class="tab_menu">
+                        <button type="button" class="tab_select">
+                          <span>스텝박스</span>
+                        </button>
+                        <div class="tab_panel">
+                          <ul class="tab_list clearfix">
+                            <li class="tab_item active">
+                              <button
+                                type="button"
+                                class="tab_button"
+                                title="선택됨"
+                              >
+                                <span>탭1</span>
+                              </button>
+                            </li>
+                            <li class="tab_item">
+                              <button type="button" class="tab_button">
+                                <span>탭2</span>
+                              </button>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="tab_content active">
+                          <!-- 차트 영역 -->
+                          <div class="chart-wrap">
+                            <div id="curve_chart" class="chart"></div>
+                            <div class="unit">
+                              <span>현재 농도 : <strong>00</strong>㎍/㎥ </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tab_content">
+                          <!-- 차트 영역 -->
+                          <div class="chart-wrap">
+                            <div id="curve_chart2" class="chart"></div>
+                            <div class="unit">
+                              <span>현재 농도 : <strong>00</strong>㎍/㎥ </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="column" data-ratio="2-3">
+                      <h3>시험 조건</h3>
+                      <div class="table">
+                        <table>
+                          <caption></caption>
+                          <colgroup>
+                            <col style="width: 15%" />
+                            <col style="width: 35%" />
+                            <col style="width: 15%" />
+                            <col />
+                          </colgroup>
+                          <tbody>
+                            <tr>
+                              <th scope="row">발생기 선택</th>
+                              <td colspan="3">
+                                <span class="input">
+                                  <input
+                                    type="radio"
+                                    name="radio1"
+                                    id="radio1-1"
+                                  />
+                                  <label for="radio1-1">분진(SAG410)</label>
+                                </span>
+                                <span class="input">
+                                  <input
+                                    type="radio"
+                                    name="radio1"
+                                    id="radio1-2"
+                                  />
+                                  <label for="radio1-2">실내미세먼지</label>
+                                </span>
+                                <span class="input">
+                                  <input
+                                    type="radio"
+                                    name="radio1"
+                                    id="radio1-3"
+                                  />
+                                  <label for="radio1-3">조리모사</label>
+                                </span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row" rowspan="2">시험 농도</th>
+                              <td colspan="3">
+                                <span class="input">
+                                  <input
+                                    type="radio"
+                                    name="radio2"
+                                    id="radio2-1"
+                                  />
+                                  <label for="radio2-1">PM1</label>
+                                </span>
+
+                                <span class="input">
+                                  <input
+                                    type="radio"
+                                    name="radio2"
+                                    id="radio2-2"
+                                  />
+                                  <label for="radio2-2">PM2.5</label>
+                                </span>
+
+                                <span class="input">
+                                  <input
+                                    type="radio"
+                                    name="radio2"
+                                    id="radio2-3"
+                                  />
+                                  <label for="radio2-3">PM10</label>
+                                </span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td colspan="3">
+                                <input type="text" class="input" />
+                                ㎍/㎥
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">시험 시간</th>
+                              <td>
+                                <input type="text" class="input" />
+                                분
+                              </td>
+                              <th scope="row">경과 시간</th>
+                              <td>163 분</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">시험 결과</th>
+                              <td colspan="3">
+                                <button type="button" class="btn">
+                                  파일 다운로드
+                                </button>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+
+                      <h3>이력관리</h3>
+                      <div class="table">
+                        <table>
+                          <caption></caption>
+                          <colgroup>
+                            <col style="width: 30%" />
+                            <col />
+                            <col style="width: 15%" />
+                            <col style="width: 15%" />
+                            <col style="width: 12%" />
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th scope="col">날짜</th>
+                              <th scope="col">발생기</th>
+                              <th scope="col">시험농도</th>
+                              <th scope="col">농도값</th>
+                              <th scope="col">재적용</th>
+                            </tr>
+                          </thead>
+                          <tbody class="align-center">
+                            <tr>
+                              <td>2024.10.14 10:20:34</td>
+                              <td>분진(SAG410)</td>
+                              <td>PM1</td>
+                              <td>160</td>
+                              <td>
+                                <button type="button" class="btn type3 w100p">
+                                  적용
+                                </button>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>2024.10.14 10:20:34</td>
+                              <td>분진(SAG410)</td>
+                              <td>PM1</td>
+                              <td>160</td>
+                              <td>
+                                <button type="button" class="btn type3 w100p">
+                                  적용
+                                </button>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="btn-wrap center">
+                    <button type="button" class="btn large">시험 시작</button>
+                    <button type="button" class="btn large">시험 종료</button>
+                  </div>
+                  @@include('./include/mypage-cctv.html')
+                  @@include('./include/mypage-option.html')
+                </div>
+                <div class="tab_content active">
+                  <!-- tab con1 -->
+                  @@include('./include/mypage-header2.html')
+                  <div class="mypage-con">
+                    <div class="column" data-ratio="1-2">
+                      <h3>자동 작동</h3>
+                      <div class="table auto-table">
+                        <table>
+                          <caption></caption>
+                          <colgroup>
+                            <col />
+                            <col style="width: 14.7%" />
+                            <col style="width: 14.7%" />
+                            <col style="width: 14.7%" />
+                            <col style="width: 14.7%" />
+                            <col style="width: 14.7%" />
+                            <col style="width: 14.7%" />
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th scope="col">전체</th>
+                              <th scope="col">1</th>
+                              <th scope="col">2</th>
+                              <th scope="col">3</th>
+                              <th scope="col">4</th>
+                              <th scope="col">5</th>
+                              <th scope="col">6</th>
+                            </tr>
+                          </thead>
+                          <tbody class="align-center">
+                            <tr>
+                              <td>조도</td>
+                              <td>
+                                <select name="" id="" class="input">
+                                  <option value="">전체</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                </select>
+                              </td>
+                              <td>
+                                <select name="" id="" class="input">
+                                  <option value="">전체</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                </select>
+                              </td>
+                              <td>
+                                <select name="" id="" class="input">
+                                  <option value="">전체</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                </select>
+                              </td>
+                              <td>
+                                <select name="" id="" class="input">
+                                  <option value="">전체</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                </select>
+                              </td>
+                              <td>
+                                <select name="" id="" class="input">
+                                  <option value="">전체</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                </select>
+                              </td>
+                              <td>
+                                <select name="" id="" class="input">
+                                  <option value="">전체</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                </select>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>색온도</td>
+                              <td>
+                                <select name="" id="" class="input">
+                                  <option value="">전체</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                </select>
+                              </td>
+                              <td>
+                                <select name="" id="" class="input">
+                                  <option value="">전체</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                </select>
+                              </td>
+                              <td>
+                                <select name="" id="" class="input">
+                                  <option value="">전체</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                </select>
+                              </td>
+                              <td>
+                                <select name="" id="" class="input">
+                                  <option value="">전체</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                </select>
+                              </td>
+                              <td>
+                                <select name="" id="" class="input">
+                                  <option value="">전체</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                </select>
+                              </td>
+                              <td>
+                                <select name="" id="" class="input">
+                                  <option value="">전체</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                </select>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>분</td>
+                              <td>
+                                <input type="text" class="input">
+                              </td>
+                              <td>
+                                <input type="text" class="input">
+                              </td>
+                              <td>
+                                <input type="text" class="input">
+                              </td>
+                              <td>
+                                <input type="text" class="input">
+                              </td>
+                              <td>
+                                <input type="text" class="input">
+                              </td>
+                              <td>
+                                <input type="text" class="input">
+                              </td>
+                            </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                    </div>
+
+                    <div class="column" data-ratio="1-2">
+                      <h3>수동 작동</h3>
+                      <div class="table">
+                        <table>
+                          <caption></caption>
+                          <colgroup>
+                            <col />
+                            <col style="width: 26%" />
+                            <col style="width: 20%" />
+                            <col style="width: 20%" />
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th scope="col"></th>
+                              <th scope="col">작동</th>
+                              <th scope="col">조도</th>
+                              <th scope="col">색온도</th>
+                            </tr>
+                          </thead>
+                          <tbody class="align-center">
+                            <tr>
+                              <td>큰방</td>
+                              <td>
+                                <span class="input">
+                                  <input
+                                    type="radio"
+                                    name="radio10"
+                                    id="radio10-1"
+                                  />
+                                  <label for="radio10-1">On</label>
+                                </span>
+                                <span class="input">
+                                  <input
+                                    type="radio"
+                                    name="radio10"
+                                    id="radio10-2"
+                                  />
+                                  <label for="radio10-2">Off</label>
+                                </span>
+                              </td>
+                              <td>
+                                <select name="" id="" class="input">
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                </select>
+                              </td>
+                              <td>
+                                <select name="" id="" class="input">
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                </select>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>작은방</td>
+                              <td>
+                                <span class="input">
+                                  <input
+                                    type="radio"
+                                    name="radio11"
+                                    id="radio11-1"
+                                  />
+                                  <label for="radio11-1">On</label>
+                                </span>
+                                <span class="input">
+                                  <input
+                                    type="radio"
+                                    name="radio11"
+                                    id="radio11-2"
+                                  />
+                                  <label for="radio11-2">Off</label>
+                                </span>
+                              </td>
+                              <td>
+                                <select name="" id="" class="input">
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                </select>
+                              </td>
+                              <td>
+                                <select name="" id="" class="input">
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                </select>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>주방</td>
+                              <td>
+                                <span class="input">
+                                  <input
+                                    type="radio"
+                                    name="radio12"
+                                    id="radio12-1"
+                                  />
+                                  <label for="radio12-1">On</label>
+                                </span>
+                                <span class="input">
+                                  <input
+                                    type="radio"
+                                    name="radio12"
+                                    id="radio12-2"
+                                  />
+                                  <label for="radio12-2">Off</label>
+                                </span>
+                              </td>
+                              <td>
+                                <select name="" id="" class="input">
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                </select>
+                              </td>
+                              <td>
+                                <select name="" id="" class="input">
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                </select>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>거실1</td>
+                              <td>
+                                <span class="input">
+                                  <input
+                                    type="radio"
+                                    name="radio13"
+                                    id="radio13-1"
+                                  />
+                                  <label for="radio13-1">On</label>
+                                </span>
+                                <span class="input">
+                                  <input
+                                    type="radio"
+                                    name="radio13"
+                                    id="radio13-2"
+                                  />
+                                  <label for="radio13-2">Off</label>
+                                </span>
+                              </td>
+                              <td>
+                                <select name="" id="" class="input">
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                </select>
+                              </td>
+                              <td>
+                                <select name="" id="" class="input">
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                </select>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>거실2</td>
+                              <td>
+                                <span class="input">
+                                  <input
+                                    type="radio"
+                                    name="radio14"
+                                    id="radio14-1"
+                                  />
+                                  <label for="radio14-1">On</label>
+                                </span>
+                                <span class="input">
+                                  <input
+                                    type="radio"
+                                    name="radio14"
+                                    id="radio14-2"
+                                  />
+                                  <label for="radio14-2">Off</label>
+                                </span>
+                              </td>
+                              <td>
+                                <select name="" id="" class="input">
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                </select>
+                              </td>
+                              <td>
+                                <select name="" id="" class="input">
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                </select>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>거실3</td>
+                              <td>
+                                <span class="input">
+                                  <input
+                                    type="radio"
+                                    name="radio15"
+                                    id="radio15-1"
+                                  />
+                                  <label for="radio15-1">On</label>
+                                </span>
+                                <span class="input">
+                                  <input
+                                    type="radio"
+                                    name="radio15"
+                                    id="radio15-2"
+                                  />
+                                  <label for="radio15-2">Off</label>
+                                </span>
+                              </td>
+                              <td>
+                                <select name="" id="" class="input">
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                </select>
+                              </td>
+                              <td>
+                                <select name="" id="" class="input">
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                  <option value="">선택</option>
+                                </select>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="table">
+                        <table>
+                          <caption></caption>
+                          <colgroup>
+                            <col style="width: 15%" />
+                            <col style="width: 35%" />
+                            <col style="width: 15%" />
+                            <col />
+                          </colgroup>
+                          <tbody>
+                            <tr>
+                              <th scope="row">시험 시간</th>
+                              <td>
+                                <input type="text" class="input" />
+                                분
+                              </td>
+                              <th scope="row">경과 시간</th>
+                              <td>
+                                <input type="text" class="input" /> 분</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">시험 결과</th>
+                              <td colspan="3">
+                                <button type="button" class="btn">
+                                  파일 다운로드
+                                </button>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+
+                      <h3>이력관리</h3>
+                      <div class="table">
+                        <table>
+                          <caption></caption>
+                          <colgroup>
+                            <col style="width: 30%" />
+                            <col />
+                            <col style="width: 22%" />
+                            <col style="width: 80px" />
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th scope="col">날짜</th>
+                              <th scope="col">조명ON/조도</th>
+                              <th scope="col">색온도</th>
+                              <th scope="col">재적용</th>
+                            </tr>
+                          </thead>
+                          <tbody class="align-center">
+                            <tr>
+                              <td>2024.10.14 10:20:34</td>
+                              <td>방1 - 70, 주방 - 80</td>
+                              <td>낮은 색온도</td>
+                              <td>
+                                <button type="button" class="btn type3 w100p">
+                                  적용
+                                </button>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>2024.10.14 10:20:34</td>
+                              <td>방1 - 70, 주방 - 80</td>
+                              <td>낮은 색온도</td>
+                              <td>
+                                <button type="button" class="btn type3 w100p">
+                                  적용
+                                </button>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="btn-wrap center">
+                    <button type="button" class="btn large">시험 시작</button>
+                    <button type="button" class="btn large">시험 종료</button>
+                  </div>
+                  @@include('./include/mypage-cctv.html')
+                  @@include('./include/mypage-option.html')
+                </div>
+                <div class="tab_content">
+                  
+                  <div class="video-wrap">
+                    <video src="../../images/service/sub/map_test.mp4" id="map-video" loop>
+                    </div>
+  
+                    <script>
+                      $('.tab_button').on('click', function(){
+                        $('#map-video').get(0).play();
+                      })
+                    </script>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <footer class="footer">@@include('./include/footer.html')</footer>
+    </div>
+  </body>
+</html>

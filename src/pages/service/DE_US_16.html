@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="kr" class="sub">
+  <head>
+    @@include('./include/sub-head.html',{title : '공지사항 - 게시판'})
+  </head>
+  <body>
+    <div class="accessibility">
+      <a href="#content">본문 바로가기</a>
+    </div>
+    <div id="container" class="de_us_12">
+      <!-- code substring 으로 key class 생성-->
+      <header class="header">@@include('./include/header.html')</header>
+      <div id="content">
+        <div class="location">
+          @@include('./include/menu.html',{code : 'DE_US_16'})
+        </div>
+        <div class="wrap">
+          @@include('./include/breadcrumb.html',{ 
+            'depth1' : {title:'게시판', anchor : '#n'}, 
+            'depth2': {title:'공지사항', anchor : '#n'}, 
+            'depthCount' : 2,
+          })
+          @@include('./include/board-tab.html')
+          <section class="section">
+            <form action="#n">
+              <fieldset>
+                <legend>게시물 목록</legend>
+                <div class="table-unit">
+                  <span class="legend">전체 <strong>0</strong>건</span>
+                  <div class="p-search">
+                    <select name="" id="" class="input">
+                      <option value="">default</option>
+                      <option value="">default2</option>
+                    </select>
+                    <input type="text" class="input" />
+                    <button type="button" class="btn type3">검색</button>
+                  </div>
+                </div>
+                <div class="table">
+                  <table class="p-board" data-table="rwd">
+                    <caption>
+                      게시판 - 번호, 분류, 제목, 등록일, 조회수 정보 제공
+                    </caption>
+                    <colgroup>
+                      <col style="width: 80px" />
+                      <col style="width: 80px" />
+                      <col />
+                      <col style="width: 120px" />
+                      <col style="width: 80px" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col" class="first">번호</th>
+                        <th scope="col">분류</th>
+                        <th scope="col">제목</th>
+                        <th scope="col">등록일</th>
+                        <th scope="col">조회수</th>
+                      </tr>
+                    </thead>
+                    <tbody class="align_center">
+                      <tr>
+                        <td>10</td>
+                        <td>공지</td>
+                        <td class="p-subject">
+                          <a href="#n"
+                            >2024년 홀로그램기술사업화실증지원 사업 통합
+                            추가공고
+                            <i class="attatch" title="첨부파일"></i>
+                          </a>
+                        </td>
+                        <td>2024-09-04</td>
+                        <td>172</td>
+                      </tr>
+                      <tr>
+                        <td>9</td>
+                        <td>공지</td>
+                        <td class="p-subject">
+                          <a href="#n"
+                            >2024년 홀로그램기술사업화실증지원 사업 통합
+                            추가공고
+                          </a>
+                          <i class="attatch" title="첨부파일"></i>
+                        </td>
+                        <td>2024-09-04</td>
+                        <td>172</td>
+                      </tr>
+                      <tr>
+                        <td>8</td>
+                        <td>공지</td>
+                        <td class="p-subject">
+                          <a href="#n"
+                            >2024년 홀로그램기술사업화실증지원 사업 통합
+                            추가공고
+                          </a>
+                          <i class="attatch" title="첨부파일"></i>
+                        </td>
+                        <td>2024-09-04</td>
+                        <td>172</td>
+                      </tr>
+                      <tr>
+                        <td>7</td>
+                        <td></td>
+                        <td class="p-subject">
+                          <a href="#n"
+                            >2024년 홀로그램기술사업화실증지원 사업 통합
+                            추가공고
+                          </a>
+                        </td>
+                        <td>2024-09-04</td>
+                        <td>172</td>
+                      </tr>
+                      <tr>
+                        <td>6</td>
+                        <td></td>
+                        <td class="p-subject">
+                          <a href="#n"
+                            >2024년 홀로그램기술사업화실증지원 사업 통합
+                            추가공고
+                          </a>
+                        </td>
+                        <td>2024-09-04</td>
+                        <td>172</td>
+                      </tr>
+                      <tr>
+                        <td>5</td>
+                        <td></td>
+                        <td class="p-subject">
+                          <a href="#n"
+                            >2024년 홀로그램기술사업화실증지원 사업 통합
+                            추가공고
+                          </a>
+                        </td>
+                        <td>2024-09-04</td>
+                        <td>172</td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td></td>
+                        <td class="p-subject">
+                          <a href="#n"
+                            >2024년 홀로그램기술사업화실증지원 사업 통합
+                            추가공고
+                          </a>
+                        </td>
+                        <td>2024-09-04</td>
+                        <td>172</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td></td>
+                        <td class="p-subject">
+                          <a href="#n"
+                            >2024년 홀로그램기술사업화실증지원 사업 통합
+                            추가공고
+                          </a>
+                        </td>
+                        <td>2024-09-04</td>
+                        <td>172</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td></td>
+                        <td class="p-subject">
+                          <a href="#n"
+                            >2024년 홀로그램기술사업화실증지원 사업 통합
+                            추가공고
+                          </a>
+                        </td>
+                        <td>2024-09-04</td>
+                        <td>172</td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td></td>
+                        <td class="p-subject">
+                          <a href="#n"
+                            >2024년 홀로그램기술사업화실증지원 사업 통합
+                            추가공고
+                          </a>
+                        </td>
+                        <td>2024-09-04</td>
+                        <td>172</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="p-pagination" data-brl-use="NO">
+                  <div class="p-page">
+                    <div class="p-page__control">
+                      <a href="#n" class="p-page__link prev-end"
+                        ><span class="skip">처음 페이지</span></a
+                      ><a href="#n" class="p-page__link prev"
+                        ><span class="skip">이전 10 페이지</span></a
+                      ><a href="#n" class="p-page__link prev-one"
+                        >이전 페이지</a
+                      >
+                    </div>
+                    <div class="p-page__link-group">
+                      <strong title="현재 1페이지" class="p-page__link active"
+                        >1</strong
+                      ><a href="#n" title="2페이지 이동" class="p-page__link"
+                        >2</a
+                      ><a href="#n" title="3페이지 이동" class="p-page__link"
+                        >3</a
+                      ><a href="#n" title="4페이지 이동" class="p-page__link"
+                        >4</a
+                      ><a href="#n" title="5페이지 이동" class="p-page__link"
+                        >5</a
+                      ><a href="#n" title="6페이지 이동" class="p-page__link"
+                        >6</a
+                      ><a href="#n" title="7페이지 이동" class="p-page__link"
+                        >7</a
+                      ><a href="#n" title="8페이지 이동" class="p-page__link"
+                        >8</a
+                      ><a href="#n" title="9페이지 이동" class="p-page__link"
+                        >9</a
+                      ><a href="0" title="10페이지 이동" class="p-page__link"
+                        >10</a
+                      >
+                    </div>
+                    <div class="p-page__control">
+                      <a href="#n" class="p-page__link next-one">다음 페이지</a>
+                      <a href="1" class="p-page__link next"
+                        ><span class="skip">다음 10 페이지</span></a
+                      ><a href="#n81" class="p-page__link next-end"
+                        ><span class="skip">끝 페이지</span></a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!--<div class="p-btn-wrap align-right">
+                  <a href="#n" class="btn">btn1</a>
+                  <a href="#n" class="btn type2">btn2</a>
+                </div>-->
+
+                <div class="table">
+                  <table class="p-board" data-table="rwd">
+                    <caption>
+                      게시판 - 번호, 분류, 제목, 등록일, 조회수 정보 제공
+                    </caption>
+                    <colgroup>
+                      <col style="width: 80px" />
+                      <col style="width: 80px" />
+                      <col />
+                      <col style="width: 120px" />
+                      <col style="width: 80px" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col" class="first">번호</th>
+                        <th scope="col">분류</th>
+                        <th scope="col">제목</th>
+                        <th scope="col">등록일</th>
+                        <th scope="col">조회수</th>
+                      </tr>
+                    </thead>
+                    <tbody class="align_center">
+                      <tr>
+                        <td colspan="5">조회 결과가 존재하지 않습니다.</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </fieldset>
+            </form>
+          </section>
+        </div>
+      </div>
+      <footer class="footer">@@include('./include/footer.html')</footer>
+      <script>
+        $('.tab_item').eq(1).addClass('active');
+      </script>
+    </div>
+  </body>
+</html>

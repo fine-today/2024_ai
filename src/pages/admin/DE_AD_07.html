@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('./include/head.html',{'title' : '사업소개'})
+  </head>
+  <body>
+    <div id="container" class="admin sub">
+      <header class="header">@@include('./include/header.html')</header>
+      <div id="content">
+        <aside id="menu" class="menu">@@include('./include/menu.html')</aside>
+        <div id="main" class="main">
+          @@include('./include/con-header.html',{depth1: '사업소개편집',depth2:
+          '사업소개'})
+
+          <section class="section">
+            <div class="editor"></div>
+          </section>
+        </div>
+      </div>
+      <footer class="footer">@@include('./include/footer.html')</footer>
+    </div>
+  </body>
+</html>
