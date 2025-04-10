@@ -231,6 +231,24 @@ p {
     width: 1205px;
     margin: 0 auto;
   }
+  .column {
+    .img-wrap {
+      position: relative;
+      .sun-spot {
+        display: block;
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        right: -10px;
+        top: 20px;
+        background-image: linear-gradient(
+          to left,
+          #fff021 0%,
+          transparent 100%
+        );
+      }
+    }
+  }
   .mypage-head-setting {
     display: flex;
     width: 100%;
@@ -366,7 +384,8 @@ p {
       color: #fff;
       transition: all 0.2s;
     }
-    &:hover {
+    &:hover,
+    &.active {
       .map-btn {
         background-color: #ff8800;
       }
