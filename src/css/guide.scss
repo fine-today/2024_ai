@@ -1015,6 +1015,9 @@ p.blt.type3:before {
   .input {
     vertical-align: middle;
   }
+  &.align-center {
+    text-align: center;
+  }
 }
 .table th {
   color: #fff;

@@ -7,37 +7,35 @@
       src="https://www.gstatic.com/charts/loader.js"
     ></script>
     <script type="text/javascript">
+      $(window).on("load", function () {
+        $(".tab_button").on("click", function () {
+          google.charts.load("current", { packages: ["corechart"] });
+          google.charts.setOnLoadCallback(drawChart);
+          function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+              ["Year", "Sales", "Expenses"],
+              ["2004", 1000, 400],
+              ["2005", 1170, 460],
+              ["2006", 660, 1120],
+              ["2007", 1030, 540],
+            ]);
 
-      
-      $(window).on('load', function(){
-        $('.tab_button').on('click', function(){ 
-            google.charts.load("current", { packages: ["corechart"] });
-            google.charts.setOnLoadCallback(drawChart);
-            function drawChart() {
-              var data = google.visualization.arrayToDataTable([
-                ["Year", "Sales", "Expenses"],
-                ["2004", 1000, 400],
-                ["2005", 1170, 460],
-                ["2006", 660, 1120],
-                ["2007", 1030, 540],
-              ]);
-
-              var options = {
-                title: "Company Performance",
-                curveType: "function",
-                legend: { position: "bottom" },
-                width: 388,
-                height: 400,
-              };
-              var chart = new google.visualization.LineChart(
-                document.getElementById("curve_chart")
-              );
-              var chart2 = new google.visualization.LineChart(
-                document.getElementById("curve_chart2")
-              );
-              chart.draw(data, options);
-              chart2.draw(data, options);
-            }
+            var options = {
+              title: "Company Performance",
+              curveType: "function",
+              legend: { position: "bottom" },
+              width: 388,
+              height: 400,
+            };
+            var chart = new google.visualization.LineChart(
+              document.getElementById("curve_chart")
+            );
+            var chart2 = new google.visualization.LineChart(
+              document.getElementById("curve_chart2")
+            );
+            chart.draw(data, options);
+            chart2.draw(data, options);
+          }
         });
       });
     </script>
@@ -54,12 +52,10 @@
           @@include('./include/menu.html',{code : 'DE_US_16'})
         </div> -->
         <div class="wrap">
-          @@include('./include/breadcrumb.html',{ 
-            'depth1' : {title:'마이페이지', anchor : '#n'}, 
-            'depth2': {title:'시스템 설정', anchor : '#n'}, 
-            'depth3': {title:'정보입력', anchor : '#n'}, 
-            'depthCount' : 3,
-          })
+          @@include('./include/breadcrumb.html',{ 'depth1' :
+          {title:'마이페이지', anchor : '#n'}, 'depth2': {title:'시스템 설정',
+          anchor : '#n'}, 'depth3': {title:'정보입력', anchor : '#n'},
+          'depthCount' : 3, })
           <section class="section">
             <div class="tab">
               <div class="tab_menu">
@@ -298,26 +294,105 @@
                           <caption></caption>
                           <colgroup>
                             <col />
-                            <col style="width: 14.7%" />
-                            <col style="width: 14.7%" />
-                            <col style="width: 14.7%" />
-                            <col style="width: 14.7%" />
-                            <col style="width: 14.7%" />
-                            <col style="width: 14.7%" />
+                            <col style="width: 18%" />
+                            <col style="width: 18%" />
+                            <col style="width: 18%" />
+                            <col style="width: 18%" />
+                            <col style="width: 18%" />
                           </colgroup>
                           <thead>
                             <tr>
                               <th scope="col">전체</th>
-                              <th scope="col">1</th>
-                              <th scope="col">2</th>
-                              <th scope="col">3</th>
-                              <th scope="col">4</th>
-                              <th scope="col">5</th>
-                              <th scope="col">6</th>
+                              <th scope="col" class="align-center">
+                                <span class="input empty">
+                                  <input
+                                    type="checkbox"
+                                    name="checkbox"
+                                    id="check2-1"
+                                  />
+                                  <label for="check2-1"></label>
+                                </span>
+                              </th>
+                              <th scope="col" class="align-center">
+                                <span class="input empty">
+                                  <input
+                                    type="checkbox"
+                                    name="checkbox"
+                                    id="check2-2"
+                                  />
+                                  <label for="check2-2"></label>
+                                </span>
+                              </th>
+                              <th scope="col">
+                                <span class="input empty">
+                                  <input
+                                    type="checkbox"
+                                    name="checkbox"
+                                    id="check2-3"
+                                  />
+                                  <label for="check2-3"></label>
+                                </span>
+                              </th>
+                              <th scope="col">
+                                <span class="input empty">
+                                  <input
+                                    type="checkbox"
+                                    name="checkbox"
+                                    id="check2-4"
+                                  />
+                                  <label for="check2-4"></label>
+                                </span>
+                              </th>
+                              <th scope="col">
+                                <span class="input empty">
+                                  <input
+                                    type="checkbox"
+                                    name="checkbox"
+                                    id="check2-5"
+                                  />
+                                  <label for="check2-5"></label>
+                                </span>
+                              </th>
                             </tr>
                           </thead>
                           <tbody class="align-center">
                             <tr>
+                              <td></td>
+                              <td>
+                                <button type="button" class="btn">저장</button>
+                              </td>
+                              <td>
+                                <button type="button" class="btn">저장</button>
+                              </td>
+                              <td>
+                                <button type="button" class="btn">저장</button>
+                              </td>
+                              <td>
+                                <button type="button" class="btn">저장</button>
+                              </td>
+                              <td>
+                                <button type="button" class="btn">저장</button>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td></td>
+                              <td>
+                                <button type="button" class="btn">확인</button>
+                              </td>
+                              <td>
+                                <button type="button" class="btn">확인</button>
+                              </td>
+                              <td>
+                                <button type="button" class="btn">확인</button>
+                              </td>
+                              <td>
+                                <button type="button" class="btn">확인</button>
+                              </td>
+                              <td>
+                                <button type="button" class="btn">확인</button>
+                              </td>
+                            </tr>
+                            <!--<tr>
                               <td>조도</td>
                               <td>
                                 <select name="" id="" class="input">
@@ -446,27 +521,36 @@
                             <tr>
                               <td>분</td>
                               <td>
-                                <input type="text" class="input">
+                                <input type="text" class="input" />
                               </td>
                               <td>
-                                <input type="text" class="input">
+                                <input type="text" class="input" />
                               </td>
                               <td>
-                                <input type="text" class="input">
+                                <input type="text" class="input" />
                               </td>
                               <td>
-                                <input type="text" class="input">
+                                <input type="text" class="input" />
                               </td>
                               <td>
-                                <input type="text" class="input">
+                                <input type="text" class="input" />
                               </td>
                               <td>
-                                <input type="text" class="input">
+                                <input type="text" class="input" />
                               </td>
-                            </tr>
-                            </tbody>
-                          </table>
-                        </div>
+                            </tr>-->
+                          </tbody>
+                        </table>
+                      </div>
+
+                      <div class="btn-wrap center">
+                        <button type="button" class="btn large">
+                          시험 시작
+                        </button>
+                        <button type="button" class="btn large">
+                          시험 종료
+                        </button>
+                      </div>
                     </div>
 
                     <div class="column" data-ratio="1-2">
@@ -755,8 +839,7 @@
                                 분
                               </td>
                               <th scope="row">경과 시간</th>
-                              <td>
-                                <input type="text" class="input" /> 분</td>
+                              <td><input type="text" class="input" /> 분</td>
                             </tr>
                             <tr>
                               <th scope="row">시험 결과</th>
@@ -814,24 +897,23 @@
                       </div>
                     </div>
                   </div>
-                  <div class="btn-wrap center">
-                    <button type="button" class="btn large">시험 시작</button>
-                    <button type="button" class="btn large">시험 종료</button>
-                  </div>
                   @@include('./include/mypage-cctv.html')
                   @@include('./include/mypage-option.html')
                 </div>
                 <div class="tab_content">
-                  
                   <div class="video-wrap">
-                    <video src="../../images/service/sub/map_test.mp4" id="map-video" loop>
-                    </div>
-  
-                    <script>
-                      $('.tab_button').on('click', function(){
-                        $('#map-video').get(0).play();
-                      })
-                    </script>
+                    <video
+                      src="../../images/service/sub/map_test.mp4"
+                      id="map-video"
+                      loop
+                    ></video>
+                  </div>
+
+                  <script>
+                    $(".tab_button").on("click", function () {
+                      $("#map-video").get(0).play();
+                    });
+                  </script>
                 </div>
               </div>
             </div>
