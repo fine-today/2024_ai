@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('./include/head.html',{'title' : '비주얼 상세/등록'})
+  </head>
+  <body>
+    <div id="container" class="admin sub">
+      <header class="header">@@include('./include/header.html')</header>
+      <div id="content">
+        <aside id="menu" class="menu">@@include('./include/menu.html')</aside>
+        <div id="main" class="main">
+          @@include('./include/con-header.html',{depth1: '원격연결',depth2:
+          '원격연결'})
+
+          <section class="section">
+            <!-- <h3>팝업</h3> -->
+
+            <div class="p-wrap bbs bbs-write">
+              <div class="table-responsive">
+                <table class="p-table scroll" data-table="rwd">
+                  <caption>
+                    원격연결
+                  </caption>
+                  <colgroup>
+                    <col style="width: 200px" />
+                    <col />
+                  </colgroup>
+                  <tbody class="p-table--th-left">
+                    <tr>
+                      <th scope="row">
+                        원격스테이션 번호 <i class="required" title="필수">*</i>
+                      </th>
+                      <td>
+                        <input type="text" class="input w50p" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row" rowspan="2">
+                        비밀번호 <i class="required" title="필수">*</i>
+                      </th>
+                      <td>
+                        <input type="password" class="input w50p" />
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="btn-wrap right">
+                <button type="button" class="btn large">원격 연결</button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <footer class="footer">@@include('./include/footer.html')</footer>
+    </div>
+  </body>
+</html>
