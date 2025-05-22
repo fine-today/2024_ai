@@ -15,50 +15,9 @@
 <script src="../../js/sub.js"></script>
 <title>시스템설정 - 마이페이지</title>
 
-    <script
-      type="text/javascript"
-      src="https://www.gstatic.com/charts/loader.js"
-    ></script>
-    <script type="text/javascript">
-      google.charts.load("current", { packages: ["corechart"] });
-      google.charts.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ["Year", "Sales", "Expenses"],
-          ["2004", 1000, 400],
-          ["2005", 1170, 460],
-          ["2006", 660, 1120],
-        
-        ]);
-
-        var options = {
-          title: "Company Performance",
-          curveType: "function",
-          legend: { position: "bottom" },
-          width: 388,
-          height: 400,
-        };
-        var chart = new google.visualization.LineChart(
-          document.getElementById("curve_chart")
-        );
-        var chart2 = new google.visualization.LineChart(
-          document.getElementById("curve_chart2")
-        );
-        chart.draw(data, options);
-        chart2.draw(data, options);
-      }
-
-      $(window).on('load', function(){
-        setTimeout(function(){
-          google.charts.setOnLoadCallback(drawChart);
-        },100);
-        
-          $('.tab_button').on('click', function(){ 
-            google.charts.setOnLoadCallback(drawChart);
-        });
-      });
-    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
   </head>
   <body>
     <div class="accessibility">
@@ -606,10 +565,12 @@
                             </li>
                           </ul>
                         </div>
+
+                        
                         <div class="tab_content active">
                           <!-- 차트 영역 -->
                           <div class="chart-wrap">
-                            <div id="curve_chart" class="chart"></div>
+                            <canvas  id="curve_chart" class="chart"></canvas>
                             <div class="unit">
                               <span>현재 농도 : <strong>00</strong>㎍/㎥ </span>
                             </div>
@@ -618,13 +579,81 @@
                         <div class="tab_content">
                           <!-- 차트 영역 -->
                           <div class="chart-wrap">
-                            <div id="curve_chart2" class="chart"></div>
+                            <canvas id="curve_chart2" class="chart"></canvas>
                             <div class="unit">
                               <span>현재 농도 : <strong>00</strong>㎍/㎥ </span>
                             </div>
                           </div></div>
                       </div>
                     </div>
+
+                    <script>
+                      const ctx = document.getElementById('curve_chart').getContext('2d');
+                      const ctx2 = document.getElementById('curve_chart2').getContext('2d');
+                      const myLineChart = new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                          labels: ['1월', '2월', '3월', '4월', '5월', '6월'],
+                          datasets: [{
+                            label: '매출액',
+                            data: [120, 190, 300, 500, 200, 300],
+                            borderColor: 'rgba(75, 192, 192, 1)',
+                            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                            tension: 0.4, // 곡선 정도
+                            fill: true
+                          }]
+                        },
+                        options: {
+                          responsive: true,
+                          plugins: {
+                            title: {
+                              display: true,
+                              text: '월별 매출 추이'
+                            },
+                            legend: {
+                              display: true,
+                              position: 'top'
+                            }
+                          },
+                          scales: {
+                            y: {
+                              beginAtZero: true
+                            }
+                          }
+                        }
+                      });const myLineChart2 = new Chart(ctx2, {
+                        type: 'line',
+                        data: {
+                          labels: ['1월', '2월', '3월', '4월', '5월', '6월'],
+                          datasets: [{
+                            label: '매출액',
+                            data: [120, 190, 300, 500, 200, 300],
+                            borderColor: 'rgba(75, 192, 192, 1)',
+                            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                            tension: 0.4, // 곡선 정도
+                            fill: true
+                          }]
+                        },
+                        options: {
+                          responsive: true,
+                          plugins: {
+                            title: {
+                              display: true,
+                              text: '월별 매출 추이'
+                            },
+                            legend: {
+                              display: true,
+                              position: 'top'
+                            }
+                          },
+                          scales: {
+                            y: {
+                              beginAtZero: true
+                            }
+                          }
+                        }
+                      });
+                    </script>
 
                     <div class="column" data-ratio="2-3">
                       <h3>시험 조건</h3>

@@ -282,6 +282,7 @@ p {
   .chart-wrap {
     position: relative;
     .chart {
+      width: 388px !important;
     }
     .unit {
       position: absolute;
@@ -417,4 +418,24 @@ p {
       }
     }
   }
+}
+
+/* mypage - 음성소음 */
+.box.sound-box {
+  margin-top: 20px;
+  .list li {
+    font-size: 16px;
+    line-height: 1.8;
+    margin: 8px 0;
+    a {
+      text-decoration: underline;
+      color: #005f9e;
+    }
+  }
+}
+.sound-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 }
