@@ -11,16 +11,12 @@
       <!-- code substring 으로 key class 생성-->
       <!-- <header class="header">@@include('./include/header.html')</header> -->
       <div id="content">
-        <!-- <div class="location">
-          @@include('./include/menu.html',{code : 'DE_US_16'})
-        </div> -->
+        <!-- <div class="location"> @@include('./include/menu.html',{code : 'DE_US_16'})      </div> -->
         <div class="wrap">
-          @@include('./include/breadcrumb.html',{ 
-            'depth1' : {title:'마이페이지', anchor : '#n'}, 
-            'depth2' : {title:'시스템 설정', anchor : '#n'}, 
-            'depth3': {title:'정보입력', anchor : '#n'}, 
-            'depthCount' : 3,
-          })
+          @@include('./include/breadcrumb.html',{ 'depth1' :
+          {title:'마이페이지', anchor : '#n'}, 'depth2' : {title:'시스템 설정',
+          anchor : '#n'}, 'depth3': {title:'옵션 설정', anchor : '#n'},
+          'depthCount' : 3, })
           <section class="section">
             <div class="mypage">
               <div class="floor">
@@ -28,12 +24,24 @@
                   src="../../images/service/sub/mypage-img1.png"
                   alt="마이페이지 도면"
                 />
-                <span class="label" style="left: 150px;top: 100px;">미세먼지</span>
-                <span class="label" style="left: 700px;top: 150px;">태양광 모사</span>
-                <span class="label" style="left: 400px;top: 280px;">새집모사</span>
-                <span class="label" style="left: 590px;top: 300px;">음성소음모사</span>
-                <span class="label" style="left: 420px;top: 350px;">인체모사</span>
-                <span class="label" style="left: 109px;top: 390px;">조리모사</span>
+                <span class="label" style="left: 150px; top: 100px"
+                  >미세먼지</span
+                >
+                <span class="label" style="left: 700px; top: 150px"
+                  >태양광 모사</span
+                >
+                <span class="label" style="left: 400px; top: 280px"
+                  >새집모사</span
+                >
+                <span class="label" style="left: 590px; top: 300px"
+                  >음성소음모사</span
+                >
+                <span class="label" style="left: 420px; top: 350px"
+                  >인체모사</span
+                >
+                <span class="label" style="left: 109px; top: 390px"
+                  >조리모사</span
+                >
               </div>
             </div>
             @@include('./include/mypage-cctv.html')

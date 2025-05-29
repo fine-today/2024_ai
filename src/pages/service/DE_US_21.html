@@ -15,8 +15,10 @@
           @@include('./include/menu.html',{code : 'DE_US_16'})
         </div>
         <div class="wrap">
-          @@include('./include/breadcrumb.html',{ depth1 : '게시판', depth2 :
-          '공지사항', })
+          @@include('./include/breadcrumb.html',{ 'depth1' :
+          {title:'마이페이지', anchor : '#n'}, 'depth2': {title:'시스템 설정',
+          anchor : '#n'}, 'depth3': {title:'모바일로봇', anchor : '#n'},
+          'depthCount' : 3, })
           <section class="section">
             <div class="popup active de_us_21" data-pop="pop1">
               <div class="popup_wrap">
@@ -31,6 +33,22 @@
                   <div class="popup_con">
                     <div class="control flex">
                       <div class="column" data-ratio="2-3">
+                        <p class="align-center margin-b-12">
+                          주행을 시작합니다.
+                        </p>
+                        <p class="align-center margin-b-12" data-percent="100">
+                          <!-- data-percent 100, 75, 50, 25, 0 단위 -->
+                          로봇이 주행을 완료하였습니다.
+                          <i>5%</i>
+                        </p>
+                        <p
+                          class="align-center margin-b-12 em-red"
+                          data-percent="100"
+                        >
+                          <!-- data-percent 100, 75, 50, 25, 0 단위 -->
+                          배터리가 부족(20%)하여 작동을 중지했습니다.
+                          <i>5%</i>
+                        </p>
                         <div class="img-wrap img-map">
                           <img
                             src="../../images/service/sub/mypage-img1.png"
@@ -483,11 +501,11 @@
                       <div class="cont">
                         <ul class="bu">
                           <li>
-                            로봇을 이동할 지점을 선택 후주행 시작을 누르시오.
+                            로봇을 이동할 지점을 선택 후 주행 시작을 누르시오.
                           </li>
                           <li>
-                            모바일로봇 이동 중 배터리가 부족할 시 자동으로 충전
-                            지점으로 돌아갑니다.
+                            로봇의 완충 시간은 약 8시간 이상 소요되오니 유의
+                            바랍니다.
                           </li>
                           <li>충전 시간은 n시간 이상이니 유의하십시오.</li>
                         </ul>

@@ -76,13 +76,10 @@
         color: #003263;
       }
       .btn.arrow {
-        position: absolute;
-        left: 30px;
-        bottom: 38px;
-        width: calc(100% - 60px);
+        width: 100%;
         display: inline-flex;
         justify-content: space-between;
-        margin: 2px;
+        margin: 20px 2px 2px 2px;
         min-width: 100px;
         height: auto;
         line-height: 26.6px;

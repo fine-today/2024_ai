@@ -15,8 +15,10 @@
           @@include('./include/menu.html',{code : 'DE_US_16'})
         </div>
         <div class="wrap">
-          @@include('./include/breadcrumb.html',{ depth1 : '게시판', depth2 :
-          '공지사항', })
+          @@include('./include/breadcrumb.html',{ 'depth1' :
+          {title:'마이페이지', anchor : '#n'}, 'depth2': {title:'시스템 설정',
+          anchor : '#n'}, 'depth3': {title:'온습도 설정', anchor : '#n'},
+          'depthCount' : 3, })
           <section class="section">
             <div class="popup active de_us_20" data-pop="pop1">
               <div class="popup_wrap">

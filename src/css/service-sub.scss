@@ -224,6 +224,11 @@ p {
     }
   }
 }
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .column {
   &[data-ratio="1-3"] {
     flex: 1;
@@ -337,6 +342,54 @@ p {
       .btn {
         height: 50px;
       }
+    }
+  }
+  [data-percent] {
+    position: relative;
+    width: 100%;
+    padding: 0 60px;
+    i {
+      display: flex;
+      align-items: center;
+      color: #333;
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 24px;
+      &::after {
+        display: block;
+        width: 24px;
+        height: 24px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 24px 24px;
+        opacity: 0.7;
+      }
+    }
+  }
+  [data-percent="100"] {
+    i::after {
+      background-image: url(../images/service/sub/battery-100.svg);
+    }
+  }
+  [data-percent="75"] {
+    i::after {
+      background-image: url(../images/service/sub/battery-75.svg);
+    }
+  }
+  [data-percent="50"] {
+    i::after {
+      background-image: url(../images/service/sub/battery-50.svg);
+    }
+  }
+  [data-percent="25"] {
+    i::after {
+      background-image: url(../images/service/sub/battery-25.svg);
+    }
+  }
+  [data-percent="0"] {
+    i::after {
+      background-image: url(../images/service/sub/battery-0.svg);
     }
   }
 }

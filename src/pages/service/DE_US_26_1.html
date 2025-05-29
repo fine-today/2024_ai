@@ -22,7 +22,7 @@
             <form action="#n">
               <fieldset>
                 <legend>게시물 목록</legend>
-                <div class="p-search-box">
+                <!--<div class="p-search-box">
                   <div class="p-form-group">
                     <span class="p-form-group__label">
                       <label for="">일자</label>
@@ -92,7 +92,7 @@
                       <button type="submit" class="btn">확인</button>
                     </div>
                   </div>
-                </div>
+                </div>-->
 
                 <div class="tab">
                   <div class="tab_menu">
@@ -130,9 +130,58 @@
 
                 <div class="table-unit">
                   <span class="legend">전체 <strong>10</strong>건</span>
-                  <div class="p-search">
-                    <select name="" id="" class="input">
+                  <div class="p-search flex">
+                    <span class="flex">
+                      <div class="p-date first" data-date="datepicker">
+                        <input
+                          type="text"
+                          title=""
+                          placeholder="yyyy-mm-dd"
+                          class="input"
+                        />
+                        <div class="p-datepicker__wrap">
+                          <button
+                            type="button"
+                            class="p-input__item p-date__icon"
+                          >
+                            달력열기
+                            <i class="ri-calendar-line"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <span
+                        class="p-form__split flex"
+                        style="align-items: center"
+                        >~</span
+                      >
+                      <div class="p-date" data-date="datepicker">
+                        <input
+                          type="text"
+                          title=""
+                          placeholder="yyyy-mm-dd"
+                          class="input"
+                        />
+                        <div class="input_split">
+                          <div class="p-datepicker__wrap">
+                            <button
+                              type="button"
+                              class="p-input__item p-date__icon"
+                            >
+                              달력열기
+                              <i class="ri-calendar-line"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </span>
+                    <select class="input" title="전체">
                       <option value="">전체</option>
+                      <option value="">#1. 생체모사</option>
+                      <option value="">#2. 인체모사</option>
+                      <option value="">#3. 태양광모사</option>
+                      <option value="">#4. 새집모사</option>
+                      <option value="">#5. 환경설정</option>
+                      <option value="">#6 모바일로봇</option>
                     </select>
                     <input type="text" class="input" />
                     <button type="button" class="btn type3">검색</button>
@@ -156,7 +205,11 @@
                       <tr>
                         <th scope="col">
                           <span class="input empty">
-                            <input type="checkbox" id="check1-1" />
+                            <input
+                              type="checkbox"
+                              name="check1"
+                              id="check1-1"
+                            />
                             <label for="check1-1"></label>
                           </span>
                         </th>
@@ -171,8 +224,12 @@
                       <tr>
                         <td>
                           <span class="input empty">
-                            <input type="checkbox" id="check1-2" />
-                            <label for="" check1-2></label>
+                            <input
+                              type="checkbox"
+                              name="check1"
+                              id="check1-2"
+                            />
+                            <label for="check1-2"></label>
                           </span>
                         </td>
                         <td>10</td>
@@ -200,8 +257,12 @@
                       <tr>
                         <td>
                           <span class="input empty">
-                            <input type="checkbox" id="check1-2" />
-                            <label for="" check1-2></label>
+                            <input
+                              type="checkbox"
+                              name="check1"
+                              id="check1-3"
+                            />
+                            <label for="check1-3"></label>
                           </span>
                         </td>
                         <td>9</td>
@@ -229,8 +290,12 @@
                       <tr>
                         <td>
                           <span class="input empty">
-                            <input type="checkbox" id="check1-2" />
-                            <label for="" check1-2></label>
+                            <input
+                              type="checkbox"
+                              name="check1"
+                              id="check1-4"
+                            />
+                            <label for="check1-4"></label>
                           </span>
                         </td>
                         <td>8</td>
@@ -258,8 +323,12 @@
                       <tr>
                         <td>
                           <span class="input empty">
-                            <input type="checkbox" id="check1-2" />
-                            <label for="" check1-2></label>
+                            <input
+                              type="checkbox"
+                              name="check1"
+                              id="check1-5"
+                            />
+                            <label for="check1-5"></label>
                           </span>
                         </td>
                         <td>7</td>
@@ -287,8 +356,12 @@
                       <tr>
                         <td>
                           <span class="input empty">
-                            <input type="checkbox" id="check1-2" />
-                            <label for="" check1-2></label>
+                            <input
+                              type="checkbox"
+                              name="check1"
+                              id="check1-6"
+                            />
+                            <label for="check1-6"></label>
                           </span>
                         </td>
                         <td>6</td>
@@ -316,8 +389,12 @@
                       <tr>
                         <td>
                           <span class="input empty">
-                            <input type="checkbox" id="check1-2" />
-                            <label for="" check1-2></label>
+                            <input
+                              type="checkbox"
+                              name="check1"
+                              id="check1-7"
+                            />
+                            <label for="check1-7"></label>
                           </span>
                         </td>
                         <td>5</td>
@@ -345,8 +422,12 @@
                       <tr>
                         <td>
                           <span class="input empty">
-                            <input type="checkbox" id="check1-2" />
-                            <label for="" check1-2></label>
+                            <input
+                              type="checkbox"
+                              name="check1"
+                              id="check1-8"
+                            />
+                            <label for="check1-8"></label>
                           </span>
                         </td>
                         <td>4</td>
@@ -374,8 +455,12 @@
                       <tr>
                         <td>
                           <span class="input empty">
-                            <input type="checkbox" id="check1-2" />
-                            <label for="" check1-2></label>
+                            <input
+                              type="checkbox"
+                              name="check1"
+                              id="check1-9"
+                            />
+                            <label for="check1-9"></label>
                           </span>
                         </td>
                         <td>3</td>
@@ -403,8 +488,12 @@
                       <tr>
                         <td>
                           <span class="input empty">
-                            <input type="checkbox" id="check1-2" />
-                            <label for="" check1-2></label>
+                            <input
+                              type="checkbox"
+                              name="check1"
+                              id="check1-10"
+                            />
+                            <label for="check1-10"></label>
                           </span>
                         </td>
                         <td>2</td>
@@ -432,8 +521,12 @@
                       <tr>
                         <td>
                           <span class="input empty">
-                            <input type="checkbox" id="check1-2" />
-                            <label for="" check1-2></label>
+                            <input
+                              type="checkbox"
+                              name="check1"
+                              id="check1-11"
+                            />
+                            <label for="check1-11"></label>
                           </span>
                         </td>
                         <td>1</td>
@@ -505,6 +598,35 @@
                     </div>
                   </div>
                 </div>
+                <div class="p-btn-wrap flex-between">
+                  <div class="left">
+                    <a href="#n" class="btn">전체 다운로드</a>
+                  </div>
+                  <div class="right"></div>
+                </div>
+                <script>
+                  $("#check1-1").on("change", function () {
+                    var $this = $(this);
+                    if ($this.prop("checked")) {
+                      $('[name="check1"]').prop("checked", true);
+                    }
+                  });
+                  $('[name="check1"]:not(#check1-1)').on("change", function () {
+                    var $check1 = $('[name="check1"]'),
+                      check1Length = $check1.length - 1,
+                      count = 0;
+                    $('[name="check1"]').each(function () {
+                      if ($(this).prop("checked")) {
+                        count = count + 1;
+                      }
+                    });
+                    if (check1Length === count) {
+                      $("#check1-1").prop("checked", true);
+                    } else {
+                      $("#check1-1").prop("checked", false);
+                    }
+                  });
+                </script>
                 <!--<div class="p-btn-wrap align-right">
                   <a href="#n" class="btn">btn1</a>
                   <a href="#n" class="btn type2">btn2</a>

@@ -9,7 +9,7 @@
   position: relative;
   z-index: 110;
   .logo-wrap {
-    padding: 56px 0;
+    padding: 36px 0;
   }
   #menu {
     display: flex;
@@ -29,8 +29,8 @@
       align-items: center;
       min-width: 200px;
       padding: 10px 30px;
-      font-size: 24px;
-      line-height: 28.8px;
+      font-size: 20px;
+      line-height: 28px;
       font-weight: 700;
       color: #191f28;
     }
@@ -130,8 +130,8 @@
   position: relative;
   padding-bottom: 40px;
   > .location {
-    position:relative;
-    z-index:100;
+    position: relative;
+    z-index: 100;
     padding: 20px 70px;
     background-color: #daeaf4;
     .depth1-item {
