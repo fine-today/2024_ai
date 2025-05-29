@@ -1,0 +1,30 @@
+<html>
+  <head>
+    @@include('./include/sub-head.html',{title : 'sub'})
+  </head>
+  <div class="win-pop" id="pop-001">
+    <div class="img-wrap">
+      <a href="">
+        <img src="../../images/service/main/main-visual.png" alt=""
+      /></a>
+    </div>
+    <div class="pop-footer">
+      <span class="input"
+        ><input type="checkbox" id="check" />
+        <label for="check">오늘 하루 이창 열지 않음 <i></i></label
+      ></span>
+      <button type="button" class="btn close">닫기</button>
+    </div>
+    <script>
+      $(".win-pop .close").on("click", function () {
+        window.close();
+      });
+      $("#check").on("change", function () {
+        if ($(this).prop("checked")) {
+          console.log(1);
+          //
+        }
+      });
+    </script>
+  </div>
+</html>
